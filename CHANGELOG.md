@@ -15,3 +15,5 @@ All notable editorial updates are recorded here.
   interest.
 - Clarified that sustained, substantive community contributions can qualify
   contributors for future survey-paper authorship.
+- Added SelfMem, a feedback-driven method for optimizing reusable agent memory
+  strategies with long-context benchmark evaluation.
