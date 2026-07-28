@@ -19,6 +19,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Validate community structure
+        run: ruby test/community_structure_test.rb
+
       - name: Check Markdown links
         uses: lycheeverse/lychee-action@v2
         with:
