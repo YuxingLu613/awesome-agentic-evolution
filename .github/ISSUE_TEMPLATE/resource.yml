@@ -1,0 +1,51 @@
+name: Suggest a resource
+description: Propose a tool, repository, paper, article, or technical discussion
+title: "[Resource]: "
+labels:
+  - resource
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Resource type
+      options:
+        - Tool or repository
+        - Paper
+        - Benchmark or dataset
+        - Article or technical post
+        - Talk, podcast, or course
+        - Community discussion
+    validations:
+      required: true
+  - type: input
+    id: canonical_url
+    attributes:
+      label: Canonical URL
+      placeholder: https://...
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Why it belongs
+      description: Explain what evolves, which signal drives the update, and how it is evaluated.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link the paper, code, evaluation, logs, or other primary evidence.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I checked that this resource is not already listed.
+          required: true
+        - label: I used a canonical or primary-source URL.
+          required: true
+        - label: The resource describes persistent improvement, not only one-shot refinement.
+          required: true
