@@ -5,7 +5,7 @@ labels:
   - resource
 body:
   - type: dropdown
-    id: type
+    id: resource_type
     attributes:
       label: Resource type
       options:
@@ -24,18 +24,65 @@ body:
       placeholder: https://...
     validations:
       required: true
-  - type: textarea
-    id: value
+  - type: dropdown
+    id: evolution_target
     attributes:
-      label: Why it belongs
-      description: Explain what evolves, which signal drives the update, and how it is evaluated.
+      label: Primary evolution target
+      options:
+        - Model or policy
+        - Memory or structured knowledge
+        - Skill, tool, or expert agent
+        - Workflow, prompt, or architecture
+        - Environment, curriculum, or evaluator
+        - Agent code or improvement process
+        - Multi-agent system or ecosystem
     validations:
       required: true
   - type: textarea
-    id: evidence
+    id: feedback_signal
     attributes:
-      label: Evidence
-      description: Link the paper, code, evaluation, logs, or other primary evidence.
+      label: Feedback or optimization signal
+      description: What evidence, reward, verifier, critique, or environmental signal drives the update?
+    validations:
+      required: true
+  - type: textarea
+    id: persistent_artifact
+    attributes:
+      label: Persistent artifact
+      description: What is changed or retained so that future behavior can improve?
+    validations:
+      required: true
+  - type: textarea
+    id: evaluation
+    attributes:
+      label: Evaluation evidence
+      description: Link the benchmark, held-out protocol, baselines, results, or other primary evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: reproducibility
+    attributes:
+      label: Reproducibility
+      description: Link public code, data, logs, or instructions, and note anything you verified yourself.
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety, regressions, and rollback
+      description: Note relevant failure modes, isolation requirements, regression checks, or rollback mechanisms. Write "Not discussed" if absent.
+    validations:
+      required: true
+  - type: dropdown
+    id: conflict_of_interest
+    attributes:
+      label: Relationship to this resource
+      options:
+        - I have no affiliation with this work
+        - I am an author or contributor
+        - I maintain the project or artifact
+        - I am affiliated with the responsible organization
+        - Other relationship disclosed in the issue
     validations:
       required: true
   - type: checkboxes
@@ -48,4 +95,6 @@ body:
         - label: I used a canonical or primary-source URL.
           required: true
         - label: The resource describes persistent improvement, not only one-shot refinement.
+          required: true
+        - label: I disclosed my relationship to the submitted work.
           required: true
