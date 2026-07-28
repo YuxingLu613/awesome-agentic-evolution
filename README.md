@@ -23,6 +23,7 @@ agents，以及从单体自我改进走向协同进化和开放式智能体生�
 - [Benchmarks and Evaluation](#benchmarks-and-evaluation)
 - [Articles and Technical Posts](#articles-and-technical-posts)
 - [Related Awesome Lists](#related-awesome-lists)
+- [Community and Long-Term Outputs](#community-and-long-term-outputs)
 - [Contributing](#contributing)
 
 ## Scope
@@ -188,6 +189,20 @@ For credible evolution claims, prefer:
 - [Awesome Self-Evolving Agents — XMUDeepLIT](https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents)
 - [Awesome Self-Improving Agents](https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents)
 - [Awesome Self-Evolution of LLM](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/Awesome-Self-Evolution-of-LLM)
+
+## Community and Long-Term Outputs
+
+The repository is community-first and survey-ready. We aim to turn verified
+curation into a structured evidence base, a living survey, and eventually a
+conference tutorial with reproducible demonstrations.
+
+- [Call for Contributors](CALL_FOR_CONTRIBUTORS.md)
+- [Community Roles and Governance](COMMUNITY.md)
+- [Roadmap](ROADMAP.md)
+
+Repository contributions are credited publicly. Future publication authorship
+is considered separately from sustained research, analysis, writing, software,
+and revision contributions.
 
 ## Contributing
 
