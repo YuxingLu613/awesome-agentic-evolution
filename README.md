@@ -200,9 +200,10 @@ conference tutorial with reproducible demonstrations.
 - [Community Roles and Governance](COMMUNITY.md)
 - [Roadmap](ROADMAP.md)
 
-Repository contributions are credited publicly. Future publication authorship
-is considered separately from sustained research, analysis, writing, software,
-and revision contributions.
+Repository contributions are credited publicly. Sustained, substantive work in
+curation, reproducibility, analysis, writing, software, visualization, or
+revision can qualify contributors for survey-paper authorship. Decisions will
+follow transparent CRediT-style roles rather than maintainer status.
 
 ## Contributing
 
