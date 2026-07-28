@@ -19,7 +19,7 @@ The selected operating model is community-first and survey-ready:
 
 - Make it easy to contribute one small, verifiable improvement.
 - Preserve quality as the number of contributors grows.
-- Credit community work without prematurely promising publication authorship.
+- Give substantial community work a clear path to publication authorship.
 - Capture evidence in a form that supports taxonomy, comparison, and synthesis.
 - Reuse reviewed material across the repository, survey, and tutorial.
 
@@ -28,7 +28,7 @@ The selected operating model is community-first and survey-ready:
 - Maximizing the number of links or GitHub stars.
 - Treating generic agent frameworks as self-evolving systems.
 - Equating one-shot self-correction with persistent improvement.
-- Automatically granting paper authorship for repository submissions.
+- Automatically granting paper authorship for a single repository submission.
 - Building manuscript or tutorial infrastructure before the evidence is ready.
 
 ## Community Flywheel
@@ -104,9 +104,11 @@ ecosystems.
 
 Contribution records will follow CRediT-style roles. Resource submissions
 receive repository credit and acknowledgement. Sustained evidence curation,
-reproducibility work, section leadership, cross-category analysis, writing, and
-revision inform authorship discussions. The rules are frozen before formal
-writing begins.
+reproducibility work, section leadership, cross-category analysis, writing,
+software, visualization, and revision can qualify contributors for
+survey-paper authorship. Maintainer status or invitation is not required. The
+evaluation process is published before formal writing begins and the criteria
+are frozen before manuscript submission.
 
 ## Tutorial Conversion
 

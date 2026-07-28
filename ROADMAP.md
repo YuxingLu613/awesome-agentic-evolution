@@ -32,8 +32,11 @@ Start a manuscript only when:
 - major categories have comparable evidence tables; and
 - the work has a clear contribution beyond existing surveys.
 
-Repository contributions are acknowledged publicly. Manuscript authorship is
-decided separately from sustained research, analysis, writing, and revision.
+Repository contributions are acknowledged publicly. Sustained, substantive
+curation, reproducibility, analysis, writing, software, visualization, or
+revision can qualify contributors for survey-paper authorship. Before formal
+writing begins, the project will publish the evaluation process and use the
+public contribution record with CRediT-style roles.
 
 ## Phase 4 — Conference Tutorial
 

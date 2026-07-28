@@ -60,10 +60,13 @@ quality.
 
 ## Credit and Authorship
 
-GitHub history, reviews, and synthesis contributions provide the public credit
-record. Future publication authorship is separate from repository recognition
-and will use a CRediT-style assessment of sustained curation, investigation,
-analysis, writing, software, visualization, and revision.
+GitHub history, reviews, and synthesis contributions form the public record
+used to evaluate authorship. Sustained, substantive work can qualify
+contributors for survey-paper authorship through a CRediT-style assessment of
+curation, investigation, analysis, writing, software, visualization, and
+revision. Authorship is based on documented contribution rather than maintainer
+status or invitation. A single small submission receives public credit but does
+not automatically establish authorship.
 
 ## Conduct
 

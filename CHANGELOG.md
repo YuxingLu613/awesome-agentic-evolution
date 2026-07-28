@@ -13,3 +13,5 @@ All notable editorial updates are recorded here.
 - Expanded resource submissions to capture evolution targets, feedback,
   persistent artifacts, evaluation, reproducibility, safety, and conflicts of
   interest.
+- Clarified that sustained, substantive community contributions can qualify
+  contributors for future survey-paper authorship.

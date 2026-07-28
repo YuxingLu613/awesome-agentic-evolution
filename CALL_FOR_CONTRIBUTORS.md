@@ -42,7 +42,10 @@ section; reviewers focus on evidence, reproducibility, or safety. See
 ## Recognition and Future Publications
 
 Repository contributions are recorded and credited publicly. Resource
-submissions alone do not imply authorship on a future paper. If this project
-develops into a survey or conference tutorial, authorship will be discussed
-using sustained, substantive contributions such as evidence curation,
-reproducibility work, section leadership, synthesis, writing, and revision.
+submissions alone do not automatically establish authorship, but sustained,
+substantive work can qualify contributors for survey-paper authorship. Eligible
+work includes evidence curation, reproducibility work, section leadership,
+cross-category analysis, synthesis, writing, software, visualization, and
+revision. Contributor status is not a barrier: decisions will use the public
+contribution record and CRediT-style roles rather than invitation or maintainer
+status.
