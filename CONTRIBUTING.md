@@ -33,6 +33,13 @@ resource:
 
 Prefer the canonical project, paper, or author page. Add a code link when the
 paper has an official implementation. Do not copy abstracts or marketing text.
+Disclose whether you are an author, maintainer, employee, or otherwise
+connected to the submitted work.
+
+Other contribution paths, including verification, reproducibility review,
+safety review, section curation, and synthesis, are described in
+[CALL_FOR_CONTRIBUTORS.md](CALL_FOR_CONTRIBUTORS.md) and
+[COMMUNITY.md](COMMUNITY.md).
 
 ## Review Checklist
 
