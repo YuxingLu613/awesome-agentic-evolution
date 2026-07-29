@@ -10,9 +10,6 @@ A high-signal, continuously curated collection of tools, repositories, papers,
 articles, and discussions about agents that improve through feedback,
 experience, self-modification, or co-evolution.
 
-中文简介：聚焦能够从反馈、轨迹、记忆、工具和环境中持续进化的 AI
-agents，以及从单体自我改进走向协同进化和开放式智能体生态的研究与工具。
-
 [Explore the living research dashboard →](https://yuxinglu613.github.io/awesome-agentic-evolution/)
 
 **Last editorial review:** 2026-07-28
