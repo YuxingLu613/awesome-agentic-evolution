@@ -18,3 +18,5 @@ All notable editorial updates are recorded here.
 - Added a repository-linked GitHub Pages dashboard with research-landscape,
   activity, contribution, and roadmap views; it refreshes on repository updates
   and on a daily schedule.
+- Added SelfMem, a feedback-driven method for optimizing reusable agent memory
+  strategies with long-context benchmark evaluation.

@@ -69,4 +69,11 @@ class CommunityStructureTest < Minitest::Test
 
     assert_empty missing, "Inclusive authorship policy is missing from: #{missing.join(", ")}"
   end
+
+  def test_selfmem_entry_records_feedback_driven_strategy_evolution
+    readme = File.read(File.join(ROOT, "README.md"))
+
+    assert_includes readme, "https://arxiv.org/abs/2607.03726"
+    assert_match(/SelfMem.*feedback signals.*refine.*memory strategy/im, readme)
+  end
 end

@@ -140,6 +140,10 @@ directly used to support persistent improvement.
   — Evolves structured routines for memory extraction and consolidation.
 - [Mem²Evolve](https://arxiv.org/abs/2604.10923) — Couples experience
   distillation with dynamic creation of tools and expert agents.
+- [SelfMem: Self-Optimizing Memory for AI Agents](https://arxiv.org/abs/2607.03726)
+  — Uses memory tools and feedback signals to explore, evaluate, and refine a
+  reusable memory strategy; reports BEAM results from 100K to 1M-token
+  conversations.
 - [MUSE-Autoskill](https://arxiv.org/abs/2605.27366) — Treats skills as
   testable, reusable, and continuously refined assets.
 - [SkillOpt](https://arxiv.org/abs/2605.23904) — Trains natural-language
