@@ -2,6 +2,11 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-07-29
+
+- Added SAGE, an ACL 2026 framework that learns a persistent skill library from
+  sequential task experience using outcome-grounded reinforcement signals.
+
 ## 2026-07-28
 
 - Created the repository and curation policy.

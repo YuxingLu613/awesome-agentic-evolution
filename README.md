@@ -145,6 +145,9 @@ directly used to support persistent improvement.
   distillation with dynamic creation of tools and expert agents.
 - [MUSE-Autoskill](https://arxiv.org/abs/2605.27366) — Treats skills as
   testable, reusable, and continuously refined assets.
+- [SAGE: Reinforcement Learning for Self-Improving Agents with Skill Libraries](https://aclanthology.org/2026.acl-long.69/)
+  — Accumulates reusable skills across sequential tasks and trains their
+  generation and use with outcome-grounded rewards.
 - [SkillOpt](https://arxiv.org/abs/2605.23904) — Trains natural-language
   procedures while keeping the target model and harness fixed.
 - [From Memory to Skills](https://arxiv.org/abs/2607.16621) — Governs
