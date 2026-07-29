@@ -79,66 +79,42 @@
             </button>
           </div>
 
-          <div class="agent-console">
-            <div class="agent-state">
-              <span>Agent state · cycle <b id="evolution-cycle">01</b></span>
-              <strong id="evolution-component">Memory evolution</strong>
+          <div class="loop-diagram">
+            <div class="loop-orbit" aria-hidden="true">
+              <span></span>
             </div>
-            <div class="agent-score">
-              <span>Evaluation</span>
-              <strong><b id="score-before">71</b><i>→</i><b id="score-after">84</b></strong>
+            <div class="agent-core">
+              <span>Agent</span>
+              <small>persistent state</small>
             </div>
-          </div>
-
-          <div class="agent-components" aria-label="Agent components">
-            <span class="is-active" data-component="Memory">Memory</span>
-            <span data-component="Skills">Skills</span>
-            <span data-component="Tools">Tools</span>
-            <span data-component="Workflow">Workflow</span>
-            <span data-component="Code">Code</span>
-          </div>
-
-          <div class="mutation-card" id="evolution-status" aria-live="polite">
-            <span id="evolution-signal">Retrieval misses repeat across long tasks</span>
-            <div class="mutation-diff">
-              <code id="mutation-before">episodic cache v2</code>
-              <i aria-hidden="true">→</i>
-              <code id="mutation-after">strategy graph v3</code>
-            </div>
-            <small id="evolution-outcome">Candidate change · awaiting evaluation</small>
-          </div>
-
-          <ol class="evolution-loop">
-            <li class="is-active" data-stage="observe">
-              <span>01</span>
+            <ol class="loop-stages">
+              <li class="loop-stage stage-observe is-active" data-stage="observe">
               <strong>Observe</strong>
               <small>Signals & traces</small>
-            </li>
-            <li data-stage="reflect">
-              <span>02</span>
+              </li>
+              <li class="loop-stage stage-reflect" data-stage="reflect">
               <strong>Reflect</strong>
               <small>Distill experience</small>
-            </li>
-            <li data-stage="modify">
-              <span>03</span>
+              </li>
+              <li class="loop-stage stage-modify" data-stage="modify">
               <strong>Modify</strong>
-              <small>Change one component</small>
-            </li>
-            <li data-stage="evaluate">
-              <span>04</span>
+              <small>Update the agent</small>
+              </li>
+              <li class="loop-stage stage-evaluate" data-stage="evaluate">
               <strong>Evaluate</strong>
               <small>Test & compare</small>
-            </li>
-            <li data-stage="retain">
-              <span>05</span>
+              </li>
+              <li class="loop-stage stage-retain" data-stage="retain">
               <strong>Retain</strong>
-              <small>Version or roll back</small>
-            </li>
-          </ol>
-          <div class="loop-return" aria-hidden="true">
-            <span></span>
-            <p>Repeat with evidence</p>
+              <small>Keep what works</small>
+              </li>
+            </ol>
           </div>
+
+          <p class="loop-status" id="evolution-status" aria-live="polite">
+            <strong id="evolution-stage">Observe</strong>
+            <span id="evolution-detail">Signals & traces</span>
+          </p>
         </div>
       </section>
 

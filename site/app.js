@@ -1,12 +1,11 @@
 import {
-  EVOLUTION_SCENARIOS,
   EVOLUTION_STAGES,
   advanceEvolutionState
 } from "./evolution-loop.js";
 
 const REPOSITORY_URL = "https://github.com/YuxingLu613/awesome-agentic-evolution";
 const numberFormat = new Intl.NumberFormat("en", { notation: "compact" });
-const LOOP_INTERVAL_MS = 1800;
+const LOOP_INTERVAL_MS = 800;
 
 function setMetric(name, value) {
   const node = document.querySelector(`[data-metric="${name}"]`);
@@ -162,9 +161,8 @@ function initEvolutionLoop() {
   if (!root || !control) return;
 
   const stageNodes = [...root.querySelectorAll("[data-stage]")];
-  const componentNodes = [...root.querySelectorAll("[data-component]")];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let state = { stageIndex: 0, scenarioIndex: 0, cycle: 1 };
+  let state = { stageIndex: 0 };
   let userPaused = reduceMotion;
   let pointerPaused = false;
   let timer = null;
@@ -176,48 +174,26 @@ function initEvolutionLoop() {
 
   function renderEvolution({ announce = false } = {}) {
     const stage = EVOLUTION_STAGES[state.stageIndex];
-    const scenario = EVOLUTION_SCENARIOS[state.scenarioIndex];
 
     stageNodes.forEach((node, index) => {
       node.classList.toggle("is-active", index === state.stageIndex);
-      node.classList.toggle("is-complete", index < state.stageIndex);
-    });
-    componentNodes.forEach((node) => {
-      node.classList.toggle("is-active", node.dataset.component === scenario.component);
     });
 
     root.dataset.stage = stage.id;
-    root.dataset.outcome = scenario.outcome;
-    setText("#evolution-cycle", String(state.cycle).padStart(2, "0"));
-    setText("#evolution-component", `${scenario.component} evolution`);
-    setText("#score-before", scenario.scoreBefore);
-    setText("#score-after", scenario.scoreAfter);
-    setText("#evolution-signal", scenario.signal);
-    setText("#mutation-before", scenario.before);
-    setText("#mutation-after", scenario.after);
-
-    const outcomeNode = root.querySelector("#evolution-outcome");
-    const evaluated = state.stageIndex >= EVOLUTION_STAGES.findIndex(({ id }) => id === "evaluate");
-    if (outcomeNode) {
-      outcomeNode.className = evaluated ? `is-${scenario.outcome}` : "";
-      outcomeNode.textContent = evaluated
-        ? scenario.outcome === "retain"
-          ? `Evidence passed · retain ${scenario.after}`
-          : `Evidence regressed · roll back to ${scenario.before}`
-        : `${stage.label} · candidate change pending`;
-    }
+    setText("#evolution-stage", stage.label);
+    setText("#evolution-detail", stage.detail);
 
     if (announce) {
       root.querySelector("#evolution-status")?.setAttribute(
         "aria-label",
-        `Cycle ${state.cycle}: evolving ${scenario.component}`
+        `${stage.label}: ${stage.detail}`
       );
     }
   }
 
   function tick() {
     state = advanceEvolutionState(state);
-    renderEvolution({ announce: state.stageIndex === 0 });
+    renderEvolution({ announce: true });
   }
 
   function syncPlayback() {

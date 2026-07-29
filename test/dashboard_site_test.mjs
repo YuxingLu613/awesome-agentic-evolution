@@ -66,17 +66,20 @@ test("links readers from the repository README to the living dashboard", () => {
   assert.match(readme, /living research dashboard/i);
 });
 
-test("presents an accessible animated agent evolution simulator", () => {
+test("presents a concise animated agent evolution diagram", () => {
   const index = readProjectFile("site/index.html");
+  const app = readProjectFile("site/app.js");
   const styles = readProjectFile("site/styles.css");
 
   assert.match(index, /id="evolution-status"[^>]*aria-live="polite"/);
   assert.match(index, /id="loop-control"[^>]*aria-pressed="false"/);
-  assert.match(index, /class="agent-components"/);
-  assert.match(index, /data-component="Memory"/);
-  assert.match(index, /data-component="Skills"/);
-  assert.match(index, /data-component="Tools"/);
-  assert.match(index, /data-component="Workflow"/);
-  assert.match(index, /data-component="Code"/);
+  assert.match(index, /class="loop-diagram"/);
+  assert.match(index, /class="agent-core"/);
+  assert.equal((index.match(/data-stage=/g) ?? []).length, 5);
+  assert.doesNotMatch(index, /agent-components|mutation-card|agent-score/);
+  assert.match(app, /const LOOP_INTERVAL_MS = 800;/);
+  assert.match(styles, /\.loop-orbit/);
+  assert.match(styles, /min-height:\s*560px;/);
+  assert.match(styles, /width:\s*min\(100%, 300px\);/);
   assert.match(styles, /prefers-reduced-motion:\s*reduce/);
 });
