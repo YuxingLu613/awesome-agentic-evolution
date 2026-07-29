@@ -406,8 +406,9 @@ h2 {
 
 .agent-core small {
   margin-top: 0.15rem;
-  color: rgba(255, 255, 255, 0.42);
-  font-size: 0.56rem;
+  color: var(--green-bright);
+  font-size: 0.58rem;
+  font-weight: 700;
 }
 
 .loop-stages {
@@ -476,6 +477,50 @@ h2 {
 .stage-retain {
   top: 37%;
   left: 15%;
+}
+
+.component-strip {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.55rem;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+
+.component-strip > span {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.component-chips {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.25rem;
+}
+
+.component-chip {
+  overflow: hidden;
+  padding: 0.35rem 0.2rem;
+  color: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  font-size: 0.48rem;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.component-chip.is-active {
+  color: var(--green-bright);
+  background: rgba(116, 164, 126, 0.13);
+  border-color: rgba(116, 164, 126, 0.5);
 }
 
 .loop-status {
@@ -1048,6 +1093,15 @@ footer a {
   .agent-core {
     width: 90px;
     height: 90px;
+  }
+
+  .component-strip {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .component-chips {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .metrics-section {

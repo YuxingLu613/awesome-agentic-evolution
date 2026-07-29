@@ -6,6 +6,22 @@ export const EVOLUTION_STAGES = [
   { id: "retain", label: "Retain", detail: "Keep what works" }
 ];
 
-export function advanceEvolutionState({ stageIndex }) {
-  return { stageIndex: (stageIndex + 1) % EVOLUTION_STAGES.length };
+export const EVOLUTION_COMPONENTS = [
+  "Parameters",
+  "Memory",
+  "Skills",
+  "Tools",
+  "Workflow",
+  "Code"
+];
+
+export function advanceEvolutionState({ stageIndex, componentIndex }) {
+  const nextStageIndex = (stageIndex + 1) % EVOLUTION_STAGES.length;
+
+  return {
+    stageIndex: nextStageIndex,
+    componentIndex: nextStageIndex === 0
+      ? (componentIndex + 1) % EVOLUTION_COMPONENTS.length
+      : componentIndex
+  };
 }

@@ -7,7 +7,8 @@ All notable editorial updates are recorded here.
 - Added SAGE, an ACL 2026 framework that learns a persistent skill library from
   sequential task experience using outcome-grounded reinforcement signals.
 - Turned the dashboard's persistent improvement loop into a concise,
-  accessible five-stage animation.
+  accessible five-stage animation that cycles through evolvable agent
+  components.
 
 ## 2026-07-28
 

@@ -85,7 +85,7 @@
             </div>
             <div class="agent-core">
               <span>Agent</span>
-              <small>persistent state</small>
+              <small id="evolution-component">Parameters</small>
             </div>
             <ol class="loop-stages">
               <li class="loop-stage stage-observe is-active" data-stage="observe">
@@ -109,6 +109,18 @@
               <small>Keep what works</small>
               </li>
             </ol>
+          </div>
+
+          <div class="component-strip" aria-label="Evolvable agent components">
+            <span>Components</span>
+            <div class="component-chips">
+              <span class="component-chip is-active" data-component="Parameters">Parameters</span>
+              <span class="component-chip" data-component="Memory">Memory</span>
+              <span class="component-chip" data-component="Skills">Skills</span>
+              <span class="component-chip" data-component="Tools">Tools</span>
+              <span class="component-chip" data-component="Workflow">Workflow</span>
+              <span class="component-chip" data-component="Code">Code</span>
+            </div>
           </div>
 
           <p class="loop-status" id="evolution-status" aria-live="polite">

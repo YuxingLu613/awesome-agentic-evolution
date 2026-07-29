@@ -76,9 +76,13 @@ test("presents a concise animated agent evolution diagram", () => {
   assert.match(index, /class="loop-diagram"/);
   assert.match(index, /class="agent-core"/);
   assert.equal((index.match(/data-stage=/g) ?? []).length, 5);
+  assert.match(index, /class="component-strip"/);
+  assert.match(index, /id="evolution-component"/);
+  assert.equal((index.match(/data-component=/g) ?? []).length, 6);
   assert.doesNotMatch(index, /agent-components|mutation-card|agent-score/);
   assert.match(app, /const LOOP_INTERVAL_MS = 800;/);
   assert.match(styles, /\.loop-orbit/);
+  assert.match(styles, /\.component-chip\.is-active/);
   assert.match(styles, /min-height:\s*560px;/);
   assert.match(styles, /width:\s*min\(100%, 300px\);/);
   assert.match(styles, /prefers-reduced-motion:\s*reduce/);

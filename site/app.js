@@ -1,4 +1,5 @@
 import {
+  EVOLUTION_COMPONENTS,
   EVOLUTION_STAGES,
   advanceEvolutionState
 } from "./evolution-loop.js";
@@ -161,8 +162,9 @@ function initEvolutionLoop() {
   if (!root || !control) return;
 
   const stageNodes = [...root.querySelectorAll("[data-stage]")];
+  const componentNodes = [...root.querySelectorAll("[data-component]")];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let state = { stageIndex: 0 };
+  let state = { stageIndex: 0, componentIndex: 0 };
   let userPaused = reduceMotion;
   let pointerPaused = false;
   let timer = null;
@@ -174,19 +176,25 @@ function initEvolutionLoop() {
 
   function renderEvolution({ announce = false } = {}) {
     const stage = EVOLUTION_STAGES[state.stageIndex];
+    const component = EVOLUTION_COMPONENTS[state.componentIndex];
 
     stageNodes.forEach((node, index) => {
       node.classList.toggle("is-active", index === state.stageIndex);
     });
+    componentNodes.forEach((node, index) => {
+      node.classList.toggle("is-active", index === state.componentIndex);
+    });
 
     root.dataset.stage = stage.id;
+    root.dataset.component = component.toLowerCase();
+    setText("#evolution-component", component);
     setText("#evolution-stage", stage.label);
     setText("#evolution-detail", stage.detail);
 
     if (announce) {
       root.querySelector("#evolution-status")?.setAttribute(
         "aria-label",
-        `${stage.label}: ${stage.detail}`
+        `${stage.label} ${component}: ${stage.detail}`
       );
     }
   }
