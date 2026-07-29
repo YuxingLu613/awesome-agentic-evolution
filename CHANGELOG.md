@@ -15,3 +15,6 @@ All notable editorial updates are recorded here.
   interest.
 - Clarified that sustained, substantive community contributions can qualify
   contributors for future survey-paper authorship.
+- Added a repository-linked GitHub Pages dashboard with research-landscape,
+  activity, contribution, and roadmap views; it refreshes on repository updates
+  and on a daily schedule.
