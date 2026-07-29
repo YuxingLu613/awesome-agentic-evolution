@@ -266,15 +266,19 @@ h2 {
 }
 
 .hero-system {
+  --system-surface: #111827;
+  --stage-accent: #b8a7ff;
+  --component-accent: #68e0cf;
   position: relative;
   overflow: hidden;
   padding: 1.7rem;
   color: var(--white);
   background:
-    radial-gradient(circle at 90% 4%, rgba(116, 164, 126, 0.22), transparent 16rem),
-    var(--ink);
+    radial-gradient(circle at 88% 2%, rgba(184, 167, 255, 0.2), transparent 15rem),
+    radial-gradient(circle at 8% 92%, rgba(104, 224, 207, 0.1), transparent 14rem),
+    var(--system-surface);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  box-shadow: 0 24px 64px rgba(17, 24, 39, 0.24);
 }
 
 .hero-system::after {
@@ -326,13 +330,13 @@ h2 {
 #loop-control span {
   width: 6px;
   height: 6px;
-  background: var(--green-bright);
+  background: var(--component-accent);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(116, 164, 126, 0.12);
+  box-shadow: 0 0 0 4px rgba(104, 224, 207, 0.12);
 }
 
 #loop-control[aria-pressed="true"] span {
-  background: var(--amber);
+  background: var(--stage-accent);
 }
 
 #loop-control b {
@@ -350,11 +354,11 @@ h2 {
 .loop-orbit {
   position: absolute;
   inset: 50px;
-  border: 1px solid rgba(116, 164, 126, 0.38);
+  border: 1px solid rgba(184, 167, 255, 0.44);
   border-radius: 50%;
   box-shadow:
     0 0 0 18px rgba(255, 255, 255, 0.018),
-    inset 0 0 38px rgba(116, 164, 126, 0.06);
+    inset 0 0 38px rgba(184, 167, 255, 0.08);
 }
 
 .loop-orbit > span {
@@ -370,9 +374,9 @@ h2 {
   top: 0;
   left: 50%;
   content: "";
-  background: var(--amber);
+  background: var(--stage-accent);
   border-radius: 50%;
-  box-shadow: 0 0 16px rgba(214, 139, 60, 0.85);
+  box-shadow: 0 0 18px rgba(184, 167, 255, 0.9);
 }
 
 .hero-system.is-paused .loop-orbit > span {
@@ -388,15 +392,17 @@ h2 {
   display: flex;
   color: var(--white);
   background:
-    radial-gradient(circle at 35% 30%, rgba(116, 164, 126, 0.35), transparent 55%),
-    rgba(0, 0, 0, 0.24);
-  border: 1px solid rgba(116, 164, 126, 0.45);
+    radial-gradient(circle at 35% 28%, rgba(104, 224, 207, 0.22), transparent 55%),
+    rgba(7, 12, 24, 0.58);
+  border: 1px solid rgba(104, 224, 207, 0.5);
   border-radius: 50%;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 38px rgba(116, 164, 126, 0.12);
+  box-shadow:
+    0 0 38px rgba(104, 224, 207, 0.12),
+    inset 0 0 24px rgba(184, 167, 255, 0.06);
 }
 
 .agent-core span {
@@ -405,10 +411,13 @@ h2 {
 }
 
 .agent-core small {
+  max-width: 82px;
   margin-top: 0.15rem;
-  color: var(--green-bright);
-  font-size: 0.58rem;
+  color: var(--component-accent);
+  font-size: 0.54rem;
   font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
 }
 
 .loop-stages {
@@ -448,10 +457,10 @@ h2 {
 
 .loop-stage.is-active {
   color: var(--white);
-  background: rgba(116, 164, 126, 0.2);
-  border-color: rgba(116, 164, 126, 0.65);
+  background: rgba(184, 167, 255, 0.16);
+  border-color: rgba(184, 167, 255, 0.72);
   transform: translate(-50%, -50%) scale(1.08);
-  box-shadow: 0 0 18px rgba(116, 164, 126, 0.18);
+  box-shadow: 0 0 20px rgba(184, 167, 255, 0.18);
 }
 
 .stage-observe {
@@ -518,9 +527,10 @@ h2 {
 }
 
 .component-chip.is-active {
-  color: var(--green-bright);
-  background: rgba(116, 164, 126, 0.13);
-  border-color: rgba(116, 164, 126, 0.5);
+  color: #bff9f0;
+  background: rgba(104, 224, 207, 0.12);
+  border-color: rgba(104, 224, 207, 0.58);
+  box-shadow: inset 0 0 16px rgba(104, 224, 207, 0.05);
 }
 
 .loop-status {
@@ -539,7 +549,7 @@ h2 {
 }
 
 .loop-status strong {
-  color: var(--green-bright);
+  color: var(--stage-accent);
   font-family: var(--serif);
   font-size: 0.84rem;
 }

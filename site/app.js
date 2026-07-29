@@ -1,6 +1,6 @@
 import {
-  EVOLUTION_COMPONENTS,
   EVOLUTION_STAGES,
+  EVOLUTION_TARGETS,
   advanceEvolutionState
 } from "./evolution-loop.js";
 
@@ -164,7 +164,7 @@ function initEvolutionLoop() {
   const stageNodes = [...root.querySelectorAll("[data-stage]")];
   const componentNodes = [...root.querySelectorAll("[data-component]")];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let state = { stageIndex: 0, componentIndex: 0 };
+  let state = { stageIndex: 0, targetIndex: 0 };
   let userPaused = reduceMotion;
   let pointerPaused = false;
   let timer = null;
@@ -176,25 +176,26 @@ function initEvolutionLoop() {
 
   function renderEvolution({ announce = false } = {}) {
     const stage = EVOLUTION_STAGES[state.stageIndex];
-    const component = EVOLUTION_COMPONENTS[state.componentIndex];
+    const target = EVOLUTION_TARGETS[state.targetIndex];
+    const targetLabel = target.join(" + ");
 
     stageNodes.forEach((node, index) => {
       node.classList.toggle("is-active", index === state.stageIndex);
     });
-    componentNodes.forEach((node, index) => {
-      node.classList.toggle("is-active", index === state.componentIndex);
+    componentNodes.forEach((node) => {
+      node.classList.toggle("is-active", target.includes(node.dataset.component));
     });
 
     root.dataset.stage = stage.id;
-    root.dataset.component = component.toLowerCase();
-    setText("#evolution-component", component);
+    root.dataset.components = target.join(",").toLowerCase();
+    setText("#evolution-component", targetLabel);
     setText("#evolution-stage", stage.label);
     setText("#evolution-detail", stage.detail);
 
     if (announce) {
       root.querySelector("#evolution-status")?.setAttribute(
         "aria-label",
-        `${stage.label} ${component}: ${stage.detail}`
+        `${stage.label} ${targetLabel}: ${stage.detail}`
       );
     }
   }

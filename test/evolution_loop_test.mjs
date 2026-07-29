@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import {
   EVOLUTION_COMPONENTS,
   EVOLUTION_STAGES,
+  EVOLUTION_TARGETS,
   advanceEvolutionState
 } from "../site/evolution-loop.js";
 
@@ -26,19 +27,30 @@ test("names the evolvable agent components", () => {
   );
 });
 
-test("advances the component after one complete improvement loop", () => {
-  let state = { stageIndex: 0, componentIndex: 0 };
+test("supports both single-component and multi-component evolution targets", () => {
+  assert.deepEqual(EVOLUTION_TARGETS, [
+    ["Parameters"],
+    ["Memory", "Skills"],
+    ["Tools", "Workflow"],
+    ["Code"]
+  ]);
+  assert.ok(EVOLUTION_TARGETS.some((target) => target.length === 1));
+  assert.ok(EVOLUTION_TARGETS.some((target) => target.length > 1));
+});
+
+test("advances the target after one complete improvement loop", () => {
+  let state = { stageIndex: 0, targetIndex: 0 };
 
   for (let step = 0; step < EVOLUTION_STAGES.length; step += 1) {
     state = advanceEvolutionState(state);
   }
 
-  assert.deepEqual(state, { stageIndex: 0, componentIndex: 1 });
+  assert.deepEqual(state, { stageIndex: 0, targetIndex: 1 });
 });
 
-test("keeps the component fixed while a loop is in progress", () => {
+test("keeps the target fixed while a loop is in progress", () => {
   assert.deepEqual(
-    advanceEvolutionState({ stageIndex: 2, componentIndex: 4 }),
-    { stageIndex: 3, componentIndex: 4 }
+    advanceEvolutionState({ stageIndex: 2, targetIndex: 2 }),
+    { stageIndex: 3, targetIndex: 2 }
   );
 });

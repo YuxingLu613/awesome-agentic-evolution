@@ -15,13 +15,20 @@ export const EVOLUTION_COMPONENTS = [
   "Code"
 ];
 
-export function advanceEvolutionState({ stageIndex, componentIndex }) {
+export const EVOLUTION_TARGETS = [
+  ["Parameters"],
+  ["Memory", "Skills"],
+  ["Tools", "Workflow"],
+  ["Code"]
+];
+
+export function advanceEvolutionState({ stageIndex, targetIndex }) {
   const nextStageIndex = (stageIndex + 1) % EVOLUTION_STAGES.length;
 
   return {
     stageIndex: nextStageIndex,
-    componentIndex: nextStageIndex === 0
-      ? (componentIndex + 1) % EVOLUTION_COMPONENTS.length
-      : componentIndex
+    targetIndex: nextStageIndex === 0
+      ? (targetIndex + 1) % EVOLUTION_TARGETS.length
+      : targetIndex
   };
 }
