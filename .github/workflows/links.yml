@@ -25,9 +25,11 @@ jobs:
       - name: Check Markdown links
         uses: lycheeverse/lychee-action@v2
         with:
+          # The project URL is unavailable until the first Pages deployment.
           args: >-
             --no-progress
             --max-retries 2
             --timeout 20
+            --exclude '^https://yuxinglu613\.github\.io/awesome-agentic-evolution/?$'
             './**/*.md'
           fail: true
