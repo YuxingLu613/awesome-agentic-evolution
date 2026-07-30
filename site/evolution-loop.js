@@ -1,4 +1,5 @@
 export const STAGE_DWELL_MS = 1400;
+export const TRANSITION_DWELL_MS = 1500;
 export const OUTER_CADENCE = 7;
 
 export const EVOLUTION_STAGES = [

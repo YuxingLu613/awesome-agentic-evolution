@@ -105,6 +105,13 @@ test("presents one integrated inner-evolution and co-evolution simulator", () =>
   assert.match(index, /data-stage="assess"/);
   assert.match(index, /data-stage="revise"/);
   assert.match(index, /data-stage="retain"/);
+  assert.equal((index.match(/class="loop-arc"/g) ?? []).length, 4);
+  assert.equal((index.match(/class="transition-arc" data-transition=/g) ?? []).length, 4);
+  assert.equal((index.match(/class="transition-arc"[^>]*pathLength="1"/g) ?? []).length, 4);
+  assert.match(index, /data-transition="act-assess"/);
+  assert.match(index, /data-transition="assess-revise"/);
+  assert.match(index, /data-transition="revise-retain"/);
+  assert.match(index, /data-transition="retain-act"/);
   assert.match(index, /id="agent-version"/);
   assert.match(index, /aria-label="Six agent evolution target categories"/);
   assert.doesNotMatch(index, /mutually exclusive/);
@@ -128,9 +135,25 @@ test("presents one integrated inner-evolution and co-evolution simulator", () =>
   assert.match(index, /id="agent-verdict"[^>]*aria-live="polite"/);
   assert.match(index, /class="governance-lines"/);
   assert.match(index, /class="writeback-arrow"/);
+  assert.match(index, /class="writeback-reject-icon" viewBox="0 0 32 28"/);
+  assert.match(
+    index,
+    /d="M6 22 H20 C25\.5 22 28 18\.5 28 14 C28 9\.5 25\.5 6 20 6 H6"/
+  );
+  assert.match(index, /d="M10 2 L6 6 L10 10"/);
+  assert.doesNotMatch(index, /↶/);
   assert.match(index, /viewBox="0 0 600 480" preserveAspectRatio="xMidYMid meet"/);
   assert.doesNotMatch(index, /preserveAspectRatio="none"/);
-  assert.match(index, /markerWidth="6" markerHeight="6"/);
+  assert.match(
+    index,
+    /id="loop-arrow" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" overflow="visible"/
+  );
+  assert.match(
+    index,
+    /id="loop-arrow-active" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" overflow="visible"/
+  );
+  assert.equal((index.match(/<path d="M0,0 L0,10 L9,5 z"><\/path>/g) ?? []).length, 2);
+  assert.doesNotMatch(index, /M0,0 L0,8 L7\.5,4 z/);
   assert.match(index, /M300 90 A150 150 0 0 1 406\.07 133\.93 A150 150 0 0 1 450 240/);
   assert.match(index, /M150 240 A150 150 0 0 1 193\.93 133\.93 A150 150 0 0 1 300 90/);
   assert.match(index, /id="target-detail"[^>]*hidden/);
@@ -143,13 +166,31 @@ test("presents one integrated inner-evolution and co-evolution simulator", () =>
     /const reduceMotion = window\.matchMedia\("\(prefers-reduced-motion: reduce\)"\)\.matches/
   );
   assert.match(app, /let userPaused = reduceMotion/);
+  assert.match(app, /let visualPhase = "stage"/);
+  assert.match(
+    app,
+    /const transitionArcs = \[\.\.\.root\.querySelectorAll\("\[data-transition\]"\)\]/
+  );
+  assert.match(
+    app,
+    /node\.classList\.toggle\("is-active", active && visualPhase === "stage"\)/
+  );
+  assert.match(
+    app,
+    /const arriving = node\.dataset\.stage === nextStage\.id && visualPhase === "transition";/
+  );
+  assert.match(app, /node\.classList\.toggle\("is-arriving", arriving\)/);
+  assert.match(app, /const pendingState = advanceEvolutionState\(state\);/);
+  assert.match(app, /root\.dataset\.nextStage = pendingState\.stage;/);
+  assert.match(app, /root\.dataset\.nextVerdict = pendingState\.verdict \?\? "";/);
+  assert.match(
+    app,
+    /arc\.classList\.toggle\(\s*"is-transition-active",\s*visualPhase === "transition" && arc\.dataset\.transition === transitionId\s*\)/s
+  );
+  assert.match(app, /window\.setTimeout\(advanceVisualPhase, delay\)/);
   assert.doesNotMatch(app, /presetSelect|PRESETS|createEvolutionState\([^)]/);
   assert.doesNotMatch(app, /selectedTargetsCaption|#selected-targets|#coevolution-caption/);
   assert.match(app, /agentVerdict\.hidden/);
-  assert.match(
-    app,
-    /writebackArrow\.textContent = state\.verdict === "rejected" \? "↶" : "→"/
-  );
   assert.match(app, /event\.key === "Escape"/);
   assert.match(styles, /\.evolution-simulator/);
   assert.match(styles, /\.agent-panel/);
@@ -159,11 +200,102 @@ test("presents one integrated inner-evolution and co-evolution simulator", () =>
   assert.match(styles, /\.agent-verdict\.is-accepted/);
   assert.match(styles, /\.agent-verdict\.is-rejected/);
   assert.match(styles, /\.loop-stage\.is-active/);
+  assert.match(
+    styles,
+    /\.loop-stage\.is-active\s*{[^}]*color:\s*white;[^}]*background:\s*var\(--stage-active\);[^}]*transform:\s*translate\(-50%, -50%\) scale\(1\.08\);/s
+  );
+  assert.match(
+    styles,
+    /\.loop-stage\.is-active strong\s*{[^}]*font-weight:\s*var\(--fw-black\);/s
+  );
+  assert.match(
+    styles,
+    /\.hero-system\[data-stage="retain"\]\[data-verdict="accepted"\]\s*{[^}]*--retain-accent:\s*var\(--accept-accent\);/s
+  );
+  assert.match(
+    styles,
+    /\.hero-system\[data-stage="retain"\]\[data-verdict="rejected"\]\s*{[^}]*--retain-accent:\s*var\(--reject-accent\);/s
+  );
+  assert.match(
+    styles,
+    /\.hero-system\[data-stage="retain"\]\[data-visual-phase="stage"\] \.stage-retain\s*{[^}]*background:\s*var\(--retain-accent\);[^}]*border-color:\s*var\(--retain-accent\);/s
+  );
+  assert.match(
+    styles,
+    /\.hero-system\[data-stage="retain"\]\[data-visual-phase="stage"\] #evolution-stage\s*{[^}]*color:\s*var\(--retain-accent\);/s
+  );
+  assert.match(
+    styles,
+    /\.transition-arc\.is-transition-active\s*{[^}]*animation:\s*transition-flow 1500ms linear both;/s
+  );
+  assert.match(
+    styles,
+    /\.loop-arcs #loop-arrow-active path\s*{[^}]*fill:\s*var\(--stage-tone\);[^}]*opacity:\s*0;[^}]*transform-box:\s*fill-box;[^}]*transform-origin:\s*100% 50%;/s
+  );
+  assert.match(
+    styles,
+    /\.hero-system\[data-visual-phase="transition"\] \.loop-arcs #loop-arrow-active path\s*{[^}]*animation:\s*transition-arrow-arrival 1500ms linear both;/s
+  );
+  assert.match(
+    styles,
+    /@keyframes transition-arrow-arrival\s*{[\s\S]*?20%\s*{[^}]*fill:\s*var\(--stage-tone\);[^}]*opacity:\s*1;[^}]*transform:\s*scale\(1\);[\s\S]*?34%\s*{[^}]*fill:\s*var\(--stage-active\);[^}]*opacity:\s*1;[^}]*transform:\s*scale\(1\.32\);[\s\S]*?60%\s*{[^}]*fill:\s*var\(--stage-active\);[^}]*opacity:\s*1;[^}]*transform:\s*scale\(1\.32\);[\s\S]*?76%\s*{[^}]*fill:\s*color-mix\(in srgb, var\(--stage-active\) 68%, var\(--stage-tone\)\);[^}]*transform:\s*scale\(1\.22\);[\s\S]*?92%\s*{[^}]*fill:\s*color-mix\(in srgb, var\(--stage-active\) 24%, var\(--stage-tone\)\);[^}]*opacity:\s*0\.5;[^}]*transform:\s*scale\(1\.06\);[\s\S]*?100%\s*{[^}]*fill:\s*var\(--stage-tone\);[^}]*opacity:\s*0;[^}]*transform:\s*scale\(1\);/s
+  );
+  assert.match(
+    styles,
+    /@keyframes transition-flow\s*{[\s\S]*?53%\s*{[^}]*stroke-dashoffset:\s*0;[\s\S]*?60%\s*{[^}]*stroke-dashoffset:\s*0;[\s\S]*?76%\s*{[^}]*stroke:\s*color-mix\(in srgb, var\(--stage-active\) 68%, var\(--stage-tone\)\);[^}]*stroke-width:\s*2\.7;[\s\S]*?92%\s*{[^}]*stroke:\s*color-mix\(in srgb, var\(--stage-active\) 24%, var\(--stage-tone\)\);[^}]*stroke-width:\s*1\.8;[\s\S]*?100%\s*{[^}]*stroke-dashoffset:\s*-1;[^}]*stroke:\s*var\(--stage-tone\);[^}]*stroke-width:\s*1\.4;[^}]*opacity:\s*0;/s
+  );
+  assert.match(
+    styles,
+    /\.hero-system\[data-next-stage="retain"\]\[data-next-verdict="accepted"\]\s*{[^}]*--arrival-active:\s*var\(--accept-accent\);/s
+  );
+  assert.match(
+    styles,
+    /\.hero-system\[data-next-stage="retain"\]\[data-next-verdict="rejected"\]\s*{[^}]*--arrival-active:\s*var\(--reject-accent\);/s
+  );
+  assert.match(
+    styles,
+    /\.loop-stage\.is-arriving\s*{[^}]*animation:\s*stage-approach 1500ms linear both;/s
+  );
+  assert.match(
+    styles,
+    /@keyframes stage-approach\s*{[\s\S]*?48%\s*{[^}]*background:\s*var\(--sim-stage\);[\s\S]*?76%\s*{[^}]*background:\s*color-mix\(in srgb, var\(--arrival-active\) 10%, var\(--sim-stage\)\);[\s\S]*?100%\s*{[^}]*background:\s*color-mix\(in srgb, var\(--arrival-active\) 28%, var\(--sim-stage\)\);/s
+  );
+  assert.match(
+    styles,
+    /\.loop-stage\.is-active\s*{[^}]*animation:\s*stage-arrival 520ms cubic-bezier\(0\.22, 1, 0\.36, 1\) both;/s
+  );
+  assert.match(styles, /@keyframes stage-arrival\s*{/);
+  assert.match(
+    styles,
+    /@keyframes stage-arrival\s*{[\s\S]*?0%\s*{[^}]*background:\s*color-mix\(in srgb, var\(--node-active\) 28%, var\(--sim-stage\)\);[\s\S]*?100%\s*{[^}]*background:\s*var\(--node-active\);/s
+  );
+  assert.doesNotMatch(
+    styles,
+    /\.transition-arc\.is-transition-active\s*{[^}]*filter:\s*drop-shadow/s
+  );
+  assert.doesNotMatch(
+    styles,
+    /\.transition-arc\.is-transition-active\s*{[^}]*animation:[^;}]*infinite/s
+  );
+  assert.match(styles, /@keyframes transition-flow/);
   assert.match(styles, /\.ecosystem-node\.is-governing/);
   assert.match(styles, /\.ecosystem-node\.is-coevolving/);
   assert.match(styles, /@keyframes target-ripple/);
   assert.match(styles, /@keyframes accepted-write/);
   assert.match(styles, /@keyframes rejected-return/);
+  assert.match(
+    styles,
+    /\.writeback-reject-icon\s*{[^}]*display:\s*none;[^}]*width:\s*32px;[^}]*height:\s*28px;[^}]*fill:\s*none;[^}]*stroke:\s*currentColor;[^}]*stroke-linecap:\s*round;[^}]*stroke-linejoin:\s*round;/s
+  );
+  assert.match(
+    styles,
+    /\.hero-system\[data-stage="retain"\]\[data-verdict="rejected"\] \.writeback-reject-icon\s*{[^}]*display:\s*block;/s
+  );
+  assert.match(
+    styles,
+    /@keyframes writeback-rejected\s*{[\s\S]*?0%\s*{[^}]*transform:\s*translateY\(-50%\) scale\(0\.72\);[\s\S]*?100%\s*{[^}]*transform:\s*translateY\(-50%\) scale\(1\);/s
+  );
+  assert.doesNotMatch(app, /writebackArrow\.textContent/);
   assert.doesNotMatch(styles, /@keyframes orbit-signal/);
   assert.doesNotMatch(styles, /@keyframes coevolution-up/);
   assert.doesNotMatch(styles, /@keyframes coevolution-down/);
@@ -172,8 +304,15 @@ test("presents one integrated inner-evolution and co-evolution simulator", () =>
   assert.match(styles, /--outer-accent:\s*var\(--outer\);/);
   assert.match(styles, /--accept-accent:\s*var\(--accept\);/);
   assert.match(styles, /--reject-accent:\s*var\(--reject\);/);
-  assert.match(styles, /\.loop-arcs path\s*{[^}]*marker-mid:\s*url\("#loop-arrow"\);/s);
-  assert.match(styles, /\.loop-arcs path\s*{[^}]*stroke-width:\s*1\.4;/s);
+  assert.match(
+    styles,
+    /\.loop-arcs > \.loop-arc\s*{[^}]*marker-mid:\s*url\("#loop-arrow"\);[^}]*stroke-width:\s*1\.4;/s
+  );
+  assert.match(
+    styles,
+    /\.loop-arcs > \.transition-arc\s*{[^}]*stroke-dasharray:\s*1;[^}]*stroke-dashoffset:\s*1;[^}]*opacity:\s*0;/s
+  );
+  assert.doesNotMatch(styles, /\.loop-arcs path\s*{/);
   assert.match(styles, /\.evolution-simulator \.stage-act\s*{[^}]*top:\s*18\.75%;/s);
   assert.match(styles, /\.evolution-simulator \.stage-revise\s*{[^}]*top:\s*81\.25%;/s);
   assert.match(styles, /\.evolution-simulator \.stage-assess\s*{[^}]*top:\s*50%;[^}]*left:\s*75%;/s);
@@ -186,6 +325,10 @@ test("presents one integrated inner-evolution and co-evolution simulator", () =>
   assert.doesNotMatch(styles, /calc\(25% - 36px\)/);
   assert.match(styles, /\.ecosystem-node\s*{[^}]*min-width:\s*var\(--node-w\);/s);
   assert.match(styles, /\.agent-panel\s*{[^}]*width:\s*var\(--panel-w\);[^}]*top:\s*50%;/s);
+  assert.match(styles, /\.agent-panel\s*{[^}]*padding:\s*0\.44rem 0\.58rem;/s);
+  assert.match(styles, /\.agent-panel header\s*{[^}]*margin-bottom:\s*0\.28rem;/s);
+  assert.match(styles, /\.component-list\s*{[^}]*gap:\s*2px;/s);
+  assert.match(styles, /\.component-row\s*{[^}]*min-height:\s*26px;/s);
   assert.match(styles, /\.component-row span\s*{[^}]*font-size:\s*var\(--fs-sm\);/s);
   assert.match(
     styles,
@@ -193,11 +336,19 @@ test("presents one integrated inner-evolution and co-evolution simulator", () =>
   );
   assert.match(
     styles,
-    /\.hero-system\[data-stage="retain"\]\[data-verdict="accepted"\] \.writeback-arrow\s*{[^}]*visibility:\s*visible;[^}]*opacity:\s*1;[^}]*animation:\s*writeback-accepted/s
+    /\.hero-system\[data-stage="retain"\]\[data-visual-phase="stage"\]\[data-verdict="accepted"\] \.writeback-arrow\s*{[^}]*visibility:\s*visible;[^}]*opacity:\s*1;[^}]*animation:\s*writeback-accepted/s
   );
   assert.match(
     styles,
-    /\.hero-system\[data-stage="retain"\]\[data-verdict="rejected"\] \.writeback-arrow\s*{[^}]*color:\s*var\(--reject-accent\);[^}]*animation:\s*writeback-rejected/s
+    /\.hero-system\[data-stage="retain"\]\[data-verdict="rejected"\] \.writeback-arrow\s*{[^}]*width:\s*32px;[^}]*height:\s*28px;[^}]*color:\s*var\(--reject-accent\);[^}]*background:\s*transparent;/s
+  );
+  assert.match(
+    styles,
+    /\.hero-system\[data-stage="retain"\]\[data-visual-phase="stage"\]\[data-verdict="rejected"\] \.writeback-arrow\s*{[^}]*visibility:\s*visible;[^}]*opacity:\s*1;[^}]*animation:\s*writeback-rejected/s
+  );
+  assert.match(
+    styles,
+    /\.hero-system\[data-stage="retain"\]\[data-visual-phase="transition"\]\[data-verdict\] \.writeback-arrow\s*{[^}]*visibility:\s*visible;[^}]*opacity:\s*0;[^}]*animation:\s*none;/s
   );
   assert.match(
     styles,
@@ -210,7 +361,7 @@ test("presents one integrated inner-evolution and co-evolution simulator", () =>
   assert.doesNotMatch(styles, /\.hero-system\[data-verdict="rejected"\] \.writeback-arrow/);
   assert.match(styles, /\.simulator-canvas::before\s*{[^}]*border:\s*1px dashed/s);
   assert.match(styles, /\.evolution-simulator\s*{[^}]*background:\s*transparent;[^}]*border:\s*0;/s);
-  assert.match(styles, /\.hero-system\s*{[^}]*border:\s*0;/s);
+  assert.match(styles, /\.hero-system\s*{[^}]*border:\s*1px solid var\(--line\);/s);
   assert.doesNotMatch(styles, /--system-surface:\s*#(?:101a2e|111827);/);
   assert.match(styles, /\.simulator-canvas\s*{[^}]*aspect-ratio:\s*600 \/ 480;/s);
   assert.match(styles, /\.simulator-canvas\s*{[^}]*--panel-w:/s);
@@ -218,27 +369,78 @@ test("presents one integrated inner-evolution and co-evolution simulator", () =>
   assert.match(styles, /prefers-reduced-motion:\s*reduce/);
 });
 
-test("uses a neutral editorial shell and reserves semantic colors for the figure", () => {
+test("uses the Graphite Plum living-system shell and reserves semantic colors for the figure", () => {
   const index = readProjectFile("site/index.html");
   const styles = readProjectFile("site/styles.css");
 
-  assert.match(index, /name="theme-color" content="#f5f6f7"/);
-  assert.match(styles, /--paper:\s*#f5f6f7;/);
-  assert.match(styles, /--paper-deep:\s*#eceff1;/);
-  assert.match(styles, /--ink:\s*#172033;/);
-  assert.match(styles, /--accent:\s*#b56d46;/);
+  assert.match(index, /name="theme-color" content="#f5f4f7"/);
+  assert.match(
+    index,
+    /<span class="brand-mark" aria-hidden="true">\s*<svg class="brand-evolution-loops" viewBox="0 0 52 52">[\s\S]*?class="brand-loop brand-loop-inner"[\s\S]*?class="brand-loop-signal brand-loop-signal-inner"[\s\S]*?class="brand-loop brand-loop-outer"[\s\S]*?class="brand-loop-signal brand-loop-signal-outer"[\s\S]*?class="brand-agent-core"[\s\S]*?<\/svg>\s*<\/span>/s
+  );
+  assert.match(
+    index,
+    /<span class="brand-copy">\s*<strong>Agentic Evolution<\/strong>\s*<small>Field guide to evolving agents<\/small>/s
+  );
+  assert.match(index, /<div class="hero-statement">[\s\S]*?<div class="hero-support">/s);
+  assert.doesNotMatch(index, /class="brand-mark"[^>]*>AE</);
+  assert.doesNotMatch(index, /brand-core/);
+  assert.match(styles, /--paper:\s*#f5f4f7;/);
+  assert.match(styles, /--paper-deep:\s*#ece9ef;/);
+  assert.match(styles, /--ink:\s*#202027;/);
+  assert.match(styles, /--ink-soft:\s*#696671;/);
+  assert.match(styles, /--accent:\s*#854f7d;/);
+  assert.match(styles, /--inner:\s*#6659c7;/);
+  assert.match(styles, /--outer:\s*#39766c;/);
+  assert.match(styles, /--fs-display:\s*clamp\(2\.85rem,\s*5\.2vw,\s*4\.8rem\);/);
+  assert.doesNotMatch(styles, /#(?:b56d46|d39b7b|f4e7df)/i);
+  assert.match(
+    styles,
+    /\.brand-mark\s*{[^}]*position:\s*relative;[^}]*width:\s*52px;[^}]*color:\s*var\(--accent\);/s
+  );
+  assert.match(
+    styles,
+    /\.brand-evolution-loops\s*{[^}]*display:\s*block;[^}]*width:\s*100%;[^}]*height:\s*100%;/s
+  );
+  assert.match(
+    styles,
+    /\.brand-loop-inner\s*{[^}]*opacity:\s*0\.42;/s
+  );
+  assert.match(
+    styles,
+    /\.brand-loop-outer\s*{[^}]*opacity:\s*0\.22;/s
+  );
+  assert.match(
+    styles,
+    /\.brand-agent-core\s*{[^}]*fill:\s*currentColor;/s
+  );
+  assert.equal((index.match(/class="brand-stage-tick"/g) ?? []).length, 4);
+  assert.doesNotMatch(index, /brand-version-/);
+  assert.match(
+    styles,
+    /\.brand strong\s*{[^}]*font-family:\s*var\(--font-sans\);[^}]*font-weight:\s*var\(--fw-bold\);/s
+  );
+  assert.match(styles, /\.contribute-panel\s*{[^}]*background:\s*var\(--ink\);/s);
+  assert.match(styles, /\.target-card\s*{[^}]*background:\s*var\(--surface\);/s);
   assert.match(styles, /body\s*{[^}]*background:\s*var\(--paper\);/s);
   assert.match(styles, /h1\s*{[^}]*font-size:\s*var\(--fs-display\);/s);
   assert.match(
     styles,
     /@media \(max-width:\s*680px\)\s*{[\s\S]*?h1\s*{[^}]*font-size:\s*var\(--fs-h1\);/
   );
-  assert.match(styles, /h1 em\s*{[^}]*color:\s*inherit;/s);
+  assert.match(styles, /h1\s*{[^}]*line-height:\s*1\.08;/s);
+  assert.match(styles, /h1 em\s*{[^}]*color:\s*var\(--accent\);/s);
   assert.match(
     styles,
-    /\.hero\s*{[^}]*grid-template-columns:\s*minmax\(0,\s*0\.9fr\) minmax\(0,\s*1\.1fr\);[^}]*align-items:\s*center;/s
+    /\.hero\s*{[^}]*grid-template-columns:\s*1fr;[^}]*gap:\s*0;/s
   );
-  assert.match(styles, /\.hero-copy\s*{[^}]*justify-content:\s*center;/s);
+  assert.match(
+    styles,
+    /\.hero-copy\s*{[^}]*grid-template-columns:\s*minmax\(0,\s*1\.15fr\) minmax\(320px,\s*0\.85fr\);[^}]*align-items:\s*start;/s
+  );
+  assert.match(styles, /\.hero-system\s*{[^}]*box-shadow:\s*none;/s);
+  assert.match(styles, /\.simulator-canvas\s*{[^}]*max-width:\s*720px;/s);
+  assert.match(styles, /\.metrics-section\s*{[^}]*border-radius:\s*0;[^}]*box-shadow:\s*none;/s);
   // the ring survives on phones instead of collapsing into a list
   assert.match(styles, /@media \(max-width:\s*560px\)\s*{[\s\S]*?aspect-ratio:\s*600 \/ 700;/);
   assert.match(
@@ -293,8 +495,9 @@ test("routes every visual value through the design tokens", () => {
   assert.ok(sizes.size <= 11, `expected <= 11 font sizes, got ${sizes.size}`);
   assert.deepEqual(body.match(/font-size:\s*0\.[0-5]?[0-9]*rem/g) ?? [], []);
 
-  // three meaningful hues only: blue is not one of them
-  assert.doesNotMatch(styles, /49,\s*95,\s*203/);
+  // the plum brand stays distinct from the inner and outer evolution semantics
+  assert.match(styles, /--inner:\s*#6659c7;/);
+  assert.match(styles, /--accent:\s*#854f7d;/);
   assert.match(styles, /--inner:/);
   assert.match(styles, /--outer:/);
   assert.match(styles, /--accent:/);
@@ -306,4 +509,24 @@ test("routes every visual value through the design tokens", () => {
   ]) {
     assert.ok(!styles.includes(dead), `dead selector still present: ${dead}`);
   }
+});
+
+test("animates inner evolution each cycle and co-evolution at one seventh speed", () => {
+  const styles = readProjectFile("site/styles.css");
+
+  assert.match(
+    styles,
+    /\.brand-loop-signal-inner\s*{[^}]*animation:\s*brand-inner-cycle 3200ms linear infinite;/s
+  );
+  assert.match(
+    styles,
+    /\.brand-loop-signal-outer\s*{[^}]*animation:\s*brand-outer-cycle 22400ms linear infinite;/s
+  );
+  assert.match(styles, /@keyframes brand-inner-cycle/);
+  assert.match(styles, /@keyframes brand-outer-cycle/);
+  assert.doesNotMatch(styles, /brand-version-rise|brand-signal-run|brand-branch-breathe|brand-return-breathe|brand-node-pulse/);
+  assert.match(
+    styles,
+    /@media \(prefers-reduced-motion:\s*reduce\)[\s\S]*?\.brand-loop-signal\s*{[^}]*animation:\s*none;/s
+  );
 });
