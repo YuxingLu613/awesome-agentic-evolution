@@ -1,12 +1,16 @@
 import {
   EVOLUTION_STAGES,
-  EVOLUTION_TARGETS,
-  advanceEvolutionState
+  GOVERNANCE,
+  INNER_TARGETS,
+  OUTER_TARGETS,
+  STAGE_DWELL_MS,
+  advanceEvolutionState,
+  createEvolutionState,
+  formatEvolutionCount
 } from "./evolution-loop.js";
 
 const REPOSITORY_URL = "https://github.com/YuxingLu613/awesome-agentic-evolution";
 const numberFormat = new Intl.NumberFormat("en", { notation: "compact" });
-const LOOP_INTERVAL_MS = 800;
 
 function setMetric(name, value) {
   const node = document.querySelector(`[data-metric="${name}"]`);
@@ -162,11 +166,21 @@ function initEvolutionLoop() {
   if (!root || !control) return;
 
   const stageNodes = [...root.querySelectorAll("[data-stage]")];
-  const componentNodes = [...root.querySelectorAll("[data-component]")];
+  const innerNodes = [...root.querySelectorAll("[data-inner-target]")];
+  const outerNodes = [...root.querySelectorAll("[data-outer-target]")];
+  const governanceLines = [...root.querySelectorAll("[data-governs-stage]")];
+  const targetDetail = root.querySelector("#target-detail");
+  const agentVerdict = root.querySelector("#agent-verdict");
+  const writebackArrow = root.querySelector("#writeback-arrow");
+  const detailButtons = [...innerNodes, ...outerNodes];
+  const targetDetails = new Map(
+    [...INNER_TARGETS, ...OUTER_TARGETS].map((target) => [target.id, target])
+  );
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let state = { stageIndex: 0, targetIndex: 0 };
+  let state = createEvolutionState();
   let userPaused = reduceMotion;
-  let pointerPaused = false;
+  let detailTarget = null;
+  let resumeAfterDetail = false;
   let timer = null;
 
   function setText(selector, value) {
@@ -174,28 +188,137 @@ function initEvolutionLoop() {
     if (node) node.textContent = value;
   }
 
+  function setCounter(node, count) {
+    if (!node) return;
+    const label = formatEvolutionCount(count);
+    node.textContent = label;
+    node.classList.toggle("has-count", Boolean(label));
+  }
+
+  function targetLabel(targetIds, separator = " + ") {
+    return targetIds
+      .map((id) => targetDetails.get(id)?.label ?? id)
+      .join(separator);
+  }
+
+  function verdictCaption() {
+    if (state.stage === "assess") return "Assessing outcomes against objectives and evaluators";
+    if (state.stage === "revise") return `candidate: ${targetLabel(state.candidates)}`;
+    if (state.stage === "retain" && state.verdict === "accepted") {
+      return `accepted: ${targetLabel(state.lastTargets)} · retained in Agent v${state.version}`;
+    }
+    if (state.stage === "retain" && state.verdict === "rejected") {
+      return `rejected: ${targetLabel(state.lastTargets)} · Agent v${state.version} unchanged`;
+    }
+    return "Acting with the current agent configuration";
+  }
+
+  function renderDetail() {
+    const details = detailTarget ? targetDetails.get(detailTarget) : null;
+    root.classList.toggle("has-target-focus", Boolean(details));
+    if (targetDetail) targetDetail.hidden = !details;
+
+    detailButtons.forEach((node) => {
+      const nodeTarget = node.dataset.innerTarget ?? node.dataset.outerTarget;
+      node.classList.toggle("is-focused", nodeTarget === detailTarget);
+      node.classList.toggle("is-dimmed", Boolean(details) && nodeTarget !== detailTarget);
+    });
+
+    setText("#detail-label", details?.label ?? "Click any component or co-evolution factor");
+    setText(
+      "#detail-criterion",
+      details?.criterion ?? "The animation pauses while its definition and examples are open."
+    );
+    setText(
+      "#detail-systems",
+      details ? `Representative systems · ${details.systems.join(" · ")}` : ""
+    );
+  }
+
+  function renderVerdict() {
+    const visible = state.stage === "retain" && Boolean(state.verdict);
+    if (agentVerdict) {
+      agentVerdict.hidden = !visible;
+      agentVerdict.classList.toggle("is-accepted", state.verdict === "accepted");
+      agentVerdict.classList.toggle("is-rejected", state.verdict === "rejected");
+      agentVerdict.textContent =
+        state.verdict === "accepted"
+          ? "✓ Accepted"
+          : state.verdict === "rejected"
+            ? "× Rejected"
+            : "";
+    }
+    if (writebackArrow) {
+      writebackArrow.textContent = state.verdict === "rejected" ? "↶" : "→";
+    }
+  }
+
   function renderEvolution({ announce = false } = {}) {
-    const stage = EVOLUTION_STAGES[state.stageIndex];
-    const target = EVOLUTION_TARGETS[state.targetIndex];
-    const targetLabel = target.join(" + ");
+    const stage = EVOLUTION_STAGES.find(({ id }) => id === state.stage);
+    const governingTargets = GOVERNANCE[state.stage];
 
-    stageNodes.forEach((node, index) => {
-      node.classList.toggle("is-active", index === state.stageIndex);
-    });
-    componentNodes.forEach((node) => {
-      node.classList.toggle("is-active", target.includes(node.dataset.component));
+    stageNodes.forEach((node) => {
+      const active = node.dataset.stage === state.stage;
+      node.classList.toggle("is-active", active);
+      if (active) node.setAttribute("aria-current", "step");
+      else node.removeAttribute("aria-current");
     });
 
-    root.dataset.stage = stage.id;
-    root.dataset.components = target.join(",").toLowerCase();
-    setText("#evolution-component", targetLabel);
+    innerNodes.forEach((node) => {
+      const target = node.dataset.innerTarget;
+      const candidate = state.candidates.includes(target);
+      const written =
+        state.stage === "retain" &&
+        state.verdict === "accepted" &&
+        state.lastTargets.includes(target);
+      node.classList.toggle("is-candidate", candidate);
+      node.classList.toggle("is-written", written);
+      node.classList.toggle(
+        "is-rejected",
+        state.stage === "retain" &&
+          state.verdict === "rejected" &&
+          state.lastTargets.includes(target)
+      );
+      setCounter(node.querySelector("[data-inner-count]"), state.retained[target]);
+      node.setAttribute(
+        "aria-label",
+        `${targetDetails.get(target).label}, retained ${state.retained[target]} times`
+      );
+    });
+
+    outerNodes.forEach((node) => {
+      const target = node.dataset.outerTarget;
+      const governing = governingTargets.includes(target) && state.coEvolving !== target;
+      node.classList.toggle("is-governing", governing);
+      node.classList.toggle("is-coevolving", state.coEvolving === target);
+      setCounter(node.querySelector("[data-outer-count]"), state.outerRetained[target]);
+      node.setAttribute(
+        "aria-label",
+        `${targetDetails.get(target).label}, retained ${state.outerRetained[target]} co-evolution changes`
+      );
+    });
+
+    governanceLines.forEach((line) => {
+      const active =
+        line.dataset.governsStage === state.stage &&
+        line.dataset.governsTarget !== state.coEvolving;
+      line.classList.toggle("is-active", active);
+    });
+
+    root.dataset.stage = state.stage;
+    root.dataset.verdict = state.verdict ?? "";
+    root.dataset.cycle = String(state.cycle);
+    setText("#agent-version", `v${state.version}`);
+    setText("#iteration-count", String(state.cycle + 1).padStart(2, "0"));
     setText("#evolution-stage", stage.label);
     setText("#evolution-detail", stage.detail);
+    renderVerdict();
+    renderDetail();
 
     if (announce) {
       root.querySelector("#evolution-status")?.setAttribute(
         "aria-label",
-        `${stage.label} ${targetLabel}: ${stage.detail}`
+        `${stage.label}: ${stage.detail}. ${verdictCaption()}.`
       );
     }
   }
@@ -206,25 +329,50 @@ function initEvolutionLoop() {
   }
 
   function syncPlayback() {
-    const paused = userPaused || pointerPaused || document.hidden;
+    const paused = userPaused || Boolean(detailTarget) || document.hidden;
     window.clearInterval(timer);
-    timer = paused ? null : window.setInterval(tick, LOOP_INTERVAL_MS);
+    timer = paused ? null : window.setInterval(tick, STAGE_DWELL_MS);
+    state = { ...state, running: !paused };
     control.setAttribute("aria-pressed", String(userPaused));
     control.querySelector("b").textContent = userPaused ? "Play" : "Pause";
     root.classList.toggle("is-paused", paused);
   }
 
   control.addEventListener("click", () => {
+    if (detailTarget) {
+      detailTarget = null;
+      resumeAfterDetail = false;
+      renderDetail();
+    }
     userPaused = !userPaused;
     syncPlayback();
   });
-  root.addEventListener("mouseenter", () => {
-    pointerPaused = true;
-    syncPlayback();
+
+  detailButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selected = button.dataset.innerTarget ?? button.dataset.outerTarget;
+      if (detailTarget === selected) {
+        detailTarget = null;
+        if (resumeAfterDetail) userPaused = false;
+        resumeAfterDetail = false;
+      } else {
+        if (!detailTarget) resumeAfterDetail = !userPaused;
+        detailTarget = selected;
+        userPaused = true;
+      }
+      renderDetail();
+      syncPlayback();
+    });
   });
-  root.addEventListener("mouseleave", () => {
-    pointerPaused = false;
-    syncPlayback();
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && detailTarget) {
+      detailTarget = null;
+      if (resumeAfterDetail) userPaused = false;
+      resumeAfterDetail = false;
+      renderDetail();
+      syncPlayback();
+    }
   });
   document.addEventListener("visibilitychange", syncPlayback);
 

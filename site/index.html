@@ -7,7 +7,7 @@
       name="description"
       content="A living map of self-improving agents, co-evolution, and open-ended agent ecosystems."
     >
-    <meta name="theme-color" content="#17231d">
+    <meta name="theme-color" content="#f5f6f7">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Awesome Agentic Evolution">
     <meta
@@ -23,6 +23,12 @@
     <meta name="twitter:image" content="https://yuxinglu613.github.io/awesome-agentic-evolution/og.jpg">
     <title>Awesome Agentic Evolution — Living Research Dashboard</title>
     <link rel="canonical" href="https://yuxinglu613.github.io/awesome-agentic-evolution/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+    >
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
@@ -70,63 +76,131 @@
           </p>
         </div>
 
-        <div class="hero-system" aria-label="Agentic evolution loop">
+        <div
+          class="hero-system"
+          data-stage="act"
+          aria-label="Interactive agent evolution and co-evolution simulator"
+        >
           <div class="system-header">
-            <div class="system-label">Persistent improvement loop</div>
+            <div class="system-heading">
+              <div class="system-label">Persistent agent evolution</div>
+              <p class="loop-status" id="evolution-status" aria-live="polite">
+                <span class="status-iteration">Iteration <strong id="iteration-count">01</strong></span>
+                <span class="status-separator" aria-hidden="true">·</span>
+                <strong id="evolution-stage">Act</strong>
+                <span class="status-separator" aria-hidden="true">—</span>
+                <span id="evolution-detail">Agent acts in the current environment</span>
+              </p>
+            </div>
             <button id="loop-control" type="button" aria-pressed="false">
               <span aria-hidden="true"></span>
               <b>Pause</b>
             </button>
           </div>
 
-          <div class="loop-diagram">
-            <div class="loop-orbit" aria-hidden="true">
-              <span></span>
-            </div>
-            <div class="agent-core">
-              <span>Agent</span>
-              <small id="evolution-component">Parameters</small>
-            </div>
-            <ol class="loop-stages">
-              <li class="loop-stage stage-observe is-active" data-stage="observe">
-              <strong>Observe</strong>
-              <small>Signals & traces</small>
-              </li>
-              <li class="loop-stage stage-reflect" data-stage="reflect">
-              <strong>Reflect</strong>
-              <small>Distill experience</small>
-              </li>
-              <li class="loop-stage stage-modify" data-stage="modify">
-              <strong>Modify</strong>
-              <small>Update the agent</small>
-              </li>
-              <li class="loop-stage stage-evaluate" data-stage="evaluate">
-              <strong>Evaluate</strong>
-              <small>Test & compare</small>
-              </li>
-              <li class="loop-stage stage-retain" data-stage="retain">
-              <strong>Retain</strong>
-              <small>Keep what works</small>
-              </li>
-            </ol>
+          <div class="simulator-timing" aria-hidden="true">
+            <span><i class="legend-inner"></i>Inner evolution · every iteration</span>
+            <span><i class="legend-outer"></i>Co-evolution · every 7 iterations</span>
           </div>
 
-          <div class="component-strip" aria-label="Evolvable agent components">
-            <span>Components</span>
-            <div class="component-chips">
-              <span class="component-chip is-active" data-component="Parameters">Parameters</span>
-              <span class="component-chip" data-component="Memory">Memory</span>
-              <span class="component-chip" data-component="Skills">Skills</span>
-              <span class="component-chip" data-component="Tools">Tools</span>
-              <span class="component-chip" data-component="Workflow">Workflow</span>
-              <span class="component-chip" data-component="Code">Code</span>
-            </div>
-          </div>
+          <div class="evolution-simulator" aria-describedby="evolution-status">
+            <div class="simulator-canvas">
+              <svg class="loop-arcs" viewBox="0 0 600 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <defs>
+                  <marker id="loop-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                    <path d="M0,0 L0,6 L5.5,3 z"></path>
+                  </marker>
+                </defs>
+                <path d="M300 90 A150 150 0 0 1 406.07 133.93 A150 150 0 0 1 450 240"></path>
+                <path d="M450 240 A150 150 0 0 1 406.07 346.07 A150 150 0 0 1 300 390"></path>
+                <path d="M300 390 A150 150 0 0 1 193.93 346.07 A150 150 0 0 1 150 240"></path>
+                <path d="M150 240 A150 150 0 0 1 193.93 133.93 A150 150 0 0 1 300 90"></path>
+              </svg>
 
-          <p class="loop-status" id="evolution-status" aria-live="polite">
-            <strong id="evolution-stage">Observe</strong>
-            <span id="evolution-detail">Signals & traces</span>
-          </p>
+              <svg class="governance-lines" viewBox="0 0 600 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <line data-governs-stage="act" data-governs-target="environment" x1="300" y1="44" x2="300" y2="67"></line>
+                <line data-governs-stage="assess" data-governs-target="objectives" x1="508" y1="160" x2="488" y2="218"></line>
+                <line data-governs-stage="assess" data-governs-target="evaluators" x1="508" y1="322" x2="488" y2="262"></line>
+                <line data-governs-stage="revise" data-governs-target="mechanism" x1="300" y1="436" x2="300" y2="412"></line>
+                <line data-governs-stage="retain" data-governs-target="population" x1="95" y1="240" x2="113" y2="240"></line>
+              </svg>
+
+              <ol class="stage-nodes" aria-label="Improvement stages">
+                <li class="loop-stage stage-act is-active" data-stage="act">
+                  <strong>Act</strong>
+                </li>
+                <li class="loop-stage stage-assess" data-stage="assess">
+                  <strong>Assess</strong>
+                </li>
+                <li class="loop-stage stage-revise" data-stage="revise">
+                  <strong>Revise</strong>
+                </li>
+                <li class="loop-stage stage-retain" data-stage="retain">
+                  <strong>Retain</strong>
+                </li>
+              </ol>
+
+              <button class="ecosystem-node target-button outer-environment is-governing" type="button" data-outer-target="environment">
+                <span><strong>Environment</strong><small>Task supply</small></span>
+                <b class="retained-badge" data-outer-count="environment"></b>
+              </button>
+              <button class="ecosystem-node target-button outer-objectives" type="button" data-outer-target="objectives">
+                <span><strong>Objectives</strong><small>The criterion</small></span>
+                <b class="retained-badge" data-outer-count="objectives"></b>
+              </button>
+              <button class="ecosystem-node target-button outer-evaluators" type="button" data-outer-target="evaluators">
+                <span><strong>Evaluators</strong><small>The judge</small></span>
+                <b class="retained-badge" data-outer-count="evaluators"></b>
+              </button>
+              <button class="ecosystem-node target-button outer-mechanism" type="button" data-outer-target="mechanism">
+                <span><strong>Mechanism</strong><small>How it varies</small></span>
+                <b class="retained-badge" data-outer-count="mechanism"></b>
+              </button>
+              <button class="ecosystem-node target-button outer-population" type="button" data-outer-target="population">
+                <span><strong>Population</strong><small>Who persists</small></span>
+                <b class="retained-badge" data-outer-count="population"></b>
+              </button>
+
+              <section class="agent-panel" aria-label="Six agent evolution target categories">
+                <header>
+                  <span>Agent</span>
+                  <div class="agent-state">
+                    <strong id="agent-version">v1</strong>
+                    <b id="agent-verdict" class="agent-verdict" aria-live="polite" hidden></b>
+                  </div>
+                </header>
+                <div class="component-list">
+                  <button class="component-row target-button" style="--row-index: 0" type="button" data-inner-target="parameters">
+                    <span>Parameters</span><b class="retained-badge" data-inner-count="parameters"></b>
+                  </button>
+                  <button class="component-row target-button" style="--row-index: 1" type="button" data-inner-target="memory">
+                    <span>Memory</span><b class="retained-badge" data-inner-count="memory"></b>
+                  </button>
+                  <button class="component-row target-button" style="--row-index: 2" type="button" data-inner-target="knowledge">
+                    <span>Knowledge</span><b class="retained-badge" data-inner-count="knowledge"></b>
+                  </button>
+                  <button class="component-row target-button" style="--row-index: 3" type="button" data-inner-target="skills">
+                    <span>Skills</span><b class="retained-badge" data-inner-count="skills"></b>
+                  </button>
+                  <button class="component-row target-button" style="--row-index: 4" type="button" data-inner-target="tools">
+                    <span>Tools</span><b class="retained-badge" data-inner-count="tools"></b>
+                  </button>
+                  <button class="component-row target-button" style="--row-index: 5" type="button" data-inner-target="topology">
+                    <span>Topology</span><b class="retained-badge" data-inner-count="topology"></b>
+                  </button>
+                </div>
+              </section>
+
+              <span class="writeback-arrow" id="writeback-arrow" aria-hidden="true">→</span>
+            </div>
+
+            <aside id="target-detail" class="target-detail" aria-live="polite" hidden>
+              <span>Inspect a target</span>
+              <strong id="detail-label">Click any component or co-evolution factor</strong>
+              <p id="detail-criterion">The animation pauses while its definition and examples are open.</p>
+              <small id="detail-systems"></small>
+            </aside>
+          </div>
         </div>
       </section>
 
