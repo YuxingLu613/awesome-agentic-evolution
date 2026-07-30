@@ -36,6 +36,10 @@ function renderLandscape(targets) {
     card.append(createElement("h3", "", target.label));
     card.append(createElement("p", "", target.description));
 
+    if (!target.count && target.note) {
+      card.append(createElement("p", "target-note", target.note));
+    }
+
     if (target.highlights.length) {
       const links = createElement("ul", "target-links");
       target.highlights.forEach((resource) => {

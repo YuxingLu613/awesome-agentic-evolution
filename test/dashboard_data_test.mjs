@@ -342,3 +342,61 @@ test("builds a self-contained GitHub Pages artifact without invoking Jekyll", as
   assert.equal(JSON.parse(data).summary.totalResources, snapshot.summary.totalResources);
   assert.equal(noJekyll, "");
 });
+
+test("separates manuscript gates from work items and keeps coverage-gap notes", () => {
+  const readme = `
+## Resource Map
+
+### Parameters
+
+- [STaR](https://arxiv.org/abs/2203.14465) — Iterative rationale training.
+  **Targets:** Parameters.
+
+### Knowledge
+
+No current entry cleanly demonstrates persistent knowledge updates.
+This is a documented coverage gap.
+
+## Benchmarks
+`;
+  const roadmap = `
+## Phase 1 — Foundation
+
+Build the base.
+
+- Publish the call.
+
+## Phase 2 — Survey
+
+Write only after gates are met.
+
+Start a manuscript only when:
+
+- entries have been verified;
+- the taxonomy has remained stable.
+`;
+  const snapshot = buildRepositorySnapshot({
+    readme,
+    changelog: "### Field updates\n\n- Entry one.\n",
+    roadmap,
+    github: null,
+    generatedAt: "2026-01-01T00:00:00.000Z"
+  });
+
+  const knowledge = snapshot.landscape.find((target) => target.id === "knowledge");
+  assert.equal(knowledge.count, 0);
+  assert.match(knowledge.note, /documented coverage gap/);
+
+  const parameters = snapshot.landscape.find((target) => target.id === "parameters");
+  assert.equal(parameters.count, 1);
+  assert.equal(parameters.note, undefined);
+
+  const [phase1, phase2] = snapshot.roadmap;
+  assert.deepEqual(phase1.items, ["Publish the call."]);
+  assert.deepEqual(phase1.gates, []);
+  assert.deepEqual(phase2.items, []);
+  assert.deepEqual(phase2.gates, [
+    "entries have been verified;",
+    "the taxonomy has remained stable."
+  ]);
+});

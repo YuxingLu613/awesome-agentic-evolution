@@ -62,9 +62,11 @@ function resourceKey(title) {
 function extractResourceEntries(markdown) {
   const entries = [];
   const entriesByTitle = new Map();
+  const notes = new Map();
   let current = null;
   let currentIsDuplicate = false;
   let primaryTarget = null;
+  let currentNoteTarget = null;
   let inCatalog = false;
 
   for (const line of markdown.split("\n")) {
@@ -78,6 +80,7 @@ function extractResourceEntries(markdown) {
     const section = line.match(/^###\s+(.+?)\s*$/);
     if (section) {
       primaryTarget = resolveTargetId(section[1]) ?? null;
+      currentNoteTarget = primaryTarget;
       current = null;
       continue;
     }
@@ -121,13 +124,25 @@ function extractResourceEntries(markdown) {
     if (current && !currentIsDuplicate && /^\s{2,}\S/.test(line)) {
       const continuation = line.trim().replace(/^—\s*/, "");
       current.description = `${current.description} ${continuation}`.trim();
-    } else if (/^-\s/.test(line) || /^#{2,}\s/.test(line) || line.trim() === "") {
+      continue;
+    }
+    if (/^-\s/.test(line) || /^#{2,}\s/.test(line)) {
       current = null;
       currentIsDuplicate = false;
+      continue;
+    }
+    if (line.trim() === "") {
+      current = null;
+      currentIsDuplicate = false;
+      continue;
+    }
+    if (currentNoteTarget && !current && /^\S/.test(line)) {
+      const note = notes.get(currentNoteTarget) ?? "";
+      notes.set(currentNoteTarget, `${note} ${line.trim()}`.trim());
     }
   }
 
-  return entries;
+  return { entries, notes };
 }
 
 function extractFieldUpdates(markdown) {
@@ -163,15 +178,17 @@ function extractRoadmap(markdown) {
   const phases = [];
   let current = null;
   let currentItem = null;
+  let currentList = [];
   let summaryStarted = false;
   let summaryComplete = false;
 
   for (const line of markdown.split("\n")) {
     const heading = line.match(/^## (Phase \d+)\s+—\s+(.+)$/);
     if (heading) {
-      current = { phase: heading[1], title: heading[2], summary: "", items: [] };
+      current = { phase: heading[1], title: heading[2], summary: "", items: [], gates: [] };
       phases.push(current);
       currentItem = null;
+      currentList = current.items;
       summaryStarted = false;
       summaryComplete = false;
       continue;
@@ -187,14 +204,14 @@ function extractRoadmap(markdown) {
     const item = line.match(/^- (.+)$/);
     if (item) {
       currentItem = item[1].trim();
-      current.items.push(currentItem);
+      currentList.push(currentItem);
       summaryComplete = true;
       continue;
     }
 
     if (currentItem && /^\s{2,}\S/.test(line)) {
-      current.items[current.items.length - 1] =
-        `${current.items.at(-1)} ${line.trim()}`;
+      currentList[currentList.length - 1] =
+        `${currentList.at(-1)} ${line.trim()}`;
       continue;
     }
 
@@ -204,9 +221,17 @@ function extractRoadmap(markdown) {
       continue;
     }
 
-    if (!summaryComplete && !/^Start a manuscript only when:/.test(line)) {
+    if (/(?:when|if|once|met):\s*$/i.test(line.trim())) {
+      currentList = current.gates;
+      currentItem = null;
+      continue;
+    }
+
+    if (!summaryComplete) {
       current.summary = `${current.summary} ${line.trim()}`.trim();
       summaryStarted = true;
+    } else {
+      currentList = current.items;
     }
   }
 
@@ -311,15 +336,17 @@ export function buildRepositorySnapshot({
   github,
   generatedAt = new Date().toISOString()
 }) {
-  const resources = extractResourceEntries(readme);
+  const { entries: resources, notes } = extractResourceEntries(readme);
   const highlights = allocateHighlights(resources, TARGETS);
   const landscape = TARGETS.map((target) => {
     const matches = resources.filter((resource) => resource.targets.includes(target.id));
+    const note = matches.length === 0 ? notes.get(target.id) : undefined;
 
     return {
       ...target,
       count: matches.length,
-      highlights: highlights.get(target.id)
+      highlights: highlights.get(target.id),
+      ...(note ? { note } : {})
     };
   });
 
