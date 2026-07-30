@@ -2,6 +2,17 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-07-30
+
+### Field updates
+
+- Indexed Retrospective Harness Optimization, which uses self-validation,
+  self-consistency, and self-preference over past trajectories to update a
+  persistent agent harness without labeled validation data.
+- Added RSIBench-Data, a controlled and auditable benchmark for whether
+  researcher agents can iteratively improve training-data strategies from
+  checkpoint feedback while preserving the strongest candidate.
+
 ## 2026-07-29
 
 ### Field updates

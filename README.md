@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-07-29
+**Last editorial review:** 2026-07-30
 
 ## Contents
 
@@ -180,6 +180,10 @@ than a reason to relabel experience memory as knowledge.
 - [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) — Builds, evaluates, and
   evolves multi-agent workflows with pluggable optimization algorithms.
   **Targets:** Topology.
+- [Retrospective Harness Optimization](https://github.com/wbopan/retro-harness)
+  — [Paper](https://arxiv.org/abs/2606.05922). Uses unlabeled past trajectories
+  and self-preference to retain harness updates that improve held-out behavior.
+  **Targets:** Skills, Tools, Topology.
 - [Darwin Gödel Machine](https://github.com/jennyzzt/dgm) — [Paper](https://arxiv.org/abs/2505.22954)
   · [Article](https://sakana.ai/dgm/). Rewrites coding-agent implementations
   and empirically validates descendants. Run only in an isolated sandbox.
@@ -209,6 +213,10 @@ agent. Multi-agent execution by itself is not sufficient.
 These resources provide environments or held-out signals for testing whether a
 persistent update is real.
 
+- [RSIBench-Data](https://github.com/evolvent-ai/RSIBench-Data) —
+  [Paper](https://arxiv.org/abs/2607.25886). Audits whether researcher agents
+  turn checkpoint feedback into reusable training-data strategies under fixed
+  training, evaluation, and budget controls.
 - [Experience-driven Lifelong Learning](https://arxiv.org/abs/2508.19005) —
   Proposes a framework and benchmark for continuous agent growth.
 - [SWE-bench](https://github.com/SWE-bench/SWE-bench) — Supplies real-world
