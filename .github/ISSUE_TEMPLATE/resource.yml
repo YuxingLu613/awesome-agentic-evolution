@@ -29,15 +29,28 @@ body:
     attributes:
       label: Primary evolution target
       options:
-        - Model or policy
-        - Memory or structured knowledge
-        - Skill, tool, or expert agent
-        - Workflow, prompt, or architecture
-        - Environment, curriculum, or evaluator
-        - Agent code or improvement process
-        - Multi-agent system or ecosystem
+        - Parameters
+        - Memory
+        - Knowledge
+        - Skills
+        - Tools
+        - Topology
+        - Co-evolution
     validations:
       required: true
+  - type: checkboxes
+    id: secondary_targets
+    attributes:
+      label: Secondary evolution targets
+      description: Select only artifacts that are updated independently in the reported system.
+      options:
+        - label: Parameters
+        - label: Memory
+        - label: Knowledge
+        - label: Skills
+        - label: Tools
+        - label: Topology
+        - label: Co-evolution
   - type: textarea
     id: feedback_signal
     attributes:

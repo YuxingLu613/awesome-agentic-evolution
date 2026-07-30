@@ -101,7 +101,13 @@ function renderRoadmap(phases) {
   phases.forEach((phase, index) => {
     const item = createElement("li", `roadmap-card${index === 0 ? " is-active" : ""}`);
     item.append(createElement("h3", "", phase.title));
-    item.append(createElement("p", "", phase.items[0] ?? "Milestone details are being refined."));
+    item.append(
+      createElement(
+        "p",
+        "",
+        phase.summary || phase.items[0] || "Milestone details are being refined."
+      )
+    );
     item.append(createElement("span", "phase-label", index === 0 ? "In progress" : phase.phase));
     list.append(item);
   });

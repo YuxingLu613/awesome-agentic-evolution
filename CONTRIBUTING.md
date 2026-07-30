@@ -29,10 +29,13 @@ resource:
 - [Project or paper](https://canonical-url.example/) — One factual sentence
   explaining what evolves, which signal drives the update, and how it is
   evaluated.
+  **Targets:** Memory, Skills.
 ```
 
 Prefer the canonical project, paper, or author page. Add a code link when the
 paper has an official implementation. Do not copy abstracts or marketing text.
+List the primary target first, followed only by secondary artifacts that update
+independently.
 Disclose whether you are an author, maintainer, employee, or otherwise
 connected to the submitted work.
 
@@ -47,6 +50,8 @@ safety review, section curation, and synthesis, are described in
 - [ ] The resource is not already listed.
 - [ ] The description is factual and under 30 words.
 - [ ] The update target and feedback signal are identifiable.
+- [ ] The primary target follows the README taxonomy; secondary targets are
+      included only when their artifacts update independently.
 - [ ] Evaluation evidence is linked or summarized.
 - [ ] Safety-sensitive self-modifying systems include an isolation warning.
 - [ ] The entry is placed in the narrowest relevant section.

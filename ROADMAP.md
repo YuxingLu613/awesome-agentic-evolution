@@ -5,6 +5,8 @@ conference tutorial on one evidence pipeline.
 
 ## Phase 1 — Community Foundation
 
+Build accountable governance and a recurring public review process.
+
 - Publish the contributor call and community roles.
 - Recruit 6–10 founding curators and reviewers across focused areas.
 - Maintain a public queue of resource, verification, reproducibility, and
@@ -14,7 +16,9 @@ conference tutorial on one evidence pipeline.
 Success is measured by external contributors, returning contributors, review
 latency, verified additions, and section coverage—not stars alone.
 
-## Phase 2 — Survey-Ready Evidence
+## Phase 2 — Structured Evidence
+
+Turn curated links into a versioned, reviewable evidence base.
 
 - Introduce a versioned structured resource catalog.
 - Record evolution target, feedback signal, persistent artifact, evaluation,
@@ -23,6 +27,9 @@ latency, verified additions, and section coverage—not stars alone.
 - Publish quarterly landscape reports generated from reviewed evidence.
 
 ## Phase 3 — Living Survey
+
+Convert the reviewed evidence base into a manuscript only after the public
+maturity gates have been met.
 
 Start a manuscript only when:
 
@@ -40,10 +47,13 @@ public contribution record with CRediT-style roles.
 
 ## Phase 4 — Conference Tutorial
 
-Develop a modular tutorial covering foundations, taxonomy, mechanisms,
-evaluation, safety, and open problems. Apply to a venue only after three
-representative demos run reproducibly in clean environments and at least three
-instructors can cover complementary modules.
+Develop and validate a modular tutorial with reproducible demonstrations.
+
+- Cover foundations, taxonomy, mechanisms, evaluation, safety, and open
+  problems.
+- Validate three representative demos in clean environments.
+- Confirm that at least three instructors can cover complementary modules
+  before applying to a venue.
 
 ## Operating Cadence
 

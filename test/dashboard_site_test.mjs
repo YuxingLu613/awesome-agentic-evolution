@@ -66,6 +66,24 @@ test("links readers from the repository README to the living dashboard", () => {
   assert.match(readme, /living research dashboard/i);
 });
 
+test("uses the evidence-stage taxonomy consistently across the README and homepage", () => {
+  const readme = readProjectFile("README.md");
+  const index = readProjectFile("site/index.html");
+
+  [
+    "Parameters",
+    "Memory",
+    "Knowledge",
+    "Skills",
+    "Tools",
+    "Topology",
+    "Co-evolution"
+  ].forEach((target) => assert.match(readme, new RegExp(`### ${target}`)));
+  assert.match(index, /Community-curated · Evidence-first/);
+  assert.doesNotMatch(index, /Survey-ready|Become a curator/);
+  assert.match(index, /Read the taxonomy/);
+});
+
 test("presents one integrated inner-evolution and co-evolution simulator", () => {
   const index = readProjectFile("site/index.html");
   const app = readProjectFile("site/app.js");
