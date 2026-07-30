@@ -1572,6 +1572,16 @@ h2 {
   white-space: nowrap;
 }
 
+.target-note {
+  margin: 0.6rem 0 0;
+  padding: 0.6rem 0.7rem;
+  color: var(--ink-soft);
+  background: color-mix(in srgb, var(--accent-soft) 55%, transparent);
+  border-left: 2px solid var(--accent);
+  border-radius: 0;
+  font-size: var(--fs-sm);
+}
+
 .target-links a:hover {
   text-decoration: underline;
 }
