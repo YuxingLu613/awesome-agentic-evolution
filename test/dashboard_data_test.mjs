@@ -16,23 +16,33 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const README_FIXTURE = `
 # Awesome Agentic Evolution
 
-## Frameworks and Repositories
+## Resource Map
 
-### Whole-Agent and Code Evolution
+### Parameters
 
-- [Darwin Machine](https://example.com/darwin) — Rewrites agent code and validates descendants.
+- [Parameter Learner](https://example.com/parameter) — Updates model weights from held-out rewards.
 
-### Workflow and Architecture Evolution
+### Memory
+
+- [Memory Lab](https://example.com/memory) — Refines persistent experience memory from feedback.
+
+### Knowledge
+
+- No verified resources yet.
+
+### Skills
+
+- [Skill Lab](https://example.com/skill) — Builds reusable procedures from scored trajectories.
+
+### Tools
+
+- [Tool Lab](https://example.com/tool) — Retains executable interfaces that pass validation.
+
+### Topology
 
 - [Graph Search](https://example.com/graph) — Optimizes a multi-agent workflow graph.
 
-### Memory, Experience, and Skill Evolution
-
-- [Memory Lab](https://example.com/memory) — Refines persistent memory skills from feedback.
-
-## Research
-
-### Model, Curriculum, and Skill Co-Evolution
+### Co-evolution
 
 - [Co-Learner](https://example.com/co) — Co-evolves a model and environment curriculum.
 
@@ -46,7 +56,12 @@ const CHANGELOG_FIXTURE = `
 
 ## 2026-07-28
 
+### Field updates
+
 - Added Memory Lab and its feedback-driven memory strategy.
+
+### Repository changes
+
 - Added the community dashboard.
 `;
 
@@ -55,9 +70,13 @@ const ROADMAP_FIXTURE = `
 
 ## Phase 1 — Community Foundation
 
+Build accountable governance and a recurring public review process.
+
 - Recruit founding curators.
 
 ## Phase 2 — Survey-Ready Evidence
+
+Turn curated links into a versioned, reviewable evidence base.
 
 - Introduce a structured resource catalog.
 `;
@@ -71,18 +90,198 @@ test("builds the dashboard research landscape from repository Markdown", () => {
     generatedAt: "2026-07-28T20:00:00.000Z"
   });
 
-  assert.equal(snapshot.summary.totalResources, 4);
+  assert.equal(snapshot.summary.totalResources, 6);
   assert.equal(snapshot.activity.status, "unavailable");
   assert.deepEqual(
     snapshot.landscape.map(({ id }) => id),
-    ["model", "memory", "skill", "workflow", "environment", "code", "co-evolution"]
+    [
+      "parameters",
+      "memory",
+      "knowledge",
+      "skills",
+      "tools",
+      "topology",
+      "co-evolution"
+    ]
   );
+  assert.ok(snapshot.landscape.find(({ id }) => id === "parameters").count >= 1);
   assert.ok(snapshot.landscape.find(({ id }) => id === "memory").count >= 1);
-  assert.ok(snapshot.landscape.find(({ id }) => id === "workflow").count >= 1);
-  assert.ok(snapshot.landscape.find(({ id }) => id === "code").count >= 1);
+  assert.equal(snapshot.landscape.find(({ id }) => id === "knowledge").count, 0);
+  assert.ok(snapshot.landscape.find(({ id }) => id === "skills").count >= 1);
+  assert.ok(snapshot.landscape.find(({ id }) => id === "tools").count >= 1);
+  assert.ok(snapshot.landscape.find(({ id }) => id === "topology").count >= 1);
   assert.ok(snapshot.landscape.find(({ id }) => id === "co-evolution").count >= 1);
   assert.match(snapshot.recent[0].text, /Memory Lab/);
+  assert.doesNotMatch(snapshot.recent.map(({ text }) => text).join(" "), /dashboard/);
   assert.equal(snapshot.roadmap.length, 2);
+  assert.equal(
+    snapshot.roadmap[0].summary,
+    "Build accountable governance and a recurring public review process."
+  );
+});
+
+test("keeps wrapped resource descriptions attached to their own bullets", () => {
+  const readme = `
+## Resource Map
+
+### Parameters
+
+- [Self-Rewarding Language Models](https://example.com/self-rewarding) — Uses the
+  model as both instruction follower and judge during iterative training.
+- [Agent0](https://example.com/agent0)
+  — Co-evolves a tool-aware curriculum and executor.
+  **Targets:** Tools, Co-evolution.
+- [MemSkill](https://example.com/memskill)
+  — Evolves structured routines for memory extraction and consolidation.
+  **Targets:** Memory, Skills.
+
+## Benchmarks and Evaluation
+`;
+
+  const snapshot = buildRepositorySnapshot({
+    readme,
+    changelog: CHANGELOG_FIXTURE,
+    roadmap: ROADMAP_FIXTURE,
+    github: null
+  });
+  const resources = snapshot.landscape.flatMap(({ highlights }) => highlights);
+  const selfRewarding = resources.find(({ title }) => title === "Self-Rewarding Language Models");
+
+  assert.match(selfRewarding.description, /instruction follower and judge/);
+  assert.doesNotMatch(selfRewarding.description, /Co-evolves|memory extraction/);
+  assert.ok(snapshot.landscape.find(({ id }) => id === "tools").count >= 1);
+  assert.ok(snapshot.landscape.find(({ id }) => id === "skills").count >= 1);
+});
+
+test("deduplicates titles and reserves scarce highlight slots for category-specific work", () => {
+  const readme = `
+## Resource Map
+
+### Parameters
+
+- [Param A](https://example.com/param-a) — Updates parameters.
+- [Param B](https://example.com/param-b) — Updates parameters.
+- [Param C](https://example.com/param-c) — Updates parameters.
+
+### Memory
+
+- [Memory A](https://example.com/memory-a) — Updates memory.
+- [Memory B](https://example.com/memory-b) — Updates memory.
+- [Memory C](https://example.com/memory-c) — Updates memory.
+
+### Skills
+
+- [Skill A](https://example.com/skill-a) — Updates skills.
+- [Skill B](https://example.com/skill-b) — Updates skills.
+- [Skill C](https://example.com/skill-c) — Updates skills.
+
+### Topology
+
+- [AgentSquare](https://example.com/agentsquare) — Searches modular agent topology.
+  **Targets:** Parameters, Memory, Skills, Topology.
+- [Darwin Gödel Machine](https://github.com/example/dgm) — Rewrites agent scaffolding.
+- [Darwin Gödel Machine](https://arxiv.org/abs/1234.5678) — Paper for the same system.
+
+### Co-evolution
+
+- [Co A](https://example.com/co-a) — Co-evolves an agent and environment.
+
+## Benchmarks and Evaluation
+`;
+
+  const snapshot = buildRepositorySnapshot({
+    readme,
+    changelog: CHANGELOG_FIXTURE,
+    roadmap: ROADMAP_FIXTURE,
+    github: null
+  });
+  const highlights = snapshot.landscape.flatMap(({ highlights }) => highlights);
+
+  assert.equal(
+    snapshot.landscape.find(({ id }) => id === "topology").count,
+    2,
+    "duplicate titles should count once within a category"
+  );
+  assert.equal(
+    highlights.filter(({ title }) => title === "Darwin Gödel Machine").length,
+    1,
+    "duplicate source links should collapse to one highlight"
+  );
+  assert.equal(
+    highlights.filter(({ title }) => title === "AgentSquare").length,
+    1,
+    "multi-label resources should not displace category-specific highlights"
+  );
+});
+
+test("leaves highlight slots empty instead of repeating a multi-target resource", () => {
+  const readme = `
+## Resource Map
+
+### Skills
+
+- [Voyager](https://example.com/voyager) — Grows a reusable skill library.
+  **Targets:** Skills, Tools, Co-evolution.
+
+## Benchmarks and Evaluation
+`;
+
+  const snapshot = buildRepositorySnapshot({
+    readme,
+    changelog: CHANGELOG_FIXTURE,
+    roadmap: ROADMAP_FIXTURE,
+    github: null
+  });
+  const titles = snapshot.landscape.flatMap(({ highlights }) =>
+    highlights.map(({ title }) => title)
+  );
+
+  assert.deepEqual(titles, ["Voyager"]);
+});
+
+test("uses wrapped phase summaries instead of gates or operating cadence bullets", () => {
+  const roadmap = `
+# Roadmap
+
+## Phase 3 — Living Survey
+
+Convert the reviewed evidence base into a manuscript only after the public
+maturity gates have been met.
+
+Start a manuscript only when:
+
+- 100–150 core research entries have been verified;
+
+## Phase 4 — Conference Tutorial
+
+Develop and validate a modular tutorial with reproducible demonstrations.
+
+- Prepare foundations, taxonomy, evaluation, and safety modules.
+
+## Operating Cadence
+
+- Daily: automated discovery and deduplication.
+`;
+
+  const snapshot = buildRepositorySnapshot({
+    readme: README_FIXTURE,
+    changelog: CHANGELOG_FIXTURE,
+    roadmap,
+    github: null
+  });
+
+  assert.equal(
+    snapshot.roadmap[0].summary,
+    "Convert the reviewed evidence base into a manuscript only after the public maturity gates have been met."
+  );
+  assert.equal(
+    snapshot.roadmap[1].summary,
+    "Develop and validate a modular tutorial with reproducible demonstrations."
+  );
+  assert.doesNotMatch(
+    snapshot.roadmap.map(({ summary }) => summary).join(" "),
+    /100–150|Daily:/
+  );
 });
 
 test("normalizes GitHub repository activity without counting pull requests as issues", () => {

@@ -7,7 +7,7 @@ The repository will remain a high-signal curated resource while accumulating
 the structured evidence needed for a future living survey and conference
 tutorial.
 
-The selected operating model is community-first and survey-ready:
+The selected operating model is community-first and evidence-building:
 
 1. an awesome list for discovery;
 2. a reviewed evidence base for comparison;
@@ -69,7 +69,7 @@ resolved. Broken or superseded resources are archived with context. Inactive
 curator areas are reopened for ownership. Maintainers document significant
 objections and make the final editorial decision.
 
-## Survey-Ready Evidence Architecture
+## Structured Evidence Architecture
 
 The README remains the reader-facing view. A later structured catalog will
 become the evidence source of truth. Each record should capture:
@@ -115,9 +115,9 @@ are frozen before manuscript submission.
 The tutorial reuses the evidence base and is organized into:
 
 1. foundations and terminology;
-2. evolution-target taxonomy;
+2. Parameters, Memory, Knowledge, Skills, Tools, and Topology;
 3. feedback and optimization mechanisms;
-4. memory, workflow, and code-evolution demonstrations;
+4. multi-target and co-evolution demonstrations;
 5. evaluation and safety; and
 6. co-evolution, open-endedness, and open problems.
 
@@ -134,6 +134,6 @@ coverage, and reproducible demos. Stars and impressions are secondary.
 ## Validation
 
 Repository checks verify that community entry points exist, the README links to
-them, the resource issue form collects survey-ready evidence, YAML parses, and
+them, the resource issue form collects structured evidence, YAML parses, and
 GitHub Actions runs the structural test. Later schema and demo features must add
 their own failing tests before implementation.

@@ -44,7 +44,7 @@ class CommunityStructureTest < Minitest::Test
     assert_empty missing, "README does not link to: #{missing.join(", ")}"
   end
 
-  def test_resource_issue_form_collects_survey_ready_evidence
+  def test_resource_issue_form_collects_structured_evidence
     form = YAML.safe_load(
       File.read(File.join(ROOT, ".github/ISSUE_TEMPLATE/resource.yml"))
     )
@@ -52,6 +52,26 @@ class CommunityStructureTest < Minitest::Test
     missing = EVIDENCE_FIELDS - field_ids
 
     assert_empty missing, "Resource form is missing fields: #{missing.join(", ")}"
+  end
+
+  def test_resource_issue_form_uses_the_public_evolution_taxonomy
+    form = YAML.safe_load(
+      File.read(File.join(ROOT, ".github/ISSUE_TEMPLATE/resource.yml"))
+    )
+    target_field = form.fetch("body").find { |field| field["id"] == "evolution_target" }
+
+    assert_equal(
+      [
+        "Parameters",
+        "Memory",
+        "Knowledge",
+        "Skills",
+        "Tools",
+        "Topology",
+        "Co-evolution"
+      ],
+      target_field.dig("attributes", "options")
+    )
   end
 
   def test_github_actions_runs_the_community_structure_test

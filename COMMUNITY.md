@@ -32,11 +32,11 @@ help turn the evidence base into a survey section or tutorial module.
 
 ## Open Founding Areas
 
-- Whole-agent and code evolution
-- Workflow and architecture evolution
-- Memory, experience, and skill evolution
-- Curriculum and model co-evolution
-- Multi-agent co-evolution and open-ended ecosystems
+- Parameter evolution
+- Memory and knowledge evolution
+- Skill and tool evolution
+- Topology and orchestration evolution
+- Co-evolution and open-ended ecosystems
 - Evaluation, reproducibility, and safety
 
 To volunteer, open an issue describing the area, relevant experience, and the

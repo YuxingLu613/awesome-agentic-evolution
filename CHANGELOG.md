@@ -4,8 +4,15 @@ All notable editorial updates are recorded here.
 
 ## 2026-07-29
 
-- Added SAGE, an ACL 2026 framework that learns a persistent skill library from
+### Field updates
+
+- Indexed SAGE, an ACL 2026 framework that learns a persistent skill library from
   sequential task experience using outcome-grounded reinforcement signals.
+
+### Repository changes
+
+- Reorganized the public index around Parameters, Memory, Knowledge, Skills,
+  Tools, Topology, and Co-evolution, with explicit multi-target annotations.
 - Rebuilt the dashboard's persistent improvement loop as an accessible
   four-stage Act–Assess–Revise–Retain simulation spanning six inner evolution
   targets and five co-evolution factors. Each iteration can revise one or more
@@ -14,6 +21,13 @@ All notable editorial updates are recorded here.
   on a slower seven-iteration cadence.
 
 ## 2026-07-28
+
+### Field updates
+
+- Indexed SelfMem, a feedback-driven method for optimizing reusable agent memory
+  strategies with long-context benchmark evaluation.
+
+### Repository changes
 
 - Created the repository and curation policy.
 - Added the initial surveys, frameworks, research papers, benchmarks, and
@@ -29,5 +43,3 @@ All notable editorial updates are recorded here.
 - Added a repository-linked GitHub Pages dashboard with research-landscape,
   activity, contribution, and roadmap views; it refreshes on repository updates
   and on a daily schedule.
-- Added SelfMem, a feedback-driven method for optimizing reusable agent memory
-  strategies with long-context benchmark evaluation.

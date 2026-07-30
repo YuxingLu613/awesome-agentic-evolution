@@ -6,92 +6,145 @@ const DEFAULT_REPOSITORY = "YuxingLu613/awesome-agentic-evolution";
 
 const TARGETS = [
   {
-    id: "model",
-    label: "Model",
-    description: "Parameters, policies, and generated training data.",
-    keywords: ["model", "policy", "parameter", "training", "reasoning"]
+    id: "parameters",
+    label: "Parameters",
+    description: "Model weights, policies, and other trainable state."
   },
   {
     id: "memory",
     label: "Memory",
-    description: "Experience, reflection, and structured knowledge.",
-    keywords: ["memory", "experience", "reflection", "episodic"]
+    description: "Agent-specific traces, reflections, and experience records."
   },
   {
-    id: "skill",
-    label: "Skill & Tool",
-    description: "Reusable procedures, tools, and expert agents.",
-    keywords: ["skill", "tool", "procedure", "expert agent"]
+    id: "knowledge",
+    label: "Knowledge",
+    description: "External, reusable world knowledge and retrieval assets."
   },
   {
-    id: "workflow",
-    label: "Workflow",
-    description: "Prompts, control flow, topology, and architecture.",
-    keywords: ["workflow", "architecture", "graph", "prompt", "topology", "modular"]
+    id: "skills",
+    label: "Skills",
+    description: "Reusable procedural instructions and callable routines."
   },
   {
-    id: "environment",
-    label: "Environment",
-    description: "Tasks, curricula, evaluators, and simulated worlds.",
-    keywords: ["environment", "curriculum", "evaluator", "world", "embodied", "task generation"]
+    id: "tools",
+    label: "Tools",
+    description: "Executable interfaces, code modules, APIs, and expert agents."
   },
   {
-    id: "code",
-    label: "Agent Code",
-    description: "Implementation, scaffolding, and self-modification.",
-    keywords: ["agent code", " code ", "rewrit", "self-modification", "program"]
+    id: "topology",
+    label: "Topology",
+    description: "Control flow, routing, graph structure, roles, and orchestration."
   },
   {
     id: "co-evolution",
     label: "Co-evolution",
-    description: "Multi-agent systems and open-ended ecosystems.",
-    keywords: ["co-evol", "multi-agent", "ecosystem", "swarm"]
+    description: "Objectives, evaluators, environments, populations, and update mechanisms."
   }
 ];
 
+const TARGET_IDS_BY_LABEL = new Map(
+  TARGETS.flatMap((target) => [
+    [target.label.toLowerCase(), target.id],
+    [target.id.toLowerCase(), target.id]
+  ])
+);
+
+function resolveTargetId(label) {
+  return TARGET_IDS_BY_LABEL.get(
+    label.trim().replace(/[.;]$/, "").replace(/\s+/g, " ").toLowerCase()
+  );
+}
+
+function resourceKey(title) {
+  return title.trim().replace(/\s+/g, " ").toLocaleLowerCase();
+}
+
 function extractResourceEntries(markdown) {
   const entries = [];
+  const entriesByTitle = new Map();
   let current = null;
+  let currentIsDuplicate = false;
+  let primaryTarget = null;
   let inCatalog = false;
 
   for (const line of markdown.split("\n")) {
-    if (/^## Frameworks and Repositories/.test(line)) {
+    if (/^## Resource Map\s*$/.test(line)) {
       inCatalog = true;
       continue;
     }
-    if (/^## Benchmarks and Evaluation/.test(line)) {
-      break;
-    }
     if (!inCatalog) continue;
+    if (/^##\s/.test(line)) break;
 
-    const match = line.match(/^- \[([^\]]+)\]\((https?:\/\/[^)]+)\)\s+[—-]\s*(.*)$/);
-    if (match) {
-      current = { title: match[1], url: match[2], description: match[3].trim() };
-      entries.push(current);
+    const section = line.match(/^###\s+(.+?)\s*$/);
+    if (section) {
+      primaryTarget = resolveTargetId(section[1]) ?? null;
+      current = null;
       continue;
     }
 
-    if (current && /^\s{2,}\S/.test(line)) {
-      current.description = `${current.description} ${line.trim()}`.trim();
-    } else if (/^#{2,}\s/.test(line) || line.trim() === "") {
+    const match = line.match(
+      /^- \[([^\]]+)\]\((https?:\/\/[^)]+)\)(?:\s+[—-]\s*(.*))?\s*$/
+    );
+    if (match) {
+      const key = resourceKey(match[1]);
+      current = entriesByTitle.get(key);
+      currentIsDuplicate = Boolean(current);
+
+      if (!current) {
+        current = {
+          title: match[1].trim(),
+          url: match[2],
+          description: (match[3] ?? "").trim(),
+          primaryTarget,
+          targets: primaryTarget ? [primaryTarget] : []
+        };
+        entriesByTitle.set(key, current);
+        entries.push(current);
+      } else if (primaryTarget && !current.targets.includes(primaryTarget)) {
+        current.targets.push(primaryTarget);
+      }
+      continue;
+    }
+
+    const targets = line.match(/^\s{2,}\*\*Targets:\*\*\s+(.+?)\s*$/);
+    if (current && targets) {
+      targets[1]
+        .split(/\s*(?:,|·)\s*/)
+        .map(resolveTargetId)
+        .filter(Boolean)
+        .forEach((target) => {
+          if (!current.targets.includes(target)) current.targets.push(target);
+        });
+      continue;
+    }
+
+    if (current && !currentIsDuplicate && /^\s{2,}\S/.test(line)) {
+      const continuation = line.trim().replace(/^—\s*/, "");
+      current.description = `${current.description} ${continuation}`.trim();
+    } else if (/^-\s/.test(line) || /^#{2,}\s/.test(line) || line.trim() === "") {
       current = null;
+      currentIsDuplicate = false;
     }
   }
 
   return entries;
 }
 
-function extractBulletItems(markdown, headingPattern) {
+function extractFieldUpdates(markdown) {
   const items = [];
   let active = false;
   let current = null;
 
   for (const line of markdown.split("\n")) {
-    if (headingPattern.test(line)) {
+    if (/^### Field updates\s*$/.test(line)) {
       active = true;
+      current = null;
       continue;
     }
-    if (active && /^##\s/.test(line)) break;
+    if (/^##\s/.test(line) || (active && /^###\s/.test(line))) {
+      active = false;
+      current = null;
+    }
     if (!active) continue;
 
     const match = line.match(/^- (.+)$/);
@@ -109,20 +162,88 @@ function extractBulletItems(markdown, headingPattern) {
 function extractRoadmap(markdown) {
   const phases = [];
   let current = null;
+  let currentItem = null;
+  let summaryStarted = false;
+  let summaryComplete = false;
 
   for (const line of markdown.split("\n")) {
     const heading = line.match(/^## (Phase \d+)\s+—\s+(.+)$/);
     if (heading) {
-      current = { phase: heading[1], title: heading[2], items: [] };
+      current = { phase: heading[1], title: heading[2], summary: "", items: [] };
       phases.push(current);
+      currentItem = null;
+      summaryStarted = false;
+      summaryComplete = false;
       continue;
     }
 
+    if (/^##\s/.test(line)) {
+      current = null;
+      currentItem = null;
+      continue;
+    }
+    if (!current) continue;
+
     const item = line.match(/^- (.+)$/);
-    if (current && item) current.items.push(item[1].trim());
+    if (item) {
+      currentItem = item[1].trim();
+      current.items.push(currentItem);
+      summaryComplete = true;
+      continue;
+    }
+
+    if (currentItem && /^\s{2,}\S/.test(line)) {
+      current.items[current.items.length - 1] =
+        `${current.items.at(-1)} ${line.trim()}`;
+      continue;
+    }
+
+    if (!line.trim()) {
+      if (summaryStarted) summaryComplete = true;
+      currentItem = null;
+      continue;
+    }
+
+    if (!summaryComplete && !/^Start a manuscript only when:/.test(line)) {
+      current.summary = `${current.summary} ${line.trim()}`.trim();
+      summaryStarted = true;
+    }
   }
 
+  phases.forEach((phase) => {
+    if (!phase.summary) phase.summary = phase.items[0] ?? "";
+  });
   return phases;
+}
+
+function allocateHighlights(resources, targets) {
+  const used = new Set();
+  const candidatesByTarget = new Map(
+    targets.map((target) => [
+      target.id,
+      resources
+        .filter((resource) => resource.targets.includes(target.id))
+        .sort((left, right) => {
+          const leftRank =
+            left.targets.length === 1 ? 0 : left.primaryTarget === target.id ? 1 : 2;
+          const rightRank =
+            right.targets.length === 1 ? 0 : right.primaryTarget === target.id ? 1 : 2;
+          return leftRank - rightRank;
+        })
+    ])
+  );
+
+  return new Map(
+    targets.map((target) => {
+      const candidates = candidatesByTarget.get(target.id);
+      const highlights = candidates
+        .filter((resource) => !used.has(resourceKey(resource.title)))
+        .slice(0, 3);
+
+      highlights.forEach((resource) => used.add(resourceKey(resource.title)));
+      return [target.id, highlights];
+    })
+  );
 }
 
 export function normalizeGitHubActivity({
@@ -191,16 +312,14 @@ export function buildRepositorySnapshot({
   generatedAt = new Date().toISOString()
 }) {
   const resources = extractResourceEntries(readme);
-  const landscape = TARGETS.map(({ keywords, ...target }) => {
-    const matches = resources.filter((resource) => {
-      const haystack = ` ${resource.title} ${resource.description} `.toLowerCase();
-      return keywords.some((keyword) => haystack.includes(keyword));
-    });
+  const highlights = allocateHighlights(resources, TARGETS);
+  const landscape = TARGETS.map((target) => {
+    const matches = resources.filter((resource) => resource.targets.includes(target.id));
 
     return {
       ...target,
       count: matches.length,
-      highlights: matches.slice(0, 3)
+      highlights: highlights.get(target.id)
     };
   });
 
@@ -212,7 +331,7 @@ export function buildRepositorySnapshot({
     },
     activity: github ?? { status: "unavailable" },
     landscape,
-    recent: extractBulletItems(changelog, /^## \d{4}-\d{2}-\d{2}$/).slice(0, 6),
+    recent: extractFieldUpdates(changelog).slice(0, 6),
     roadmap: extractRoadmap(roadmap)
   };
 }
