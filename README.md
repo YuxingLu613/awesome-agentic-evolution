@@ -12,6 +12,16 @@ the change, what persists, and how the claimed improvement is evaluated.
 
 [Explore the living research dashboard →](https://yuxinglu613.github.io/awesome-agentic-evolution/)
 
+<p align="center">
+  <a href="https://yuxinglu613.github.io/awesome-agentic-evolution/">
+    <img
+      src="./site/assets/persistent-agent-evolution-v1-v3-loop.gif"
+      width="680"
+      alt="Persistent agent evolution from v1 to v3 across Act, Assess, Revise, and Retain"
+    >
+  </a>
+</p>
+
 **Last editorial review:** 2026-07-29
 
 ## Contents
