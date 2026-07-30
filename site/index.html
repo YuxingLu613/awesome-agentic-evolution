@@ -7,7 +7,7 @@
       name="description"
       content="A living map of self-improving agents, co-evolution, and open-ended agent ecosystems."
     >
-    <meta name="theme-color" content="#f5f6f7">
+    <meta name="theme-color" content="#f5f4f7">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Awesome Agentic Evolution">
     <meta
@@ -36,10 +36,23 @@
 
     <header class="site-header">
       <a class="brand" href="./" aria-label="Awesome Agentic Evolution home">
-        <span class="brand-mark" aria-hidden="true">AE</span>
-        <span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg class="brand-evolution-loops" viewBox="0 0 52 52">
+            <circle class="brand-loop brand-loop-inner" cx="26" cy="26" r="11" pathLength="1"></circle>
+            <circle class="brand-loop-signal brand-loop-signal-inner" cx="26" cy="26" r="11" pathLength="1"></circle>
+            <path class="brand-loop brand-loop-outer" pathLength="1" d="M10 37.5 A19 19 0 1 1 42 37.5"></path>
+            <path class="brand-loop-signal brand-loop-signal-outer" pathLength="1" d="M10 37.5 A19 19 0 1 1 42 37.5"></path>
+            <circle class="brand-stage-tick" cx="26" cy="15" r="1.35"></circle>
+            <circle class="brand-stage-tick" cx="37" cy="26" r="1.35"></circle>
+            <circle class="brand-stage-tick" cx="26" cy="37" r="1.35"></circle>
+            <circle class="brand-stage-tick" cx="15" cy="26" r="1.35"></circle>
+            <circle class="brand-agent-halo" cx="26" cy="26" r="5.25"></circle>
+            <circle class="brand-agent-core" cx="26" cy="26" r="2.85"></circle>
+          </svg>
+        </span>
+        <span class="brand-copy">
           <strong>Agentic Evolution</strong>
-          <small>Open research index</small>
+          <small>Field guide to evolving agents</small>
         </span>
       </a>
       <nav aria-label="Primary navigation">
@@ -56,24 +69,28 @@
     <main id="main-content">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow"><span></span> Community-curated · Evidence-first</p>
-          <h1>Intelligence that<br><em>keeps becoming.</em></h1>
-          <p class="hero-summary">
-            A high-signal map of agents that learn from feedback, preserve
-            improvements, and evolve from individual systems into open-ended
-            ecosystems.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#landscape">Explore the map</a>
-          <a
-            class="button button-secondary"
-            href="https://github.com/YuxingLu613/awesome-agentic-evolution#taxonomy"
-            >Read the taxonomy</a>
+          <div class="hero-statement">
+            <p class="eyebrow"><span></span> Community-curated · Evidence-first</p>
+            <h1>Intelligence that<br><em>keeps becoming.</em></h1>
           </div>
-          <p class="snapshot-line">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span id="snapshot-status" aria-live="polite">Loading repository snapshot…</span>
-          </p>
+          <div class="hero-support">
+            <p class="hero-summary">
+              A high-signal map of agents that learn from feedback, preserve
+              improvements, and evolve from individual systems into open-ended
+              ecosystems.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#landscape">Explore the map</a>
+              <a
+                class="button button-secondary"
+                href="https://github.com/YuxingLu613/awesome-agentic-evolution#taxonomy"
+              >Read the taxonomy</a>
+            </div>
+            <p class="snapshot-line">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span id="snapshot-status" aria-live="polite">Loading repository snapshot…</span>
+            </p>
+          </div>
         </div>
 
         <div
@@ -107,14 +124,21 @@
             <div class="simulator-canvas">
               <svg class="loop-arcs" viewBox="0 0 600 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                 <defs>
-                  <marker id="loop-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-                    <path d="M0,0 L0,6 L5.5,3 z"></path>
+                  <marker id="loop-arrow" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" overflow="visible">
+                    <path d="M0,0 L0,10 L9,5 z"></path>
+                  </marker>
+                  <marker id="loop-arrow-active" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" overflow="visible">
+                    <path d="M0,0 L0,10 L9,5 z"></path>
                   </marker>
                 </defs>
-                <path d="M300 90 A150 150 0 0 1 406.07 133.93 A150 150 0 0 1 450 240"></path>
-                <path d="M450 240 A150 150 0 0 1 406.07 346.07 A150 150 0 0 1 300 390"></path>
-                <path d="M300 390 A150 150 0 0 1 193.93 346.07 A150 150 0 0 1 150 240"></path>
-                <path d="M150 240 A150 150 0 0 1 193.93 133.93 A150 150 0 0 1 300 90"></path>
+                <path class="loop-arc" d="M300 90 A150 150 0 0 1 406.07 133.93 A150 150 0 0 1 450 240"></path>
+                <path class="loop-arc" d="M450 240 A150 150 0 0 1 406.07 346.07 A150 150 0 0 1 300 390"></path>
+                <path class="loop-arc" d="M300 390 A150 150 0 0 1 193.93 346.07 A150 150 0 0 1 150 240"></path>
+                <path class="loop-arc" d="M150 240 A150 150 0 0 1 193.93 133.93 A150 150 0 0 1 300 90"></path>
+                <path class="transition-arc" data-transition="act-assess" pathLength="1" d="M300 90 A150 150 0 0 1 406.07 133.93 A150 150 0 0 1 450 240"></path>
+                <path class="transition-arc" data-transition="assess-revise" pathLength="1" d="M450 240 A150 150 0 0 1 406.07 346.07 A150 150 0 0 1 300 390"></path>
+                <path class="transition-arc" data-transition="revise-retain" pathLength="1" d="M300 390 A150 150 0 0 1 193.93 346.07 A150 150 0 0 1 150 240"></path>
+                <path class="transition-arc" data-transition="retain-act" pathLength="1" d="M150 240 A150 150 0 0 1 193.93 133.93 A150 150 0 0 1 300 90"></path>
               </svg>
 
               <svg class="governance-lines" viewBox="0 0 600 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
@@ -191,7 +215,12 @@
                 </div>
               </section>
 
-              <span class="writeback-arrow" id="writeback-arrow" aria-hidden="true">→</span>
+              <span class="writeback-arrow" id="writeback-arrow" aria-hidden="true">
+                <svg class="writeback-reject-icon" viewBox="0 0 32 28" focusable="false">
+                  <path d="M6 22 H20 C25.5 22 28 18.5 28 14 C28 9.5 25.5 6 20 6 H6"></path>
+                  <path d="M10 2 L6 6 L10 10"></path>
+                </svg>
+              </span>
             </div>
 
             <aside id="target-detail" class="target-detail" aria-live="polite" hidden>

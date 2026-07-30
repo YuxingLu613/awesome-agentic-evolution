@@ -4,6 +4,7 @@ import {
   INNER_TARGETS,
   OUTER_TARGETS,
   STAGE_DWELL_MS,
+  TRANSITION_DWELL_MS,
   advanceEvolutionState,
   createEvolutionState,
   formatEvolutionCount
@@ -175,9 +176,9 @@ function initEvolutionLoop() {
   const innerNodes = [...root.querySelectorAll("[data-inner-target]")];
   const outerNodes = [...root.querySelectorAll("[data-outer-target]")];
   const governanceLines = [...root.querySelectorAll("[data-governs-stage]")];
+  const transitionArcs = [...root.querySelectorAll("[data-transition]")];
   const targetDetail = root.querySelector("#target-detail");
   const agentVerdict = root.querySelector("#agent-verdict");
-  const writebackArrow = root.querySelector("#writeback-arrow");
   const detailButtons = [...innerNodes, ...outerNodes];
   const targetDetails = new Map(
     [...INNER_TARGETS, ...OUTER_TARGETS].map((target) => [target.id, target])
@@ -185,6 +186,7 @@ function initEvolutionLoop() {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let state = createEvolutionState();
   let userPaused = reduceMotion;
+  let visualPhase = "stage";
   let detailTarget = null;
   let resumeAfterDetail = false;
   let timer = null;
@@ -254,20 +256,30 @@ function initEvolutionLoop() {
             ? "× Rejected"
             : "";
     }
-    if (writebackArrow) {
-      writebackArrow.textContent = state.verdict === "rejected" ? "↶" : "→";
-    }
   }
 
   function renderEvolution({ announce = false } = {}) {
     const stage = EVOLUTION_STAGES.find(({ id }) => id === state.stage);
     const governingTargets = GOVERNANCE[state.stage];
+    const stageIndex = EVOLUTION_STAGES.findIndex(({ id }) => id === state.stage);
+    const nextStage = EVOLUTION_STAGES[(stageIndex + 1) % EVOLUTION_STAGES.length];
+    const pendingState = advanceEvolutionState(state);
+    const transitionId = `${state.stage}-${nextStage.id}`;
 
     stageNodes.forEach((node) => {
       const active = node.dataset.stage === state.stage;
-      node.classList.toggle("is-active", active);
-      if (active) node.setAttribute("aria-current", "step");
+      const arriving = node.dataset.stage === nextStage.id && visualPhase === "transition";
+      node.classList.toggle("is-active", active && visualPhase === "stage");
+      node.classList.toggle("is-arriving", arriving);
+      if (active && visualPhase === "stage") node.setAttribute("aria-current", "step");
       else node.removeAttribute("aria-current");
+    });
+
+    transitionArcs.forEach((arc) => {
+      arc.classList.toggle(
+        "is-transition-active",
+        visualPhase === "transition" && arc.dataset.transition === transitionId
+      );
     });
 
     innerNodes.forEach((node) => {
@@ -312,6 +324,10 @@ function initEvolutionLoop() {
     });
 
     root.dataset.stage = state.stage;
+    root.dataset.visualPhase = visualPhase;
+    root.dataset.transition = visualPhase === "transition" ? transitionId : "";
+    root.dataset.nextStage = pendingState.stage;
+    root.dataset.nextVerdict = pendingState.verdict ?? "";
     root.dataset.verdict = state.verdict ?? "";
     root.dataset.cycle = String(state.cycle);
     setText("#agent-version", `v${state.version}`);
@@ -329,15 +345,29 @@ function initEvolutionLoop() {
     }
   }
 
-  function tick() {
-    state = advanceEvolutionState(state);
-    renderEvolution({ announce: true });
+  function advanceVisualPhase() {
+    if (visualPhase === "stage") {
+      visualPhase = "transition";
+      renderEvolution();
+    } else {
+      state = advanceEvolutionState(state);
+      visualPhase = "stage";
+      renderEvolution({ announce: true });
+    }
+    scheduleNextPhase();
+  }
+
+  function scheduleNextPhase() {
+    const delay = visualPhase === "stage" ? STAGE_DWELL_MS : TRANSITION_DWELL_MS;
+    window.clearTimeout(timer);
+    timer = window.setTimeout(advanceVisualPhase, delay);
   }
 
   function syncPlayback() {
     const paused = userPaused || Boolean(detailTarget) || document.hidden;
-    window.clearInterval(timer);
-    timer = paused ? null : window.setInterval(tick, STAGE_DWELL_MS);
+    window.clearTimeout(timer);
+    timer = null;
+    if (!paused) scheduleNextPhase();
     state = { ...state, running: !paused };
     control.setAttribute("aria-pressed", String(userPaused));
     control.querySelector("b").textContent = userPaused ? "Play" : "Pause";

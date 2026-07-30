@@ -8,6 +8,7 @@ import {
   OUTER_CADENCE,
   OUTER_TARGETS,
   STAGE_DWELL_MS,
+  TRANSITION_DWELL_MS,
   advanceEvolutionState,
   createEvolutionState,
   formatEvolutionCount
@@ -27,6 +28,7 @@ test("models the four-stage persistent improvement loop", () => {
     ["act", "assess", "revise", "retain"]
   );
   assert.equal(STAGE_DWELL_MS, 1400);
+  assert.equal(TRANSITION_DWELL_MS, 1500);
 });
 
 test("defines six inner target categories", () => {
