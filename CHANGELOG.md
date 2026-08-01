@@ -10,6 +10,8 @@ All notable editorial updates are recorded here.
   external knowledge and resolves contradictions on changing-domain tasks.
 - Indexed Double Ratchet, which co-evolves an inspectable evaluation metric
   with lifecycle-managed skills and validates metric integrity on locked sets.
+- Indexed Group-Evolving Agents, which turns populations of agent workflows
+  into the evolutionary unit and retains improvements shared across lineages.
 
 ## 2026-07-30
 

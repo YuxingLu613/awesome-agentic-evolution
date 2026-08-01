@@ -207,6 +207,12 @@ attached to the same entry instead of being counted again.
   drawback-detector metric with a lifecycle-managed skill library, using
   anchored references and locked-set validation to expose evaluator collapse.
   **Targets:** Skills, Co-evolution.
+- [Group-Evolving Agents (GEA)](https://github.com/UCSB-AI/GEA) —
+  [Paper](https://arxiv.org/abs/2602.04837). Evolves populations of agent
+  workflows and tools through archived experience sharing, retaining
+  cross-lineage improvements on held-out coding benchmarks. Run only in an
+  isolated sandbox.
+  **Targets:** Topology, Tools, Co-evolution.
 - [Agent0](https://github.com/aiming-lab/Agent0) — [Paper](https://arxiv.org/abs/2511.16043).
   Co-evolves a task curriculum and a tool-using executor without human-curated
   task data.
