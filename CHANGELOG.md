@@ -2,6 +2,15 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-07-31
+
+### Field updates
+
+- Indexed ARIA, which turns targeted human corrections into timestamped
+  external knowledge and resolves contradictions on changing-domain tasks.
+- Indexed Double Ratchet, which co-evolves an inspectable evaluation metric
+  with lifecycle-managed skills and validates metric integrity on locked sets.
+
 ## 2026-07-30
 
 ### Field updates

@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-07-30
+**Last editorial review:** 2026-07-31
 
 ## Contents
 
@@ -131,9 +131,10 @@ attached to the same entry instead of being counted again.
 
 ### Knowledge
 
-No current entry cleanly demonstrates persistent, independently evaluated
-updates to external world knowledge. This is a documented coverage gap rather
-than a reason to relabel experience memory as knowledge.
+- [Adaptive Reflective Interactive Agent (ARIA)](https://aclanthology.org/2025.emnlp-industry.115/)
+  — Maintains a timestamped knowledge repository from targeted human guidance,
+  detects conflicts, and evaluates adaptation on changing-domain tasks.
+  **Targets:** Knowledge.
 
 ### Skills
 
@@ -155,6 +156,11 @@ than a reason to relabel experience memory as knowledge.
 - [From Memory to Skills](https://arxiv.org/abs/2607.16621) — Governs the
   evidence-grounded conversion of retained traces into callable skills.
   **Targets:** Memory, Skills.
+- [Retrospective Harness Optimization](https://github.com/wbopan/retro-harness)
+  — [Paper](https://arxiv.org/abs/2606.05922). Uses unlabeled past trajectories
+  and self-preference to retain skill and tool updates that improve held-out
+  behavior.
+  **Targets:** Skills, Tools.
 
 ### Tools
 
@@ -180,10 +186,6 @@ than a reason to relabel experience memory as knowledge.
 - [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) — Builds, evaluates, and
   evolves multi-agent workflows with pluggable optimization algorithms.
   **Targets:** Topology.
-- [Retrospective Harness Optimization](https://github.com/wbopan/retro-harness)
-  — [Paper](https://arxiv.org/abs/2606.05922). Uses unlabeled past trajectories
-  and self-preference to retain harness updates that improve held-out behavior.
-  **Targets:** Skills, Tools, Topology.
 - [Darwin Gödel Machine](https://github.com/jennyzzt/dgm) — [Paper](https://arxiv.org/abs/2505.22954)
   · [Article](https://sakana.ai/dgm/). Rewrites coding-agent implementations
   and empirically validates descendants. Run only in an isolated sandbox.
@@ -200,6 +202,11 @@ than a reason to relabel experience memory as knowledge.
 
 ### Co-evolution
 
+- [Double Ratchet](https://github.com/amazon-science/Self-Evolving-Agents-Double-Ratchet)
+  — [Paper](https://arxiv.org/abs/2607.12790). Co-evolves an inspectable
+  drawback-detector metric with a lifecycle-managed skill library, using
+  anchored references and locked-set validation to expose evaluator collapse.
+  **Targets:** Skills, Co-evolution.
 - [Agent0](https://github.com/aiming-lab/Agent0) — [Paper](https://arxiv.org/abs/2511.16043).
   Co-evolves a task curriculum and a tool-using executor without human-curated
   task data.
