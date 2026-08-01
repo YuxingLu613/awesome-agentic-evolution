@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-07-31
+**Last editorial review:** 2026-08-01
 
 ## Contents
 
@@ -128,6 +128,10 @@ attached to the same entry instead of being counted again.
   Learns memory-skill selection and evolves reusable routines from difficult
   cases.
   **Targets:** Memory, Skills.
+- [Living-Harness](https://arxiv.org/abs/2607.26598) — Converts evaluated
+  trajectories into bounded episodic-memory and state-graph repairs that
+  persist across episodes and improve interactive benchmark performance.
+  **Targets:** Memory, Topology.
 
 ### Knowledge
 
@@ -226,6 +230,9 @@ agent. Multi-agent execution by itself is not sufficient.
 These resources provide environments or held-out signals for testing whether a
 persistent update is real.
 
+- [Sealed Exogenous Acceptance Loop (SEAL)](https://arxiv.org/abs/2607.24300)
+  — Keeps its audit hidden from evolving policies and self-tests, returning
+  only accept/reject and retaining the whole incumbent after a clear regression.
 - [RSIBench-Data](https://github.com/evolvent-ai/RSIBench-Data) —
   [Paper](https://arxiv.org/abs/2607.25886). Audits whether researcher agents
   turn checkpoint feedback into reusable training-data strategies under fixed

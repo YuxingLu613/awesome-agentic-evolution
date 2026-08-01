@@ -2,6 +2,15 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-01
+
+### Field updates
+
+- Indexed Living-Harness, which converts evaluated trajectories into bounded
+  episodic-memory and state-graph repairs that persist across future episodes.
+- Indexed SEAL, which exposes failures in self-authored verification and uses a
+  sealed external audit plus whole-state retention to block clear regressions.
+
 ## 2026-07-31
 
 ### Field updates
