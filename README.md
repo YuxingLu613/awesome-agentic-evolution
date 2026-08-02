@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-01
+**Last editorial review:** 2026-08-02
 
 ## Contents
 
@@ -230,6 +230,10 @@ agent. Multi-agent execution by itself is not sufficient.
 These resources provide environments or held-out signals for testing whether a
 persistent update is real.
 
+- [PerMemSafe](https://github.com/Greysahy/permemsafe) —
+  [Paper](https://aclanthology.org/2026.findings-acl.320/). Benchmarks implicit
+  personalized safety across evolving long-horizon memory, with committed data,
+  evaluation logs, and a risk-aware memory baseline.
 - [Sealed Exogenous Acceptance Loop (SEAL)](https://arxiv.org/abs/2607.24300)
   — Keeps its audit hidden from evolving policies and self-tests, returning
   only accept/reject and retaining the whole incumbent after a clear regression.

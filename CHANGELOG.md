@@ -2,6 +2,13 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-02
+
+### Field updates
+
+- Added PerMemSafe, an ACL 2026 benchmark for implicit personalized safety in
+  long-horizon self-evolving memory, with public data, logs, and evaluation code.
+
 ## 2026-08-01
 
 ### Field updates
