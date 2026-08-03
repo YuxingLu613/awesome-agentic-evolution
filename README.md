@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-07-29
+**Last editorial review:** 2026-08-02
 
 ## Contents
 
@@ -128,12 +128,17 @@ attached to the same entry instead of being counted again.
   Learns memory-skill selection and evolves reusable routines from difficult
   cases.
   **Targets:** Memory, Skills.
+- [Living-Harness](https://arxiv.org/abs/2607.26598) — Converts evaluated
+  trajectories into bounded episodic-memory and state-graph repairs that
+  persist across episodes and improve interactive benchmark performance.
+  **Targets:** Memory, Topology.
 
 ### Knowledge
 
-No current entry cleanly demonstrates persistent, independently evaluated
-updates to external world knowledge. This is a documented coverage gap rather
-than a reason to relabel experience memory as knowledge.
+- [Adaptive Reflective Interactive Agent (ARIA)](https://aclanthology.org/2025.emnlp-industry.115/)
+  — Maintains a timestamped knowledge repository from targeted human guidance,
+  detects conflicts, and evaluates adaptation on changing-domain tasks.
+  **Targets:** Knowledge.
 
 ### Skills
 
@@ -155,6 +160,11 @@ than a reason to relabel experience memory as knowledge.
 - [From Memory to Skills](https://arxiv.org/abs/2607.16621) — Governs the
   evidence-grounded conversion of retained traces into callable skills.
   **Targets:** Memory, Skills.
+- [Retrospective Harness Optimization](https://github.com/wbopan/retro-harness)
+  — [Paper](https://arxiv.org/abs/2606.05922). Uses unlabeled past trajectories
+  and self-preference to retain skill and tool updates that improve held-out
+  behavior.
+  **Targets:** Skills, Tools.
 
 ### Tools
 
@@ -196,6 +206,22 @@ than a reason to relabel experience memory as knowledge.
 
 ### Co-evolution
 
+- [WebEvolver](https://github.com/Tencent/SelfEvolvingAgent/tree/main/WebEvolver) —
+  [Paper](https://aclanthology.org/2025.emnlp-main.454/). Co-trains a policy
+  and world model from real trajectories, then uses the model for synthetic
+  training and look-ahead evaluation.
+  **Targets:** Parameters, Co-evolution.
+- [Double Ratchet](https://github.com/amazon-science/Self-Evolving-Agents-Double-Ratchet)
+  — [Paper](https://arxiv.org/abs/2607.12790). Co-evolves an inspectable
+  drawback-detector metric with a lifecycle-managed skill library, using
+  anchored references and locked-set validation to expose evaluator collapse.
+  **Targets:** Skills, Co-evolution.
+- [Group-Evolving Agents (GEA)](https://github.com/UCSB-AI/GEA) —
+  [Paper](https://arxiv.org/abs/2602.04837). Evolves populations of agent
+  workflows and tools through archived experience sharing, retaining
+  cross-lineage improvements on held-out coding benchmarks. Run only in an
+  isolated sandbox.
+  **Targets:** Topology, Tools, Co-evolution.
 - [Agent0](https://github.com/aiming-lab/Agent0) — [Paper](https://arxiv.org/abs/2511.16043).
   Co-evolves a task curriculum and a tool-using executor without human-curated
   task data.
@@ -209,6 +235,17 @@ agent. Multi-agent execution by itself is not sufficient.
 These resources provide environments or held-out signals for testing whether a
 persistent update is real.
 
+- [PerMemSafe](https://github.com/Greysahy/permemsafe) —
+  [Paper](https://aclanthology.org/2026.findings-acl.320/). Benchmarks implicit
+  personalized safety across evolving long-horizon memory, with committed data,
+  evaluation logs, and a risk-aware memory baseline.
+- [Sealed Exogenous Acceptance Loop (SEAL)](https://arxiv.org/abs/2607.24300)
+  — Keeps its audit hidden from evolving policies and self-tests, returning
+  only accept/reject and retaining the whole incumbent after a clear regression.
+- [RSIBench-Data](https://github.com/evolvent-ai/RSIBench-Data) —
+  [Paper](https://arxiv.org/abs/2607.25886). Audits whether researcher agents
+  turn checkpoint feedback into reusable training-data strategies under fixed
+  training, evaluation, and budget controls.
 - [Experience-driven Lifelong Learning](https://arxiv.org/abs/2508.19005) —
   Proposes a framework and benchmark for continuous agent growth.
 - [SWE-bench](https://github.com/SWE-bench/SWE-bench) — Supplies real-world
