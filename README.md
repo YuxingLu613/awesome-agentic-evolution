@@ -206,6 +206,11 @@ attached to the same entry instead of being counted again.
 
 ### Co-evolution
 
+- [WebEvolver](https://github.com/Tencent/SelfEvolvingAgent/tree/main/WebEvolver) —
+  [Paper](https://aclanthology.org/2025.emnlp-main.454/). Co-trains a policy
+  and world model from real trajectories, then uses the model for synthetic
+  training and look-ahead evaluation.
+  **Targets:** Parameters, Co-evolution.
 - [Double Ratchet](https://github.com/amazon-science/Self-Evolving-Agents-Double-Ratchet)
   — [Paper](https://arxiv.org/abs/2607.12790). Co-evolves an inspectable
   drawback-detector metric with a lifecycle-managed skill library, using

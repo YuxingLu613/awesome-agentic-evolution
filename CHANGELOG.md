@@ -2,6 +2,14 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-03
+
+### Field updates
+
+- Indexed WebEvolver, which co-trains an agent policy and world model from real
+  web trajectories, then reuses model-generated trajectories for persistent
+  policy improvement.
+
 ## 2026-08-02
 
 ### Field updates
