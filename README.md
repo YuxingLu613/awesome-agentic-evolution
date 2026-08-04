@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-02
+**Last editorial review:** 2026-08-04
 
 ## Contents
 
@@ -132,6 +132,11 @@ attached to the same entry instead of being counted again.
   trajectories into bounded episodic-memory and state-graph repairs that
   persist across episodes and improve interactive benchmark performance.
   **Targets:** Memory, Topology.
+- [RoMeRL](https://github.com/YOUNG-fnxm/RoMeRL) —
+  [Paper](https://arxiv.org/abs/2608.02508). Uses bounded task-slot memory
+  states whose contents and utilities update from environment rewards,
+  reducing persistent reward contamination across lifelong benchmarks.
+  **Targets:** Memory.
 
 ### Knowledge
 
@@ -168,6 +173,12 @@ attached to the same entry instead of being counted again.
 
 ### Tools
 
+- [AgentFactory](https://github.com/zzatpku/AgentFactory) —
+  [Paper](https://aclanthology.org/2026.acl-demo.81/). Stores successful
+  solutions as executable Python subagents, refines them from execution
+  feedback, and evaluates reusable capability growth across later tasks. Run
+  only in an isolated sandbox.
+  **Targets:** Tools, Skills.
 - [Mem²Evolve](https://buaa-irip-llm.github.io/Mem2Evolve/) — [Paper](https://arxiv.org/abs/2604.10923).
   Couples experience distillation with dynamic creation of tools and expert
   agents.
