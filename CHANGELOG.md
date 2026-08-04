@@ -2,6 +2,15 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-04
+
+### Field updates
+
+- Indexed RoMeRL, which updates bounded task-slot memory states from
+  environment rewards while limiting persistent reward contamination.
+- Indexed AgentFactory, which retains successful solutions as executable
+  subagents and refines them from later execution feedback.
+
 ## 2026-08-03
 
 ### Field updates
