@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-04
+**Last editorial review:** 2026-08-06
 
 ## Contents
 
@@ -144,6 +144,10 @@ attached to the same entry instead of being counted again.
   — Maintains a timestamped knowledge repository from targeted human guidance,
   detects conflicts, and evaluates adaptation on changing-domain tasks.
   **Targets:** Knowledge.
+- [CoEvoKG](https://github.com/lazzy1225/CoEvoKG) — [Paper](https://arxiv.org/abs/2608.01904).
+  Writes verified search evidence back into a knowledge graph that co-evolves
+  with a proposer–solver loop and is evaluated on six multi-hop QA benchmarks.
+  **Targets:** Knowledge, Co-evolution.
 
 ### Skills
 
@@ -198,6 +202,11 @@ attached to the same entry instead of being counted again.
   Represents language agents as graphs and optimizes node prompts and
   connectivity.
   **Targets:** Topology.
+- [A-SR: Self-Evolving Agentic LLMs for Symbolic Regression](https://arxiv.org/abs/2608.04872)
+  — Routes evaluator feedback through role policies and process memory, adapts
+  coordination within runs, and distills trajectories across runs with held-out
+  symbolic-regression evaluation.
+  **Targets:** Topology, Memory, Parameters.
 - [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) — Builds, evaluates, and
   evolves multi-agent workflows with pluggable optimization algorithms.
   **Targets:** Topology.

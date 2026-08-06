@@ -2,6 +2,16 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-06
+
+### Field updates
+
+- Indexed CoEvoKG, which writes verified search evidence back into a knowledge
+  graph and reuses the enriched graph for proposer–solver self-play.
+- Indexed A-SR, which adapts role coordination and routed process memory from
+  evaluator feedback, with cross-run distillation and held-out
+  symbolic-regression tests.
+
 ## 2026-08-04
 
 ### Field updates
