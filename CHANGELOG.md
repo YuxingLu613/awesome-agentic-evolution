@@ -2,6 +2,21 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-07
+
+### Field updates
+
+- Indexed CrystalMem, which makes external memory reversible under elastic
+  budgets and verifies recrystallized entries across broad evaluations.
+- Indexed Search2Skill and SESA, which turn external evidence or self-play
+  failures into reusable skills with held-out transfer signals.
+- Indexed MANTA, which adapts multi-agent topology during execution and retains
+  cross-run structural experience.
+- Indexed When Self-Evolution Backfires, which documents skill contamination and
+  evaluates pre-commit gating as a safety control.
+- Added FinEvo-Bench, a longitudinal professional-workflow benchmark with
+  paired non-evolving controls and expert-validated compliance evaluation.
+
 ## 2026-08-06
 
 ### Field updates
