@@ -132,6 +132,11 @@ attached to the same entry instead of being counted again.
   trajectories into bounded episodic-memory and state-graph repairs that
   persist across episodes and improve interactive benchmark performance.
   **Targets:** Memory, Topology.
+- [CrystalMem](https://arxiv.org/abs/2608.00303) — Reversibly demotes and
+  verifies memory entries under changing byte budgets, using influence-aware
+  retention and evaluation across seven environments, seventeen methods, and
+  six backbones.
+  **Targets:** Memory.
 - [RoMeRL](https://github.com/YOUNG-fnxm/RoMeRL) —
   [Paper](https://arxiv.org/abs/2608.02508). Uses bounded task-slot memory
   states whose contents and utilities update from environment rewards,
@@ -174,6 +179,20 @@ attached to the same entry instead of being counted again.
   and self-preference to retain skill and tool updates that improve held-out
   behavior.
   **Targets:** Skills, Tools.
+- [Search2Skill](https://arxiv.org/abs/2608.05245) — Searches for capability
+  gaps, distills external evidence into a persistent skill library with
+  rubric-based reinforcement learning, and improves streaming and held-out
+  expert-domain evaluation.
+  **Targets:** Skills, Parameters.
+- [When Self-Evolution Backfires](https://arxiv.org/abs/2608.05810) — Shows
+  skill pools can contaminate later skills and proposes pre-commit heterogeneous
+  critics plus marginal-gain subset selection, evaluated on Terminal-Bench 2.
+  **Targets:** Skills.
+- [SESA: Self-Evolving Search Agents](https://github.com/Zenghuang-Fu/SESA-Self-Evolving-Search-Agents)
+  — [Paper](https://arxiv.org/abs/2607.29468). Distills informative self-play
+  failures into bounded skill memory that reshapes the solver and challenger
+  frontier across held-out QA benchmarks.
+  **Targets:** Skills, Memory, Parameters, Co-evolution.
 
 ### Tools
 
@@ -202,6 +221,11 @@ attached to the same entry instead of being counted again.
   Represents language agents as graphs and optimizes node prompts and
   connectivity.
   **Targets:** Topology.
+- [MANTA: Multi-Agent Network Topology Adaptation](https://arxiv.org/abs/2607.28527)
+  — Adapts roles, links, execution order, and visibility from trace audits
+  during execution, retains a cross-run topology playbook, and evaluates
+  transfer across five benchmarks.
+  **Targets:** Topology, Memory.
 - [A-SR: Self-Evolving Agentic LLMs for Symbolic Regression](https://arxiv.org/abs/2608.04872)
   — Routes evaluator feedback through role policies and process memory, adapts
   coordination within runs, and distills trajectories across runs with held-out
@@ -266,6 +290,10 @@ persistent update is real.
   [Paper](https://arxiv.org/abs/2607.25886). Audits whether researcher agents
   turn checkpoint feedback into reusable training-data strategies under fixed
   training, evaluation, and budget controls.
+- [FinEvo-Bench](https://arxiv.org/abs/2608.06144) — A longitudinal benchmark
+  with 120 financial workflow tasks, interleaved streams, paired state-reset
+  controls, expert-validated rubrics, and compliance metrics for retained-
+  experience gains.
 - [Experience-driven Lifelong Learning](https://arxiv.org/abs/2508.19005) —
   Proposes a framework and benchmark for continuous agent growth.
 - [SWE-bench](https://github.com/SWE-bench/SWE-bench) — Supplies real-world
