@@ -153,6 +153,11 @@ attached to the same entry instead of being counted again.
   Writes verified search evidence back into a knowledge graph that co-evolves
   with a proposer–solver loop and is evaluated on six multi-hop QA benchmarks.
   **Targets:** Knowledge, Co-evolution.
+- [Knowledge-Centric Self-Improvement](https://github.com/recursive-knowledge/KSI)
+  — [Paper](https://arxiv.org/abs/2607.19592). Runs disposable agents that
+  distill evidence-grounded forums into shared knowledge, then seeds later
+  attempts; gains transfer across held-out tasks and model families.
+  **Targets:** Knowledge.
 
 ### Skills
 
@@ -231,6 +236,11 @@ attached to the same entry instead of being counted again.
   coordination within runs, and distills trajectories across runs with held-out
   symbolic-regression evaluation.
   **Targets:** Topology, Memory, Parameters.
+- [CausalForge](https://github.com/Jiyuan-Tan/CausalForge) —
+  [Paper](https://arxiv.org/abs/2607.22511). Uses Lean-checked proofs and
+  statement audits in a self-improving theorem pipeline, with public formal
+  libraries and run records.
+  **Targets:** Topology.
 - [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) — Builds, evaluates, and
   evolves multi-agent workflows with pluggable optimization algorithms.
   **Targets:** Topology.
@@ -270,6 +280,10 @@ attached to the same entry instead of being counted again.
   Co-evolves a task curriculum and a tool-using executor without human-curated
   task data.
   **Targets:** Tools, Co-evolution.
+- [Self-Modifying Lean Proof Agents](https://arxiv.org/abs/2607.17352) —
+  Co-evolves a Lean proof workflow and benchmark curriculum, using compiler and
+  Lean verification feedback across 15 generations with a held-out miniF2F split.
+  **Targets:** Topology, Tools, Co-evolution.
 
 This section uses **Co-evolution** only when an external factor changes with the
 agent. Multi-agent execution by itself is not sufficient.

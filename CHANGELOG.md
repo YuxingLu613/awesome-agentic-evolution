@@ -2,6 +2,18 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-08
+
+### Field updates
+
+- Indexed Knowledge-Centric Self-Improvement (KSI), which distills evidence from
+  disposable agents into shared knowledge that transfers across tasks and
+  model families.
+- Indexed CausalForge, which combines Lean-checked proofs and statement audits
+  in a public self-improving theorem pipeline.
+- Indexed Self-Modifying Lean Proof Agents, which co-evolve a proof workflow
+  with a verifier-grounded benchmark curriculum across held-out generations.
+
 ## 2026-08-07
 
 ### Field updates
