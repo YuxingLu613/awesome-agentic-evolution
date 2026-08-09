@@ -2,6 +2,15 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-09
+
+### Field updates
+
+- Indexed SkillHone, which evolves complete skill folders through persistent
+  decision history and regression-gated revisions.
+- Indexed RethinkSkill, which releases a controlled comparison of success,
+  failure, and mixed feedback across repeated skill-evolution rounds.
+
 ## 2026-08-08
 
 ### Field updates

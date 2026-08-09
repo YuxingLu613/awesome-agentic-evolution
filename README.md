@@ -198,6 +198,16 @@ attached to the same entry instead of being counted again.
   failures into bounded skill memory that reshapes the solver and challenger
   frontier across held-out QA benchmarks.
   **Targets:** Skills, Memory, Parameters, Co-evolution.
+- [SkillHone](https://github.com/Tencent/SkillHone) —
+  [Paper](https://arxiv.org/abs/2606.08671). Evolves whole skill folders through
+  persistent decision history, practice probes, and regression-gated PRs, with
+  validation-gated deep-research evaluation. Run only in an isolated sandbox.
+  **Targets:** Skills.
+- [RethinkSkill](https://github.com/HKUST-KnowComp/rethinkskill) —
+  [Paper](https://arxiv.org/abs/2608.02636). Provides a reproducible controlled
+  skill-evolution harness that compares success-only, failure-only, and mixed
+  feedback across 42 matched runs with held-out, robustness, and transfer checks.
+  **Targets:** Skills.
 
 ### Tools
 
