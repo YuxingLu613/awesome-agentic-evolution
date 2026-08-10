@@ -161,6 +161,11 @@ attached to the same entry instead of being counted again.
 
 ### Skills
 
+- [SkillProx](https://github.com/Steven011018/SkillProx) — [Paper](https://arxiv.org/abs/2608.07449).
+  Runs a closed-loop forward/backward skill-evolution process: measured outcomes
+  roll back regressions, and utility audits gate consolidation or removal before
+  held-out evaluation; official code is forthcoming.
+  **Targets:** Skills.
 - [SkillOpt](https://github.com/microsoft/SkillOpt) — [Paper](https://arxiv.org/abs/2605.23904).
   Optimizes natural-language procedures from scored trajectories with
   validation-gated updates.
