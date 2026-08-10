@@ -2,6 +2,13 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-11
+
+### Field updates
+
+- Indexed OpenSkill, which refines reusable skills with evidence-grounded
+  virtual tests before held-out target-task evaluation.
+
 ## 2026-08-09
 
 ### Field updates

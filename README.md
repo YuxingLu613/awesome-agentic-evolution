@@ -161,6 +161,10 @@ attached to the same entry instead of being counted again.
 
 ### Skills
 
+- [OpenSkill](https://openlair.github.io/openskill/) — [Paper](https://arxiv.org/abs/2606.06741).
+  Builds and refines reusable skills against self-created, evidence-grounded
+  virtual tests, then evaluates frozen skills on held-out target tasks.
+  **Targets:** Skills.
 - [SkillOpt](https://github.com/microsoft/SkillOpt) — [Paper](https://arxiv.org/abs/2605.23904).
   Optimizes natural-language procedures from scored trajectories with
   validation-gated updates.
