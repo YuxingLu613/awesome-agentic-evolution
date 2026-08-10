@@ -2,6 +2,13 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-10
+
+### Field updates
+
+- Indexed SkillProx, which closes the diagnostic loop around skill edits and
+  gates consolidation or removal with utility audits before held-out evaluation.
+
 ## 2026-08-09
 
 ### Field updates
