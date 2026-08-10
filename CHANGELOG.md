@@ -11,6 +11,8 @@ All notable editorial updates are recorded here.
 
 - Indexed SkillProx, which closes the diagnostic loop around skill edits and
   gates consolidation or removal with utility audits before held-out evaluation.
+- Indexed OpenSkill, which refines reusable skills with evidence-grounded
+  virtual tests before held-out target-task evaluation.
 
 ## 2026-08-09
 
