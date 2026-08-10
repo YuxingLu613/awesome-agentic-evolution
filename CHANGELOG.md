@@ -6,6 +6,9 @@ All notable editorial updates are recorded here.
 
 ### Field updates
 
+- Indexed SEAGym, which evaluates harness updates through frozen validation,
+  held-out transfer, replay, and cost views with released run artifacts.
+
 - Indexed SkillProx, which closes the diagnostic loop around skill edits and
   gates consolidation or removal with utility audits before held-out evaluation.
 

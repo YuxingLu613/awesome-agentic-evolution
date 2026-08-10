@@ -308,6 +308,10 @@ agent. Multi-agent execution by itself is not sufficient.
 These resources provide environments or held-out signals for testing whether a
 persistent update is real.
 
+- [SEAGym: An Evaluation Environment for Self-Evolving LLM Agents](https://github.com/antropy-research/SEAGym)
+  — [Paper](https://arxiv.org/abs/2606.17546). Measures persistent harness
+  updates across train, frozen validation, held-out ID/OOD transfer, replay, and
+  cost views, with checkpointed states and reproducible configurations.
 - [PerMemSafe](https://github.com/Greysahy/permemsafe) —
   [Paper](https://aclanthology.org/2026.findings-acl.320/). Benchmarks implicit
   personalized safety across evolving long-horizon memory, with committed data,
