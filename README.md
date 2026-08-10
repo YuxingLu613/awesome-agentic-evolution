@@ -161,6 +161,11 @@ attached to the same entry instead of being counted again.
 
 ### Skills
 
+- [SkillProx](https://github.com/Steven011018/SkillProx) — [Paper](https://arxiv.org/abs/2608.07449).
+  Runs a closed-loop forward/backward skill-evolution process: measured outcomes
+  roll back regressions, and utility audits gate consolidation or removal before
+  held-out evaluation; official code is forthcoming.
+  **Targets:** Skills.
 - [OpenSkill](https://openlair.github.io/openskill/) — [Paper](https://arxiv.org/abs/2606.06741).
   Builds and refines reusable skills against self-created, evidence-grounded
   virtual tests, then evaluates frozen skills on held-out target tasks.
@@ -307,6 +312,10 @@ agent. Multi-agent execution by itself is not sufficient.
 These resources provide environments or held-out signals for testing whether a
 persistent update is real.
 
+- [SEAGym: An Evaluation Environment for Self-Evolving LLM Agents](https://github.com/antropy-research/SEAGym)
+  — [Paper](https://arxiv.org/abs/2606.17546). Measures persistent harness
+  updates across train, frozen validation, held-out ID/OOD transfer, replay, and
+  cost views, with checkpointed states and reproducible configurations.
 - [PerMemSafe](https://github.com/Greysahy/permemsafe) —
   [Paper](https://aclanthology.org/2026.findings-acl.320/). Benchmarks implicit
   personalized safety across evolving long-horizon memory, with committed data,
