@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-06
+**Last editorial review:** 2026-08-11
 
 ## Contents
 
@@ -142,6 +142,11 @@ attached to the same entry instead of being counted again.
   states whose contents and utilities update from environment rewards,
   reducing persistent reward contamination across lifelong benchmarks.
   **Targets:** Memory.
+- [Tree-of-Experience](https://arxiv.org/abs/2608.09044) — Organizes reusable
+  experience as a reasoning-aligned tree, calibrates path reliability from
+  environmental outcomes, and evaluates transfer on Game of 24 and
+  FinEvolveBench.
+  **Targets:** Memory.
 
 ### Knowledge
 
@@ -166,6 +171,15 @@ attached to the same entry instead of being counted again.
   roll back regressions, and utility audits gate consolidation or removal before
   held-out evaluation; official code is forthcoming.
   **Targets:** Skills.
+- [SkillHEX](https://arxiv.org/abs/2608.05628) — Uses falsifiable self-tests
+  and evidence-guided tree search to explore persistent skill revisions under
+  sparse feedback, evaluated on 87 SkillsBench tasks.
+  **Targets:** Skills.
+- [Learning Globally Reusable Skills for Coding Agents](https://arxiv.org/abs/2608.06153)
+  — Co-evolves a skill-relation graph with global skill consolidation and replay
+  verification, reporting cross-task and regression-aware gains on coding-agent
+  tasks.
+  **Targets:** Skills, Topology.
 - [OpenSkill](https://openlair.github.io/openskill/) — [Paper](https://arxiv.org/abs/2606.06741).
   Builds and refines reusable skills against self-created, evidence-grounded
   virtual tests, then evaluates frozen skills on held-out target tasks.
@@ -245,6 +259,10 @@ attached to the same entry instead of being counted again.
   Represents language agents as graphs and optimizes node prompts and
   connectivity.
   **Targets:** Topology.
+- [Open-Ended Optimization (OEO)](https://arxiv.org/abs/2608.09629) — Composes
+  the improvement route online under fixed objectives, budgets, data boundaries,
+  and evaluators, comparing persistent skill updates with SkillOpt and GEPA.
+  **Targets:** Skills, Topology.
 - [MANTA: Multi-Agent Network Topology Adaptation](https://arxiv.org/abs/2607.28527)
   — Adapts roles, links, execution order, and visibility from trace audits
   during execution, retains a cross-run topology playbook, and evaluates
@@ -316,6 +334,10 @@ persistent update is real.
   — [Paper](https://arxiv.org/abs/2606.17546). Measures persistent harness
   updates across train, frozen validation, held-out ID/OOD transfer, replay, and
   cost views, with checkpointed states and reproducible configurations.
+- [Continual Skill Bench](https://github.com/gtynnn060110-hash/continual-skill-bench-final)
+  — [Paper](https://arxiv.org/abs/2608.03874). Evaluates continual skill reuse
+  across five domains and 100-task sequences, comparing in-context adaptation
+  with explicit skill maintenance.
 - [PerMemSafe](https://github.com/Greysahy/permemsafe) —
   [Paper](https://aclanthology.org/2026.findings-acl.320/). Benchmarks implicit
   personalized safety across evolving long-horizon memory, with committed data,

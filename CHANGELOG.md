@@ -2,6 +2,20 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-11
+
+### Field updates
+
+- Indexed Open-Ended Optimization, which composes the route from fixed
+  objectives and feedback to persistent skill updates online.
+- Indexed Tree-of-Experience, which calibrates a reasoning-aligned experience
+  tree from environmental outcomes and tests cross-task transfer.
+- Indexed SkillHEX and Learning Globally Reusable Skills, which explore
+  persistent skill revisions while adding self-verification, graph-level
+  consolidation, or replay-gated regression checks.
+- Added Continual Skill Bench, a public benchmark for comparing in-context
+  adaptation with explicit skill maintenance across sequential tasks.
+
 ## 2026-08-10
 
 ### Field updates
