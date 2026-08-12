@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-11
+**Last editorial review:** 2026-08-12
 
 ## Contents
 
@@ -163,9 +163,17 @@ attached to the same entry instead of being counted again.
   distill evidence-grounded forums into shared knowledge, then seeds later
   attempts; gains transfer across held-out tasks and model families.
   **Targets:** Knowledge.
+- [GeoForge](https://arxiv.org/abs/2608.10494) — Converts grounded trajectories
+  into workflow-graph, action-experience, and SOP memories, then safety-gated
+  distillation reuses them for tool planning across geospatial benchmarks.
+  **Targets:** Knowledge, Topology.
 
 ### Skills
 
+- [SkillZip](https://arxiv.org/abs/2608.11079) — Compresses evolving skills with
+  typed structural sharing and coverage constraints; its Zip-on-Write mode
+  incorporates each patch without replaying tasks or reparsing history.
+  **Targets:** Skills.
 - [SkillProx](https://github.com/Steven011018/SkillProx) — [Paper](https://arxiv.org/abs/2608.07449).
   Runs a closed-loop forward/backward skill-evolution process: measured outcomes
   roll back regressions, and utility audits gate consolidation or removal before
@@ -273,6 +281,12 @@ attached to the same entry instead of being counted again.
   coordination within runs, and distills trajectories across runs with held-out
   symbolic-regression evaluation.
   **Targets:** Topology, Memory, Parameters.
+- [MetaVideoAgent](https://github.com/Alibaba-VELLDEPTH/MetaVideoAgent) —
+  [Paper](https://arxiv.org/abs/2608.04587). Profiles a video distribution,
+  diagnoses trajectory failures, and evolves responsible modules across four
+  rounds with evolution and held-out VA-EvoBench splits. Run only in an
+  isolated sandbox.
+  **Targets:** Topology.
 - [CausalForge](https://github.com/Jiyuan-Tan/CausalForge) —
   [Paper](https://arxiv.org/abs/2607.22511). Uses Lean-checked proofs and
   statement audits in a self-improving theorem pipeline, with public formal
@@ -297,6 +311,15 @@ attached to the same entry instead of being counted again.
 
 ### Co-evolution
 
+- [MEGA: Self-Evolving Agent Optimization Infrastructure via Wisdom Graph](https://arxiv.org/abs/2608.10504)
+  — Distills sessions into durable wisdom assets and a typed graph, then feeds
+  controlled operational evidence back into workflow optimization and the
+  evolving curation strategy.
+  **Targets:** Knowledge, Topology, Co-evolution.
+- [SBCO: Self-Supervised, Verifier-Grounded Harness Optimization](https://arxiv.org/abs/2608.10157)
+  — Jointly updates a decomposed verifier bank and planning-agent harness from
+  self-graded feedback via block-coordinate ascent, without human labels.
+  **Targets:** Topology, Co-evolution.
 - [WebEvolver](https://github.com/Tencent/SelfEvolvingAgent/tree/main/WebEvolver) —
   [Paper](https://aclanthology.org/2025.emnlp-main.454/). Co-trains a policy
   and world model from real trajectories, then uses the model for synthetic
