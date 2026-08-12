@@ -2,6 +2,18 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-12
+
+### Field updates
+
+- Indexed MetaVideoAgent, which evolves responsible video-agent modules from
+  trajectory failures and validates accepted bundles on evolution and held-out
+  splits.
+- Indexed GeoForge and SkillZip, which retain safety-gated execution knowledge
+  or structurally compressed skill patches for later reuse.
+- Indexed MEGA and SBCO, which feed operational or self-graded evidence back
+  into an optimization harness, verifier bank, or workflow-level wisdom graph.
+
 ## 2026-08-11
 
 ### Field updates
