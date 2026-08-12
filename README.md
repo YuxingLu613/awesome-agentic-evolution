@@ -117,6 +117,11 @@ attached to the same entry instead of being counted again.
 - [Reflexion](https://github.com/noahshinn/reflexion) — [Paper](https://arxiv.org/abs/2303.11366).
   Stores verbal reflections in episodic memory for later trials.
   **Targets:** Memory.
+- [Luclas](https://github.com/LuclasM/Luclas) — Learns from task outcomes through
+  persistent SQLite episodes and lessons plus versioned self-updating policies,
+  with daily compression, explicit corrections, and inspectable drift
+  safeguards.
+  **Targets:** Memory, Topology.
 - [ExpeL](https://github.com/LeapLabTHU/ExpeL) — [Paper](https://arxiv.org/abs/2308.10144).
   Distills transferable insights from successes and failures without updating
   model weights.

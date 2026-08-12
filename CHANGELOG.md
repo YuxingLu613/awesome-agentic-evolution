@@ -6,6 +6,8 @@ All notable editorial updates are recorded here.
 
 ### Field updates
 
+- Indexed Luclas, an open implementation that evolves persistent memory and
+  versioned policies from task outcomes with inspectable drift safeguards.
 - Indexed MetaVideoAgent, which evolves responsible video-agent modules from
   trajectory failures and validates accepted bundles on evolution and held-out
   splits.
