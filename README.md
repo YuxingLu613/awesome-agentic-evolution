@@ -292,6 +292,11 @@ attached to the same entry instead of being counted again.
   rounds with evolution and held-out VA-EvoBench splits. Run only in an
   isolated sandbox.
   **Targets:** Topology.
+- [EMAS: Evolving Multi-Agent System](https://github.com/cf3i/Evolving-Multi-Agent-System)
+  — [Paper](https://arxiv.org/abs/2608.07196). Converts recurring trace diagnoses
+  into prompt or topology revisions, paired-validates each candidate, and
+  persists accepted versions while retaining rejected proposals for audit.
+  **Targets:** Topology.
 - [CausalForge](https://github.com/Jiyuan-Tan/CausalForge) —
   [Paper](https://arxiv.org/abs/2607.22511). Uses Lean-checked proofs and
   statement audits in a self-improving theorem pipeline, with public formal
@@ -366,6 +371,10 @@ persistent update is real.
   — [Paper](https://arxiv.org/abs/2608.03874). Evaluates continual skill reuse
   across five domains and 100-task sequences, comparing in-context adaptation
   with explicit skill maintenance.
+- [Evo-Bench](https://github.com/RUCAIBox/Evo-Bench) —
+  [Paper](https://arxiv.org/abs/2608.09096). Holds policy, seed harness, and
+  budget fixed while scoring autonomous harness evolution on disjoint
+  validation and evaluation suites.
 - [PerMemSafe](https://github.com/Greysahy/permemsafe) —
   [Paper](https://aclanthology.org/2026.findings-acl.320/). Benchmarks implicit
   personalized safety across evolving long-horizon memory, with committed data,
