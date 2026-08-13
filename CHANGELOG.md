@@ -2,6 +2,17 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-13
+
+### Field updates
+
+- Indexed EMAS, an open implementation that turns recurring execution evidence
+  into paired-validated prompt or topology revisions with versioned acceptance
+  and rejection records.
+- Added Evo-Bench, a public benchmark with disjoint validation/evaluation
+  suites for measuring autonomous agent-harness improvement under fixed policy,
+  seed, and budget controls.
+
 ## 2026-08-12
 
 ### Field updates
