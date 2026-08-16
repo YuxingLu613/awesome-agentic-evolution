@@ -10,6 +10,13 @@ All notable editorial updates are recorded here.
   design harness around fixed models and gates one-component updates with an
   independent development set.
 
+## 2026-08-15
+
+### Field updates
+
+- Indexed RewardHarness, which evolves reusable scoring skills and tool prompts
+  from preference feedback under held-out validation and rollback.
+
 ## 2026-08-13
 
 ### Field updates
