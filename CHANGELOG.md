@@ -2,6 +2,14 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-16
+
+### Field updates
+
+- Indexed AutoDesign, an MIT-licensed implementation that evolves a reusable
+  design harness around fixed models and gates one-component updates with an
+  independent development set.
+
 ## 2026-08-13
 
 ### Field updates
