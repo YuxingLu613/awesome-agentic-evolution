@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-12
+**Last editorial review:** 2026-08-16
 
 ## Contents
 
@@ -297,6 +297,12 @@ attached to the same entry instead of being counted again.
   into prompt or topology revisions, paired-validates each candidate, and
   persists accepted versions while retaining rejected proposals for audit.
   **Targets:** Topology.
+- [AutoDesign](https://github.com/Yaxin9Luo/AutoDesign) —
+  [Paper](https://arxiv.org/abs/2608.13560). Learns a reusable design harness
+  around fixed models, retaining one-component updates only when training
+  improves without regressing an independent development set, then evaluates
+  matched configurations on PosterBench.
+  **Targets:** Topology, Tools, Skills.
 - [CausalForge](https://github.com/Jiyuan-Tan/CausalForge) —
   [Paper](https://arxiv.org/abs/2607.22511). Uses Lean-checked proofs and
   statement audits in a self-improving theorem pipeline, with public formal
