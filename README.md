@@ -197,6 +197,11 @@ attached to the same entry instead of being counted again.
   Builds and refines reusable skills against self-created, evidence-grounded
   virtual tests, then evaluates frozen skills on held-out target tasks.
   **Targets:** Skills.
+- [AgentDescent](https://github.com/Birfy/agentdescent) — [Paper](https://github.com/Birfy/agentdescent/blob/main/paper/main.pdf).
+  Evolves skills, prompts, harness modules, and verifiers through parallel
+  proposals, reward scoring, and asynchronous aggregator merges, with live-model
+  results and per-run raw data.
+  **Targets:** Skills, Tools, Topology.
 - [SkillOpt](https://github.com/microsoft/SkillOpt) — [Paper](https://arxiv.org/abs/2605.23904).
   Optimizes natural-language procedures from scored trajectories with
   validation-gated updates.
@@ -390,6 +395,10 @@ persistent update is real.
   — [Paper](https://arxiv.org/abs/2608.18066). Re-evaluates memory-based
   self-improving agents across repeated runs and shuffled task orders, releasing
   trajectories to measure variance, order sensitivity, and specification effects.
+- [tide-eval](https://github.com/Human-Agent-Society/tide-eval) — An Apache-2.0
+  evaluation infrastructure for self-evolving agents on Harbor: carries memory,
+  skills, or harness state across task streams with per-step snapshots, and
+  reports anytime, forgetting, and transfer metrics.
 - [PerMemSafe](https://github.com/Greysahy/permemsafe) —
   [Paper](https://aclanthology.org/2026.findings-acl.320/). Benchmarks implicit
   personalized safety across evolving long-horizon memory, with committed data,

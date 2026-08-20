@@ -10,6 +10,12 @@ All notable editorial updates are recorded here.
   cases and utility, attack-success, persistence, and detection metrics.
 - Added the Apache-2.0 self-improve-fragility release, which publishes repeated-
   run and shuffled-order trajectories for auditing memory-based self-improvement.
+- Indexed AgentDescent, an MIT-licensed asynchronous framework that merges
+  evidence-bearing proposals for skills, prompts, harness modules, and verifiers
+  against live-model rewards with released raw results.
+- Added tide-eval, an Apache-2.0 Harbor evaluation infrastructure that carries
+  memory, skills, or harness state across task streams and reports anytime,
+  forgetting, and transfer metrics.
 
 ## 2026-08-16
 
