@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-16
+**Last editorial review:** 2026-08-20
 
 ## Contents
 
@@ -381,6 +381,15 @@ persistent update is real.
   [Paper](https://arxiv.org/abs/2608.09096). Holds policy, seed harness, and
   budget fixed while scoring autonomous harness evolution on disjoint
   validation and evaluation suites.
+- [HarnessRisk](https://github.com/Baiyajing/HarnessRisk) —
+  [Paper](https://arxiv.org/abs/2608.17597). Benchmarks agent-harness safety
+  across configuration, capability extension, runtime, persistence, action
+  control, and recovery using sandboxed cases with trajectory evidence and
+  explicit utility, attack, persistence, and detection metrics.
+- [On the Fragility of Self-Improving Agents](https://github.com/SalesforceAIResearch/self-improve-fragility)
+  — [Paper](https://arxiv.org/abs/2608.18066). Re-evaluates memory-based
+  self-improving agents across repeated runs and shuffled task orders, releasing
+  trajectories to measure variance, order sensitivity, and specification effects.
 - [PerMemSafe](https://github.com/Greysahy/permemsafe) —
   [Paper](https://aclanthology.org/2026.findings-acl.320/). Benchmarks implicit
   personalized safety across evolving long-horizon memory, with committed data,

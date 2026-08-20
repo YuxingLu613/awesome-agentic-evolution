@@ -2,6 +2,15 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-20
+
+### Field updates
+
+- Added HarnessRisk, a MIT-licensed benchmark with 128 sandboxed lifecycle
+  cases and utility, attack-success, persistence, and detection metrics.
+- Added the Apache-2.0 self-improve-fragility release, which publishes repeated-
+  run and shuffled-order trajectories for auditing memory-based self-improvement.
+
 ## 2026-08-16
 
 ### Field updates
