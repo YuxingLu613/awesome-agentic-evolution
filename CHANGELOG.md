@@ -2,6 +2,19 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-21
+
+### Field updates
+
+- Indexed Evolve (altk-evolve), which distills trajectories into provenance-aware
+  memory guidelines and reports AppWorld reliability gains.
+- Indexed CoEvoSkills, which co-evolves a multi-file Skill generator and surrogate
+  verifier with isolated fresh-agent transfer evaluation.
+- Indexed CORAL and Task-CoEvolve, which evolve agent organizations or validation
+  task selection around persistent graders and cost-aware evaluation.
+- Added AI4AI-Bench and Phantom Gains, which release frozen evaluators or measured
+  null controls for auditing recursive self-improvement claims.
+
 ## 2026-08-20
 
 ### Field updates
