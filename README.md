@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-20
+**Last editorial review:** 2026-08-21
 
 ## Contents
 
@@ -152,6 +152,11 @@ attached to the same entry instead of being counted again.
   environmental outcomes, and evaluates transfer on Game of 24 and
   FinEvolveBench.
   **Targets:** Memory.
+- [Evolve](https://github.com/AgentToolkit/altk-evolve) — [Paper](https://arxiv.org/abs/2603.10600).
+  Learns reusable memory guidelines from trajectories with conflict resolution,
+  feeds them into later sessions, and reports AppWorld reliability gains with
+  provenance-aware storage.
+  **Targets:** Memory.
 
 ### Knowledge
 
@@ -202,6 +207,10 @@ attached to the same entry instead of being counted again.
   proposals, reward scoring, and asynchronous aggregator merges, with live-model
   results and per-run raw data.
   **Targets:** Skills, Tools, Topology.
+- [CoEvoSkills](https://github.com/Zhang-Henry/CoEvoSkills) — [Paper](https://arxiv.org/abs/2604.01687).
+  Builds multi-file Skills through a generate–verify–refine loop, co-evolving a
+  skill generator and surrogate verifier before isolated fresh-agent transfer tests.
+  **Targets:** Skills, Co-evolution.
 - [SkillOpt](https://github.com/microsoft/SkillOpt) — [Paper](https://arxiv.org/abs/2605.23904).
   Optimizes natural-language procedures from scored trajectories with
   validation-gated updates.
@@ -365,6 +374,15 @@ attached to the same entry instead of being counted again.
   Co-evolves a Lean proof workflow and benchmark curriculum, using compiler and
   Lean verification feedback across 15 generations with a held-out miniF2F split.
   **Targets:** Topology, Tools, Co-evolution.
+- [Task-CoEvolve](https://arxiv.org/abs/2608.20169) — Co-evolves harness code and
+  validation-task sampling, focusing evaluation on discriminative tasks while
+  retaining unbiased full-set estimates and reducing evaluation cost.
+  **Targets:** Topology, Co-evolution.
+- [CORAL](https://github.com/Human-Agent-Society/CORAL) — [Paper](https://arxiv.org/abs/2604.01658).
+  Runs autonomous coding-agent organizations in isolated worktrees, sharing
+  persistent attempts, notes, and skills while a grader scores commits and agents
+  iterate on open-ended tasks.
+  **Targets:** Topology, Tools, Co-evolution.
 
 This section uses **Co-evolution** only when an external factor changes with the
 agent. Multi-agent execution by itself is not sufficient.
@@ -399,6 +417,12 @@ persistent update is real.
   evaluation infrastructure for self-evolving agents on Harbor: carries memory,
   skills, or harness state across task streams with per-step snapshots, and
   reports anytime, forgetting, and transfer metrics.
+- [AI4AI-Bench](https://arxiv.org/abs/2608.20318) — Releases 10 frozen research
+  repositories, hidden evaluators, 29 configurations, and every scored submission
+  for testing whether agents can rewrite training algorithms.
+- [Phantom Gains](https://arxiv.org/abs/2608.20290) — Audits self-improvement
+  claims against measured frozen controls, replacing noisy transition statistics
+  with per-problem tests and false-discovery-rate control.
 - [PerMemSafe](https://github.com/Greysahy/permemsafe) —
   [Paper](https://aclanthology.org/2026.findings-acl.320/). Benchmarks implicit
   personalized safety across evolving long-horizon memory, with committed data,
