@@ -111,6 +111,11 @@ attached to the same entry instead of being counted again.
   generation, experience synthesis, and reinforcement learning for persistent
   agent improvement.
   **Targets:** Parameters, Memory, Co-evolution.
+- [Benchmark-as-Teacher](https://github.com/AutoMedBench/Benchmark-as-Teacher)
+  — [Paper](https://arxiv.org/abs/2608.16211). Uses held-out-safe stage states
+  and stage rubrics to select curricula, updates the policy with GRPO, and
+  gates each checkpoint on the fixed benchmark contract.
+  **Targets:** Parameters, Co-evolution.
 
 ### Memory
 
@@ -157,6 +162,14 @@ attached to the same entry instead of being counted again.
   feeds them into later sessions, and reports AppWorld reliability gains with
   provenance-aware storage.
   **Targets:** Memory.
+- [Areev](https://github.com/AreevAI/areev) — Uses deterministic, evidence-citing
+  analyzers to propose memory changes, requires named approval, stores inverse
+  records, and remeasures outcomes so regressions can be reverted.
+  **Targets:** Memory, Tools.
+- [AutoMem](https://arxiv.org/abs/2608.14621) — Searches task-adaptive memory
+  architectures from historical trajectories and failure-guided module
+  feedback, reporting gains across three benchmarks and two backbones.
+  **Targets:** Memory, Topology.
 
 ### Knowledge
 
@@ -258,6 +271,11 @@ attached to the same entry instead of being counted again.
   skill-evolution harness that compares success-only, failure-only, and mixed
   feedback across 42 matched runs with held-out, robustness, and transfer checks.
   **Targets:** Skills.
+- [self-evolve](https://github.com/DaizeDong/self-evolve) — Runs multi-round
+  skill or repository self-iteration in an isolated worktree with deterministic
+  acceptance, heterogeneous signals, archive lineage, and rollback; its tests
+  cover 555 cases.
+  **Targets:** Skills, Tools.
 
 ### Tools
 
@@ -383,6 +401,11 @@ attached to the same entry instead of being counted again.
   persistent attempts, notes, and skills while a grader scores commits and agents
   iterate on open-ended tasks.
   **Targets:** Topology, Tools, Co-evolution.
+- [HELIX](https://github.com/HKUDS/HELIX) — [Paper](https://arxiv.org/abs/2608.13951).
+  Composes source-traceable harness variants, evaluates sibling rollouts, and
+  turns verified successes, regressions, and preferences into data for later
+  model updates; reports LiveCodeBench and SWE-Bench results.
+  **Targets:** Topology, Co-evolution.
 
 This section uses **Co-evolution** only when an external factor changes with the
 agent. Multi-agent execution by itself is not sufficient.
