@@ -14,6 +14,12 @@ All notable editorial updates are recorded here.
   task selection around persistent graders and cost-aware evaluation.
 - Added AI4AI-Bench and Phantom Gains, which release frozen evaluators or measured
   null controls for auditing recursive self-improvement claims.
+- Added Benchmark-as-Teacher, which couples held-out-safe stage curricula with
+  GRPO policy updates and checkpoint gates for medical research agents.
+- Indexed Areev and self-evolve, which provide deterministic, review-gated
+  memory or skill improvement loops with rollback evidence.
+- Indexed AutoMem and HELIX, which search memory architectures or harness
+  variants from trajectory evidence and report held-out evaluation results.
 
 ## 2026-08-20
 
