@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-21
+**Last editorial review:** 2026-08-22
 
 ## Contents
 
@@ -276,6 +276,10 @@ attached to the same entry instead of being counted again.
   acceptance, heterogeneous signals, archive lineage, and rollback; its tests
   cover 555 cases.
   **Targets:** Skills, Tools.
+- [cambium](https://github.com/debarshi29/cambium) — Admission-gates evolving
+  skill, tool, and prompt libraries, measures retrieval separately, rejects
+  reward-hacking candidates, and reports held-out transfer from a reproducible
+  27-task demo. **Targets:** Skills, Tools, Topology.
 
 ### Tools
 

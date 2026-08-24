@@ -21,6 +21,14 @@ All notable editorial updates are recorded here.
 - Indexed AutoMem and HELIX, which search memory architectures or harness
   variants from trajectory evidence and report held-out evaluation results.
 
+## 2026-08-22
+
+### Field updates
+
+- Indexed [cambium](https://github.com/debarshi29/cambium), which admission-gates
+  skill, tool, and prompt libraries, separates retrieval from generation, and
+  reports held-out transfer with reward-hacking audits.
+
 ## 2026-08-20
 
 ### Field updates
