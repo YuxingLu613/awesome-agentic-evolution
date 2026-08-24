@@ -2,6 +2,17 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-24
+
+### Field updates
+
+- Indexed Evo-Harness, which compiles noisy one-shot trajectories into reusable
+  skill harnesses and evaluates cross-task adaptation.
+- Added PACE-Bench and SciToolAgent-Evo, which test code evolution under mutated
+  physics environments or open-world scientific tool acquisition.
+- Added financial-agent auditing and trajectory-poisoning studies that measure
+  security drift, unauthorized state changes, and malicious skill promotion.
+
 ## 2026-08-21
 
 ### Field updates
