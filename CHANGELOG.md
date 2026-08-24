@@ -12,6 +12,10 @@ All notable editorial updates are recorded here.
   physics environments or open-world scientific tool acquisition.
 - Added financial-agent auditing and trajectory-poisoning studies that measure
   security drift, unauthorized state changes, and malicious skill promotion.
+- Indexed OpenViking and MemOS, which retain context or memory across sessions
+  with feedback-driven updates and public memory benchmarks.
+- Added xskill and PenguinHarness, which evolve versioned skills from agent
+  trajectories or benchmark feedback with observable lineage or snapshots.
 
 ## 2026-08-21
 

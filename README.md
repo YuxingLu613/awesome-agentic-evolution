@@ -170,6 +170,15 @@ attached to the same entry instead of being counted again.
   architectures from historical trajectories and failure-guided module
   feedback, reporting gains across three benchmarks and two backbones.
   **Targets:** Memory, Topology.
+- [OpenViking](https://github.com/volcengine/OpenViking) — Stores memories,
+  resources, and skills in a browsable context filesystem; commits session
+  experience to long-term memory and reports LoCoMo/tau2-bench gains with
+  reproducible scripts.
+  **Targets:** Memory, Knowledge, Skills.
+- [MemOS](https://github.com/MemTensor/MemOS) — Applies natural-language
+  feedback and correction to persistent memory, adds tiered skill evolution,
+  and publishes LoCoMo, LongMemEval, and OmniMemEval results.
+  **Targets:** Memory, Skills, Knowledge.
 
 ### Knowledge
 
@@ -285,6 +294,15 @@ attached to the same entry instead of being counted again.
   trajectories into reusable skill harnesses for cross-task adaptation,
   evaluating a frozen agent across five realistic benchmarks.
   **Targets:** Skills, Topology.
+- [xskill](https://github.com/SkillNerds/xskill) — [Paper](https://github.com/SkillNerds/xskill/blob/main/paper/xskill_v4.pdf).
+  Distills anonymized agent trajectories into versioned team skills, canary-tests
+  revisions on real traffic, and reports benchmark gains with rollback-ready
+  lineage.
+  **Targets:** Skills, Memory.
+- [PenguinHarness](https://github.com/Prism-Shadow/penguin-harness) — Agents
+  evaluate and optimize their own Skills from benchmark feedback, snapshot each
+  round, and expose observable traces for review.
+  **Targets:** Skills.
 
 ### Tools
 
