@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-22
+**Last editorial review:** 2026-08-24
 
 ## Contents
 
@@ -280,6 +280,11 @@ attached to the same entry instead of being counted again.
   skill, tool, and prompt libraries, measures retrieval separately, rejects
   reward-hacking candidates, and reports held-out transfer from a reproducible
   27-task demo. **Targets:** Skills, Tools, Topology.
+- [Evo-Harness](https://github.com/A-EVO-Lab/a-evolve/tree/release/evo-harness)
+  — [Paper](https://arxiv.org/abs/2608.15071). Compiles noisy one-shot
+  trajectories into reusable skill harnesses for cross-task adaptation,
+  evaluating a frozen agent across five realistic benchmarks.
+  **Targets:** Skills, Topology.
 
 ### Tools
 
@@ -293,6 +298,10 @@ attached to the same entry instead of being counted again.
   Couples experience distillation with dynamic creation of tools and expert
   agents.
   **Targets:** Memory, Skills, Tools, Co-evolution.
+- [SciToolAgent-Evo](https://arxiv.org/abs/2607.28692) — Evolves an
+  ontology-backed scientific tool graph and skill/experience memory through
+  contrastive trajectories and bandit-gated acquisition, evaluated on 900
+  OpenSciToolBench tasks. **Targets:** Knowledge, Memory, Tools.
 
 ### Topology
 
@@ -431,6 +440,10 @@ persistent update is real.
   [Paper](https://arxiv.org/abs/2608.09096). Holds policy, seed harness, and
   budget fixed while scoring autonomous harness evolution on disjoint
   validation and evaluation suites.
+- [PACE-Bench](https://github.com/thunlp/PACE-Bench) —
+  [Paper](https://arxiv.org/abs/2608.14441). Tests whether code-driven designs
+  adapt after source-to-target physics mutations, with diagnostic sandbox
+  feedback across 144 pairs and 180 evaluation environments.
 - [HarnessRisk](https://github.com/Baiyajing/HarnessRisk) —
   [Paper](https://arxiv.org/abs/2608.17597). Benchmarks agent-harness safety
   across configuration, capability extension, runtime, persistence, action
@@ -440,6 +453,14 @@ persistent update is real.
   — [Paper](https://arxiv.org/abs/2608.18066). Re-evaluates memory-based
   self-improving agents across repeated runs and shuffled task orders, releasing
   trajectories to measure variance, order sensitivity, and specification effects.
+- [Auditing Self-Evolution in Financial Agents](https://arxiv.org/abs/2608.17684)
+  — Audits three self-evolving agents with sealed endpoints, state replay,
+  execution-grounded checks, and security metrics, exposing capability gains
+  that increase exposure and unauthorized state changes.
+- [When Experience Becomes Instruction](https://arxiv.org/abs/2608.05563)
+  — Demonstrates trajectory-poisoning attacks that promote malicious behaviors
+  into persistent skill banks, with transfer tests across six LLM evolvers and
+  two architectures.
 - [tide-eval](https://github.com/Human-Agent-Society/tide-eval) — An Apache-2.0
   evaluation infrastructure for self-evolving agents on Harbor: carries memory,
   skills, or harness state across task streams with per-step snapshots, and
