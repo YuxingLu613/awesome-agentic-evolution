@@ -2,6 +2,15 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-25
+
+### Field updates
+
+- Indexed Membrane, which evolves a contrastive safety-memory store from paired
+  attack/safe evidence and evaluates model and agent defenses.
+- Indexed TRACE, which refines a persistent Skill Bank from trajectory contrasts
+  and reports reliability gains on public and hidden CAR-bench evaluations.
+
 ## 2026-08-24
 
 ### Field updates

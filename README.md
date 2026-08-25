@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-24
+**Last editorial review:** 2026-08-25
 
 ## Contents
 
@@ -179,6 +179,10 @@ attached to the same entry instead of being counted again.
   feedback and correction to persistent memory, adds tiered skill evolution,
   and publishes LoCoMo, LongMemEval, and OmniMemEval results.
   **Targets:** Memory, Skills, Knowledge.
+- [Membrane](https://github.com/brightjade/membrane) — [Paper](https://arxiv.org/abs/2606.05743).
+  Evolves a contrastive safety-memory store from paired harmful/safe prompts
+  and label-free test-time review, with HarmBench and AgentHarm evaluations.
+  **Targets:** Memory.
 
 ### Knowledge
 
@@ -302,6 +306,10 @@ attached to the same entry instead of being counted again.
 - [PenguinHarness](https://github.com/Prism-Shadow/penguin-harness) — Agents
   evaluate and optimize their own Skills from benchmark feedback, snapshot each
   round, and expose observable traces for review.
+  **Targets:** Skills.
+- [TRACE](https://github.com/Darwin-Agent/Car-bench-TRACE) — [Paper](https://arxiv.org/abs/2608.22793).
+  Refines a persistent Skill Bank by contrasting successful and failed
+  trajectories, then reports Pass^3 gains on public and hidden CAR-bench sets.
   **Targets:** Skills.
 
 ### Tools
