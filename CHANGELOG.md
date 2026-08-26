@@ -2,6 +2,14 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-26
+
+### Field updates
+
+- Indexed RubSE, which uses typed visual-repair rubrics and retained repair
+  history to stabilize self-evolving UI-to-code iterations across six VLMs and
+  three benchmarks.
+
 ## 2026-08-25
 
 ### Field updates
