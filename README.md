@@ -395,6 +395,11 @@ attached to the same entry instead of being counted again.
 - [Agentic Evolution is the Path to Evolving LLMs](https://arxiv.org/abs/2602.00359)
   — Positions the agent scaffold as a primary target of evolution.
   **Targets:** Topology.
+- [RubSE](https://tyxiong23.github.io/rubse) — [Paper](https://arxiv.org/abs/2608.24138).
+  Generates UI code with typed rubrics as visual feedback, retains selected repair
+  history across rounds, and evaluates six VLMs on three UI-to-code benchmarks
+  for stable iterative improvement.
+  **Targets:** Topology, Memory.
 
 ### Co-evolution
 
