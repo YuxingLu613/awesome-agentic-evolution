@@ -170,6 +170,11 @@ attached to the same entry instead of being counted again.
   architectures from historical trajectories and failure-guided module
   feedback, reporting gains across three benchmarks and two backbones.
   **Targets:** Memory, Topology.
+- [KOPE: Experience-Driven Workflow and Experience Graph Memory](https://arxiv.org/abs/2608.25570)
+  — Records hardware-kernel optimization decisions and correctness/performance
+  feedback in an experience graph, then retrieves it under a fixed budget for
+  continual optimization.
+  **Targets:** Memory.
 - [OpenViking](https://github.com/volcengine/OpenViking) — Stores memories,
   resources, and skills in a browsable context filesystem; commits session
   experience to long-term memory and reports LoCoMo/tau2-bench gains with
@@ -182,6 +187,11 @@ attached to the same entry instead of being counted again.
 - [Membrane](https://github.com/brightjade/membrane) — [Paper](https://arxiv.org/abs/2606.05743).
   Evolves a contrastive safety-memory store from paired harmful/safe prompts
   and label-free test-time review, with HarmBench and AgentHarm evaluations.
+  **Targets:** Memory.
+- [A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks](https://arxiv.org/abs/2608.26008)
+  — Abstracts successful jailbreaks into reusable method-level rules, retains
+  them across interactions, and reduces attack success across four families
+  while preserving benign utility.
   **Targets:** Memory.
 
 ### Knowledge
@@ -203,6 +213,11 @@ attached to the same entry instead of being counted again.
   into workflow-graph, action-experience, and SOP memories, then safety-gated
   distillation reuses them for tool planning across geospatial benchmarks.
   **Targets:** Knowledge, Topology.
+- [VISA: Agentic Self-Evolving Data Synthesis for Multimodal Instruction Following](https://arxiv.org/abs/2608.26013)
+  — Synthesizes multimodal instructions from persistent constraint memory,
+  writes verifier and target-model failures back into later rounds, and improves
+  MM-IFEval while preserving general capability across seven public benchmarks.
+  **Targets:** Knowledge, Memory.
 
 ### Skills
 
@@ -240,6 +255,11 @@ attached to the same entry instead of being counted again.
 - [SkillOpt](https://github.com/microsoft/SkillOpt) — [Paper](https://arxiv.org/abs/2605.23904).
   Optimizes natural-language procedures from scored trajectories with
   validation-gated updates.
+  **Targets:** Skills.
+- [HypoForge](https://arxiv.org/abs/2608.25770) — Learns reusable scientific
+  skills from stage-specific critique and execution outcomes, enabling
+  continual improvement without fine-tuning and outperforming framework and
+  skill-level baselines.
   **Targets:** Skills.
 - [Voyager](https://github.com/MineDojo/Voyager) — [Paper](https://arxiv.org/abs/2305.16291).
   Grows an executable skill library through environment feedback and an
@@ -395,6 +415,16 @@ attached to the same entry instead of being counted again.
 - [Agentic Evolution is the Path to Evolving LLMs](https://arxiv.org/abs/2602.00359)
   — Positions the agent scaffold as a primary target of evolution.
   **Targets:** Topology.
+- [From General Agents to RCA Experts: A Self-Evolving Harness for Root Cause Analysis](https://arxiv.org/abs/2608.25661)
+  — Converts successful and failed RCA trajectories into atomic expertise
+  updates, admits them through dual-gate verification, and reports gains on two
+  public benchmarks plus an industrial deployment.
+  **Targets:** Knowledge, Topology.
+- [JIT-Agent](https://bingreeky.github.io/JIT-site) — [Paper](https://arxiv.org/abs/2608.25593).
+  Distills performance signals from an archive of prior harness configurations
+  to synthesize, repair, and improve task-adaptive harnesses across model
+  families and benchmarks.
+  **Targets:** Topology.
 - [RubSE](https://tyxiong23.github.io/rubse) — [Paper](https://arxiv.org/abs/2608.24138).
   Generates UI code with typed rubrics as visual feedback, retains selected repair
   history across rounds, and evaluates six VLMs on three UI-to-code benchmarks
@@ -480,6 +510,10 @@ persistent update is real.
   across configuration, capability extension, runtime, persistence, action
   control, and recovery using sandboxed cases with trajectory evidence and
   explicit utility, attack, persistence, and detection metrics.
+- [EVOMAL: Self-Poisoning in Self-Evolving Coding Agents](https://arxiv.org/abs/2608.25776)
+  — Measures self-poisoning propagation in evolving skill libraries across six
+  models and 153 SWE-bench tasks, and evaluates a counter-prompt defense
+  without task-completion loss.
 - [On the Fragility of Self-Improving Agents](https://github.com/SalesforceAIResearch/self-improve-fragility)
   — [Paper](https://arxiv.org/abs/2608.18066). Re-evaluates memory-based
   self-improving agents across repeated runs and shuffled task orders, releasing

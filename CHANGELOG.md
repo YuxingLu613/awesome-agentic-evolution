@@ -2,6 +2,20 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-27
+
+### Field updates
+
+- Indexed VISA and a cross-interaction jailbreak defense, which write
+  verifier-driven failures or method-level rules into persistent memory for
+  later rounds.
+- Added EVOMAL, a safety study measuring self-poisoning propagation in evolving
+  skill libraries and evaluating a counter-prompt defense.
+- Indexed OpsHarness and KOPE, which retain verified root-cause expertise or
+  hardware-optimization experience for later tasks.
+- Indexed JIT-Agent and HypoForge, which evolve task-adaptive harnesses or
+  reusable scientific skills from performance, critique, and execution signals.
+
 ## 2026-08-26
 
 ### Field updates
