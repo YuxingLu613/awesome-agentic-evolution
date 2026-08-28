@@ -2,6 +2,19 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-28
+
+### Field updates
+
+- Indexed WikiSkill and Recuris, which compile or validate persistent
+  experience and skill memory for cross-task transfer.
+- Added PILOT and RedEvoAgent, which evolve skills from live execution or
+  red-team trajectories with benchmark or validation gates.
+- Indexed Astar, J-Zero, and Naive Prompt Optimization, which improve models
+  or prompts across repeated iterations using evaluator or rollout feedback.
+- Added HarnessLens, Proteus, and AegisEvo, which provide behavior-aware or
+  governed harness evolution with reproducible gates and rollback evidence.
+
 ## 2026-08-27
 
 ### Field updates

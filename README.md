@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-25
+**Last editorial review:** 2026-08-28
 
 ## Contents
 
@@ -116,6 +116,10 @@ attached to the same entry instead of being counted again.
   and stage rubrics to select curricula, updates the policy with GRPO, and
   gates each checkpoint on the fixed benchmark contract.
   **Targets:** Parameters, Co-evolution.
+- [Astar](https://arxiv.org/abs/2608.27287) — Trains an evolution-guiding model
+  from industrial iteration histories, uses a surrogate reward evaluator, and
+  guides 20 consecutive iterations with offline and online gains.
+  **Targets:** Parameters.
 
 ### Memory
 
@@ -193,6 +197,11 @@ attached to the same entry instead of being counted again.
   them across interactions, and reduces attack success across four families
   while preserving benign utility.
   **Targets:** Memory.
+- [Recuris](https://github.com/Gen-Verse/Recuris) — [Paper](https://arxiv.org/abs/2608.24876).
+  Evolves targeted Skill Memory from structured traces with paired held-out
+  validation, releases frozen splits, and reports cross-task transfer across
+  37 model–benchmark pairs.
+  **Targets:** Memory, Skills.
 
 ### Knowledge
 
@@ -260,6 +269,19 @@ attached to the same entry instead of being counted again.
   skills from stage-specific critique and execution outcomes, enabling
   continual improvement without fine-tuning and outperforming framework and
   skill-level baselines.
+  **Targets:** Skills.
+- [WikiSkill](https://arxiv.org/abs/2608.27454) — Consolidates execution
+  experience into a persistent wiki that guides later skill updates, with
+  cross-model transfer and ablations showing knowledge accumulation matters.
+  **Targets:** Skills, Knowledge.
+- [PILOT in the Loop](https://arxiv.org/abs/2608.26530) — Steers active workers
+  during execution and distills procedures and failure modes into reusable
+  skills and memory, improving three long-horizon benchmarks.
+  **Targets:** Skills, Memory.
+- [RedEvoAgent](https://arxiv.org/abs/2608.27439) — Distills cross-case red-team
+  trajectories into attack skills, retains only validation-improving updates
+  through a ratchet, and transfers across target harnesses. Run only in an
+  isolated sandbox.
   **Targets:** Skills.
 - [Voyager](https://github.com/MineDojo/Voyager) — [Paper](https://arxiv.org/abs/2305.16291).
   Grows an executable skill library through environment feedback and an
@@ -402,6 +424,25 @@ attached to the same entry instead of being counted again.
 - [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) — Builds, evaluates, and
   evolves multi-agent workflows with pluggable optimization algorithms.
   **Targets:** Topology.
+- [Naive Prompt Optimization](https://arxiv.org/abs/2608.27266) — Iteratively
+  revises prompts from teacher-model rollout feedback and transfers
+  single-lineage improvements across tasks and interactive games.
+  **Targets:** Topology.
+- [HarnessLens](https://github.com/jhxu5214/HarnessLens) — [Paper](https://arxiv.org/abs/2608.27311).
+  Evolves OpenCode, Codex CLI, and Pi harnesses through behavior-aware diagnosis
+  and selective verification, with blind-test entrypoints, pinned
+  reproducibility, and four-benchmark evaluation. Run only in an isolated
+  sandbox.
+  **Targets:** Topology.
+- [Proteus](https://github.com/proteus-evolve/Proteus) — Provides a
+  harness-agnostic, snapshot-based evolution loop with evaluator gates,
+  crystallization tests, rollback, and git histories for measuring persistent
+  change. Run only in an isolated sandbox.
+  **Targets:** Topology.
+- [AegisEvo](https://github.com/ETOLucy/AegisEvo) — Governs sandboxed harness
+  search with statistical quality, safety, canary, promotion, and rollback
+  gates, publishing deterministic fixtures and reproducible reports.
+  **Targets:** Topology.
 - [Darwin Gödel Machine](https://github.com/jennyzzt/dgm) — [Paper](https://arxiv.org/abs/2505.22954)
   · [Article](https://sakana.ai/dgm/). Rewrites coding-agent implementations
   and empirically validates descendants. Run only in an isolated sandbox.
@@ -480,6 +521,10 @@ attached to the same entry instead of being counted again.
   turns verified successes, regressions, and preferences into data for later
   model updates; reports LiveCodeBench and SWE-Bench results.
   **Targets:** Topology, Co-evolution.
+- [J-Zero](https://arxiv.org/abs/2608.26582) — Co-evolves challenger, solver,
+  and judge from zero data, using known-order preference pairs and adversarial
+  tasks to improve through ten iterations.
+  **Targets:** Parameters, Co-evolution.
 
 This section uses **Co-evolution** only when an external factor changes with the
 agent. Multi-agent execution by itself is not sufficient.
