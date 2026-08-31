@@ -202,6 +202,16 @@ attached to the same entry instead of being counted again.
   validation, releases frozen splits, and reports cross-task transfer across
   37 model–benchmark pairs.
   **Targets:** Memory, Skills.
+- [EvolveBank](https://github.com/C10udsea/evolvebank) — Distills success and
+  failure trajectories into a deduplicated strategy bank, tracks downstream win
+  rates, freezes the bank for held-out τ-bench evaluation, and reports a parity
+  result.
+  **Targets:** Memory.
+- [Reflexio](https://github.com/ReflexioAI/reflexio) — Turns user corrections and
+  successful interactions into persistent profiles and playbooks, aggregates
+  approved cross-user lessons, and reports a warm-baseline GDPVal comparison
+  across two host agents.
+  **Targets:** Memory, Skills.
 
 ### Knowledge
 
@@ -442,6 +452,16 @@ attached to the same entry instead of being counted again.
 - [AegisEvo](https://github.com/ETOLucy/AegisEvo) — Governs sandboxed harness
   search with statistical quality, safety, canary, promotion, and rollback
   gates, publishing deterministic fixtures and reproducible reports.
+  **Targets:** Topology.
+- [RSIHub](https://github.com/simple-agent-lab/RSIHub) — Runs evaluator-driven
+  evolution over prompts, skills, harnesses, and agent code with frozen scoring,
+  bounded mutation, Git lineage, rollback, and reproducible benchmark recipes.
+  Run only in an isolated sandbox.
+  **Targets:** Topology, Skills.
+- [EvoUndo](https://arxiv.org/abs/2608.28363) — Evaluates recoverability of
+  model-generated prompt, tool, middleware, and harness mutations across
+  counterfactual states on 600 unseen tasks, exposing grounding and
+  recovery-language bottlenecks.
   **Targets:** Topology.
 - [Darwin Gödel Machine](https://github.com/jennyzzt/dgm) — [Paper](https://arxiv.org/abs/2505.22954)
   · [Article](https://sakana.ai/dgm/). Rewrites coding-agent implementations

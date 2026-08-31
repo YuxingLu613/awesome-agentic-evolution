@@ -2,6 +2,16 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-30
+
+### Field updates
+
+- Indexed EvolveBank and Reflexio, which turn success, failure, and user
+  correction signals into persistent strategies or playbooks with held-out or
+  warm-baseline evaluation.
+- Added RSIHub and EvoUndo, which make evaluator protection, mutation bounds,
+  lineage, and recoverability evidence explicit for self-evolving harnesses.
+
 ## 2026-08-28
 
 ### Field updates
