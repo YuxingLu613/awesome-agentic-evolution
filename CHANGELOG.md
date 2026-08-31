@@ -2,6 +2,19 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-08-31
+
+### Field updates
+
+- Indexed earcon and Rudder, which preserve scored experience, reviewed lessons,
+  and reusable skills for later agent runs with source-backed evaluation.
+- Added Factory, Self-Improving Agent Ecosystem, Raven, ROSClaw, and yoyo, which
+  expose governed, testable, and traceable loops for persistent harness or
+  environment evolution.
+- Indexed ProofEvolve, VideoHarness-RSI, RecurSE, and CAFE, which retain
+  verified proof, harness, judge, or feedback improvements and report held-out
+  or out-of-domain evaluation.
+
 ## 2026-08-30
 
 ### Field updates
