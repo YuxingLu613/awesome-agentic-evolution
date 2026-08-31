@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-28
+**Last editorial review:** 2026-08-31
 
 ## Contents
 
@@ -120,6 +120,16 @@ attached to the same entry instead of being counted again.
   from industrial iteration histories, uses a surrogate reward evaluator, and
   guides 20 consecutive iterations with offline and online gains.
   **Targets:** Parameters.
+- [RecurSE: Bounded Recursive Self-Evaluation for LLM Rubric Judges](https://arxiv.org/abs/2608.24231)
+  — Co-evolves a rubric judge and checker with decoupled self-reward,
+  validation-based early stopping, held-out generalization, and ablations
+  against frozen-checker and teacher baselines.
+  **Targets:** Parameters, Co-evolution.
+- [CAFE: Self-Improving Search Agents Need Co-Evolving Feedback](https://arxiv.org/abs/2608.24794)
+  — Co-evolves a search agent and critic from matched failures, alternating
+  online and offline feedback updates with gains across seven search benchmarks
+  and six out-of-domain sets.
+  **Targets:** Parameters, Co-evolution.
 
 ### Memory
 
@@ -212,6 +222,15 @@ attached to the same entry instead of being counted again.
   approved cross-user lessons, and reports a warm-baseline GDPVal comparison
   across two host agents.
   **Targets:** Memory, Skills.
+- [earcon](https://github.com/370540009gg-cmd/earcon) — A local
+  OpenAI-compatible proxy that distills session outcomes into SQLite experience
+  cards and injects them into future tasks, with a discrete-action maze
+  evaluation.
+  **Targets:** Memory.
+- [Rudder](https://github.com/Undertone0809/rudder) — Preserves reviewed lessons,
+  decisions, and skills from agent work in durable context for future runs,
+  with a documented local-case-equal GDPval harness comparison.
+  **Targets:** Memory, Skills, Topology.
 
 ### Knowledge
 
@@ -237,6 +256,11 @@ attached to the same entry instead of being counted again.
   writes verifier and target-model failures back into later rounds, and improves
   MM-IFEval while preserving general capability across seven public benchmarks.
   **Targets:** Knowledge, Memory.
+- [ProofEvolve: Neuro-Symbolic Evolution for Formal Automated Theorem Proving](https://arxiv.org/abs/2608.26334)
+  — Evolves Lean-verified proof DAGs with neural variation operators, retaining
+  checked schemas across problems and exposing residual subgoals for typed
+  recombination across three benchmarks.
+  **Targets:** Knowledge, Topology.
 
 ### Skills
 
@@ -491,6 +515,36 @@ attached to the same entry instead of being counted again.
   history across rounds, and evaluates six VLMs on three UI-to-code benchmarks
   for stable iterative improvement.
   **Targets:** Topology, Memory.
+- [Factory](https://github.com/watt-mind/factory) — Provides tracker-controlled
+  coding-agent loops with isolated worktrees, repeatable verification, CI/review
+  gates, Git lineage, and offline regression demos. Run only in an isolated
+  sandbox.
+  **Targets:** Topology.
+- [Self-Improving Agent Ecosystem](https://github.com/Git-on-my-level/self-improving-agent-ecosystem)
+  — Provides contracts, schemas, deterministic fixtures, and validation for
+  evaluator-driven loops with isolated candidates, evidence lineage, promotion
+  gates, rollback, and external health checks.
+  **Targets:** Topology.
+- [Raven](https://github.com/EverMind-AI/Raven) — Combines terminal execution,
+  tracing, durable memory, skills, reusable workflows, and an opt-in Evolver with
+  independent benchmark harnesses for long-running agent improvement. Run only
+  in an isolated sandbox.
+  **Targets:** Topology, Memory, Skills.
+- [ROSClaw](https://github.com/ros-claw/rosclaw) — Provides a simulation-first
+  physical-agent control plane that turns feedback into hashed controller
+  candidates, fail-closed gates, and rollback targets; real-hardware activation
+  is blocked. Run only in an isolated sandbox.
+  **Targets:** Topology.
+- [yoyo](https://github.com/yologdev/yoyo-evolve) — Runs an autonomous
+  coding-agent loop that reads source and community issues, test-gates commits
+  or reverts, and synthesizes durable memory across sessions. Run only in an
+  isolated sandbox.
+  **Targets:** Topology, Memory.
+- [VideoHarness-RSI: Recursive Harness Self-Improvement for Long-Video Understanding](https://arxiv.org/abs/2608.24302)
+  — Searches executable context constructors around a frozen VLM, retaining
+  evaluation-selected variants and transferring the selected harness to
+  additional long-video benchmarks.
+  **Targets:** Topology.
 
 ### Co-evolution
 
