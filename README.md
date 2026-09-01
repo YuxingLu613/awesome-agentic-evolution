@@ -229,7 +229,7 @@ attached to the same entry instead of being counted again.
   **Targets:** Memory.
 - [Rudder](https://github.com/Undertone0809/rudder) — Preserves reviewed lessons,
   decisions, and skills from agent work in durable context for future runs,
-  with a documented local-case-equal GDPval harness comparison.
+  with a documented local-case-equal GDPVal harness comparison.
   **Targets:** Memory, Skills, Topology.
 - [SSE-Bio](https://github.com/ZhaohanM/SSE-Bio) — [Paper](https://arxiv.org/abs/2608.22132).
   Maintains structured reasoning and template memory, trains a retrieval proxy
