@@ -2,6 +2,19 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-09-01
+
+### Field updates
+
+- Indexed reef-eval and AgentStream, which provide state-carrying task streams,
+  held-out-style reliability views, and reproducible metrics for self-evolving
+  agents.
+- Added SSE-Bio, SkillZip Pro, Coalition-Aware Skill Reliability, Meta^n, and
+  CineForge, which update structured memory, skill bundles, reliability gates,
+  recursive helper layers, or stage-local policies with benchmark evidence.
+- Added EvoSkill Injection and SkillJack, which make persistent skill-formation
+  attacks and cross-system safety failures measurable through benchmark evidence.
+
 ## 2026-08-31
 
 ### Field updates
