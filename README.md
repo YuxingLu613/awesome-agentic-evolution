@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-08-31
+**Last editorial review:** 2026-09-01
 
 ## Contents
 
@@ -231,6 +231,11 @@ attached to the same entry instead of being counted again.
   decisions, and skills from agent work in durable context for future runs,
   with a documented local-case-equal GDPval harness comparison.
   **Targets:** Memory, Skills, Topology.
+- [SSE-Bio](https://github.com/ZhaohanM/SSE-Bio) — [Paper](https://arxiv.org/abs/2608.22132).
+  Maintains structured reasoning and template memory, trains a retrieval proxy
+  from decision-contrastive feedback, and reports gains on three biomedical QA
+  benchmarks.
+  **Targets:** Memory, Parameters.
 
 ### Knowledge
 
@@ -267,6 +272,11 @@ attached to the same entry instead of being counted again.
 - [SkillZip](https://arxiv.org/abs/2608.11079) — Compresses evolving skills with
   typed structural sharing and coverage constraints; its Zip-on-Write mode
   incorporates each patch without replaying tasks or reparsing history.
+  **Targets:** Skills.
+- [SkillZip Pro](https://arxiv.org/abs/2608.30785) — Continually compresses
+  progressively loaded skill bundles after each evolution patch, preserving
+  routes and reporting 38% bundle-token reduction without quality loss in a
+  production moderation harness.
   **Targets:** Skills.
 - [SkillProx](https://github.com/Steven011018/SkillProx) — [Paper](https://arxiv.org/abs/2608.07449).
   Runs a closed-loop forward/backward skill-evolution process: measured outcomes
@@ -386,6 +396,11 @@ attached to the same entry instead of being counted again.
 - [TRACE](https://github.com/Darwin-Agent/Car-bench-TRACE) — [Paper](https://arxiv.org/abs/2608.22793).
   Refines a persistent Skill Bank by contrasting successful and failed
   trajectories, then reports Pass^3 gains on public and hidden CAR-bench sets.
+  **Targets:** Skills.
+- [Coalition-Aware Skill Reliability](https://arxiv.org/abs/2608.22610) — Audits
+  coalition-level skill contributions and masks transfer-harmful entries,
+  improving LoCoMo, LongMemEval, HotpotQA, and ALFWorld while exposing
+  isolation-evaluation failures.
   **Targets:** Skills.
 
 ### Tools
@@ -545,6 +560,17 @@ attached to the same entry instead of being counted again.
   evaluation-selected variants and transferring the selected harness to
   additional long-video benchmarks.
   **Targets:** Topology.
+- [Meta^n: Recursive Self-Improvement through Emergent Depth](https://github.com/minnesotanlp/meta-n)
+  — [Paper](https://arxiv.org/abs/2608.24735). Recursively writes executable
+  helpers and pre-processors from lower-layer traces, archives evaluated chains,
+  and reports gains across eight benchmark families. Run only in an isolated
+  sandbox.
+  **Targets:** Topology, Skills.
+- [CineForge: Self-Improving Agents for Long-Horizon Video Generation](https://arxiv.org/abs/2608.29621)
+  — Consolidates production trajectories into bounded, stage-local policy
+  patches, validates them by structural replay and paired evaluation, and
+  improves scores on a 100-script suite plus two public benchmarks.
+  **Targets:** Topology.
 
 ### Co-evolution
 
@@ -670,6 +696,23 @@ persistent update is real.
   with 120 financial workflow tasks, interleaved streams, paired state-reset
   controls, expert-validated rubrics, and compliance metrics for retained-
   experience gains.
+- [reef-eval](https://github.com/Human-Agent-Society/reef-eval) — Provides
+  Harbor-compatible autoresearch and continual task streams with state
+  snapshots, tamper-resistant scoring, and anytime, forgetting, and transfer
+  metrics.
+- [AgentStream](https://github.com/Jasper-Yan/AgentStream) — [Paper](https://arxiv.org/abs/2608.00155).
+  Evaluates five self-evolving methods in isolated, sequential, and interleaved
+  task streams across three models, exposing model-, method-, and
+  stream-dependent reliability.
+- [EvoSkill Injection](https://arxiv.org/abs/2608.30429) — Defines a red-team
+  threat model, EvoSkillBench trajectories, and post-attack safety tests for
+  persistent malicious-skill formation and repeated activation. Run only in an
+  isolated sandbox.
+- [SkillJack](https://github.com/Tencent/AI-Infra-Guard/tree/main/Research/SkillJack)
+  — [Paper](https://arxiv.org/abs/2608.03509). Releases poisoned-trajectory
+  data and cross-system experiments showing experience-to-skill backdoors
+  survive source deletion and can activate on benign queries. Run only in an
+  isolated sandbox.
 - [Experience-driven Lifelong Learning](https://arxiv.org/abs/2508.19005) —
   Proposes a framework and benchmark for continuous agent growth.
 - [SWE-bench](https://github.com/SWE-bench/SWE-bench) — Supplies real-world
