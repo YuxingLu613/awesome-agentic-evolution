@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-09-01
+**Last editorial review:** 2026-09-02
 
 ## Contents
 
@@ -130,6 +130,16 @@ attached to the same entry instead of being counted again.
   online and offline feedback updates with gains across seven search benchmarks
   and six out-of-domain sets.
   **Targets:** Parameters, Co-evolution.
+- [ARISE-RL: Reward-Gated Self-Evolution](https://arxiv.org/abs/2609.01058)
+  — Co-evolves a rubric/task generator and tool-using solver, gating
+  memory-augmented self-distillation on reward improvement across deep-research
+  and travel-planning tasks.
+  **Targets:** Parameters, Co-evolution.
+- [GenRubric](https://github.com/foggpoy/GenRubric) — [Paper](https://arxiv.org/abs/2608.29856).
+  Uses rubric-induced self-consistency rewards to evolve rubric-generation
+  parameters from unlabeled queries, with agreement gains on human-annotated
+  benchmarks and held-out domains.
+  **Targets:** Parameters.
 
 ### Memory
 
@@ -147,6 +157,10 @@ attached to the same entry instead of being counted again.
   **Targets:** Memory.
 - [SelfMem](https://arxiv.org/abs/2607.03726) — Uses memory tools and feedback signals
   to evaluate and refine a reusable long-context memory strategy.
+  **Targets:** Memory.
+- [DiagEvo](https://arxiv.org/abs/2609.00768) — Extracts recurring failure causes
+  into hierarchical error memory, targets challenger generation at active
+  weaknesses, and improves nine benchmarks across three solvers.
   **Targets:** Memory.
 - [MemSkill](https://github.com/ViktorAxelsen/MemSkill) — [Paper](https://arxiv.org/abs/2602.02474).
   Learns memory-skill selection and evolves reusable routines from difficult
@@ -308,6 +322,10 @@ attached to the same entry instead of being counted again.
 - [SkillOpt](https://github.com/microsoft/SkillOpt) — [Paper](https://arxiv.org/abs/2605.23904).
   Optimizes natural-language procedures from scored trajectories with
   validation-gated updates.
+  **Targets:** Skills.
+- [PRACTICE](https://arxiv.org/abs/2608.30760) — Trains a dedicated learner to
+  add, refine, merge, and remove a persistent skill library from trajectories,
+  improving successive rounds for frozen embodied executors.
   **Targets:** Skills.
 - [HypoForge](https://arxiv.org/abs/2608.25770) — Learns reusable scientific
   skills from stage-specific critique and execution outcomes, enabling
@@ -571,6 +589,15 @@ attached to the same entry instead of being counted again.
   patches, validates them by structural replay and paired evaluation, and
   improves scores on a 100-script suite plus two public benchmarks.
   **Targets:** Topology.
+- [HarnessEvolve](https://arxiv.org/abs/2609.00829) — Aligns failed runs with
+  reference trajectories, then quality- and performance-gates harness
+  snapshots against held-out validation to reduce shortcut learning and
+  forgetting.
+  **Targets:** Topology.
+- [WebWorld](https://arxiv.org/abs/2608.30530) — Uses browser-issued acceptance
+  certificates to ratchet verified web-code transitions into training data,
+  improving HTMLBench and MiniAppBench under matched training.
+  **Targets:** Topology.
 
 ### Co-evolution
 
@@ -704,6 +731,20 @@ persistent update is real.
   Evaluates five self-evolving methods in isolated, sequential, and interleaved
   task streams across three models, exposing model-, method-, and
   stream-dependent reliability.
+- [StudyBench](https://github.com/thunlp/StudyBench) — [Paper](https://arxiv.org/abs/2609.00787).
+  Releases fixed textbook materials, application/transfer splits, and
+  evaluation scripts to measure whether self-evolution converts study material
+  into transferable capability.
+- [ASPIRE](https://arxiv.org/abs/2608.31111) — Hides expert-authored tasks behind
+  vague goals and scores whether agents choose data, updates, and validation
+  signals, exposing transfer and stability failures.
+- [S3Gym](https://arxiv.org/abs/2608.31100) — Separates permissive exploration
+  from held-out game evaluation while comparing history, summary-memory, and
+  parameter updates for self-improvement.
+- [Auditing Harness Tampering](https://arxiv.org/abs/2609.00069) — Audits
+  authorization, provenance, and completeness violations in self-modifying
+  harnesses using tampered-benign pairs, localization tasks, and real-trajectory
+  persistence analysis.
 - [EvoSkill Injection](https://arxiv.org/abs/2608.30429) — Defines a red-team
   threat model, EvoSkillBench trajectories, and post-attack safety tests for
   persistent malicious-skill formation and repeated activation. Run only in an
@@ -713,6 +754,13 @@ persistent update is real.
   data and cross-system experiments showing experience-to-skill backdoors
   survive source deletion and can activate on benign queries. Run only in an
   isolated sandbox.
+- [ECLIPSE](https://arxiv.org/abs/2608.30441) — Builds and iteratively verifies
+  stealthy tool-chain injections, releasing LASE-Bench for long-horizon safety
+  evaluation. Run only in an isolated sandbox.
+- [SIR: Self-Improving Red Teaming](https://arxiv.org/abs/2608.30207) — Distills
+  failed computer-use attacks into reusable principles with deterministic
+  filesystem, service, and permission oracles; report transfer evidence and
+  run only in an isolated sandbox.
 - [Experience-driven Lifelong Learning](https://arxiv.org/abs/2508.19005) —
   Proposes a framework and benchmark for continuous agent growth.
 - [SWE-bench](https://github.com/SWE-bench/SWE-bench) — Supplies real-world
