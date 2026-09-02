@@ -2,6 +2,20 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-09-02
+
+### Field updates
+
+- Indexed ARISE-RL, GenRubric, DiagEvo, PRACTICE, HarnessEvolve, and WebWorld,
+  which evolve rubric, memory, skill, or harness artifacts with reward- or
+  trajectory-gated updates and held-out evaluation.
+- Added StudyBench, ASPIRE, S3Gym, and Auditing Harness Tampering, which expose
+  transfer, hidden-goal, self-testing, and harness-integrity evidence for
+  self-evolution.
+- Added ECLIPSE and SIR, which make persistent agentic attack formation and
+  deterministic cross-system safety transfer measurable. Run only in an
+  isolated sandbox.
+
 ## 2026-09-01
 
 ### Field updates
