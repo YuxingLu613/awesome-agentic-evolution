@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-09-02
+**Last editorial review:** 2026-09-03
 
 ## Contents
 
@@ -161,6 +161,16 @@ attached to the same entry instead of being counted again.
 - [DiagEvo](https://arxiv.org/abs/2609.00768) — Extracts recurring failure causes
   into hierarchical error memory, targets challenger generation at active
   weaknesses, and improves nine benchmarks across three solvers.
+  **Targets:** Memory.
+- [APEx: Distillation of Agent Procedural Experience](https://arxiv.org/abs/2609.02253)
+  — Distills trajectory memories into procedural skills, then adapts a research
+  planner with reward-guided test-time reinforcement learning across seven
+  benchmarks.
+  **Targets:** Memory, Parameters.
+- [CHIME: Credit-Aware Hierarchical Memory Evolution](https://arxiv.org/abs/2609.02074)
+  — Separates planning and execution memory banks, attributes outcomes before
+  retention, and transfers credit-aware memories across four long-horizon
+  benchmarks and backbone models.
   **Targets:** Memory.
 - [MemSkill](https://github.com/ViktorAxelsen/MemSkill) — [Paper](https://arxiv.org/abs/2602.02474).
   Learns memory-skill selection and evolves reusable routines from difficult
@@ -326,6 +336,11 @@ attached to the same entry instead of being counted again.
 - [PRACTICE](https://arxiv.org/abs/2608.30760) — Trains a dedicated learner to
   add, refine, merge, and remove a persistent skill library from trajectories,
   improving successive rounds for frozen embodied executors.
+  **Targets:** Skills.
+- [SkillGLoW: Procedural-Family Skill Consolidation](https://arxiv.org/abs/2609.02217)
+  — Aggregates task-local skills into procedural-family priors, admits them only
+  after non-degradation checks, and transfers compact procedures across four
+  continual task domains.
   **Targets:** Skills.
 - [HypoForge](https://arxiv.org/abs/2608.25770) — Learns reusable scientific
   skills from stage-specific critique and execution outcomes, enabling
@@ -601,6 +616,11 @@ attached to the same entry instead of being counted again.
 
 ### Co-evolution
 
+- [SafeEvolve](https://github.com/MaoPopovich/SafeEvolve) — [Paper](https://arxiv.org/abs/2609.02786).
+  Turns on-policy safety trajectories into bounded safety-prompt and SkillBank
+  revisions, then trains policy use with SFT and GRPO under safety and utility
+  gates. Run only in an isolated sandbox.
+  **Targets:** Parameters, Skills, Co-evolution.
 - [MEGA: Self-Evolving Agent Optimization Infrastructure via Wisdom Graph](https://arxiv.org/abs/2608.10504)
   — Distills sessions into durable wisdom assets and a typed graph, then feeds
   controlled operational evidence back into workflow optimization and the
@@ -708,6 +728,9 @@ persistent update is real.
 - [Phantom Gains](https://arxiv.org/abs/2608.20290) — Audits self-improvement
   claims against measured frozen controls, replacing noisy transition statistics
   with per-problem tests and false-discovery-rate control.
+- [Cheap Verifiers, Large Blind Spots](https://arxiv.org/abs/2609.01345) — Audits
+  self-improving verifier cascades with true-error controls, showing in-loop
+  metrics can improve while delivered quality degrades under blind-spot feedback.
 - [PerMemSafe](https://github.com/Greysahy/permemsafe) —
   [Paper](https://aclanthology.org/2026.findings-acl.320/). Benchmarks implicit
   personalized safety across evolving long-horizon memory, with committed data,

@@ -2,6 +2,16 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-09-03
+
+### Field updates
+
+- Indexed SafeEvolve, APEx, CHIME, and SkillGLoW, which evolve safety harnesses,
+  procedural memories, or skill-family priors with trajectory feedback,
+  credit attribution, non-degradation gates, and multi-benchmark evaluation.
+- Added Cheap Verifiers, Large Blind Spots, a negative audit of self-improving
+  verifier cascades that separates in-loop metrics from true delivered quality.
+
 ## 2026-09-02
 
 ### Field updates
