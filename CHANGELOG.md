@@ -2,6 +2,14 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-09-04
+
+### Field updates
+
+- Indexed FlowBalance and SimSkill, which retain verifier-calibrated policy
+  updates or executable traffic-simulation skills and report stability,
+  transfer, or held-out evaluation evidence.
+
 ## 2026-09-03
 
 ### Field updates

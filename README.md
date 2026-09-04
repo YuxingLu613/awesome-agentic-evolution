@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-09-03
+**Last editorial review:** 2026-09-04
 
 ## Contents
 
@@ -140,6 +140,11 @@ attached to the same entry instead of being counted again.
   parameters from unlabeled queries, with agreement gains on human-annotated
   benchmarks and held-out domains.
   **Targets:** Parameters.
+- [FlowBalance](https://arxiv.org/abs/2609.03241) — Reweights policy updates
+  from verifier-derived group advantage and calibrated self-guidance, retaining
+  or reversing on-policy signals to improve reasoning reward and training
+  stability.
+  **Targets:** Parameters.
 
 ### Memory
 
@@ -172,6 +177,11 @@ attached to the same entry instead of being counted again.
   retention, and transfers credit-aware memories across four long-horizon
   benchmarks and backbone models.
   **Targets:** Memory.
+- [SimSkill](https://github.com/qiliuchn/SimSkill-V1) — [Paper](https://arxiv.org/abs/2609.03753).
+  Explores SUMO traffic tasks, verifies solutions with action–critic feedback,
+  and consolidates episodic, procedural, and semantic memories into a reusable
+  library evaluated on two held-out benchmarks.
+  **Targets:** Memory, Knowledge, Skills.
 - [MemSkill](https://github.com/ViktorAxelsen/MemSkill) — [Paper](https://arxiv.org/abs/2602.02474).
   Learns memory-skill selection and evolves reusable routines from difficult
   cases.
