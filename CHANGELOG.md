@@ -2,6 +2,14 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-09-05
+
+### Field updates
+
+- Indexed R2-MAD and Environment Evolution for Terminal Agents, which retain
+  debate experience or evolve executable environments from consensus, reliability,
+  and difficulty signals with multi-benchmark evaluation.
+
 ## 2026-09-04
 
 ### Field updates
