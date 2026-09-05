@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-09-04
+**Last editorial review:** 2026-09-05
 
 ## Contents
 
@@ -182,6 +182,11 @@ attached to the same entry instead of being counted again.
   and consolidates episodic, procedural, and semantic memories into a reusable
   library evaluated on two held-out benchmarks.
   **Targets:** Memory, Knowledge, Skills.
+- [R2-MAD: Remember and Reweight](https://github.com/KylJin/R2-MAD) — [Paper](https://arxiv.org/abs/2609.03619).
+  Builds persistent debate experience memory, retrieves cases using consensus-aware
+  states, and reweights peer influence by historical reliability across four
+  reasoning benchmarks.
+  **Targets:** Memory.
 - [MemSkill](https://github.com/ViktorAxelsen/MemSkill) — [Paper](https://arxiv.org/abs/2602.02474).
   Learns memory-skill selection and evolves reusable routines from difficult
   cases.
@@ -631,6 +636,10 @@ attached to the same entry instead of being counted again.
   revisions, then trains policy use with SFT and GRPO under safety and utility
   gates. Run only in an isolated sandbox.
   **Targets:** Parameters, Skills, Co-evolution.
+- [Environment Evolution for Terminal Agents](https://arxiv.org/abs/2609.04128) —
+  Evolves terminal environments off-policy along difficulty directions to sustain
+  learning signals, improving long-horizon RL on Terminal-Bench 2.1.
+  **Targets:** Co-evolution.
 - [MEGA: Self-Evolving Agent Optimization Infrastructure via Wisdom Graph](https://arxiv.org/abs/2608.10504)
   — Distills sessions into durable wisdom assets and a typed graph, then feeds
   controlled operational evidence back into workflow optimization and the
