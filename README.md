@@ -308,6 +308,10 @@ attached to the same entry instead of being counted again.
 
 ### Skills
 
+- [RewardHarness](https://github.com/TIGER-AI-Lab/RewardHarness) — [Paper](https://arxiv.org/abs/2605.08703).
+  Evolves scoring skills and tool prompts from preference feedback, retaining
+  updates through held-out validation and rollback.
+  **Targets:** Skills, Tools.
 - [SkillZip](https://arxiv.org/abs/2608.11079) — Compresses evolving skills with
   typed structural sharing and coverage constraints; its Zip-on-Write mode
   incorporates each patch without replaying tasks or reparsing history.
