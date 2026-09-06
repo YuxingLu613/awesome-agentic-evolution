@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-09-05
+**Last editorial review:** 2026-09-06
 
 ## Contents
 
@@ -335,7 +335,7 @@ attached to the same entry instead of being counted again.
   Builds and refines reusable skills against self-created, evidence-grounded
   virtual tests, then evaluates frozen skills on held-out target tasks.
   **Targets:** Skills.
-- [AgentDescent](https://github.com/Birfy/agentdescent) — [Paper](https://github.com/Birfy/agentdescent/blob/main/paper/main.pdf).
+- [AgentDescent](https://github.com/Birfy/agentdescent) — [Paper](https://github.com/Birfy/agentdescent/blob/paper/paper/main.pdf).
   Evolves skills, prompts, harness modules, and verifiers through parallel
   proposals, reward scoring, and asynchronous aggregator merges, with live-model
   results and per-run raw data.
@@ -418,6 +418,18 @@ attached to the same entry instead of being counted again.
   skill-evolution harness that compares success-only, failure-only, and mixed
   feedback across 42 matched runs with held-out, robustness, and transfer checks.
   **Targets:** Skills.
+- [skill-up](https://github.com/alibaba/skill-up) — Provides declarative skill
+  evaluations with rule, script, or agent judges, then turns structured failure
+  reports into skill or regression-suite repairs through repeated `skill-upper`
+  iterations. The Apache-2.0 tool ships CI-ready reports and multi-engine
+  execution for a reproducible eval-to-evolution loop. **Targets:** Skills,
+  Tools, Co-evolution.
+- [COBRA-Skills](https://github.com/Jerry-LuP/COBRA-Skills) — Maintains a fixed
+  population of task skills, allocates target-agent evaluations with a learned
+  reward predictor and LinearUCB feedback, and periodically replaces low-scoring
+  skills through mutation and crossover. The Apache-2.0 release includes fixed
+  train/test manifests, six benchmark adapters, and separate baseline,
+  optimization, and held-out test stages. **Targets:** Skills, Co-evolution.
 - [self-evolve](https://github.com/DaizeDong/self-evolve) — Runs multi-round
   skill or repository self-iteration in an isolated worktree with deterministic
   acceptance, heterogeneous signals, archive lineage, and rollback; its tests

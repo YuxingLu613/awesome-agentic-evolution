@@ -2,6 +2,15 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-09-06
+
+### Field updates
+
+- Indexed Alibaba's skill-up and COBRA-Skills, which close the loop from
+  structured evaluation feedback to persistent skill or regression updates with
+  reproducible reports, benchmark splits, and held-out test stages.
+- Corrected the AgentDescent paper link to its published `paper` branch.
+
 ## 2026-09-05
 
 ### Field updates
