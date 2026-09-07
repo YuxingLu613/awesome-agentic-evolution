@@ -2,6 +2,17 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-09-07
+
+### Field updates
+
+- Indexed CoSkill and Meta Context Engineering, which evolve procedural skills
+  or context artifacts from execution rewards with released code or artifacts
+  and multi-domain evaluation.
+- Added Reef and Meta-Harness, which provide versioned feedback-to-update
+  infrastructure with candidate gates, replay or rollback, and frozen or
+  held-out evaluation protocols.
+
 ## 2026-09-06
 
 ### Field updates
