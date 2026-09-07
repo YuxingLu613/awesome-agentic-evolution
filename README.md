@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-09-06
+**Last editorial review:** 2026-09-07
 
 ## Contents
 
@@ -322,6 +322,11 @@ attached to the same entry instead of being counted again.
   roll back regressions, and utility audits gate consolidation or removal before
   held-out evaluation; official code is forthcoming.
   **Targets:** Skills.
+- [Meta Context Engineering (MCE)](https://github.com/metaevo-ai/meta-context-engineering)
+  — [Paper](https://arxiv.org/abs/2601.21557). Co-evolves context-engineering
+  skills and context artifacts through agentic crossover and bi-level
+  optimization, with released artifacts and five-domain offline/online
+  evaluation. **Targets:** Skills, Knowledge.
 - [SkillHEX](https://arxiv.org/abs/2608.05628) — Uses falsifiable self-tests
   and evidence-guided tree search to explore persistent skill revisions under
   sparse feedback, evaluated on 87 SkillsBench tasks.
@@ -418,6 +423,11 @@ attached to the same entry instead of being counted again.
   skill-evolution harness that compares success-only, failure-only, and mixed
   feedback across 42 matched runs with held-out, robustness, and transfer checks.
   **Targets:** Skills.
+- [CoSkill](https://github.com/jinyuan-cookie/CoSkill) —
+  [Paper](https://arxiv.org/abs/2609.04865). Jointly trains reasoning and
+  meta-skill agents over a hierarchical Skill Bank, promoting lineage-tracked
+  edits from improvement rewards with ALFWorld/WebShop results.
+  **Targets:** Skills, Parameters.
 - [skill-up](https://github.com/alibaba/skill-up) — Provides declarative skill
   evaluations with rule, script, or agent judges, then turns structured failure
   reports into skill or regression-suite repairs through repeated `skill-upper`
@@ -552,6 +562,16 @@ attached to the same entry instead of being counted again.
   search with statistical quality, safety, canary, promotion, and rollback
   gates, publishing deterministic fixtures and reproducible reports.
   **Targets:** Topology.
+- [Reef](https://github.com/Human-Agent-Society/reef) — Connects live
+  inference, feedback, candidate training, evaluator selection, and versioned
+  delivery for model weights or harness skills, with recipes and task-level
+  result reports. Run only in an isolated sandbox.
+  **Targets:** Topology, Parameters, Skills.
+- [Meta-Harness](https://github.com/davidyang07/Meta-Harness) — Makes
+  coding-harness evolution branchable and exactly replayable with persistent
+  checkpoints, rollback, candidate selection, frozen/holdout protocols, and
+  raw-result summaries. Run only in an isolated sandbox.
+  **Targets:** Topology, Skills.
 - [RSIHub](https://github.com/simple-agent-lab/RSIHub) — Runs evaluator-driven
   evolution over prompts, skills, harnesses, and agent code with frozen scoring,
   bounded mutation, Git lineage, rollback, and reproducible benchmark recipes.
