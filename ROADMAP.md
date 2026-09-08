@@ -3,6 +3,14 @@
 This roadmap keeps community growth, a possible living survey, and a future
 conference tutorial on one evidence pipeline.
 
+## Current Evidence Stage
+
+The [survey workspace](docs/survey/README.md), generated
+[inventory](docs/survey/catalog.md), extraction protocol, and review queue now
+exist. Inventory migration is not full-paper verification. Use the recorded
+evidence statuses to track remaining work; repository size, reachable links,
+and passing CI do not satisfy the manuscript gates below.
+
 ## Phase 1 — Community Foundation
 
 Build accountable governance and a recurring public review process.
@@ -20,10 +28,12 @@ latency, verified additions, and section coverage—not stars alone.
 
 Turn curated links into a versioned, reviewable evidence base.
 
-- Introduce a versioned structured resource catalog.
+- Maintain the versioned [structured resource catalog](docs/survey/catalog.json)
+  and its generated inventory without duplicating the README source list.
 - Record evolution target, feedback signal, persistent artifact, evaluation,
   reproducibility, safety, open questions, contributors, and reviewers.
-- Migrate the existing curated entries without weakening the acceptance bar.
+- Complete full-paper extraction of the migrated entries, resolving the
+  [review queue](docs/survey/REVIEW_QUEUE.md) without weakening the acceptance bar.
 - Publish quarterly landscape reports generated from reviewed evidence.
 
 ## Phase 3 — Living Survey
@@ -31,9 +41,14 @@ Turn curated links into a versioned, reviewable evidence base.
 Convert the reviewed evidence base into a manuscript only after the public
 maturity gates have been met.
 
+- Compare coverage and evidence methodology against existing surveys.
+- Build matched-protocol comparison tables and an explicit limitations section.
+- Assign section ownership and document substantive review and writing contributions.
+
 Start a manuscript only when:
 
-- 100–150 core research entries have been verified;
+- 100–150 unique core research studies have completed source-located extraction
+  and human evidence review, excluding background lists and duplicate artifacts;
 - the taxonomy has remained stable across two monthly reviews;
 - at least four section leads are active;
 - major categories have comparable evidence tables; and

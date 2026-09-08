@@ -1,0 +1,3901 @@
+{
+  "schemaVersion": 1,
+  "source": "README.md + docs/survey/reviews.json",
+  "resources": [
+    {
+      "id": "https://arxiv.org/abs/2607.13104",
+      "title": "Self-Improvements in Modern Agentic Systems: A Survey",
+      "section": "Start Here",
+      "category": null,
+      "primaryTarget": null,
+      "targets": [],
+      "description": "A 2026 system-level view of self-induced updates to foundation models and agent scaffolds.",
+      "sources": [
+        {
+          "label": "Self-Improvements in Modern Agentic Systems: A Survey",
+          "url": "https://arxiv.org/abs/2607.13104"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2507.21046",
+      "title": "A Survey of Self-Evolving Agents: What, When, How, and Where to Evolve",
+      "section": "Start Here",
+      "category": null,
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Organizes the field by update target, timing, feedback, and application.",
+      "sources": [
+        {
+          "label": "A Survey of Self-Evolving Agents: What, When, How, and Where to Evolve",
+          "url": "https://arxiv.org/abs/2507.21046"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2508.07407",
+      "title": "A Comprehensive Survey of Self-Evolving AI Agents",
+      "section": "Start Here",
+      "category": null,
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Presents a feedback-loop perspective spanning models, workflows, and domain-specific evolution.",
+      "sources": [
+        {
+          "label": "A Comprehensive Survey of Self-Evolving AI Agents",
+          "url": "https://arxiv.org/abs/2508.07407"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2404.14387",
+      "title": "A Survey on Self-Evolution of Large Language Models",
+      "section": "Start Here",
+      "category": null,
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Background on self-generated experience and parameter-level updates.",
+      "sources": [
+        {
+          "label": "A Survey on Self-Evolution of Large Language Models",
+          "url": "https://arxiv.org/abs/2404.14387"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/modelscope/AgentEvolver",
+      "title": "AgentEvolver",
+      "section": "Resource Map",
+      "category": "Parameters",
+      "primaryTarget": "Parameters",
+      "targets": [
+        "Parameters",
+        "Memory",
+        "Co-evolution"
+      ],
+      "description": "Couples task generation, experience synthesis, and reinforcement learning for persistent agent improvement.",
+      "sources": [
+        {
+          "label": "AgentEvolver",
+          "url": "https://github.com/modelscope/AgentEvolver"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.01058",
+      "title": "ARISE-RL: Reward-Gated Self-Evolution",
+      "section": "Resource Map",
+      "category": "Parameters",
+      "primaryTarget": "Parameters",
+      "targets": [
+        "Parameters",
+        "Co-evolution"
+      ],
+      "description": "Co-evolves a rubric/task generator and tool-using solver, gating memory-augmented self-distillation on reward improvement across deep-research and travel-planning tasks.",
+      "sources": [
+        {
+          "label": "ARISE-RL: Reward-Gated Self-Evolution",
+          "url": "https://arxiv.org/abs/2609.01058"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.27287",
+      "title": "Astar",
+      "section": "Resource Map",
+      "category": "Parameters",
+      "primaryTarget": "Parameters",
+      "targets": [
+        "Parameters"
+      ],
+      "description": "Trains an evolution-guiding model from industrial iteration histories, uses a surrogate reward evaluator, and guides 20 consecutive iterations with offline and online gains.",
+      "sources": [
+        {
+          "label": "Astar",
+          "url": "https://arxiv.org/abs/2608.27287"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/AutoMedBench/Benchmark-as-Teacher",
+      "title": "Benchmark-as-Teacher",
+      "section": "Resource Map",
+      "category": "Parameters",
+      "primaryTarget": "Parameters",
+      "targets": [
+        "Parameters",
+        "Co-evolution"
+      ],
+      "description": "Uses held-out-safe stage states and stage rubrics to select curricula, updates the policy with GRPO, and gates each checkpoint on the fixed benchmark contract.",
+      "sources": [
+        {
+          "label": "Benchmark-as-Teacher",
+          "url": "https://github.com/AutoMedBench/Benchmark-as-Teacher"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.16211"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.24794",
+      "title": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback",
+      "section": "Resource Map",
+      "category": "Parameters",
+      "primaryTarget": "Parameters",
+      "targets": [
+        "Parameters",
+        "Co-evolution"
+      ],
+      "description": "Co-evolves a search agent and critic from matched failures, alternating online and offline feedback updates with gains across seven search benchmarks and six out-of-domain sets.",
+      "sources": [
+        {
+          "label": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback",
+          "url": "https://arxiv.org/abs/2608.24794"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.03241",
+      "title": "FlowBalance",
+      "section": "Resource Map",
+      "category": "Parameters",
+      "primaryTarget": "Parameters",
+      "targets": [
+        "Parameters"
+      ],
+      "description": "Reweights policy updates from verifier-derived group advantage and calibrated self-guidance, retaining or reversing on-policy signals to improve reasoning reward and training stability.",
+      "sources": [
+        {
+          "label": "FlowBalance",
+          "url": "https://arxiv.org/abs/2609.03241"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/foggpoy/GenRubric",
+      "title": "GenRubric",
+      "section": "Resource Map",
+      "category": "Parameters",
+      "primaryTarget": "Parameters",
+      "targets": [
+        "Parameters"
+      ],
+      "description": "Uses rubric-induced self-consistency rewards to evolve rubric-generation parameters from unlabeled queries, with agreement gains on human-annotated benchmarks and held-out domains.",
+      "sources": [
+        {
+          "label": "GenRubric",
+          "url": "https://github.com/foggpoy/GenRubric"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.29856"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.24231",
+      "title": "RecurSE: Bounded Recursive Self-Evaluation for LLM Rubric Judges",
+      "section": "Resource Map",
+      "category": "Parameters",
+      "primaryTarget": "Parameters",
+      "targets": [
+        "Parameters",
+        "Co-evolution"
+      ],
+      "description": "Co-evolves a rubric judge and checker with decoupled self-reward, validation-based early stopping, held-out generalization, and ablations against frozen-checker and teacher baselines.",
+      "sources": [
+        {
+          "label": "RecurSE: Bounded Recursive Self-Evaluation for LLM Rubric Judges",
+          "url": "https://arxiv.org/abs/2608.24231"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2401.10020",
+      "title": "Self-Rewarding Language Models",
+      "section": "Resource Map",
+      "category": "Parameters",
+      "primaryTarget": "Parameters",
+      "targets": [
+        "Parameters"
+      ],
+      "description": "Uses the model as both instruction follower and judge during iterative training.",
+      "sources": [
+        {
+          "label": "Self-Rewarding Language Models",
+          "url": "https://arxiv.org/abs/2401.10020"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2203.14465",
+      "title": "STaR",
+      "section": "Resource Map",
+      "category": "Parameters",
+      "primaryTarget": "Parameters",
+      "targets": [
+        "Parameters"
+      ],
+      "description": "Iteratively generates successful rationales and updates model parameters on the retained examples.",
+      "sources": [
+        {
+          "label": "STaR",
+          "url": "https://arxiv.org/abs/2203.14465"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "source-checked",
+      "review": {
+        "status": "source-checked",
+        "reviewedAt": "2026-09-08",
+        "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+        "bibliography": {
+          "title": "STaR: Bootstrapping Reasoning With Reasoning",
+          "year": 2022
+        },
+        "sources": [
+          {
+            "url": "https://arxiv.org/abs/2203.14465v2",
+            "locator": "Abstract and submission metadata, v2"
+          }
+        ],
+        "artifact": "Model parameters trained on generated correct-answer rationales.",
+        "feedback": "Answer correctness; failed generations are retried with the correct answer.",
+        "retention": "Fine-tuned weights seed subsequent generation and training rounds.",
+        "evaluation": "Authors compare iterative rationale training with direct-answer fine-tuning on reasoning datasets, including CommonsenseQA.",
+        "reproducibility": "not-run",
+        "safety": "not-assessed",
+        "conflictOfInterest": "not-assessed",
+        "limitations": [
+          "Abstract-level extraction only; extract splits, models, compute, seeds, and result tables before comparison.",
+          "Foundational parameter self-improvement, not by itself evidence about deployed multi-tool agents."
+        ]
+      }
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.30530",
+      "title": "WebWorld",
+      "section": "Resource Map",
+      "category": "Parameters",
+      "primaryTarget": "Parameters",
+      "targets": [
+        "Parameters"
+      ],
+      "description": "Uses browser-issued acceptance certificates to ratchet verified web-code transitions into training data, improving HTMLBench and MiniAppBench under matched training.",
+      "sources": [
+        {
+          "label": "WebWorld",
+          "url": "https://arxiv.org/abs/2608.30530"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.26008",
+      "title": "A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Abstracts successful jailbreaks into reusable method-level rules, retains them across interactions, and reduces attack success across four families while preserving benign utility.",
+      "sources": [
+        {
+          "label": "A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks",
+          "url": "https://arxiv.org/abs/2608.26008"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.02253",
+      "title": "APEx: Distillation of Agent Procedural Experience",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Parameters"
+      ],
+      "description": "Distills trajectory memories into procedural skills, then adapts a research planner with reward-guided test-time reinforcement learning across seven benchmarks.",
+      "sources": [
+        {
+          "label": "APEx: Distillation of Agent Procedural Experience",
+          "url": "https://arxiv.org/abs/2609.02253"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/AreevAI/areev",
+      "title": "Areev",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Tools"
+      ],
+      "description": "Uses deterministic, evidence-citing analyzers to propose memory changes, requires named approval, stores inverse records, and remeasures outcomes so regressions can be reverted.",
+      "sources": [
+        {
+          "label": "Areev",
+          "url": "https://github.com/AreevAI/areev"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.14621",
+      "title": "AutoMem",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Topology"
+      ],
+      "description": "Searches task-adaptive memory architectures from historical trajectories and failure-guided module feedback, reporting gains across three benchmarks and two backbones.",
+      "sources": [
+        {
+          "label": "AutoMem",
+          "url": "https://arxiv.org/abs/2608.14621"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.02074",
+      "title": "CHIME: Credit-Aware Hierarchical Memory Evolution",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Separates planning and execution memory banks, attributes outcomes before retention, and transfers credit-aware memories across four long-horizon benchmarks and backbone models.",
+      "sources": [
+        {
+          "label": "CHIME: Credit-Aware Hierarchical Memory Evolution",
+          "url": "https://arxiv.org/abs/2609.02074"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.00303",
+      "title": "CrystalMem",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Reversibly demotes and verifies memory entries under changing byte budgets, using influence-aware retention and evaluation across seven environments, seventeen methods, and six backbones.",
+      "sources": [
+        {
+          "label": "CrystalMem",
+          "url": "https://arxiv.org/abs/2608.00303"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.00768",
+      "title": "DiagEvo",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Extracts recurring failure causes into hierarchical error memory, targets challenger generation at active weaknesses, and improves nine benchmarks across three solvers.",
+      "sources": [
+        {
+          "label": "DiagEvo",
+          "url": "https://arxiv.org/abs/2609.00768"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/370540009gg-cmd/earcon",
+      "title": "earcon",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "A local OpenAI-compatible proxy that distills session outcomes into SQLite experience cards and injects them into future tasks, with a discrete-action maze evaluation.",
+      "sources": [
+        {
+          "label": "earcon",
+          "url": "https://github.com/370540009gg-cmd/earcon"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/AgentToolkit/altk-evolve",
+      "title": "Evolve",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Learns reusable memory guidelines from trajectories with conflict resolution, feeds them into later sessions, and reports AppWorld reliability gains with provenance-aware storage.",
+      "sources": [
+        {
+          "label": "Evolve",
+          "url": "https://github.com/AgentToolkit/altk-evolve"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2603.10600"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/C10udsea/evolvebank",
+      "title": "EvolveBank",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Distills success and failure trajectories into a deduplicated strategy bank, tracks downstream win rates, freezes the bank for held-out τ-bench evaluation, and reports a parity result.",
+      "sources": [
+        {
+          "label": "EvolveBank",
+          "url": "https://github.com/C10udsea/evolvebank"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/LeapLabTHU/ExpeL",
+      "title": "ExpeL",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Distills transferable insights from successes and failures without updating model weights.",
+      "sources": [
+        {
+          "label": "ExpeL",
+          "url": "https://github.com/LeapLabTHU/ExpeL"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2308.10144"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.10494",
+      "title": "GeoForge",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Skills",
+        "Topology"
+      ],
+      "description": "Converts grounded trajectories into workflow-graph, action-experience, and SOP memories, then safety-gated distillation reuses them for tool planning across geospatial benchmarks.",
+      "sources": [
+        {
+          "label": "GeoForge",
+          "url": "https://arxiv.org/abs/2608.10494"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.25570",
+      "title": "KOPE: Experience-Driven Workflow and Experience Graph Memory",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Records hardware-kernel optimization decisions and correctness/performance feedback in an experience graph, then retrieves it under a fixed budget for continual optimization.",
+      "sources": [
+        {
+          "label": "KOPE: Experience-Driven Workflow and Experience Graph Memory",
+          "url": "https://arxiv.org/abs/2608.25570"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2607.26598",
+      "title": "Living-Harness",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Topology"
+      ],
+      "description": "Converts evaluated trajectories into bounded episodic-memory and state-graph repairs that persist across episodes and improve interactive benchmark performance.",
+      "sources": [
+        {
+          "label": "Living-Harness",
+          "url": "https://arxiv.org/abs/2607.26598"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/LuclasM/Luclas",
+      "title": "Luclas",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Topology"
+      ],
+      "description": "Learns from task outcomes through persistent SQLite episodes and lessons plus versioned self-updating policies, with daily compression, explicit corrections, and inspectable drift safeguards.",
+      "sources": [
+        {
+          "label": "Luclas",
+          "url": "https://github.com/LuclasM/Luclas"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/brightjade/membrane",
+      "title": "Membrane",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Evolves a contrastive safety-memory store from paired harmful/safe prompts and label-free test-time review, with HarmBench and AgentHarm evaluations.",
+      "sources": [
+        {
+          "label": "Membrane",
+          "url": "https://github.com/brightjade/membrane"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2606.05743"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/MemTensor/MemOS",
+      "title": "MemOS",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Skills",
+        "Knowledge"
+      ],
+      "description": "Applies natural-language feedback and correction to persistent memory, adds tiered skill evolution, and publishes LoCoMo, LongMemEval, and OmniMemEval results.",
+      "sources": [
+        {
+          "label": "MemOS",
+          "url": "https://github.com/MemTensor/MemOS"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/ViktorAxelsen/MemSkill",
+      "title": "MemSkill",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Skills"
+      ],
+      "description": "Learns memory-skill selection and evolves reusable routines from difficult cases.",
+      "sources": [
+        {
+          "label": "MemSkill",
+          "url": "https://github.com/ViktorAxelsen/MemSkill"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2602.02474"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/volcengine/OpenViking",
+      "title": "OpenViking",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Knowledge",
+        "Skills"
+      ],
+      "description": "Stores memories, resources, and skills in a browsable context filesystem; commits session experience to long-term memory and reports LoCoMo/tau2-bench gains with reproducible scripts.",
+      "sources": [
+        {
+          "label": "OpenViking",
+          "url": "https://github.com/volcengine/OpenViking"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/KylJin/R2-MAD",
+      "title": "R2-MAD: Remember and Reweight",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Builds persistent debate experience memory, retrieves cases using consensus-aware states, and reweights peer influence by historical reliability across four reasoning benchmarks.",
+      "sources": [
+        {
+          "label": "R2-MAD: Remember and Reweight",
+          "url": "https://github.com/KylJin/R2-MAD"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.03619"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Gen-Verse/Recuris",
+      "title": "Recuris",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Skills"
+      ],
+      "description": "Evolves targeted Skill Memory from structured traces with paired held-out validation, releases frozen splits, and reports cross-task transfer across 37 model–benchmark pairs.",
+      "sources": [
+        {
+          "label": "Recuris",
+          "url": "https://github.com/Gen-Verse/Recuris"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.24876"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/ReflexioAI/reflexio",
+      "title": "Reflexio",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Skills"
+      ],
+      "description": "Turns user corrections and successful interactions into persistent profiles and playbooks, aggregates approved cross-user lessons, and reports a warm-baseline GDPVal comparison across two host agents.",
+      "sources": [
+        {
+          "label": "Reflexio",
+          "url": "https://github.com/ReflexioAI/reflexio"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/noahshinn/reflexion",
+      "title": "Reflexion",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Stores verbal reflections in episodic memory for later trials.",
+      "sources": [
+        {
+          "label": "Reflexion",
+          "url": "https://github.com/noahshinn/reflexion"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2303.11366"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "source-checked",
+      "review": {
+        "status": "source-checked",
+        "reviewedAt": "2026-09-08",
+        "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+        "bibliography": {
+          "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+          "year": 2023
+        },
+        "sources": [
+          {
+            "url": "https://arxiv.org/abs/2303.11366v4",
+            "locator": "Abstract and submission metadata, v4"
+          }
+        ],
+        "artifact": "Reflective text in an episodic memory buffer; model weights are unchanged.",
+        "feedback": "Scalar or linguistic task feedback, external or internally simulated.",
+        "retention": "Reflections condition decisions in subsequent trials.",
+        "evaluation": "Authors report sequential decision-making, coding, and reasoning experiments with feedback ablations.",
+        "reproducibility": "not-run",
+        "safety": "not-assessed",
+        "conflictOfInterest": "not-assessed",
+        "limitations": [
+          "Extract trial/reset boundaries before treating repeated-attempt gains as cross-task transfer.",
+          "Abstract-level screening does not establish matched inference budgets or independent feedback quality."
+        ]
+      }
+    },
+    {
+      "id": "https://github.com/YOUNG-fnxm/RoMeRL",
+      "title": "RoMeRL",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Uses bounded task-slot memory states whose contents and utilities update from environment rewards, reducing persistent reward contamination across lifelong benchmarks.",
+      "sources": [
+        {
+          "label": "RoMeRL",
+          "url": "https://github.com/YOUNG-fnxm/RoMeRL"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.02508"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Undertone0809/rudder",
+      "title": "Rudder",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Skills",
+        "Topology"
+      ],
+      "description": "Preserves reviewed lessons, decisions, and skills from agent work in durable context for future runs, with a documented local-case-equal GDPVal harness comparison.",
+      "sources": [
+        {
+          "label": "Rudder",
+          "url": "https://github.com/Undertone0809/rudder"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2607.03726",
+      "title": "SelfMem",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Uses memory tools and feedback signals to evaluate and refine a reusable long-context memory strategy.",
+      "sources": [
+        {
+          "label": "SelfMem",
+          "url": "https://arxiv.org/abs/2607.03726"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/qiliuchn/SimSkill-V1",
+      "title": "SimSkill",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Knowledge",
+        "Skills"
+      ],
+      "description": "Explores SUMO traffic tasks, verifies solutions with action–critic feedback, and consolidates episodic, procedural, and semantic memories into a reusable library evaluated on two held-out benchmarks.",
+      "sources": [
+        {
+          "label": "SimSkill",
+          "url": "https://github.com/qiliuchn/SimSkill-V1"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.03753"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/ZhaohanM/SSE-Bio",
+      "title": "SSE-Bio",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory",
+        "Parameters"
+      ],
+      "description": "Maintains structured reasoning and template memory, trains a retrieval proxy from decision-contrastive feedback, and reports gains on three biomedical QA benchmarks.",
+      "sources": [
+        {
+          "label": "SSE-Bio",
+          "url": "https://github.com/ZhaohanM/SSE-Bio"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.22132"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.09044",
+      "title": "Tree-of-Experience",
+      "section": "Resource Map",
+      "category": "Memory",
+      "primaryTarget": "Memory",
+      "targets": [
+        "Memory"
+      ],
+      "description": "Organizes reusable experience as a reasoning-aligned tree, calibrates path reliability from environmental outcomes, and evaluates transfer on Game of 24 and FinEvolveBench.",
+      "sources": [
+        {
+          "label": "Tree-of-Experience",
+          "url": "https://arxiv.org/abs/2608.09044"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://aclanthology.org/2025.emnlp-industry.115/",
+      "title": "Adaptive Reflective Interactive Agent (ARIA)",
+      "section": "Resource Map",
+      "category": "Knowledge",
+      "primaryTarget": "Knowledge",
+      "targets": [
+        "Knowledge"
+      ],
+      "description": "Maintains a timestamped knowledge repository from targeted human guidance, detects conflicts, and evaluates adaptation on changing-domain tasks.",
+      "sources": [
+        {
+          "label": "Adaptive Reflective Interactive Agent (ARIA)",
+          "url": "https://aclanthology.org/2025.emnlp-industry.115/"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "source-checked",
+      "review": {
+        "status": "source-checked",
+        "reviewedAt": "2026-09-08",
+        "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+        "bibliography": {
+          "title": "Enabling Self-Improving Agents to Learn at Test Time With Human-In-The-Loop Guidance",
+          "year": 2025
+        },
+        "sources": [
+          {
+            "url": "https://aclanthology.org/2025.emnlp-industry.115/",
+            "locator": "Abstract and EMNLP Industry 2025 metadata (ARIA)"
+          }
+        ],
+        "artifact": "Timestamped domain-knowledge repository.",
+        "feedback": "Targeted human explanations and corrections requested after uncertainty assessment.",
+        "retention": "Knowledge updates and conflict resolution support later changing-domain decisions.",
+        "evaluation": "Authors report customer due-diligence name screening and public dynamic-knowledge tasks.",
+        "reproducibility": "not-run",
+        "safety": "not-assessed",
+        "conflictOfInterest": "not-assessed",
+        "limitations": [
+          "Human guidance is part of the method; extract annotation cost and availability rather than labeling it autonomous.",
+          "Public and industrial evaluations require separate access and protocol checks; only the abstract was screened."
+        ]
+      }
+    },
+    {
+      "id": "https://github.com/lazzy1225/CoEvoKG",
+      "title": "CoEvoKG",
+      "section": "Resource Map",
+      "category": "Knowledge",
+      "primaryTarget": "Knowledge",
+      "targets": [
+        "Knowledge",
+        "Co-evolution"
+      ],
+      "description": "Writes verified search evidence back into a knowledge graph that co-evolves with a proposer–solver loop and is evaluated on six multi-hop QA benchmarks.",
+      "sources": [
+        {
+          "label": "CoEvoKG",
+          "url": "https://github.com/lazzy1225/CoEvoKG"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.01904"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/recursive-knowledge/KSI",
+      "title": "Knowledge-Centric Self-Improvement",
+      "section": "Resource Map",
+      "category": "Knowledge",
+      "primaryTarget": "Knowledge",
+      "targets": [
+        "Knowledge"
+      ],
+      "description": "Runs disposable agents that distill evidence-grounded forums into shared knowledge, then seeds later attempts; gains transfer across held-out tasks and model families.",
+      "sources": [
+        {
+          "label": "Knowledge-Centric Self-Improvement",
+          "url": "https://github.com/recursive-knowledge/KSI"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2607.19592"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.26334",
+      "title": "ProofEvolve: Neuro-Symbolic Evolution for Formal Automated Theorem Proving",
+      "section": "Resource Map",
+      "category": "Knowledge",
+      "primaryTarget": "Knowledge",
+      "targets": [
+        "Knowledge",
+        "Topology"
+      ],
+      "description": "Evolves Lean-verified proof DAGs with neural variation operators, retaining checked schemas across problems and exposing residual subgoals for typed recombination across three benchmarks.",
+      "sources": [
+        {
+          "label": "ProofEvolve: Neuro-Symbolic Evolution for Formal Automated Theorem Proving",
+          "url": "https://arxiv.org/abs/2608.26334"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.26013",
+      "title": "VISA: Agentic Self-Evolving Data Synthesis for Multimodal Instruction Following",
+      "section": "Resource Map",
+      "category": "Knowledge",
+      "primaryTarget": "Knowledge",
+      "targets": [
+        "Knowledge",
+        "Memory"
+      ],
+      "description": "Synthesizes multimodal instructions from persistent constraint memory, writes verifier and target-model failures back into later rounds, and improves MM-IFEval while preserving general capability across seven public benchmarks.",
+      "sources": [
+        {
+          "label": "VISA: Agentic Self-Evolving Data Synthesis for Multimodal Instruction Following",
+          "url": "https://arxiv.org/abs/2608.26013"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Birfy/agentdescent",
+      "title": "AgentDescent",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Tools",
+        "Topology"
+      ],
+      "description": "Evolves skills, prompts, harness modules, and verifiers through parallel proposals, reward scoring, and asynchronous aggregator merges, with live-model results and per-run raw data.",
+      "sources": [
+        {
+          "label": "AgentDescent",
+          "url": "https://github.com/Birfy/agentdescent"
+        },
+        {
+          "label": "Paper",
+          "url": "https://github.com/Birfy/agentdescent/blob/paper/paper/main.pdf"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/debarshi29/cambium",
+      "title": "cambium",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Tools",
+        "Topology"
+      ],
+      "description": "Admission-gates evolving skill, tool, and prompt libraries, measures retrieval separately, rejects reward-hacking candidates, and reports held-out transfer from a reproducible 27-task demo.",
+      "sources": [
+        {
+          "label": "cambium",
+          "url": "https://github.com/debarshi29/cambium"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.22610",
+      "title": "Coalition-Aware Skill Reliability",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Audits coalition-level skill contributions and masks transfer-harmful entries, improving LoCoMo, LongMemEval, HotpotQA, and ALFWorld while exposing isolation-evaluation failures.",
+      "sources": [
+        {
+          "label": "Coalition-Aware Skill Reliability",
+          "url": "https://arxiv.org/abs/2608.22610"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Jerry-LuP/COBRA-Skills",
+      "title": "COBRA-Skills",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Co-evolution"
+      ],
+      "description": "Allocates skill evaluations with a learned reward predictor and replaces low-scoring skills through mutation and crossover, with separate optimization and held-out test stages.",
+      "sources": [
+        {
+          "label": "COBRA-Skills",
+          "url": "https://github.com/Jerry-LuP/COBRA-Skills"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Zhang-Henry/CoEvoSkills",
+      "title": "CoEvoSkills",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Co-evolution"
+      ],
+      "description": "Builds multi-file Skills through a generate–verify–refine loop, co-evolving a skill generator and surrogate verifier before isolated fresh-agent transfer tests.",
+      "sources": [
+        {
+          "label": "CoEvoSkills",
+          "url": "https://github.com/Zhang-Henry/CoEvoSkills"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2604.01687"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/jinyuan-cookie/CoSkill",
+      "title": "CoSkill",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Parameters"
+      ],
+      "description": "Jointly trains reasoning and meta-skill agents over a hierarchical Skill Bank, promoting lineage-tracked edits from improvement rewards with ALFWorld/WebShop results.",
+      "sources": [
+        {
+          "label": "CoSkill",
+          "url": "https://github.com/jinyuan-cookie/CoSkill"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.04865"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/A-EVO-Lab/a-evolve/tree/release/evo-harness",
+      "title": "Evo-Harness",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Topology"
+      ],
+      "description": "Compiles noisy one-shot trajectories into reusable skill harnesses for cross-task adaptation, evaluating a frozen agent across five realistic benchmarks.",
+      "sources": [
+        {
+          "label": "Evo-Harness",
+          "url": "https://github.com/A-EVO-Lab/a-evolve/tree/release/evo-harness"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.15071"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2607.16621",
+      "title": "From Memory to Skills",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Memory"
+      ],
+      "description": "Governs the evidence-grounded conversion of retained traces into callable skills.",
+      "sources": [
+        {
+          "label": "From Memory to Skills",
+          "url": "https://arxiv.org/abs/2607.16621"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.25770",
+      "title": "HypoForge",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Learns reusable scientific skills from stage-specific critique and execution outcomes, enabling continual improvement without fine-tuning and outperforming framework and skill-level baselines.",
+      "sources": [
+        {
+          "label": "HypoForge",
+          "url": "https://arxiv.org/abs/2608.25770"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.06153",
+      "title": "Learning Globally Reusable Skills for Coding Agents",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Topology"
+      ],
+      "description": "Co-evolves a skill-relation graph with global skill consolidation and replay verification, reporting cross-task and regression-aware gains on coding-agent tasks.",
+      "sources": [
+        {
+          "label": "Learning Globally Reusable Skills for Coding Agents",
+          "url": "https://arxiv.org/abs/2608.06153"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/metaevo-ai/meta-context-engineering",
+      "title": "Meta Context Engineering (MCE)",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Knowledge"
+      ],
+      "description": "Co-evolves context-engineering skills and context artifacts through agentic crossover and bi-level optimization, with released artifacts and five-domain offline/online evaluation.",
+      "sources": [
+        {
+          "label": "Meta Context Engineering (MCE)",
+          "url": "https://github.com/metaevo-ai/meta-context-engineering"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2601.21557"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2605.27366",
+      "title": "MUSE-Autoskill",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Treats skills as testable, reusable assets that are refined across tasks.",
+      "sources": [
+        {
+          "label": "MUSE-Autoskill",
+          "url": "https://arxiv.org/abs/2605.27366"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://openlair.github.io/openskill/",
+      "title": "OpenSkill",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Builds and refines reusable skills against self-created, evidence-grounded virtual tests, then evaluates frozen skills on held-out target tasks.",
+      "sources": [
+        {
+          "label": "OpenSkill",
+          "url": "https://openlair.github.io/openskill/"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2606.06741"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Prism-Shadow/penguin-harness",
+      "title": "PenguinHarness",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Agents evaluate and optimize their own Skills from benchmark feedback, snapshot each round, and expose observable traces for review.",
+      "sources": [
+        {
+          "label": "PenguinHarness",
+          "url": "https://github.com/Prism-Shadow/penguin-harness"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.26530",
+      "title": "PILOT in the Loop",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Memory"
+      ],
+      "description": "Steers active workers during execution and distills procedures and failure modes into reusable skills and memory, improving three long-horizon benchmarks.",
+      "sources": [
+        {
+          "label": "PILOT in the Loop",
+          "url": "https://arxiv.org/abs/2608.26530"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.30760",
+      "title": "PRACTICE",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Trains a dedicated learner to add, refine, merge, and remove a persistent skill library from trajectories, improving successive rounds for frozen embodied executors.",
+      "sources": [
+        {
+          "label": "PRACTICE",
+          "url": "https://arxiv.org/abs/2608.30760"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.27439",
+      "title": "RedEvoAgent",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Distills cross-case red-team trajectories into attack skills, retains only validation-improving updates through a ratchet, and transfers across target harnesses. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "RedEvoAgent",
+          "url": "https://arxiv.org/abs/2608.27439"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/HKUST-KnowComp/rethinkskill",
+      "title": "RethinkSkill",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Provides a reproducible controlled skill-evolution harness that compares success-only, failure-only, and mixed feedback across 42 matched runs with held-out, robustness, and transfer checks.",
+      "sources": [
+        {
+          "label": "RethinkSkill",
+          "url": "https://github.com/HKUST-KnowComp/rethinkskill"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.02636"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/wbopan/retro-harness",
+      "title": "Retrospective Harness Optimization",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Tools"
+      ],
+      "description": "Uses unlabeled past trajectories and self-preference to retain skill and tool updates that improve held-out behavior.",
+      "sources": [
+        {
+          "label": "Retrospective Harness Optimization",
+          "url": "https://github.com/wbopan/retro-harness"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2606.05922"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://aclanthology.org/2026.acl-long.69/",
+      "title": "SAGE",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Parameters"
+      ],
+      "description": "Accumulates a persistent skill library and trains skill generation and use with outcome-grounded rewards.",
+      "sources": [
+        {
+          "label": "SAGE",
+          "url": "https://aclanthology.org/2026.acl-long.69/"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.05245",
+      "title": "Search2Skill",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Parameters"
+      ],
+      "description": "Searches for capability gaps, distills external evidence into a persistent skill library with rubric-based reinforcement learning, and improves streaming and held-out expert-domain evaluation.",
+      "sources": [
+        {
+          "label": "Search2Skill",
+          "url": "https://arxiv.org/abs/2608.05245"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/DaizeDong/self-evolve",
+      "title": "self-evolve",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Tools"
+      ],
+      "description": "Runs multi-round skill or repository self-iteration in an isolated worktree with deterministic acceptance, heterogeneous signals, archive lineage, and rollback; its tests cover 555 cases.",
+      "sources": [
+        {
+          "label": "self-evolve",
+          "url": "https://github.com/DaizeDong/self-evolve"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Zenghuang-Fu/SESA-Self-Evolving-Search-Agents",
+      "title": "SESA: Self-Evolving Search Agents",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Memory",
+        "Parameters",
+        "Co-evolution"
+      ],
+      "description": "Distills informative self-play failures into bounded skill memory that reshapes the solver and challenger frontier across held-out QA benchmarks.",
+      "sources": [
+        {
+          "label": "SESA: Self-Evolving Search Agents",
+          "url": "https://github.com/Zenghuang-Fu/SESA-Self-Evolving-Search-Agents"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2607.29468"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/alibaba/skill-up",
+      "title": "skill-up",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Co-evolution"
+      ],
+      "description": "Turns structured evaluation failures into persistent skill and regression-suite repairs through repeated skill-upper iterations with rule, script, or agent judges.",
+      "sources": [
+        {
+          "label": "skill-up",
+          "url": "https://github.com/alibaba/skill-up"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.02217",
+      "title": "SkillGLoW: Procedural-Family Skill Consolidation",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Aggregates task-local skills into procedural-family priors, admits them only after non-degradation checks, and transfers compact procedures across four continual task domains.",
+      "sources": [
+        {
+          "label": "SkillGLoW: Procedural-Family Skill Consolidation",
+          "url": "https://arxiv.org/abs/2609.02217"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.05628",
+      "title": "SkillHEX",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Uses falsifiable self-tests and evidence-guided tree search to explore persistent skill revisions under sparse feedback, evaluated on 87 SkillsBench tasks.",
+      "sources": [
+        {
+          "label": "SkillHEX",
+          "url": "https://arxiv.org/abs/2608.05628"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Tencent/SkillHone",
+      "title": "SkillHone",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Evolves whole skill folders through persistent decision history, practice probes, and regression-gated PRs, with validation-gated deep-research evaluation. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "SkillHone",
+          "url": "https://github.com/Tencent/SkillHone"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2606.08671"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/microsoft/SkillOpt",
+      "title": "SkillOpt",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Optimizes natural-language procedures from scored trajectories with validation-gated updates.",
+      "sources": [
+        {
+          "label": "SkillOpt",
+          "url": "https://github.com/microsoft/SkillOpt"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2605.23904"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Steven011018/SkillProx",
+      "title": "SkillProx",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Runs a closed-loop forward/backward skill-evolution process: measured outcomes roll back regressions, and utility audits gate consolidation or removal before held-out evaluation; official code is forthcoming.",
+      "sources": [
+        {
+          "label": "SkillProx",
+          "url": "https://github.com/Steven011018/SkillProx"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.07449"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.11079",
+      "title": "SkillZip",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Compresses evolving skills with typed structural sharing and coverage constraints; its Zip-on-Write mode incorporates each patch without replaying tasks or reparsing history.",
+      "sources": [
+        {
+          "label": "SkillZip",
+          "url": "https://arxiv.org/abs/2608.11079"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.30785",
+      "title": "SkillZip Pro",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Continually compresses progressively loaded skill bundles after each evolution patch, preserving routes and reporting 38% bundle-token reduction without quality loss in a production moderation harness.",
+      "sources": [
+        {
+          "label": "SkillZip Pro",
+          "url": "https://arxiv.org/abs/2608.30785"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Darwin-Agent/Car-bench-TRACE",
+      "title": "TRACE",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Refines a persistent Skill Bank by contrasting successful and failed trajectories, then reports Pass^3 gains on public and hidden CAR-bench sets.",
+      "sources": [
+        {
+          "label": "TRACE",
+          "url": "https://github.com/Darwin-Agent/Car-bench-TRACE"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.22793"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/MineDojo/Voyager",
+      "title": "Voyager",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Co-evolution"
+      ],
+      "description": "Grows an executable skill library through environment feedback and an automatic curriculum.",
+      "sources": [
+        {
+          "label": "Voyager",
+          "url": "https://github.com/MineDojo/Voyager"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2305.16291"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "source-checked",
+      "review": {
+        "status": "source-checked",
+        "reviewedAt": "2026-09-08",
+        "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+        "bibliography": {
+          "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+          "year": 2023
+        },
+        "sources": [
+          {
+            "url": "https://arxiv.org/abs/2305.16291v2",
+            "locator": "Abstract and submission metadata, v2"
+          }
+        ],
+        "artifact": "Growing library of reusable executable skills, alongside an adaptive curriculum.",
+        "feedback": "Environment observations, execution errors, and self-verification.",
+        "retention": "Stored skills support subsequent exploration and tasks in a new Minecraft world.",
+        "evaluation": "Authors report exploration, milestone acquisition, and new-world skill reuse in Minecraft.",
+        "reproducibility": "not-run",
+        "safety": "Execution requires isolation; sandbox effectiveness not assessed",
+        "conflictOfInterest": "not-assessed",
+        "limitations": [
+          "One executable skill library is not two independently evolving Skills and Tools artifacts.",
+          "Abstract-level screening only; inspect curriculum persistence, task splits, trial budgets, and generalization outside Minecraft."
+        ]
+      }
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.05810",
+      "title": "When Self-Evolution Backfires",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills"
+      ],
+      "description": "Shows skill pools can contaminate later skills and proposes pre-commit heterogeneous critics plus marginal-gain subset selection, evaluated on Terminal-Bench 2.",
+      "sources": [
+        {
+          "label": "When Self-Evolution Backfires",
+          "url": "https://arxiv.org/abs/2608.05810"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.27454",
+      "title": "WikiSkill",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Knowledge"
+      ],
+      "description": "Consolidates execution experience into a persistent wiki that guides later skill updates, with cross-model transfer and ablations showing knowledge accumulation matters.",
+      "sources": [
+        {
+          "label": "WikiSkill",
+          "url": "https://arxiv.org/abs/2608.27454"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/SkillNerds/xskill",
+      "title": "xskill",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Memory"
+      ],
+      "description": "Distills anonymized agent trajectories into versioned team skills, canary-tests revisions on real traffic, and reports benchmark gains with rollback-ready lineage.",
+      "sources": [
+        {
+          "label": "xskill",
+          "url": "https://github.com/SkillNerds/xskill"
+        },
+        {
+          "label": "Paper",
+          "url": "https://github.com/SkillNerds/xskill/blob/main/paper/xskill_v4.pdf"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/zzatpku/AgentFactory",
+      "title": "AgentFactory",
+      "section": "Resource Map",
+      "category": "Tools",
+      "primaryTarget": "Tools",
+      "targets": [
+        "Tools"
+      ],
+      "description": "Stores successful solutions as executable Python subagents, refines them from execution feedback, and evaluates reusable capability growth across later tasks. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "AgentFactory",
+          "url": "https://github.com/zzatpku/AgentFactory"
+        },
+        {
+          "label": "Paper",
+          "url": "https://aclanthology.org/2026.acl-demo.81/"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "source-checked",
+      "review": {
+        "status": "source-checked",
+        "reviewedAt": "2026-09-08",
+        "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+        "bibliography": {
+          "title": "AgentFactory: A Self-Evolving Framework Through Executable Subagent Accumulation and Reuse",
+          "year": 2026
+        },
+        "sources": [
+          {
+            "url": "https://aclanthology.org/2026.acl-demo.81/",
+            "locator": "Abstract and ACL 2026 System Demonstrations metadata"
+          }
+        ],
+        "artifact": "Documented callable Python subagents.",
+        "feedback": "Execution outcomes used to refine saved solutions.",
+        "retention": "The executable subagent library accumulates and is reused for later tasks.",
+        "evaluation": "Authors demonstrate capability accumulation and reduced effort for similar tasks.",
+        "reproducibility": "not-run",
+        "safety": "Execution requires isolation; sandbox effectiveness not assessed",
+        "conflictOfInterest": "not-assessed",
+        "limitations": [
+          "A demonstration claim does not establish held-out effectiveness; extract tasks, baselines, and budgets from the paper.",
+          "Only abstract and bibliographic metadata were screened; code portability is author-reported."
+        ]
+      }
+    },
+    {
+      "id": "https://buaa-irip-llm.github.io/Mem2Evolve/",
+      "title": "Mem²Evolve",
+      "section": "Resource Map",
+      "category": "Tools",
+      "primaryTarget": "Tools",
+      "targets": [
+        "Tools",
+        "Memory",
+        "Skills",
+        "Co-evolution"
+      ],
+      "description": "Couples experience distillation with dynamic creation of tools and expert agents.",
+      "sources": [
+        {
+          "label": "Mem²Evolve",
+          "url": "https://buaa-irip-llm.github.io/Mem2Evolve/"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2604.10923"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2607.28692",
+      "title": "SciToolAgent-Evo",
+      "section": "Resource Map",
+      "category": "Tools",
+      "primaryTarget": "Tools",
+      "targets": [
+        "Tools",
+        "Knowledge",
+        "Memory"
+      ],
+      "description": "Evolves an ontology-backed scientific tool graph and skill/experience memory through contrastive trajectories and bandit-gated acquisition, evaluated on 900 OpenSciToolBench tasks.",
+      "sources": [
+        {
+          "label": "SciToolAgent-Evo",
+          "url": "https://arxiv.org/abs/2607.28692"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/A-EVO-Lab/a-evolve",
+      "title": "A-Evolve",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "A position paper and framework treating deployment-time improvement as optimization over persistent agent state; empirical scope requires separate extraction.",
+      "sources": [
+        {
+          "label": "A-Evolve",
+          "url": "https://github.com/A-EVO-Lab/a-evolve"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2602.00359"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.04872",
+      "title": "A-SR: Self-Evolving Agentic LLMs for Symbolic Regression",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Memory",
+        "Parameters"
+      ],
+      "description": "Routes evaluator feedback through role policies and process memory, adapts coordination within runs, and distills trajectories across runs with held-out symbolic-regression evaluation.",
+      "sources": [
+        {
+          "label": "A-SR: Self-Evolving Agentic LLMs for Symbolic Regression",
+          "url": "https://arxiv.org/abs/2608.04872"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/ShengranHu/ADAS",
+      "title": "ADAS",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Searches agent designs expressed as code and retains an archive of evaluated candidates.",
+      "sources": [
+        {
+          "label": "ADAS",
+          "url": "https://github.com/ShengranHu/ADAS"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2408.08435"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "source-checked",
+      "review": {
+        "status": "source-checked",
+        "reviewedAt": "2026-09-08",
+        "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+        "bibliography": {
+          "title": "Automated Design of Agentic Systems",
+          "year": 2024
+        },
+        "sources": [
+          {
+            "url": "https://arxiv.org/abs/2408.08435v2",
+            "locator": "Abstract and submission metadata; first submitted 2024, inspected v2 revised 2025"
+          }
+        ],
+        "artifact": "Code-defined agent designs and an archive of discoveries.",
+        "feedback": "Evaluation of candidate agent designs in Meta Agent Search.",
+        "retention": "The meta-agent proposes later designs using the accumulated archive.",
+        "evaluation": "Authors report coding, science, and mathematics experiments plus cross-domain/model transfer.",
+        "reproducibility": "not-run",
+        "safety": "Generated code requires isolation; sandbox effectiveness not assessed",
+        "conflictOfInterest": "not-assessed",
+        "limitations": [
+          "The abstract motivates the loop; extract selection rules, search/test separation, and evaluation budgets from the full method.",
+          "Do not equate code-defined design search with arbitrary safe self-modification."
+        ]
+      }
+    },
+    {
+      "id": "https://github.com/ETOLucy/AegisEvo",
+      "title": "AegisEvo",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Governs sandboxed harness search with statistical quality, safety, canary, promotion, and rollback gates, publishing deterministic fixtures and reproducible reports.",
+      "sources": [
+        {
+          "label": "AegisEvo",
+          "url": "https://github.com/ETOLucy/AegisEvo"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/tsinghua-fib-lab/AgentSquare",
+      "title": "AgentSquare",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Memory",
+        "Skills",
+        "Tools"
+      ],
+      "description": "Searches a modular space of planning, reasoning, tool-use, and memory components.",
+      "sources": [
+        {
+          "label": "AgentSquare",
+          "url": "https://github.com/tsinghua-fib-lab/AgentSquare"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2410.06153"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Yaxin9Luo/AutoDesign",
+      "title": "AutoDesign",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Tools",
+        "Skills"
+      ],
+      "description": "Learns a reusable design harness around fixed models, retaining one-component updates only when training improves without regressing an independent development set, then evaluates matched configurations on PosterBench.",
+      "sources": [
+        {
+          "label": "AutoDesign",
+          "url": "https://github.com/Yaxin9Luo/AutoDesign"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.13560"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Jiyuan-Tan/CausalForge",
+      "title": "CausalForge",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Uses Lean-checked proofs and statement audits in a self-improving theorem pipeline, with public formal libraries and run records.",
+      "sources": [
+        {
+          "label": "CausalForge",
+          "url": "https://github.com/Jiyuan-Tan/CausalForge"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2607.22511"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.29621",
+      "title": "CineForge: Self-Improving Agents for Long-Horizon Video Generation",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Consolidates production trajectories into bounded, stage-local policy patches, validates them by structural replay and paired evaluation, and improves scores on a 100-script suite plus two public benchmarks.",
+      "sources": [
+        {
+          "label": "CineForge: Self-Improving Agents for Long-Horizon Video Generation",
+          "url": "https://arxiv.org/abs/2608.29621"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/jennyzzt/dgm",
+      "title": "Darwin Gödel Machine",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Skills",
+        "Tools"
+      ],
+      "description": "Rewrites coding-agent implementations and empirically validates descendants. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "Darwin Gödel Machine",
+          "url": "https://github.com/jennyzzt/dgm"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2505.22954"
+        },
+        {
+          "label": "Article",
+          "url": "https://sakana.ai/dgm/"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/cf3i/Evolving-Multi-Agent-System",
+      "title": "EMAS: Evolving Multi-Agent System",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Converts recurring trace diagnoses into prompt or topology revisions, paired-validates each candidate, and persists accepted versions while retaining rejected proposals for audit.",
+      "sources": [
+        {
+          "label": "EMAS: Evolving Multi-Agent System",
+          "url": "https://github.com/cf3i/Evolving-Multi-Agent-System"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.07196"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/EvoAgentX/EvoAgentX",
+      "title": "EvoAgentX",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Builds, evaluates, and evolves multi-agent workflows with pluggable optimization algorithms.",
+      "sources": [
+        {
+          "label": "EvoAgentX",
+          "url": "https://github.com/EvoAgentX/EvoAgentX"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/watt-mind/factory",
+      "title": "Factory",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Provides tracker-controlled coding-agent loops with isolated worktrees, repeatable verification, CI/review gates, Git lineage, and offline regression demos. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "Factory",
+          "url": "https://github.com/watt-mind/factory"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.25661",
+      "title": "From General Agents to RCA Experts: A Self-Evolving Harness for Root Cause Analysis",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Knowledge"
+      ],
+      "description": "Converts successful and failed RCA trajectories into atomic expertise updates, admits them through dual-gate verification, and reports gains on two public benchmarks plus an industrial deployment.",
+      "sources": [
+        {
+          "label": "From General Agents to RCA Experts: A Self-Evolving Harness for Root Cause Analysis",
+          "url": "https://arxiv.org/abs/2608.25661"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/metauto-ai/GPTSwarm",
+      "title": "GPTSwarm",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Represents language agents as graphs and optimizes node prompts and connectivity.",
+      "sources": [
+        {
+          "label": "GPTSwarm",
+          "url": "https://github.com/metauto-ai/GPTSwarm"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2402.16823"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.00829",
+      "title": "HarnessEvolve",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Aligns failed runs with reference trajectories, then quality- and performance-gates harness snapshots against held-out validation to reduce shortcut learning and forgetting.",
+      "sources": [
+        {
+          "label": "HarnessEvolve",
+          "url": "https://arxiv.org/abs/2609.00829"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/jhxu5214/HarnessLens",
+      "title": "HarnessLens",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Evolves OpenCode, Codex CLI, and Pi harnesses through behavior-aware diagnosis and selective verification, with blind-test entrypoints, pinned reproducibility, and four-benchmark evaluation. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "HarnessLens",
+          "url": "https://github.com/jhxu5214/HarnessLens"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.27311"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://bingreeky.github.io/JIT-site",
+      "title": "JIT-Agent",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Distills performance signals from an archive of prior harness configurations to synthesize, repair, and improve task-adaptive harnesses across model families and benchmarks.",
+      "sources": [
+        {
+          "label": "JIT-Agent",
+          "url": "https://bingreeky.github.io/JIT-site"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.25593"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2607.28527",
+      "title": "MANTA: Multi-Agent Network Topology Adaptation",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Memory"
+      ],
+      "description": "Adapts roles, links, execution order, and visibility from trace audits during execution, retains a cross-run topology playbook, and evaluates transfer across five benchmarks.",
+      "sources": [
+        {
+          "label": "MANTA: Multi-Agent Network Topology Adaptation",
+          "url": "https://arxiv.org/abs/2607.28527"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/davidyang07/Meta-Harness",
+      "title": "Meta-Harness",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Skills"
+      ],
+      "description": "Implements recorded-tape harness replay, persistent checkpoints, candidate selection, and separate search/holdout protocols; replay does not imply fresh-model reproducibility. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "Meta-Harness",
+          "url": "https://github.com/davidyang07/Meta-Harness"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/minnesotanlp/meta-n",
+      "title": "Meta^n: Recursive Self-Improvement through Emergent Depth",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Skills"
+      ],
+      "description": "Recursively writes executable helpers and pre-processors from lower-layer traces, archives evaluated chains, and reports gains across eight benchmark families. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "Meta^n: Recursive Self-Improvement through Emergent Depth",
+          "url": "https://github.com/minnesotanlp/meta-n"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.24735"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Alibaba-VELLDEPTH/MetaVideoAgent",
+      "title": "MetaVideoAgent",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Profiles a video distribution, diagnoses trajectory failures, and evolves responsible modules across four rounds with evolution and held-out VA-EvoBench splits. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "MetaVideoAgent",
+          "url": "https://github.com/Alibaba-VELLDEPTH/MetaVideoAgent"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.04587"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.27266",
+      "title": "Naive Prompt Optimization",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Iteratively revises prompts from teacher-model rollout feedback and transfers single-lineage improvements across tasks and interactive games.",
+      "sources": [
+        {
+          "label": "Naive Prompt Optimization",
+          "url": "https://arxiv.org/abs/2608.27266"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.09629",
+      "title": "Open-Ended Optimization (OEO)",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Skills"
+      ],
+      "description": "Composes the improvement route online under fixed objectives, budgets, data boundaries, and evaluators, comparing persistent skill updates with SkillOpt and GEPA.",
+      "sources": [
+        {
+          "label": "Open-Ended Optimization (OEO)",
+          "url": "https://arxiv.org/abs/2608.09629"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/algorithmicsuperintelligence/openevolve",
+      "title": "OpenEvolve",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Provides an open evolutionary coding loop inspired by AlphaEvolve.",
+      "sources": [
+        {
+          "label": "OpenEvolve",
+          "url": "https://github.com/algorithmicsuperintelligence/openevolve"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/proteus-evolve/Proteus",
+      "title": "Proteus",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Provides a harness-agnostic, snapshot-based evolution loop with evaluator gates, crystallization tests, rollback, and git histories for measuring persistent change. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "Proteus",
+          "url": "https://github.com/proteus-evolve/Proteus"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/EverMind-AI/Raven",
+      "title": "Raven",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Memory",
+        "Skills"
+      ],
+      "description": "Combines terminal execution, tracing, durable memory, skills, reusable workflows, and an opt-in Evolver with independent benchmark harnesses for long-running agent improvement. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "Raven",
+          "url": "https://github.com/EverMind-AI/Raven"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Human-Agent-Society/reef",
+      "title": "Reef",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Parameters",
+        "Skills"
+      ],
+      "description": "Connects live inference, feedback, candidate training, evaluator selection, and versioned delivery for model weights or harness skills, with recipes and task-level result reports. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "Reef",
+          "url": "https://github.com/Human-Agent-Society/reef"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/ros-claw/rosclaw",
+      "title": "ROSClaw",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Provides a simulation-first physical-agent control plane that turns feedback into hashed controller candidates, fail-closed gates, and rollback targets; real-hardware activation is blocked. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "ROSClaw",
+          "url": "https://github.com/ros-claw/rosclaw"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/simple-agent-lab/RSIHub",
+      "title": "RSIHub",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Skills"
+      ],
+      "description": "Runs evaluator-driven evolution over prompts, skills, harnesses, and agent code with frozen scoring, bounded mutation, Git lineage, rollback, and reproducible benchmark recipes. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "RSIHub",
+          "url": "https://github.com/simple-agent-lab/RSIHub"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://tyxiong23.github.io/rubse",
+      "title": "RubSE",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Memory"
+      ],
+      "description": "Generates UI code with typed rubrics as visual feedback, retains selected repair history across rounds, and evaluates six VLMs on three UI-to-code benchmarks for stable iterative improvement.",
+      "sources": [
+        {
+          "label": "RubSE",
+          "url": "https://tyxiong23.github.io/rubse"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.24138"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Git-on-my-level/self-improving-agent-ecosystem",
+      "title": "Self-Improving Agent Ecosystem",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Provides contracts, schemas, deterministic fixtures, and validation for evaluator-driven loops with isolated candidates, evidence lineage, promotion gates, rollback, and external health checks.",
+      "sources": [
+        {
+          "label": "Self-Improving Agent Ecosystem",
+          "url": "https://github.com/Git-on-my-level/self-improving-agent-ecosystem"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.24302",
+      "title": "VideoHarness-RSI: Recursive Harness Self-Improvement for Long-Video Understanding",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology"
+      ],
+      "description": "Searches executable context constructors around a frozen VLM, retaining evaluation-selected variants and transferring the selected harness to additional long-video benchmarks.",
+      "sources": [
+        {
+          "label": "VideoHarness-RSI: Recursive Harness Self-Improvement for Long-Video Understanding",
+          "url": "https://arxiv.org/abs/2608.24302"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/yologdev/yoyo-evolve",
+      "title": "yoyo",
+      "section": "Resource Map",
+      "category": "Topology",
+      "primaryTarget": "Topology",
+      "targets": [
+        "Topology",
+        "Memory"
+      ],
+      "description": "Runs an autonomous coding-agent loop that reads source and community issues, test-gates commits or reverts, and synthesizes durable memory across sessions. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "yoyo",
+          "url": "https://github.com/yologdev/yoyo-evolve"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/aiming-lab/Agent0",
+      "title": "Agent0",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution",
+        "Parameters"
+      ],
+      "description": "Co-evolves a task curriculum and a tool-using executor without human-curated task data.",
+      "sources": [
+        {
+          "label": "Agent0",
+          "url": "https://github.com/aiming-lab/Agent0"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2511.16043"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "source-checked",
+      "review": {
+        "status": "source-checked",
+        "reviewedAt": "2026-09-08",
+        "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+        "bibliography": {
+          "title": "Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning",
+          "year": 2025
+        },
+        "sources": [
+          {
+            "url": "https://arxiv.org/abs/2511.16043v1",
+            "locator": "Abstract and submission metadata, v1"
+          }
+        ],
+        "artifact": "Learned executor and curriculum-agent state.",
+        "feedback": "Executor capability and task difficulty drive competitive curriculum/executor learning.",
+        "retention": "Successive co-evolution rounds build on learned agents and generated curricula.",
+        "evaluation": "Authors report mathematical and general reasoning benchmarks for a Qwen3-8B-Base starting model.",
+        "reproducibility": "not-run",
+        "safety": "Tool execution requires isolation; sandbox effectiveness not assessed",
+        "conflictOfInterest": "not-assessed",
+        "limitations": [
+          "Tool integration is not evidence of tool evolution; classification is Co-evolution plus Parameters.",
+          "Abstract-level screening only; extract reward equations, contamination controls, training cost, and evaluation splits before comparison."
+        ]
+      }
+    },
+    {
+      "id": "https://github.com/Human-Agent-Society/CORAL",
+      "title": "CORAL",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution",
+        "Topology",
+        "Tools"
+      ],
+      "description": "Runs autonomous coding-agent organizations in isolated worktrees, sharing persistent attempts, notes, and skills while a grader scores commits and agents iterate on open-ended tasks.",
+      "sources": [
+        {
+          "label": "CORAL",
+          "url": "https://github.com/Human-Agent-Society/CORAL"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2604.01658"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/amazon-science/Self-Evolving-Agents-Double-Ratchet",
+      "title": "Double Ratchet",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution",
+        "Skills"
+      ],
+      "description": "Co-evolves an inspectable drawback-detector metric with a lifecycle-managed skill library, using anchored references and locked-set validation to expose evaluator collapse.",
+      "sources": [
+        {
+          "label": "Double Ratchet",
+          "url": "https://github.com/amazon-science/Self-Evolving-Agents-Double-Ratchet"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2607.12790"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.04128",
+      "title": "Environment Evolution for Terminal Agents",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution"
+      ],
+      "description": "Evolves terminal environments off-policy along difficulty directions to sustain learning signals, improving long-horizon RL on Terminal-Bench 2.1.",
+      "sources": [
+        {
+          "label": "Environment Evolution for Terminal Agents",
+          "url": "https://arxiv.org/abs/2609.04128"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/UCSB-AI/GEA",
+      "title": "Group-Evolving Agents (GEA)",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution",
+        "Topology",
+        "Tools"
+      ],
+      "description": "Evolves populations of agent workflows and tools through archived experience sharing, retaining cross-lineage improvements on held-out coding benchmarks. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "Group-Evolving Agents (GEA)",
+          "url": "https://github.com/UCSB-AI/GEA"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2602.04837"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/HKUDS/HELIX",
+      "title": "HELIX",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution",
+        "Topology"
+      ],
+      "description": "Composes source-traceable harness variants, evaluates sibling rollouts, and turns verified successes, regressions, and preferences into data for later model updates; reports LiveCodeBench and SWE-Bench results.",
+      "sources": [
+        {
+          "label": "HELIX",
+          "url": "https://github.com/HKUDS/HELIX"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.13951"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.26582",
+      "title": "J-Zero",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution",
+        "Parameters"
+      ],
+      "description": "Co-evolves challenger, solver, and judge from zero data, using known-order preference pairs and adversarial tasks to improve through ten iterations.",
+      "sources": [
+        {
+          "label": "J-Zero",
+          "url": "https://arxiv.org/abs/2608.26582"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.10504",
+      "title": "MEGA: Self-Evolving Agent Optimization Infrastructure via Wisdom Graph",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution",
+        "Knowledge",
+        "Topology"
+      ],
+      "description": "Distills sessions into durable wisdom assets and a typed graph, then feeds controlled operational evidence back into workflow optimization and the evolving curation strategy.",
+      "sources": [
+        {
+          "label": "MEGA: Self-Evolving Agent Optimization Infrastructure via Wisdom Graph",
+          "url": "https://arxiv.org/abs/2608.10504"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/MaoPopovich/SafeEvolve",
+      "title": "SafeEvolve",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution",
+        "Parameters",
+        "Skills"
+      ],
+      "description": "Turns on-policy safety trajectories into bounded safety-prompt and SkillBank revisions, then trains policy use with SFT and GRPO under safety and utility gates. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "SafeEvolve",
+          "url": "https://github.com/MaoPopovich/SafeEvolve"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.02786"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.10157",
+      "title": "SBCO: Self-Supervised, Verifier-Grounded Harness Optimization",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution",
+        "Topology"
+      ],
+      "description": "Jointly updates a decomposed verifier bank and planning-agent harness from self-graded feedback via block-coordinate ascent, without human labels.",
+      "sources": [
+        {
+          "label": "SBCO: Self-Supervised, Verifier-Grounded Harness Optimization",
+          "url": "https://arxiv.org/abs/2608.10157"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2607.17352",
+      "title": "Self-Modifying Lean Proof Agents",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution",
+        "Topology",
+        "Tools"
+      ],
+      "description": "Co-evolves a Lean proof workflow and benchmark curriculum, using compiler and Lean verification feedback across 15 generations with a held-out miniF2F split.",
+      "sources": [
+        {
+          "label": "Self-Modifying Lean Proof Agents",
+          "url": "https://arxiv.org/abs/2607.17352"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.20169",
+      "title": "Task-CoEvolve",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution",
+        "Topology"
+      ],
+      "description": "Co-evolves harness code and validation-task sampling, focusing evaluation on discriminative tasks while retaining unbiased full-set estimates and reducing evaluation cost.",
+      "sources": [
+        {
+          "label": "Task-CoEvolve",
+          "url": "https://arxiv.org/abs/2608.20169"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Tencent/SelfEvolvingAgent/tree/main/WebEvolver",
+      "title": "WebEvolver",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution",
+        "Parameters"
+      ],
+      "description": "Co-trains a policy and world model from real trajectories, then uses the model for synthetic training and look-ahead evaluation.",
+      "sources": [
+        {
+          "label": "WebEvolver",
+          "url": "https://github.com/Tencent/SelfEvolvingAgent/tree/main/WebEvolver"
+        },
+        {
+          "label": "Paper",
+          "url": "https://aclanthology.org/2025.emnlp-main.454/"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Jasper-Yan/AgentStream",
+      "title": "AgentStream",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Evaluates five self-evolving methods in isolated, sequential, and interleaved task streams across three models, exposing model-, method-, and stream-dependent reliability.",
+      "sources": [
+        {
+          "label": "AgentStream",
+          "url": "https://github.com/Jasper-Yan/AgentStream"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.00155"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.20318",
+      "title": "AI4AI-Bench",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Releases 10 frozen research repositories, hidden evaluators, 29 configurations, and every scored submission for testing whether agents can rewrite training algorithms.",
+      "sources": [
+        {
+          "label": "AI4AI-Bench",
+          "url": "https://arxiv.org/abs/2608.20318"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.31111",
+      "title": "ASPIRE",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Hides expert-authored tasks behind vague goals and scores whether agents choose data, updates, and validation signals, exposing transfer and stability failures.",
+      "sources": [
+        {
+          "label": "ASPIRE",
+          "url": "https://arxiv.org/abs/2608.31111"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/gtynnn060110-hash/continual-skill-bench-final",
+      "title": "Continual Skill Bench",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Evaluates continual skill reuse across five domains and 100-task sequences, comparing in-context adaptation with explicit skill maintenance.",
+      "sources": [
+        {
+          "label": "Continual Skill Bench",
+          "url": "https://github.com/gtynnn060110-hash/continual-skill-bench-final"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.03874"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/RUCAIBox/Evo-Bench",
+      "title": "Evo-Bench",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Holds policy, seed harness, and budget fixed while scoring autonomous harness evolution on disjoint validation and evaluation suites.",
+      "sources": [
+        {
+          "label": "Evo-Bench",
+          "url": "https://github.com/RUCAIBox/Evo-Bench"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.09096"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2508.19005",
+      "title": "Experience-driven Lifelong Learning",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Proposes a framework and benchmark for continuous agent growth.",
+      "sources": [
+        {
+          "label": "Experience-driven Lifelong Learning",
+          "url": "https://arxiv.org/abs/2508.19005"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.06144",
+      "title": "FinEvo-Bench",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "A longitudinal benchmark with 120 financial workflow tasks, interleaved streams, paired state-reset controls, expert-validated rubrics, and compliance metrics for retained- experience gains.",
+      "sources": [
+        {
+          "label": "FinEvo-Bench",
+          "url": "https://arxiv.org/abs/2608.06144"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/thunlp/PACE-Bench",
+      "title": "PACE-Bench",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Tests whether code-driven designs adapt after source-to-target physics mutations, with diagnostic sandbox feedback across 144 pairs and 180 evaluation environments.",
+      "sources": [
+        {
+          "label": "PACE-Bench",
+          "url": "https://github.com/thunlp/PACE-Bench"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.14441"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Human-Agent-Society/reef-eval",
+      "title": "reef-eval",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Provides Harbor-compatible autoresearch and continual task streams with state snapshots, tamper-resistant scoring, and anytime, forgetting, and transfer metrics.",
+      "sources": [
+        {
+          "label": "reef-eval",
+          "url": "https://github.com/Human-Agent-Society/reef-eval"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/evolvent-ai/RSIBench-Data",
+      "title": "RSIBench-Data",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Audits whether researcher agents turn checkpoint feedback into reusable training-data strategies under fixed training, evaluation, and budget controls.",
+      "sources": [
+        {
+          "label": "RSIBench-Data",
+          "url": "https://github.com/evolvent-ai/RSIBench-Data"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2607.25886"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.31100",
+      "title": "S3Gym",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Separates permissive exploration from held-out game evaluation while comparing history, summary-memory, and parameter updates for self-improvement.",
+      "sources": [
+        {
+          "label": "S3Gym",
+          "url": "https://arxiv.org/abs/2608.31100"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/antropy-research/SEAGym",
+      "title": "SEAGym: An Evaluation Environment for Self-Evolving LLM Agents",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Measures persistent harness updates across train, frozen validation, held-out ID/OOD transfer, replay, and cost views, with checkpointed states and reproducible configurations.",
+      "sources": [
+        {
+          "label": "SEAGym: An Evaluation Environment for Self-Evolving LLM Agents",
+          "url": "https://github.com/antropy-research/SEAGym"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2606.17546"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/thunlp/StudyBench",
+      "title": "StudyBench",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Releases fixed textbook materials, application/transfer splits, and evaluation scripts to measure whether self-evolution converts study material into transferable capability.",
+      "sources": [
+        {
+          "label": "StudyBench",
+          "url": "https://github.com/thunlp/StudyBench"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.00787"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Human-Agent-Society/tide-eval",
+      "title": "tide-eval",
+      "section": "Benchmarks and Evaluation",
+      "category": "Longitudinal and adaptation evaluation",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "An Apache-2.0 evaluation infrastructure for self-evolving agents on Harbor: carries memory, skills, or harness state across task streams with per-step snapshots, and reports anytime, forgetting, and transfer metrics.",
+      "sources": [
+        {
+          "label": "tide-eval",
+          "url": "https://github.com/Human-Agent-Society/tide-eval"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.01345",
+      "title": "Cheap Verifiers, Large Blind Spots",
+      "section": "Benchmarks and Evaluation",
+      "category": "Reliability and evaluation controls",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Audits self-improving verifier cascades with true-error controls, showing in-loop metrics can improve while delivered quality degrades under blind-spot feedback.",
+      "sources": [
+        {
+          "label": "Cheap Verifiers, Large Blind Spots",
+          "url": "https://arxiv.org/abs/2609.01345"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/SalesforceAIResearch/self-improve-fragility",
+      "title": "On the Fragility of Self-Improving Agents",
+      "section": "Benchmarks and Evaluation",
+      "category": "Reliability and evaluation controls",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Re-evaluates memory-based self-improving agents across repeated runs and shuffled task orders, releasing trajectories to measure variance, order sensitivity, and specification effects.",
+      "sources": [
+        {
+          "label": "On the Fragility of Self-Improving Agents",
+          "url": "https://github.com/SalesforceAIResearch/self-improve-fragility"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.18066"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.20290",
+      "title": "Phantom Gains",
+      "section": "Benchmarks and Evaluation",
+      "category": "Reliability and evaluation controls",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Audits self-improvement claims against measured frozen controls, replacing noisy transition statistics with per-problem tests and false-discovery-rate control.",
+      "sources": [
+        {
+          "label": "Phantom Gains",
+          "url": "https://arxiv.org/abs/2608.20290"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2607.24300",
+      "title": "Sealed Exogenous Acceptance Loop (SEAL)",
+      "section": "Benchmarks and Evaluation",
+      "category": "Reliability and evaluation controls",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Keeps its audit hidden from evolving policies and self-tests, returning only accept/reject and retaining the whole incumbent after a clear regression.",
+      "sources": [
+        {
+          "label": "Sealed Exogenous Acceptance Loop (SEAL)",
+          "url": "https://arxiv.org/abs/2607.24300"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2609.00069",
+      "title": "Auditing Harness Tampering",
+      "section": "Benchmarks and Evaluation",
+      "category": "Safety, poisoning, and recoverability",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Audits authorization, provenance, and completeness violations in self-modifying harnesses using tampered-benign pairs, localization tasks, and real-trajectory persistence analysis.",
+      "sources": [
+        {
+          "label": "Auditing Harness Tampering",
+          "url": "https://arxiv.org/abs/2609.00069"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.17684",
+      "title": "Auditing Self-Evolution in Financial Agents",
+      "section": "Benchmarks and Evaluation",
+      "category": "Safety, poisoning, and recoverability",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Audits three self-evolving agents with sealed endpoints, state replay, execution-grounded checks, and security metrics, exposing capability gains that increase exposure and unauthorized state changes.",
+      "sources": [
+        {
+          "label": "Auditing Self-Evolution in Financial Agents",
+          "url": "https://arxiv.org/abs/2608.17684"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.30441",
+      "title": "ECLIPSE",
+      "section": "Benchmarks and Evaluation",
+      "category": "Safety, poisoning, and recoverability",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Builds and iteratively verifies stealthy tool-chain injections, releasing LASE-Bench for long-horizon safety evaluation. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "ECLIPSE",
+          "url": "https://arxiv.org/abs/2608.30441"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.25776",
+      "title": "EVOMAL: Self-Poisoning in Self-Evolving Coding Agents",
+      "section": "Benchmarks and Evaluation",
+      "category": "Safety, poisoning, and recoverability",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Measures self-poisoning propagation in evolving skill libraries across six models and 153 SWE-bench tasks, and evaluates a counter-prompt defense without task-completion loss.",
+      "sources": [
+        {
+          "label": "EVOMAL: Self-Poisoning in Self-Evolving Coding Agents",
+          "url": "https://arxiv.org/abs/2608.25776"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.30429",
+      "title": "EvoSkill Injection",
+      "section": "Benchmarks and Evaluation",
+      "category": "Safety, poisoning, and recoverability",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Defines a red-team threat model, EvoSkillBench trajectories, and post-attack safety tests for persistent malicious-skill formation and repeated activation. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "EvoSkill Injection",
+          "url": "https://arxiv.org/abs/2608.30429"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.28363",
+      "title": "EvoUndo",
+      "section": "Benchmarks and Evaluation",
+      "category": "Safety, poisoning, and recoverability",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Evaluates recoverability of model-generated prompt, tool, middleware, and harness mutations across counterfactual states on 600 unseen tasks, exposing grounding and recovery-language bottlenecks.",
+      "sources": [
+        {
+          "label": "EvoUndo",
+          "url": "https://arxiv.org/abs/2608.28363"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Baiyajing/HarnessRisk",
+      "title": "HarnessRisk",
+      "section": "Benchmarks and Evaluation",
+      "category": "Safety, poisoning, and recoverability",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Benchmarks agent-harness safety across configuration, capability extension, runtime, persistence, action control, and recovery using sandboxed cases with trajectory evidence and explicit utility, attack, persistence, and detection metrics.",
+      "sources": [
+        {
+          "label": "HarnessRisk",
+          "url": "https://github.com/Baiyajing/HarnessRisk"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.17597"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Greysahy/permemsafe",
+      "title": "PerMemSafe",
+      "section": "Benchmarks and Evaluation",
+      "category": "Safety, poisoning, and recoverability",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Benchmarks implicit personalized safety across evolving long-horizon memory, with committed data, evaluation logs, and a risk-aware memory baseline.",
+      "sources": [
+        {
+          "label": "PerMemSafe",
+          "url": "https://github.com/Greysahy/permemsafe"
+        },
+        {
+          "label": "Paper",
+          "url": "https://aclanthology.org/2026.findings-acl.320/"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.30207",
+      "title": "SIR: Self-Improving Red Teaming",
+      "section": "Benchmarks and Evaluation",
+      "category": "Safety, poisoning, and recoverability",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Distills failed computer-use attacks into reusable principles with deterministic filesystem, service, and permission oracles; report transfer evidence and run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "SIR: Self-Improving Red Teaming",
+          "url": "https://arxiv.org/abs/2608.30207"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/Tencent/AI-Infra-Guard/tree/main/Research/SkillJack",
+      "title": "SkillJack",
+      "section": "Benchmarks and Evaluation",
+      "category": "Safety, poisoning, and recoverability",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Releases poisoned-trajectory data and cross-system experiments showing experience-to-skill backdoors survive source deletion and can activate on benign queries. Run only in an isolated sandbox.",
+      "sources": [
+        {
+          "label": "SkillJack",
+          "url": "https://github.com/Tencent/AI-Infra-Guard/tree/main/Research/SkillJack"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2608.03509"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://arxiv.org/abs/2608.05563",
+      "title": "When Experience Becomes Instruction",
+      "section": "Benchmarks and Evaluation",
+      "category": "Safety, poisoning, and recoverability",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Demonstrates trajectory-poisoning attacks that promote malicious behaviors into persistent skill banks, with transfer tests across six LLM evolvers and two architectures.",
+      "sources": [
+        {
+          "label": "When Experience Becomes Instruction",
+          "url": "https://arxiv.org/abs/2608.05563"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/THUDM/AgentBench",
+      "title": "AgentBench",
+      "section": "Benchmarks and Evaluation",
+      "category": "General agent benchmarks",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Evaluates agents across multiple interactive environments.",
+      "sources": [
+        {
+          "label": "AgentBench",
+          "url": "https://github.com/THUDM/AgentBench"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://huggingface.co/gaia-benchmark",
+      "title": "GAIA",
+      "section": "Benchmarks and Evaluation",
+      "category": "General agent benchmarks",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Tests assistants on tasks requiring reasoning, tools, and multimodal information.",
+      "sources": [
+        {
+          "label": "GAIA",
+          "url": "https://huggingface.co/gaia-benchmark"
+        }
+      ],
+      "sourceProfile": "web-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/SWE-bench/SWE-bench",
+      "title": "SWE-bench",
+      "section": "Benchmarks and Evaluation",
+      "category": "General agent benchmarks",
+      "primaryTarget": null,
+      "targets": [],
+      "description": "Supplies real-world software issues used by self-improving coding-agent systems.",
+      "sources": [
+        {
+          "label": "SWE-bench",
+          "url": "https://github.com/SWE-bench/SWE-bench"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+      "title": "AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms",
+      "section": "Articles and Technical Posts",
+      "category": null,
+      "primaryTarget": null,
+      "targets": [],
+      "description": "A first-party description of an evolutionary loop combining proposals with automated evaluators.",
+      "sources": [
+        {
+          "label": "AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms",
+          "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+        }
+      ],
+      "sourceProfile": "web-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://deepmind.google/blog/alphaevolve-impact/",
+      "title": "AlphaEvolve: How our coding agent is scaling impact across fields",
+      "section": "Articles and Technical Posts",
+      "category": null,
+      "primaryTarget": null,
+      "targets": [],
+      "description": "A 2026 first-party update on deployments and scientific applications.",
+      "sources": [
+        {
+          "label": "AlphaEvolve: How our coding agent is scaling impact across fields",
+          "url": "https://deepmind.google/blog/alphaevolve-impact/"
+        }
+      ],
+      "sourceProfile": "web-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+      "title": "LLM Powered Autonomous Agents",
+      "section": "Articles and Technical Posts",
+      "category": null,
+      "primaryTarget": null,
+      "targets": [],
+      "description": "A foundation for reflection, memory, planning, and tool use.",
+      "sources": [
+        {
+          "label": "LLM Powered Autonomous Agents",
+          "url": "https://lilianweng.github.io/posts/2023-06-23-agent/"
+        }
+      ],
+      "sourceProfile": "web-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/EvoAgentX/Awesome-Self-Evolving-Agents",
+      "title": "Awesome Self-Evolving Agents — EvoAgentX",
+      "section": "Related Awesome Lists",
+      "category": null,
+      "primaryTarget": null,
+      "targets": [],
+      "description": "",
+      "sources": [
+        {
+          "label": "Awesome Self-Evolving Agents — EvoAgentX",
+          "url": "https://github.com/EvoAgentX/Awesome-Self-Evolving-Agents"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents",
+      "title": "Awesome Self-Evolving Agents — XMUDeepLIT",
+      "section": "Related Awesome Lists",
+      "category": null,
+      "primaryTarget": null,
+      "targets": [],
+      "description": "",
+      "sources": [
+        {
+          "label": "Awesome Self-Evolving Agents — XMUDeepLIT",
+          "url": "https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents",
+      "title": "Awesome Self-Improving Agents",
+      "section": "Related Awesome Lists",
+      "category": null,
+      "primaryTarget": null,
+      "targets": [],
+      "description": "",
+      "sources": [
+        {
+          "label": "Awesome Self-Improving Agents",
+          "url": "https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
+      "id": "https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/Awesome-Self-Evolution-of-LLM",
+      "title": "Awesome Self-Evolution of LLM",
+      "section": "Related Awesome Lists",
+      "category": null,
+      "primaryTarget": null,
+      "targets": [],
+      "description": "",
+      "sources": [
+        {
+          "label": "Awesome Self-Evolution of LLM",
+          "url": "https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/Awesome-Self-Evolution-of-LLM"
+        }
+      ],
+      "sourceProfile": "repository-only",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    }
+  ]
+}

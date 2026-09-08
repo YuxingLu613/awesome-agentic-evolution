@@ -239,6 +239,27 @@ test("leaves highlight slots empty instead of repeating a multi-target resource"
   assert.deepEqual(titles, ["Voyager"]);
 });
 
+test("reads inline and wrapped target metadata without leaking it into descriptions", () => {
+  const snapshot = buildRepositorySnapshot({
+    readme: `## Resource Map
+### Skills
+- [Inline](https://example.com/inline) — Retains evaluated routines. **Targets:** Skills,
+  Tools, Co-evolution.
+### Memory
+- [Wrapped](https://example.com/wrapped) — Stores feedback.
+  **Targets:** Memory,
+  Knowledge.
+## Benchmarks and Evaluation
+`,
+    changelog: "", roadmap: "", github: null
+  });
+  const inline = snapshot.landscape[3].highlights[0];
+  assert.equal(inline.description, "Retains evaluated routines.");
+  assert.deepEqual(inline.targets, ["skills", "tools", "co-evolution"]);
+  assert.equal(snapshot.landscape[2].count, 1);
+  assert.equal(snapshot.landscape[1].highlights[0].description, "Stores feedback.");
+});
+
 test("uses wrapped phase summaries instead of gates or operating cadence bullets", () => {
   const roadmap = `
 # Roadmap

@@ -33,8 +33,10 @@ help turn the evidence base into a survey section or tutorial module.
 ## Open Founding Areas
 
 - Parameter evolution
-- Memory and knowledge evolution
-- Skill and tool evolution
+- Memory evolution
+- Knowledge evolution
+- Skill evolution
+- Tool evolution
 - Topology and orchestration evolution
 - Co-evolution and open-ended ecosystems
 - Evaluation, reproducibility, and safety
@@ -67,6 +69,14 @@ curation, investigation, analysis, writing, software, visualization, and
 revision. Authorship is based on documented contribution rather than maintainer
 status or invitation. A single small submission receives public credit but does
 not automatically establish authorship.
+
+Evidence contributors should record actual extraction and review work using
+the [survey protocol](docs/survey/PROTOCOL.md). Keep dated source locators,
+public PR/review links, and CRediT-style roles for investigation, curation,
+analysis, software, visualization, and writing. AI-assisted extraction must be
+labeled and does not stand in for an independent human review. Git author
+metadata and future paper authorship are separate records; neither erases
+attribution to the authors of indexed work.
 
 ## Conduct
 
