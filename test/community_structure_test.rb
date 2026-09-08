@@ -82,7 +82,7 @@ class CommunityStructureTest < Minitest::Test
 
   def test_substantive_contributions_can_qualify_for_authorship
     missing = AUTHORSHIP_POLICY_FILES.reject do |path|
-      File.read(File.join(ROOT, path)).split.join(" ").include?(
+      File.read(File.join(ROOT, path)).gsub(/\s+/, " ").strip.include?(
         "can qualify contributors for survey-paper authorship"
       )
     end
@@ -91,7 +91,7 @@ class CommunityStructureTest < Minitest::Test
   end
 
   def test_selfmem_entry_records_feedback_driven_strategy_evolution
-    readme = File.read(File.join(ROOT, "README.md")).split.join(" ")
+    readme = File.read(File.join(ROOT, "README.md")).gsub(/\s+/, " ").strip
 
     assert_includes readme, "https://arxiv.org/abs/2607.03726"
     assert_match(/SelfMem.*feedback signals.*refine.*memory strategy/im, readme)

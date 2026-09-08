@@ -3,14 +3,14 @@
 Generated from [README](../../README.md) and [evidence records](reviews.json).
 Do not edit directly: run `node scripts/build-survey-catalog.mjs`.
 
-173 distinct entries. Source profiles describe linked artifacts, not
+174 distinct entries. Source profiles describe linked artifacts, not
 publication status or evidence quality. Not-extracted means no structured
 extraction is recorded here; earlier editorial checks may still exist in GitHub.
 
 | Section | Entries | Source-checked | Evidence-reviewed |
 | --- | ---: | ---: | ---: |
 | Start Here | 4 | 0 | 0 |
-| Resource Map | 130 | 7 | 0 |
+| Resource Map | 131 | 7 | 0 |
 | Benchmarks and Evaluation | 32 | 0 | 0 |
 | Articles and Technical Posts | 3 | 0 | 0 |
 | Related Awesome Lists | 4 | 0 | 0 |
@@ -92,6 +92,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | [RedEvoAgent](https://arxiv.org/abs/2608.27439) | Skills | paper-linked | not-extracted |
 | [RethinkSkill](https://github.com/HKUST-KnowComp/rethinkskill) | Skills | paper-linked | not-extracted |
 | [Retrospective Harness Optimization](https://github.com/wbopan/retro-harness) | Skills | paper-linked | not-extracted |
+| [RewardHarness](https://github.com/TIGER-AI-Lab/RewardHarness) | Skills | paper-linked | not-extracted |
 | [SAGE](https://aclanthology.org/2026.acl-long.69/) | Skills | paper-linked | not-extracted |
 | [Search2Skill](https://arxiv.org/abs/2608.05245) | Skills | paper-linked | not-extracted |
 | [self-evolve](https://github.com/DaizeDong/self-evolve) | Skills | repository-only | not-extracted |

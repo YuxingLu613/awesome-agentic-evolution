@@ -441,6 +441,11 @@ unless an evidence record explicitly documents independent reproduction.
   and self-preference to retain skill and tool updates that improve held-out
   behavior.
   **Targets:** Skills, Tools.
+- [RewardHarness](https://github.com/TIGER-AI-Lab/RewardHarness) —
+  [Paper](https://arxiv.org/abs/2605.08703). Evolves scoring skills and tool
+  prompts from preference feedback, retaining updates through held-out
+  validation and rollback.
+  **Targets:** Skills, Tools.
 - [SAGE](https://aclanthology.org/2026.acl-long.69/) — Accumulates a
   persistent skill library and trains skill generation and use with
   outcome-grounded rewards.

@@ -253,11 +253,14 @@ test("reads inline and wrapped target metadata without leaking it into descripti
 `,
     changelog: "", roadmap: "", github: null
   });
-  const inline = snapshot.landscape[3].highlights[0];
+  const skills = snapshot.landscape.find(({ id }) => id === "skills");
+  const knowledge = snapshot.landscape.find(({ id }) => id === "knowledge");
+  const memory = snapshot.landscape.find(({ id }) => id === "memory");
+  const inline = skills.highlights.find(({ title }) => title === "Inline");
   assert.equal(inline.description, "Retains evaluated routines.");
   assert.deepEqual(inline.targets, ["skills", "tools", "co-evolution"]);
-  assert.equal(snapshot.landscape[2].count, 1);
-  assert.equal(snapshot.landscape[1].highlights[0].description, "Stores feedback.");
+  assert.equal(knowledge.count, 1);
+  assert.equal(memory.highlights.find(({ title }) => title === "Wrapped").description, "Stores feedback.");
 });
 
 test("uses wrapped phase summaries instead of gates or operating cadence bullets", () => {

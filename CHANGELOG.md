@@ -16,7 +16,7 @@ All notable editorial updates are recorded here.
   replay claims to recorded tapes rather than fresh-model reproducibility.
 - Added the survey workspace, search/extraction protocol, research questions,
   review queue, and seven explicitly limited source-checked seed cards.
-- Generated a complete 173-entry inventory from README and evidence records;
+- Generated a complete 174-entry inventory from README and evidence records;
   preserved every prior source URL while consolidating one duplicate work.
 - Added catalog integrity and freshness validation, repaired inline/wrapped
   target parsing for the dashboard, and integrated checks into CI.
@@ -227,6 +227,13 @@ All notable editorial updates are recorded here.
 - Indexed AutoDesign, an MIT-licensed implementation that evolves a reusable
   design harness around fixed models and gates one-component updates with an
   independent development set.
+
+## 2026-08-15
+
+### Field updates
+
+- Indexed RewardHarness, which evolves reusable scoring skills and tool prompts
+  from preference feedback under held-out validation and rollback.
 
 ## 2026-08-13
 

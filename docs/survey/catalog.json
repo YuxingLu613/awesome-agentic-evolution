@@ -1559,6 +1559,31 @@
       "review": null
     },
     {
+      "id": "https://github.com/TIGER-AI-Lab/RewardHarness",
+      "title": "RewardHarness",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Tools"
+      ],
+      "description": "Evolves scoring skills and tool prompts from preference feedback, retaining updates through held-out validation and rollback.",
+      "sources": [
+        {
+          "label": "RewardHarness",
+          "url": "https://github.com/TIGER-AI-Lab/RewardHarness"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2605.08703"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "not-extracted",
+      "review": null
+    },
+    {
       "id": "https://aclanthology.org/2026.acl-long.69/",
       "title": "SAGE",
       "section": "Resource Map",

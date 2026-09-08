@@ -26,13 +26,13 @@ const readme = `# Example
 test("exports every resource once, preserves attached sources, and excludes navigation", () => {
   const result = buildCatalog(readme);
   assert.equal(result.resources.length, 4);
-  const memory = result.resources[1];
+  const memory = result.resources.find(({ title }) => title === "Memory A");
   assert.equal(memory.description, "Retains feedback from trials.");
   assert.deepEqual(memory.targets, ["Memory", "Skills"]);
   assert.equal(memory.sources.length, 2);
   assert.equal(memory.sourceProfile, "paper-linked");
-  assert.equal(result.resources[2].sourceProfile, "repository-only");
-  assert.equal(result.resources[3].section, "Benchmarks and Evaluation");
+  assert.equal(result.resources.find(({ title }) => title === "Tool B").sourceProfile, "repository-only");
+  assert.equal(result.resources.find(({ title }) => title === "Audit").section, "Benchmarks and Evaluation");
   assert.equal(memory.evidenceStatus, "not-extracted");
   assert.equal(memory.review, null);
 });
@@ -81,7 +81,8 @@ test("exports recorded source checks without turning them into reproduction clai
     evaluation: "Author-reported trial comparison", limitations: ["Splits not extracted"],
     reproducibility: "not-run", safety: "not-assessed", conflictOfInterest: "not-assessed"
   };
-  const resource = buildCatalog(readme, {"https://github.com/example/memory": review}).resources[1];
+  const resource = buildCatalog(readme, {"https://github.com/example/memory": review})
+    .resources.find(({ title }) => title === "Memory A");
   assert.equal(resource.evidenceStatus, "source-checked");
   assert.equal(resource.review.reproducibility, "not-run");
 });
