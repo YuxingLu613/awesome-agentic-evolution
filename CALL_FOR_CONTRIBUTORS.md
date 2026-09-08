@@ -14,8 +14,10 @@ understand and evaluate.
 - Verify an existing entry against its primary sources.
 - Reproduce a result or document a failure mode.
 - Review safety, regression, rollback, or reward-hacking evidence.
-- Curate a focused section such as memory, skills, workflows, environments,
-  code evolution, or multi-agent co-evolution.
+- Curate Parameters, Memory, Knowledge, Skills, Tools, Topology, or
+  Co-evolution using the [classification guide](docs/TAXONOMY.md).
+- Complete a [source-located evidence card](docs/survey/PROTOCOL.md) or take a
+  task from the [review queue](docs/survey/REVIEW_QUEUE.md).
 - Write a monthly synthesis or help build a reproducible tutorial demo.
 
 Good first contributions are intentionally small. One carefully verified

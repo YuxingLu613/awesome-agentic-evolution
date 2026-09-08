@@ -2,6 +2,27 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-09-08
+
+### Repository organization
+
+- Alphabetized the resource map and normalized primary-first target metadata;
+  separated longitudinal, reliability, safety, and general evaluation resources.
+- Consolidated the A-Evolve paper with its implementation; moved EvoUndo to
+  recoverability evaluation, WebWorld to Parameters, and GeoForge to Memory.
+- Corrected Agent0's evolving target and removed duplicate Skills/Tools labels
+  for Voyager and AgentFactory; recorded classification decisions and open questions.
+- Narrowed skill-up's tags to its skill/evaluation loop and bounded Meta-Harness
+  replay claims to recorded tapes rather than fresh-model reproducibility.
+- Added the survey workspace, search/extraction protocol, research questions,
+  review queue, and seven explicitly limited source-checked seed cards.
+- Generated a complete 174-entry inventory from README and evidence records;
+  preserved every prior source URL while consolidating one duplicate work.
+- Added catalog integrity and freshness validation, repaired inline/wrapped
+  target parsing for the dashboard, and integrated checks into CI.
+- Sorted historical dated changelog sections newest first without rewriting
+  their original claims; historical records are not new verification evidence.
+
 ## 2026-09-07
 
 ### Field updates
@@ -157,6 +178,14 @@ All notable editorial updates are recorded here.
 - Added xskill and PenguinHarness, which evolve versioned skills from agent
   trajectories or benchmark feedback with observable lineage or snapshots.
 
+## 2026-08-22
+
+### Field updates
+
+- Indexed [cambium](https://github.com/debarshi29/cambium), which admission-gates
+  skill, tool, and prompt libraries, separates retrieval from generation, and
+  reports held-out transfer with reward-hacking audits.
+
 ## 2026-08-21
 
 ### Field updates
@@ -175,14 +204,6 @@ All notable editorial updates are recorded here.
   memory or skill improvement loops with rollback evidence.
 - Indexed AutoMem and HELIX, which search memory architectures or harness
   variants from trajectory evidence and report held-out evaluation results.
-
-## 2026-08-22
-
-### Field updates
-
-- Indexed [cambium](https://github.com/debarshi29/cambium), which admission-gates
-  skill, tool, and prompt libraries, separates retrieval from generation, and
-  reports held-out transfer with reward-hacking audits.
 
 ## 2026-08-20
 

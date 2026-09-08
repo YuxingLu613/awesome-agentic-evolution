@@ -22,6 +22,19 @@ jobs:
       - name: Validate community structure
         run: ruby test/community_structure_test.rb
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate catalog, dashboard, and animation
+        run: |
+          node --test test/*_test.mjs
+          node scripts/build-survey-catalog.mjs --check
+
+      - name: Validate YAML
+        run: ruby -ryaml -e 'Dir.glob(".github/**/*.{yml,yaml}").each { |f| YAML.load_file(f) }'
+
       - name: Check Markdown links
         uses: lycheeverse/lychee-action@v2
         with:

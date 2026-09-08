@@ -28,6 +28,7 @@ body:
     id: evolution_target
     attributes:
       label: Primary evolution target
+      description: Required for methods. For surveys, benchmarks, or audits, leave blank and describe the resource's role in the evaluation field.
       options:
         - Parameters
         - Memory
@@ -37,7 +38,7 @@ body:
         - Topology
         - Co-evolution
     validations:
-      required: true
+      required: false
   - type: checkboxes
     id: secondary_targets
     attributes:
@@ -51,6 +52,13 @@ body:
         - label: Tools
         - label: Topology
         - label: Co-evolution
+  - type: textarea
+    id: source_locations
+    attributes:
+      label: Bibliographic identity and source locations
+      description: Give the paper title, authors, year and version when applicable, plus sections/tables or code paths supporting the update and evaluation claims. Distinguish papers, implementations, and demos.
+    validations:
+      required: true
   - type: textarea
     id: feedback_signal
     attributes:
@@ -69,7 +77,7 @@ body:
     id: evaluation
     attributes:
       label: Evaluation evidence
-      description: Link the benchmark, held-out protocol, baselines, results, or other primary evidence.
+      description: Link the primary evidence and identify tasks/splits, backbone, baselines, update budget, metrics, and missing controls. For evaluation resources, explain what they measure rather than claiming that they evolve.
     validations:
       required: true
   - type: textarea

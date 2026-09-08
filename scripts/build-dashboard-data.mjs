@@ -109,18 +109,6 @@ function extractResourceEntries(markdown) {
       continue;
     }
 
-    const targets = line.match(/^\s{2,}\*\*Targets:\*\*\s+(.+?)\s*$/);
-    if (current && targets) {
-      targets[1]
-        .split(/\s*(?:,|·)\s*/)
-        .map(resolveTargetId)
-        .filter(Boolean)
-        .forEach((target) => {
-          if (!current.targets.includes(target)) current.targets.push(target);
-        });
-      continue;
-    }
-
     if (current && !currentIsDuplicate && /^\s{2,}\S/.test(line)) {
       const continuation = line.trim().replace(/^—\s*/, "");
       current.description = `${current.description} ${continuation}`.trim();
@@ -142,6 +130,15 @@ function extractResourceEntries(markdown) {
     }
   }
 
+  // Parse metadata after joining soft-wrapped lines, including inline Targets.
+  for (const entry of entries) {
+    const metadata = entry.description.match(/\s*\*\*Targets:\*\*\s*(.+)$/);
+    if (!metadata) continue;
+    entry.description = entry.description.slice(0, metadata.index).trim();
+    for (const target of metadata[1].split(/\s*(?:,|·)\s*/).map(resolveTargetId).filter(Boolean)) {
+      if (!entry.targets.includes(target)) entry.targets.push(target);
+    }
+  }
   return { entries, notes };
 }
 
