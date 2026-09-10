@@ -2,6 +2,18 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-09-10
+
+### Field updates
+
+- Added ContDa under Knowledge: the retained artifact is tool documentation,
+  not an independently rewritten API implementation.
+- Added EvoHarnessBench under longitudinal evaluation; externally supplied
+  harness expansion is distinguished from the evaluated agent's persistent state.
+- Recorded two source-located, AI-assisted evidence cards with bibliographic
+  identity, inspection limits, and `not-run` reproduction status; regenerated
+  the survey exports. Neither card is an independent human evidence review.
+
 ## 2026-09-08
 
 ### Repository organization

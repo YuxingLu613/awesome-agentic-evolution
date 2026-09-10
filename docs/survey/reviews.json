@@ -1,4 +1,53 @@
 {
+  "https://github.com/Bingo-W/ContDa": {
+    "status": "source-checked",
+    "reviewedAt": "2026-09-10",
+    "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+    "bibliography": {
+      "title": "Beyond Static Toolsets: Self-Evolving LLM Tool Agents via Continual Documentation Adaptation",
+      "authors": ["Bin Wu", "Edgar Meij", "Emine Yilmaz"],
+      "year": 2026,
+      "venue": "Findings of ACL 2026",
+      "doi": "10.18653/v1/2026.findings-acl.1082",
+      "version": "ACL Anthology record; repository e68497285587be3cb2022dbcdfb1ed244f50398b"
+    },
+    "sources": [
+      {"url": "https://aclanthology.org/2026.findings-acl.1082/", "locator": "Abstract and publication metadata"},
+      {"url": "https://github.com/Bingo-W/ContDa/blob/e68497285587be3cb2022dbcdfb1ed244f50398b/README.md", "locator": "Scope paragraph; Pipeline; Optional Virtual Server; Notes"}
+    ],
+    "artifact": "A tool-description corpus with relational notes. Knowledge is an editorial classification of API documentation; callable implementations are not the updated artifact.",
+    "feedback": "Tool-probe observations guide description revisions and disambiguation; optional virtual-server observations may be LLM-simulated.",
+    "retention": "Discovered and adjusted JSON corpora persist by time step; previous tools inform later exploration and relational updates.",
+    "evaluation": "The paper reports stability/adaptation comparisons on dynamic StableToolBench and RestBench across three toolset-change patterns, with residual forgetting.",
+    "reproducibility": "not-run",
+    "safety": "API observations are untrusted input to persistent documentation; poisoning resistance and execution isolation not assessed",
+    "conflictOfInterest": "No connection identified in this screening; no external COI declaration obtained",
+    "limitations": ["Only the abstract, metadata, and repository README were inspected; full split, baseline, budget, and uncertainty extraction remains open.", "The MIT repository releases the StableToolBench pipeline and a compact corpus, not baselines, ablations, full outputs, or the RestBench pipeline."]
+  },
+  "https://arxiv.org/abs/2609.04280": {
+    "status": "source-checked",
+    "reviewedAt": "2026-09-10",
+    "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+    "bibliography": {
+      "title": "EVOHARNESSBENCH: Can Your Agents Keep Pace with an Evolving Harness?",
+      "authors": ["Zixuan Ke", "Vaidehi Patil", "Haizhou Shi", "Yang Li", "Ye Liu", "Sarath Shekkizhar", "Anurag Koul", "Jiayu Wang", "Xuan Phi Nguyen", "Semih Yavuz", "Mohit Bansal", "Shafiq Joty"],
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "version": "2609.04280v1, submitted 2026-09-03"
+    },
+    "sources": [
+      {"url": "https://arxiv.org/abs/2609.04280v1", "locator": "Abstract and submission metadata"},
+      {"url": "https://arxiv.org/html/2609.04280v1", "locator": "Sections 3.1–3.4 (construction and protocol); Section 4 and Table 1 (comparisons)"}
+    ],
+    "artifact": "Evaluation resource, not an evolving method: the benchmark supplies cumulative capabilities; evaluated systems may retain their own adaptive state.",
+    "feedback": "Verifier-scored tasks; cumulative adaptation examples are available before separate held-out measurement.",
+    "retention": "Deployment resets internal state; adaptation carries memory, prompts, or code between harness stages.",
+    "evaluation": "EnterpriseOps-Gym and Agentic Last Exam comparisons include task-specific capability references, memory/prompt/code adaptation, performance, cost, and forward/backward transfer.",
+    "reproducibility": "not-run",
+    "safety": "Benchmark execution and isolation not assessed; no code was run",
+    "conflictOfInterest": "No connection identified in this screening; no external COI declaration obtained",
+    "limitations": ["Selected sections only; no complete statistical or artifact audit. Retention and adaptation gains are setting-dependent.", "The construction adds capabilities without removal or modification. Keyword-derived skill annotations are heuristic, not guaranteed necessary or sufficient.", "A paper and project page do not establish a complete executable release; artifact availability remains to be audited."]
+  },
   "https://arxiv.org/abs/2203.14465": {
     "status": "source-checked",
     "reviewedAt": "2026-09-08",

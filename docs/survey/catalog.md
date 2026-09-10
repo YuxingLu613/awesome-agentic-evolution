@@ -3,15 +3,15 @@
 Generated from [README](../../README.md) and [evidence records](reviews.json).
 Do not edit directly: run `node scripts/build-survey-catalog.mjs`.
 
-174 distinct entries. Source profiles describe linked artifacts, not
+176 distinct entries. Source profiles describe linked artifacts, not
 publication status or evidence quality. Not-extracted means no structured
 extraction is recorded here; earlier editorial checks may still exist in GitHub.
 
 | Section | Entries | Source-checked | Evidence-reviewed |
 | --- | ---: | ---: | ---: |
 | Start Here | 4 | 0 | 0 |
-| Resource Map | 131 | 7 | 0 |
-| Benchmarks and Evaluation | 32 | 0 | 0 |
+| Resource Map | 132 | 8 | 0 |
+| Benchmarks and Evaluation | 33 | 1 | 0 |
 | Articles and Technical Posts | 3 | 0 | 0 |
 | Related Awesome Lists | 4 | 0 | 0 |
 
@@ -70,6 +70,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | [Tree-of-Experience](https://arxiv.org/abs/2608.09044) | Memory | paper-linked | not-extracted |
 | [Adaptive Reflective Interactive Agent (ARIA)](https://aclanthology.org/2025.emnlp-industry.115/) | Knowledge | paper-linked | source-checked |
 | [CoEvoKG](https://github.com/lazzy1225/CoEvoKG) | Knowledge | paper-linked | not-extracted |
+| [ContDa](https://github.com/Bingo-W/ContDa) | Knowledge | paper-linked | source-checked |
 | [Knowledge-Centric Self-Improvement](https://github.com/recursive-knowledge/KSI) | Knowledge | paper-linked | not-extracted |
 | [ProofEvolve: Neuro-Symbolic Evolution for Formal Automated Theorem Proving](https://arxiv.org/abs/2608.26334) | Knowledge | paper-linked | not-extracted |
 | [VISA: Agentic Self-Evolving Data Synthesis for Multimodal Instruction Following](https://arxiv.org/abs/2608.26013) | Knowledge | paper-linked | not-extracted |
@@ -169,6 +170,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | [ASPIRE](https://arxiv.org/abs/2608.31111) | Longitudinal and adaptation evaluation | paper-linked | not-extracted |
 | [Continual Skill Bench](https://github.com/gtynnn060110-hash/continual-skill-bench-final) | Longitudinal and adaptation evaluation | paper-linked | not-extracted |
 | [Evo-Bench](https://github.com/RUCAIBox/Evo-Bench) | Longitudinal and adaptation evaluation | paper-linked | not-extracted |
+| [EvoHarnessBench](https://arxiv.org/abs/2609.04280) | Longitudinal and adaptation evaluation | paper-linked | source-checked |
 | [Experience-driven Lifelong Learning](https://arxiv.org/abs/2508.19005) | Longitudinal and adaptation evaluation | paper-linked | not-extracted |
 | [FinEvo-Bench](https://arxiv.org/abs/2608.06144) | Longitudinal and adaptation evaluation | paper-linked | not-extracted |
 | [PACE-Bench](https://github.com/thunlp/PACE-Bench) | Longitudinal and adaptation evaluation | paper-linked | not-extracted |
