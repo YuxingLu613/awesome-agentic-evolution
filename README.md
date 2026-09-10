@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-09-08 (structure and selected sources; not a full evidence audit)
+**Last editorial review:** 2026-09-10 (structure and selected sources; not a full evidence audit)
 
 **Writing a survey?** Begin with the [survey workspace](docs/survey/README.md),
 the [complete inventory and extraction status](docs/survey/catalog.md), and the
@@ -333,6 +333,11 @@ unless an evidence record explicitly documents independent reproduction.
   back into a knowledge graph that co-evolves with a proposer–solver loop and
   is evaluated on six multi-hop QA benchmarks.
   **Targets:** Knowledge, Co-evolution.
+- [ContDa](https://github.com/Bingo-W/ContDa) —
+  [Paper](https://aclanthology.org/2026.findings-acl.1082/). Rewrites a persistent
+  tool-documentation corpus from API observations and relation-aware exploration,
+  evaluating adaptation and retention on evolving StableToolBench and RestBench toolsets.
+  **Targets:** Knowledge.
 - [Knowledge-Centric Self-Improvement](https://github.com/recursive-knowledge/KSI) —
   [Paper](https://arxiv.org/abs/2607.19592). Runs disposable agents that
   distill evidence-grounded forums into shared knowledge, then seeds later
@@ -805,6 +810,9 @@ general task benchmarks; none automatically demonstrates persistent learning.
   [Paper](https://arxiv.org/abs/2608.09096). Holds policy, seed harness, and
   budget fixed while scoring autonomous harness evolution on disjoint
   validation and evaluation suites.
+- [EvoHarnessBench](https://arxiv.org/abs/2609.04280) — Separates fresh-state
+  deployment from persistent adaptation under externally expanding tool, skill,
+  and specialist-agent pools, measuring retention and transfer with held-out evaluation.
 - [Experience-driven Lifelong Learning](https://arxiv.org/abs/2508.19005) —
   Proposes a framework and benchmark for continuous agent growth.
 - [FinEvo-Bench](https://arxiv.org/abs/2608.06144) — A longitudinal benchmark
