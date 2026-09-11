@@ -1756,6 +1756,96 @@
       "review": null
     },
     {
+      "id": "https://github.com/ruc-datalab/SkillAdam",
+      "title": "SkillAdam",
+      "section": "Resource Map",
+      "category": "Skills",
+      "primaryTarget": "Skills",
+      "targets": [
+        "Skills",
+        "Memory"
+      ],
+      "description": "Refines reusable skill documents using persistent issue histories and volatility-controlled edits, retains accepted revisions, and evaluates frozen-agent performance on separate test partitions. Use isolated environments.",
+      "sources": [
+        {
+          "label": "SkillAdam",
+          "url": "https://github.com/ruc-datalab/SkillAdam"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2609.08944"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "source-checked",
+      "review": {
+        "status": "source-checked",
+        "reviewedAt": "2026-09-11",
+        "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+        "bibliography": {
+          "title": "SkillAdam: Stable and Efficient Skill Evolution for Agents",
+          "authors": [
+            "Gaoyuan Li",
+            "Meihao Fan",
+            "Yizhe Liu",
+            "Shaolei Zhang",
+            "Ju Fan",
+            "Siyi Wang",
+            "Jiaheng Hou",
+            "Xudong Weng",
+            "Honghan Tian",
+            "Zang Li"
+          ],
+          "year": 2026,
+          "venue": "arXiv preprint",
+          "version": "2609.08944v1, submitted 2026-09-08; repository bd1cee7333ef390130eac7f3cb6d952d5543c18c"
+        },
+        "sources": [
+          {
+            "url": "https://arxiv.org/abs/2609.08944v1",
+            "locator": "Title, authors, submission metadata, and official repository link"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.08944v1",
+            "locator": "Sections 3.1, 4.1–4.2 and Algorithm 1; Sections 5.1–5.4 and Table 2"
+          },
+          {
+            "url": "https://github.com/ruc-datalab/SkillAdam/blob/bd1cee7333ef390130eac7f3cb6d952d5543c18c/README.md",
+            "locator": "Requirements; Usage; License"
+          },
+          {
+            "url": "https://github.com/ruc-datalab/SkillAdam/blob/bd1cee7333ef390130eac7f3cb6d952d5543c18c/docs/testing.md",
+            "locator": "Offline Checks; Real API Availability Checks; Host Acceptance Tests"
+          },
+          {
+            "url": "https://github.com/ruc-datalab/SkillAdam/blob/bd1cee7333ef390130eac7f3cb6d952d5543c18c/docs/benchmarks/searchqa.md",
+            "locator": "Rollout; Data Boundary"
+          },
+          {
+            "url": "https://github.com/ruc-datalab/SkillAdam/blob/bd1cee7333ef390130eac7f3cb6d952d5543c18c/NOTICE",
+            "locator": "SkillOpt attribution and dataset exclusions"
+          },
+          {
+            "url": "https://github.com/ruc-datalab/SkillAdam/blob/bd1cee7333ef390130eac7f3cb6d952d5543c18c/LICENSE",
+            "locator": "Tencent copyright and MIT terms"
+          }
+        ],
+        "artifact": "Skill documents plus a separately updated issue/outcome tracker; editorial targets Skills and Memory. Adam is an analogy, not model-weight training.",
+        "feedback": "Paired case scores and diagnostics control acceptance and subsequent edit magnitude.",
+        "retention": "Accepted skills persist; rejected revisions leave the incumbent intact while optimizer histories inform later proposals.",
+        "evaluation": "Seven benchmarks with frozen GPT-5.5 or Claude Sonnet 4.5, separate final test partitions, and skill-optimization baselines; results are author-reported.",
+        "reproducibility": "not-run",
+        "safety": "Release docs warn that local subprocesses are not sandboxed and provider calls expose task content; use disposable environments. No code executed or safety audit performed",
+        "conflictOfInterest": "No connection identified in this screening; no external COI declaration obtained",
+        "limitations": [
+          "Selected passages only; no independent human review or statistical audit.",
+          "Acceptance reuses optimization cases, not an independent validation set. SkillAdam merges train/selection pools where SkillOpt retains the split; some baselines are imported. Tests run once, with seed 42 for controlled sampling.",
+          "The release omits regression fixtures and raw benchmark data. SearchQA data redistribution terms are unclear, and its retained examples are not zero-shot; exact reproduction remains unverified.",
+          "MIT source terms and SkillOpt attribution were inspected; they do not grant blanket rights to external datasets. No source code or dataset is redistributed here."
+        ]
+      }
+    },
+    {
       "id": "https://arxiv.org/abs/2609.02217",
       "title": "SkillGLoW: Procedural-Family Skill Consolidation",
       "section": "Resource Map",

@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-09-10 (structure and selected sources; not a full evidence audit)
+**Last editorial review:** 2026-09-11 (structure and selected sources; not a full evidence audit)
 
 **Writing a survey?** Begin with the [survey workspace](docs/survey/README.md),
 the [complete inventory and extraction status](docs/survey/catalog.md), and the
@@ -474,6 +474,12 @@ unless an evidence record explicitly documents independent reproduction.
   evaluation failures into persistent skill and regression-suite repairs
   through repeated skill-upper iterations with rule, script, or agent judges.
   **Targets:** Skills, Co-evolution.
+- [SkillAdam](https://github.com/ruc-datalab/SkillAdam) —
+  [Paper](https://arxiv.org/abs/2609.08944). Refines reusable skill documents using
+  persistent issue histories and volatility-controlled edits, retains accepted
+  revisions, and evaluates frozen-agent performance on separate test partitions.
+  Use isolated environments.
+  **Targets:** Skills, Memory.
 - [SkillGLoW: Procedural-Family Skill Consolidation](https://arxiv.org/abs/2609.02217) — Aggregates task-local
   skills into procedural-family priors, admits them only after non-degradation
   checks, and transfers compact procedures across four continual task domains.
