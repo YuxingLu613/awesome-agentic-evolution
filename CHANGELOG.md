@@ -2,6 +2,16 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-09-11
+
+### Field updates
+
+- Added SkillAdam under Skills, with distinct optimizer-history Memory; linked
+  its paper and official implementation as one resource.
+- Recorded a source-checked card distinguishing same-batch acceptance from final
+  test evaluation, noting comparison and release limitations. Reproduction is
+  `not-run`; this is not independent human evidence review. Regenerated exports.
+
 ## 2026-09-10
 
 ### Field updates

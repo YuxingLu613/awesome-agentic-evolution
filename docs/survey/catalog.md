@@ -3,14 +3,14 @@
 Generated from [README](../../README.md) and [evidence records](reviews.json).
 Do not edit directly: run `node scripts/build-survey-catalog.mjs`.
 
-176 distinct entries. Source profiles describe linked artifacts, not
+177 distinct entries. Source profiles describe linked artifacts, not
 publication status or evidence quality. Not-extracted means no structured
 extraction is recorded here; earlier editorial checks may still exist in GitHub.
 
 | Section | Entries | Source-checked | Evidence-reviewed |
 | --- | ---: | ---: | ---: |
 | Start Here | 4 | 0 | 0 |
-| Resource Map | 132 | 8 | 0 |
+| Resource Map | 133 | 9 | 0 |
 | Benchmarks and Evaluation | 33 | 1 | 0 |
 | Articles and Technical Posts | 3 | 0 | 0 |
 | Related Awesome Lists | 4 | 0 | 0 |
@@ -99,6 +99,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | [self-evolve](https://github.com/DaizeDong/self-evolve) | Skills | repository-only | not-extracted |
 | [SESA: Self-Evolving Search Agents](https://github.com/Zenghuang-Fu/SESA-Self-Evolving-Search-Agents) | Skills | paper-linked | not-extracted |
 | [skill-up](https://github.com/alibaba/skill-up) | Skills | repository-only | not-extracted |
+| [SkillAdam](https://github.com/ruc-datalab/SkillAdam) | Skills | paper-linked | source-checked |
 | [SkillGLoW: Procedural-Family Skill Consolidation](https://arxiv.org/abs/2609.02217) | Skills | paper-linked | not-extracted |
 | [SkillHEX](https://arxiv.org/abs/2608.05628) | Skills | paper-linked | not-extracted |
 | [SkillHone](https://github.com/Tencent/SkillHone) | Skills | paper-linked | not-extracted |

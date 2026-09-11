@@ -11,6 +11,7 @@ All unextracted entries remain in the [complete inventory](catalog.md).
 | [Reflexion](https://github.com/noahshinn/reflexion) | Memory | Reflective text in an episodic memory buffer; model weights are unchanged. | Scalar or linguistic task feedback, external or internally simulated. | Authors report sequential decision-making, coding, and reasoning experiments with feedback ablations. |
 | [Adaptive Reflective Interactive Agent (ARIA)](https://aclanthology.org/2025.emnlp-industry.115/) | Knowledge | Timestamped domain-knowledge repository. | Targeted human explanations and corrections requested after uncertainty assessment. | Authors report customer due-diligence name screening and public dynamic-knowledge tasks. |
 | [ContDa](https://github.com/Bingo-W/ContDa) | Knowledge | A tool-description corpus with relational notes. Knowledge is an editorial classification of API documentation; callable implementations are not the updated artifact. | Tool-probe observations guide description revisions and disambiguation; optional virtual-server observations may be LLM-simulated. | The paper reports stability/adaptation comparisons on dynamic StableToolBench and RestBench across three toolset-change patterns, with residual forgetting. |
+| [SkillAdam](https://github.com/ruc-datalab/SkillAdam) | Skills | Skill documents plus a separately updated issue/outcome tracker; editorial targets Skills and Memory. Adam is an analogy, not model-weight training. | Paired case scores and diagnostics control acceptance and subsequent edit magnitude. | Seven benchmarks with frozen GPT-5.5 or Claude Sonnet 4.5, separate final test partitions, and skill-optimization baselines; results are author-reported. |
 | [Voyager](https://github.com/MineDojo/Voyager) | Skills | Growing library of reusable executable skills, alongside an adaptive curriculum. | Environment observations, execution errors, and self-verification. | Authors report exploration, milestone acquisition, and new-world skill reuse in Minecraft. |
 | [AgentFactory](https://github.com/zzatpku/AgentFactory) | Tools | Documented callable Python subagents. | Execution outcomes used to refine saved solutions. | Authors demonstrate capability accumulation and reduced effort for similar tasks. |
 | [ADAS](https://github.com/ShengranHu/ADAS) | Topology | Code-defined agent designs and an archive of discoveries. | Evaluation of candidate agent designs in Meta Agent Search. | Authors report coding, science, and mathematics experiments plus cross-domain/model transfer. |
@@ -93,6 +94,33 @@ Limitations / next extraction:
 
 - Only the abstract, metadata, and repository README were inspected; full split, baseline, budget, and uncertainty extraction remains open.
 - The MIT repository releases the StableToolBench pipeline and a compact corpus, not baselines, ablations, full outputs, or the RestBench pipeline.
+
+## SkillAdam
+
+Status: source-checked; checked 2026-09-11 by Codex (AI-assisted extraction; no independent human review).
+
+Citation identity: SkillAdam: Stable and Efficient Skill Evolution for Agents (2026).
+
+Retention: Accepted skills persist; rejected revisions leave the incumbent intact while optimizer histories inform later proposals.
+
+Reproduction: not-run. Safety: Release docs warn that local subprocesses are not sandboxed and provider calls expose task content; use disposable environments. No code executed or safety audit performed. COI: No connection identified in this screening; no external COI declaration obtained.
+
+Sources inspected:
+
+- [Title, authors, submission metadata, and official repository link](https://arxiv.org/abs/2609.08944v1)
+- [Sections 3.1, 4.1–4.2 and Algorithm 1; Sections 5.1–5.4 and Table 2](https://arxiv.org/html/2609.08944v1)
+- [Requirements; Usage; License](https://github.com/ruc-datalab/SkillAdam/blob/bd1cee7333ef390130eac7f3cb6d952d5543c18c/README.md)
+- [Offline Checks; Real API Availability Checks; Host Acceptance Tests](https://github.com/ruc-datalab/SkillAdam/blob/bd1cee7333ef390130eac7f3cb6d952d5543c18c/docs/testing.md)
+- [Rollout; Data Boundary](https://github.com/ruc-datalab/SkillAdam/blob/bd1cee7333ef390130eac7f3cb6d952d5543c18c/docs/benchmarks/searchqa.md)
+- [SkillOpt attribution and dataset exclusions](https://github.com/ruc-datalab/SkillAdam/blob/bd1cee7333ef390130eac7f3cb6d952d5543c18c/NOTICE)
+- [Tencent copyright and MIT terms](https://github.com/ruc-datalab/SkillAdam/blob/bd1cee7333ef390130eac7f3cb6d952d5543c18c/LICENSE)
+
+Limitations / next extraction:
+
+- Selected passages only; no independent human review or statistical audit.
+- Acceptance reuses optimization cases, not an independent validation set. SkillAdam merges train/selection pools where SkillOpt retains the split; some baselines are imported. Tests run once, with seed 42 for controlled sampling.
+- The release omits regression fixtures and raw benchmark data. SearchQA data redistribution terms are unclear, and its retained examples are not zero-shot; exact reproduction remains unverified.
+- MIT source terms and SkillOpt attribution were inspected; they do not grant blanket rights to external datasets. No source code or dataset is redistributed here.
 
 ## Voyager
 
