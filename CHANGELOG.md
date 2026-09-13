@@ -2,6 +2,16 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-09-13
+
+### Field updates
+
+- Added ReMe under Memory as one paper/implementation entry, linking the
+  historical release rather than attributing newer product features to the paper.
+- Recorded a source-checked card distinguishing frozen-pool evaluation from
+  online memory updates, with release/configuration limits and `not-run`
+  reproduction status. Regenerated survey exports; no human review is implied.
+
 ## 2026-09-11
 
 ### Field updates

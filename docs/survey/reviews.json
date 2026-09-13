@@ -1,4 +1,38 @@
 {
+  "https://aclanthology.org/2026.findings-acl.829/": {
+    "status": "source-checked",
+    "reviewedAt": "2026-09-13",
+    "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+    "bibliography": {
+      "title": "Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution",
+      "authors": ["Zouying Cao", "Jiaji Deng", "Li Yu", "Weikang Zhou", "Zhaoyang Liu", "Bolin Ding", "Hai Zhao"],
+      "year": 2026,
+      "venue": "Findings of ACL 2026",
+      "doi": "10.18653/v1/2026.findings-acl.829",
+      "version": "ACL published version; preprint 2512.10696; implementation v0.2.0.6 at 554eec1cb94821212c8b81d5499c9e7f42de5c16"
+    },
+    "sources": [
+      {"url": "https://aclanthology.org/2026.findings-acl.829/", "locator": "Publication metadata and abstract"},
+      {"url": "https://aclanthology.org/2026.findings-acl.829.pdf", "locator": "Sections 3.2–3.4, 4.1; Tables 1 and 3; Limitations; Appendix B.1–B.4"},
+      {"url": "https://github.com/agentscope-ai/ReMe/blob/554eec1cb94821212c8b81d5499c9e7f42de5c16/README.md", "locator": "December paper link; Task Memory; Environment Configuration"},
+      {"url": "https://github.com/agentscope-ai/ReMe/blob/554eec1cb94821212c8b81d5499c9e7f42de5c16/docs/cookbook/bfcl/quickstart.md", "locator": "Training acquisition, pool export/import, validation"},
+      {"url": "https://github.com/agentscope-ai/ReMe/blob/554eec1cb94821212c8b81d5499c9e7f42de5c16/docs/cookbook/appworld/quickstart.md", "locator": "Environment setup and development-set demo"},
+      {"url": "https://github.com/agentscope-ai/ReMe/blob/554eec1cb94821212c8b81d5499c9e7f42de5c16/cookbook/bfcl/run_bfcl.py", "locator": "Memory-update switches, worker configuration, and run loop"},
+      {"url": "https://github.com/agentscope-ai/ReMe/blob/554eec1cb94821212c8b81d5499c9e7f42de5c16/LICENSE", "locator": "Apache-2.0 source terms"}
+    ],
+    "artifact": "Scenario-indexed experience records; Memory is the editorial unit, not a separately evolving skill library.",
+    "feedback": "Task success and LLM quality judgments; retrieval-associated success counts are not causal attribution.",
+    "retention": "Deduplicated records persist across tasks; successful lessons are added and frequently recalled low-utility entries removed.",
+    "evaluation": "Qwen3-8B/14B/32B; BFCL-V3 50/150 acquisition/evaluation tasks, AppWorld 90/168 train/test-normal. Compares no memory, A-Mem, LangMem, fixed/dynamic ReMe; Avg@4/Pass@4 with three-run mean and standard deviation.",
+    "reproducibility": "not-run",
+    "safety": "Persistent experiences may carry sensitive or adversarial content. Provider privacy, poisoning resistance, and execution isolation not assessed; use isolated benchmark environments",
+    "conflictOfInterest": "No connection identified in this screening; no external COI declaration obtained",
+    "limitations": [
+      "Selected passages only; no independent human review. Dynamic evaluation updates memory online, not an untouched frozen test. Reflection adds attempts; equal-total-compute benefit is not established here.",
+      "The historical release includes benchmark scripts and memory data; demo defaults differ from paper settings. Reset/order behavior and exact reproduction remain unverified. Current main is a different memory architecture.",
+      "Code/data were not executed or redistributed. Software licensing does not establish rights to all external benchmark data."
+    ]
+  },
   "https://github.com/ruc-datalab/SkillAdam": {
     "status": "source-checked",
     "reviewedAt": "2026-09-11",

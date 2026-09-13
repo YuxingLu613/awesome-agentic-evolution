@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-09-11 (structure and selected sources; not a full evidence audit)
+**Last editorial review:** 2026-09-13 (structure and selected sources; not a full evidence audit)
 
 **Writing a survey?** Begin with the [survey workspace](docs/survey/README.md),
 the [complete inventory and extraction status](docs/survey/catalog.md), and the
@@ -292,6 +292,12 @@ unless an evidence record explicitly documents independent reproduction.
 - [Reflexion](https://github.com/noahshinn/reflexion) —
   [Paper](https://arxiv.org/abs/2303.11366). Stores verbal reflections in
   episodic memory for later trials.
+  **Targets:** Memory.
+- [ReMe](https://aclanthology.org/2026.findings-acl.829/) —
+  [Code](https://github.com/agentscope-ai/ReMe/tree/v0.2.0.6).
+  Distills execution experience into reusable memory, adds successful lessons,
+  and prunes low-utility records; compares fixed and dynamically updated pools
+  on tool-use benchmarks.
   **Targets:** Memory.
 - [RoMeRL](https://github.com/YOUNG-fnxm/RoMeRL) —
   [Paper](https://arxiv.org/abs/2608.02508). Uses bounded task-slot memory
