@@ -3,14 +3,14 @@
 Generated from [README](../../README.md) and [evidence records](reviews.json).
 Do not edit directly: run `node scripts/build-survey-catalog.mjs`.
 
-177 distinct entries. Source profiles describe linked artifacts, not
+178 distinct entries. Source profiles describe linked artifacts, not
 publication status or evidence quality. Not-extracted means no structured
 extraction is recorded here; earlier editorial checks may still exist in GitHub.
 
 | Section | Entries | Source-checked | Evidence-reviewed |
 | --- | ---: | ---: | ---: |
 | Start Here | 4 | 0 | 0 |
-| Resource Map | 133 | 9 | 0 |
+| Resource Map | 134 | 10 | 0 |
 | Benchmarks and Evaluation | 33 | 1 | 0 |
 | Articles and Technical Posts | 3 | 0 | 0 |
 | Related Awesome Lists | 4 | 0 | 0 |
@@ -62,6 +62,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | [Recuris](https://github.com/Gen-Verse/Recuris) | Memory | paper-linked | not-extracted |
 | [Reflexio](https://github.com/ReflexioAI/reflexio) | Memory | repository-only | not-extracted |
 | [Reflexion](https://github.com/noahshinn/reflexion) | Memory | paper-linked | source-checked |
+| [ReMe](https://aclanthology.org/2026.findings-acl.829/) | Memory | paper-linked | source-checked |
 | [RoMeRL](https://github.com/YOUNG-fnxm/RoMeRL) | Memory | paper-linked | not-extracted |
 | [Rudder](https://github.com/Undertone0809/rudder) | Memory | repository-only | not-extracted |
 | [SelfMem](https://arxiv.org/abs/2607.03726) | Memory | paper-linked | not-extracted |

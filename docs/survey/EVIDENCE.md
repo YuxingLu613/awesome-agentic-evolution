@@ -9,6 +9,7 @@ All unextracted entries remain in the [complete inventory](catalog.md).
 | --- | --- | --- | --- | --- |
 | [STaR](https://arxiv.org/abs/2203.14465) | Parameters | Model parameters trained on generated correct-answer rationales. | Answer correctness; failed generations are retried with the correct answer. | Authors compare iterative rationale training with direct-answer fine-tuning on reasoning datasets, including CommonsenseQA. |
 | [Reflexion](https://github.com/noahshinn/reflexion) | Memory | Reflective text in an episodic memory buffer; model weights are unchanged. | Scalar or linguistic task feedback, external or internally simulated. | Authors report sequential decision-making, coding, and reasoning experiments with feedback ablations. |
+| [ReMe](https://aclanthology.org/2026.findings-acl.829/) | Memory | Scenario-indexed experience records; Memory is the editorial unit, not a separately evolving skill library. | Task success and LLM quality judgments; retrieval-associated success counts are not causal attribution. | Qwen3-8B/14B/32B; BFCL-V3 50/150 acquisition/evaluation tasks, AppWorld 90/168 train/test-normal. Compares no memory, A-Mem, LangMem, fixed/dynamic ReMe; Avg@4/Pass@4 with three-run mean and standard deviation. |
 | [Adaptive Reflective Interactive Agent (ARIA)](https://aclanthology.org/2025.emnlp-industry.115/) | Knowledge | Timestamped domain-knowledge repository. | Targeted human explanations and corrections requested after uncertainty assessment. | Authors report customer due-diligence name screening and public dynamic-knowledge tasks. |
 | [ContDa](https://github.com/Bingo-W/ContDa) | Knowledge | A tool-description corpus with relational notes. Knowledge is an editorial classification of API documentation; callable implementations are not the updated artifact. | Tool-probe observations guide description revisions and disambiguation; optional virtual-server observations may be LLM-simulated. | The paper reports stability/adaptation comparisons on dynamic StableToolBench and RestBench across three toolset-change patterns, with residual forgetting. |
 | [SkillAdam](https://github.com/ruc-datalab/SkillAdam) | Skills | Skill documents plus a separately updated issue/outcome tracker; editorial targets Skills and Memory. Adam is an analogy, not model-weight training. | Paired case scores and diagnostics control acceptance and subsequent edit magnitude. | Seven benchmarks with frozen GPT-5.5 or Claude Sonnet 4.5, separate final test partitions, and skill-optimization baselines; results are author-reported. |
@@ -55,6 +56,32 @@ Limitations / next extraction:
 
 - Extract trial/reset boundaries before treating repeated-attempt gains as cross-task transfer.
 - Abstract-level screening does not establish matched inference budgets or independent feedback quality.
+
+## ReMe
+
+Status: source-checked; checked 2026-09-13 by Codex (AI-assisted extraction; no independent human review).
+
+Citation identity: Remember Me, Refine Me: A Dynamic Procedural Memory Framework for Experience-Driven Agent Evolution (2026).
+
+Retention: Deduplicated records persist across tasks; successful lessons are added and frequently recalled low-utility entries removed.
+
+Reproduction: not-run. Safety: Persistent experiences may carry sensitive or adversarial content. Provider privacy, poisoning resistance, and execution isolation not assessed; use isolated benchmark environments. COI: No connection identified in this screening; no external COI declaration obtained.
+
+Sources inspected:
+
+- [Publication metadata and abstract](https://aclanthology.org/2026.findings-acl.829/)
+- [Sections 3.2–3.4, 4.1; Tables 1 and 3; Limitations; Appendix B.1–B.4](https://aclanthology.org/2026.findings-acl.829.pdf)
+- [December paper link; Task Memory; Environment Configuration](https://github.com/agentscope-ai/ReMe/blob/554eec1cb94821212c8b81d5499c9e7f42de5c16/README.md)
+- [Training acquisition, pool export/import, validation](https://github.com/agentscope-ai/ReMe/blob/554eec1cb94821212c8b81d5499c9e7f42de5c16/docs/cookbook/bfcl/quickstart.md)
+- [Environment setup and development-set demo](https://github.com/agentscope-ai/ReMe/blob/554eec1cb94821212c8b81d5499c9e7f42de5c16/docs/cookbook/appworld/quickstart.md)
+- [Memory-update switches, worker configuration, and run loop](https://github.com/agentscope-ai/ReMe/blob/554eec1cb94821212c8b81d5499c9e7f42de5c16/cookbook/bfcl/run_bfcl.py)
+- [Apache-2.0 source terms](https://github.com/agentscope-ai/ReMe/blob/554eec1cb94821212c8b81d5499c9e7f42de5c16/LICENSE)
+
+Limitations / next extraction:
+
+- Selected passages only; no independent human review. Dynamic evaluation updates memory online, not an untouched frozen test. Reflection adds attempts; equal-total-compute benefit is not established here.
+- The historical release includes benchmark scripts and memory data; demo defaults differ from paper settings. Reset/order behavior and exact reproduction remain unverified. Current main is a different memory architecture.
+- Code/data were not executed or redistributed. Software licensing does not establish rights to all external benchmark data.
 
 ## Adaptive Reflective Interactive Agent (ARIA)
 
