@@ -1,4 +1,33 @@
 {
+  "https://arxiv.org/abs/2608.12720": {
+    "status": "needs-review",
+    "reviewedAt": "2026-09-14",
+    "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+    "bibliography": {
+      "title": "ERSkill: Evolving for Skill-Guided Adaptive Memory Retrieval",
+      "authors": ["Haolong Chen", "Liang Zhang", "Zhuo Li", "Lei Xue", "Guanrxu Zhu"],
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "version": "2608.12720v1, submitted 2026-08-13; author spellings preserve abstract metadata"
+    },
+    "sources": [
+      {"url": "https://arxiv.org/abs/2608.12720v1", "locator": "Bibliographic metadata"},
+      {"url": "https://arxiv.org/html/2608.12720v1", "locator": "Author block; Sections 2.2–2.4, 3.1–3.2; Table 1; Appendices B, D.1–D.3, F"}
+    ],
+    "artifact": "Retrieval programs (Skills), router weights (Parameters), and a retained search-experience trie (Memory); fixed primitives and compiled memory are not separately evolving tools or knowledge.",
+    "feedback": "GPT-4o-mini answer judgments guide candidate filtering, router learning, and validation-based selection.",
+    "retention": "Accepted skills serve later queries; accepted/rejected paths guide later proposals. Router training continues even when a skill-set update is rejected.",
+    "evaluation": "LoCoMo and PerLTQA use train/validation/test partitions; LongMemEval is described as transfer. Table 1 compares memory/optimization baselines using F1, BLEU-1, and judge scores with two backbones.",
+    "reproducibility": "not-run",
+    "safety": "Privacy, poisoning, and execution isolation not assessed. Use isolated environments for executable retrieval; no external code or benchmark was run",
+    "conflictOfInterest": "No connection identified in this screening; no external COI declaration obtained",
+    "limitations": [
+      "Selected passages only; no independent human review. Official code, split manifests, and logs not located; this is not proof of absence.",
+      "Appendix D lists LongMemEval training/validation settings despite Section 3.2's transfer claim; exact usage needs clarification. Validation is optimizer-visible, not an untouched test.",
+      "Oracle non-degradation does not guarantee routed performance: compactness permits losses. Full-state rollback, matched total compute, and statistical validity remain unverified.",
+      "The HTML author block says Guangxu Zhu; abstract metadata says Guanrxu Zhu. Both spellings are recorded without silently resolving identity."
+    ]
+  },
   "https://aclanthology.org/2026.findings-acl.829/": {
     "status": "source-checked",
     "reviewedAt": "2026-09-13",

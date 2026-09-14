@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-09-13 (structure and selected sources; not a full evidence audit)
+**Last editorial review:** 2026-09-14 (structure and selected sources; not a full evidence audit)
 
 **Writing a survey?** Begin with the [survey workspace](docs/survey/README.md),
 the [complete inventory and extraction status](docs/survey/catalog.md), and the
@@ -393,6 +393,11 @@ unless an evidence record explicitly documents independent reproduction.
   meta-skill agents over a hierarchical Skill Bank, promoting lineage-tracked
   edits from improvement rewards with ALFWorld/WebShop results.
   **Targets:** Skills, Parameters.
+- [ERSkill](https://arxiv.org/abs/2608.12720) — Evolves reusable retrieval
+  programs and a learned router from judged rollouts, retaining validation-selected
+  skills for memory QA and cross-dataset transfer. Official code not located;
+  reproduction unverified.
+  **Targets:** Skills, Parameters, Memory.
 - [Evo-Harness](https://github.com/A-EVO-Lab/a-evolve/tree/release/evo-harness)
   — [Paper](https://arxiv.org/abs/2608.15071). Compiles noisy one-shot
   trajectories into reusable skill harnesses for cross-task adaptation,

@@ -2,6 +2,16 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-09-14
+
+### Field updates
+
+- Added ERSkill as one retrieval-skill evolution study, with separately trained
+  router parameters and retained search-experience memory.
+- Recorded selected source passages, explicit reproduction/release gaps, and
+  metadata and evaluation ambiguities in its `needs-review` card. No human
+  evidence review or numerical performance endorsement is implied.
+
 ## 2026-09-13
 
 ### Field updates
