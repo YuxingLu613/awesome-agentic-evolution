@@ -3,14 +3,14 @@
 Generated from [README](../../README.md) and [evidence records](reviews.json).
 Do not edit directly: run `node scripts/build-survey-catalog.mjs`.
 
-179 distinct entries. Source profiles describe linked artifacts, not
+180 distinct entries. Source profiles describe linked artifacts, not
 publication status or evidence quality. Not-extracted means no structured
 extraction is recorded here; earlier editorial checks may still exist in GitHub.
 
 | Section | Entries | Source-checked | Evidence-reviewed |
 | --- | ---: | ---: | ---: |
 | Start Here | 4 | 0 | 0 |
-| Resource Map | 135 | 10 | 0 |
+| Resource Map | 136 | 11 | 0 |
 | Benchmarks and Evaluation | 33 | 1 | 0 |
 | Articles and Technical Posts | 3 | 0 | 0 |
 | Related Awesome Lists | 4 | 0 | 0 |
@@ -57,6 +57,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | [Membrane](https://github.com/brightjade/membrane) | Memory | paper-linked | not-extracted |
 | [MemOS](https://github.com/MemTensor/MemOS) | Memory | repository-only | not-extracted |
 | [MemSkill](https://github.com/ViktorAxelsen/MemSkill) | Memory | paper-linked | not-extracted |
+| [MetaMem](https://github.com/OpenBMB/MetaMem) | Memory | paper-linked | source-checked |
 | [OpenViking](https://github.com/volcengine/OpenViking) | Memory | repository-only | not-extracted |
 | [R2-MAD: Remember and Reweight](https://github.com/KylJin/R2-MAD) | Memory | paper-linked | not-extracted |
 | [Recuris](https://github.com/Gen-Verse/Recuris) | Memory | paper-linked | not-extracted |

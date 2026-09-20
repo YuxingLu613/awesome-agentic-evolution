@@ -22,7 +22,7 @@ the change, what persists, and how the claimed improvement is evaluated.
   </a>
 </p>
 
-**Last editorial review:** 2026-09-14 (structure and selected sources; not a full evidence audit)
+**Last editorial review:** 2026-09-20 (structure and selected sources; not a full evidence audit)
 
 **Writing a survey?** Begin with the [survey workspace](docs/survey/README.md),
 the [complete inventory and extraction status](docs/survey/catalog.md), and the
@@ -268,6 +268,11 @@ unless an evidence record explicitly documents independent reproduction.
   [Paper](https://arxiv.org/abs/2602.02474). Learns memory-skill selection and
   evolves reusable routines from difficult cases.
   **Targets:** Memory, Skills.
+- [MetaMem](https://github.com/OpenBMB/MetaMem) —
+  [Paper](https://aclanthology.org/2026.findings-acl.270/).
+  Edits retained memory-use experiences from judged answers and reflections,
+  then evaluates selected checkpoints on held-out folds of long-term memory QA.
+  **Targets:** Memory.
 - [OpenViking](https://github.com/volcengine/OpenViking) — Stores memories,
   resources, and skills in a browsable context filesystem; commits session
   experience to long-term memory and reports LoCoMo/tau2-bench gains with

@@ -2,6 +2,17 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-09-20
+
+### Field updates
+
+- Added MetaMem under Memory as one paper/implementation entry, with a pinned
+  code revision and a source-checked card for retained memory-use experiences.
+- Distinguished fold-held-out evaluation from an untouched official benchmark;
+  recorded checkpoint-selection uncertainty, regression and release limits.
+  Reproduction remains `not-run`; no independent human review is implied.
+  Regenerated exports.
+
 ## 2026-09-14
 
 ### Field updates

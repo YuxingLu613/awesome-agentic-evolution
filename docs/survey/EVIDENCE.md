@@ -8,6 +8,7 @@ All unextracted entries remain in the [complete inventory](catalog.md).
 | Work | Target | Persistent artifact | Feedback | Reported evaluation |
 | --- | --- | --- | --- | --- |
 | [STaR](https://arxiv.org/abs/2203.14465) | Parameters | Model parameters trained on generated correct-answer rationales. | Answer correctness; failed generations are retried with the correct answer. | Authors compare iterative rationale training with direct-answer fine-tuning on reasoning datasets, including CommonsenseQA. |
+| [MetaMem](https://github.com/OpenBMB/MetaMem) | Memory | Editable memory-use experience units. Memory is the editorial unit; no separately evolving factual corpus, callable skill library, or model weights are established. | Ground-truth-conditioned LLM judgments and reflections propose additions, modifications, and deletions; a filtering prompt reconciles edits. | LongMemEval five-fold evaluation: 350 training, 50 validation, 100 test examples per fold, seed 42. Qwen3-30B-A3B-Instruct and Llama3.1-70B-Instruct; accuracy against LightMem and other memory/retrieval baselines, plus no-evolution/reflection ablations. |
 | [Reflexion](https://github.com/noahshinn/reflexion) | Memory | Reflective text in an episodic memory buffer; model weights are unchanged. | Scalar or linguistic task feedback, external or internally simulated. | Authors report sequential decision-making, coding, and reasoning experiments with feedback ablations. |
 | [ReMe](https://aclanthology.org/2026.findings-acl.829/) | Memory | Scenario-indexed experience records; Memory is the editorial unit, not a separately evolving skill library. | Task success and LLM quality judgments; retrieval-associated success counts are not causal attribution. | Qwen3-8B/14B/32B; BFCL-V3 50/150 acquisition/evaluation tasks, AppWorld 90/168 train/test-normal. Compares no memory, A-Mem, LangMem, fixed/dynamic ReMe; Avg@4/Pass@4 with three-run mean and standard deviation. |
 | [Adaptive Reflective Interactive Agent (ARIA)](https://aclanthology.org/2025.emnlp-industry.115/) | Knowledge | Timestamped domain-knowledge repository. | Targeted human explanations and corrections requested after uncertainty assessment. | Authors report customer due-diligence name screening and public dynamic-knowledge tasks. |
@@ -38,6 +39,34 @@ Limitations / next extraction:
 
 - Abstract-level extraction only; extract splits, models, compute, seeds, and result tables before comparison.
 - Foundational parameter self-improvement, not by itself evidence about deployed multi-tool agents.
+
+## MetaMem
+
+Status: source-checked; checked 2026-09-20 by Codex (AI-assisted extraction; no independent human review).
+
+Citation identity: MetaMem: Evolving Meta-Memory for Knowledge Utilization through Self-Reflective Symbolic Optimization (2026).
+
+Retention: Meta-memory checkpoints persist across training batches and are reused for inference; scripts separate validation scoring from test inference.
+
+Reproduction: not-run. Safety: Privacy, poisoning resistance, and deployment isolation not assessed. Setup enables trust-remote-code; use isolated environments. No external code or benchmark executed. COI: No connection identified in this screening; no external COI declaration obtained.
+
+Sources inspected:
+
+- [Publication metadata and official code attribution](https://aclanthology.org/2026.findings-acl.270/)
+- [Sections 3.1–3.2, 4, 5.2–5.3; Table 5; Appendix A.5; Limitations](https://arxiv.org/html/2602.11182v1)
+- [Setup, reproduction guide, repository structure](https://github.com/OpenBMB/MetaMem/blob/66232c1cb33d3d7939d323b431f21c741785142e/README.md)
+- [Seed 42; disjoint per-fold train, validation, test slices](https://github.com/OpenBMB/MetaMem/blob/66232c1cb33d3d7939d323b431f21c741785142e/src/split_data.py)
+- [Selected update templates, judged rewards, and saved meta-memory checkpoints; not a complete code audit](https://github.com/OpenBMB/MetaMem/blob/66232c1cb33d3d7939d323b431f21c741785142e/src/train_metamem.py)
+- [Validation dataset and all-step evaluation](https://github.com/OpenBMB/MetaMem/blob/66232c1cb33d3d7939d323b431f21c741785142e/scripts/eval_metamem.sh)
+- [Test dataset; manually specified step_x checkpoint](https://github.com/OpenBMB/MetaMem/blob/66232c1cb33d3d7939d323b431f21c741785142e/scripts/infer_metamem.sh)
+- [Apache-2.0 source terms](https://github.com/OpenBMB/MetaMem/blob/66232c1cb33d3d7939d323b431f21c741785142e/LICENSE)
+
+Limitations / next extraction:
+
+- Selected passages and code paths only; no independent human review. The published ACL PDF was not compared line-by-line with the inspected preprint.
+- The benchmark is repartitioned: held-out per fold, not an untouched official test. Scripts score validation checkpoints and require a manually selected step for test; actual selection and total-compute matching are unaudited.
+- Later optimization can regress; Table 5 includes a worse Llama fold. Judge reliability and out-of-domain transfer remain limited, not universal improvement.
+- Release scripts require paths, model services and a selected step_x checkpoint. Frozen data/checkpoints and raw runs are absent from the inspected tree; exact reproduction is unverified. Apache-2.0 code terms do not establish external data rights.
 
 ## Reflexion
 
