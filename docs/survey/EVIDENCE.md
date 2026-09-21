@@ -8,10 +8,12 @@ All unextracted entries remain in the [complete inventory](catalog.md).
 | Work | Target | Persistent artifact | Feedback | Reported evaluation |
 | --- | --- | --- | --- | --- |
 | [STaR](https://arxiv.org/abs/2203.14465) | Parameters | Model parameters trained on generated correct-answer rationales. | Answer correctness; failed generations are retried with the correct answer. | Authors compare iterative rationale training with direct-answer fine-tuning on reasoning datasets, including CommonsenseQA. |
+| [MetaMem](https://github.com/OpenBMB/MetaMem) | Memory | Editable memory-use experience units. Memory is the editorial unit; no separately evolving factual corpus, callable skill library, or model weights are established. | Ground-truth-conditioned LLM judgments and reflections propose additions, modifications, and deletions; a filtering prompt reconciles edits. | LongMemEval five-fold evaluation: 350 training, 50 validation, 100 test examples per fold, seed 42. Qwen3-30B-A3B-Instruct and Llama3.1-70B-Instruct; accuracy against LightMem and other memory/retrieval baselines, plus no-evolution/reflection ablations. |
 | [Reflexion](https://github.com/noahshinn/reflexion) | Memory | Reflective text in an episodic memory buffer; model weights are unchanged. | Scalar or linguistic task feedback, external or internally simulated. | Authors report sequential decision-making, coding, and reasoning experiments with feedback ablations. |
 | [ReMe](https://aclanthology.org/2026.findings-acl.829/) | Memory | Scenario-indexed experience records; Memory is the editorial unit, not a separately evolving skill library. | Task success and LLM quality judgments; retrieval-associated success counts are not causal attribution. | Qwen3-8B/14B/32B; BFCL-V3 50/150 acquisition/evaluation tasks, AppWorld 90/168 train/test-normal. Compares no memory, A-Mem, LangMem, fixed/dynamic ReMe; Avg@4/Pass@4 with three-run mean and standard deviation. |
 | [Adaptive Reflective Interactive Agent (ARIA)](https://aclanthology.org/2025.emnlp-industry.115/) | Knowledge | Timestamped domain-knowledge repository. | Targeted human explanations and corrections requested after uncertainty assessment. | Authors report customer due-diligence name screening and public dynamic-knowledge tasks. |
 | [ContDa](https://github.com/Bingo-W/ContDa) | Knowledge | A tool-description corpus with relational notes. Knowledge is an editorial classification of API documentation; callable implementations are not the updated artifact. | Tool-probe observations guide description revisions and disambiguation; optional virtual-server observations may be LLM-simulated. | The paper reports stability/adaptation comparisons on dynamic StableToolBench and RestBench across three toolset-change patterns, with residual forgetting. |
+| [ERSkill](https://arxiv.org/abs/2608.12720) | Skills | Retrieval programs (Skills), router weights (Parameters), and a retained search-experience trie (Memory); fixed primitives and compiled memory are not separately evolving tools or knowledge. | GPT-4o-mini answer judgments guide candidate filtering, router learning, and validation-based selection. | LoCoMo and PerLTQA use train/validation/test partitions; LongMemEval is described as transfer. Table 1 compares memory/optimization baselines using F1, BLEU-1, and judge scores with two backbones. |
 | [SkillAdam](https://github.com/ruc-datalab/SkillAdam) | Skills | Skill documents plus a separately updated issue/outcome tracker; editorial targets Skills and Memory. Adam is an analogy, not model-weight training. | Paired case scores and diagnostics control acceptance and subsequent edit magnitude. | Seven benchmarks with frozen GPT-5.5 or Claude Sonnet 4.5, separate final test partitions, and skill-optimization baselines; results are author-reported. |
 | [Voyager](https://github.com/MineDojo/Voyager) | Skills | Growing library of reusable executable skills, alongside an adaptive curriculum. | Environment observations, execution errors, and self-verification. | Authors report exploration, milestone acquisition, and new-world skill reuse in Minecraft. |
 | [AgentFactory](https://github.com/zzatpku/AgentFactory) | Tools | Documented callable Python subagents. | Execution outcomes used to refine saved solutions. | Authors demonstrate capability accumulation and reduced effort for similar tasks. |
@@ -37,6 +39,34 @@ Limitations / next extraction:
 
 - Abstract-level extraction only; extract splits, models, compute, seeds, and result tables before comparison.
 - Foundational parameter self-improvement, not by itself evidence about deployed multi-tool agents.
+
+## MetaMem
+
+Status: source-checked; checked 2026-09-20 by Codex (AI-assisted extraction; no independent human review).
+
+Citation identity: MetaMem: Evolving Meta-Memory for Knowledge Utilization through Self-Reflective Symbolic Optimization (2026).
+
+Retention: Meta-memory checkpoints persist across training batches and are reused for inference; scripts separate validation scoring from test inference.
+
+Reproduction: not-run. Safety: Privacy, poisoning resistance, and deployment isolation not assessed. Setup enables trust-remote-code; use isolated environments. No external code or benchmark executed. COI: No connection identified in this screening; no external COI declaration obtained.
+
+Sources inspected:
+
+- [Publication metadata and official code attribution](https://aclanthology.org/2026.findings-acl.270/)
+- [Sections 3.1–3.2, 4, 5.2–5.3; Table 5; Appendix A.5; Limitations](https://arxiv.org/html/2602.11182v1)
+- [Setup, reproduction guide, repository structure](https://github.com/OpenBMB/MetaMem/blob/66232c1cb33d3d7939d323b431f21c741785142e/README.md)
+- [Seed 42; disjoint per-fold train, validation, test slices](https://github.com/OpenBMB/MetaMem/blob/66232c1cb33d3d7939d323b431f21c741785142e/src/split_data.py)
+- [Selected update templates, judged rewards, and saved meta-memory checkpoints; not a complete code audit](https://github.com/OpenBMB/MetaMem/blob/66232c1cb33d3d7939d323b431f21c741785142e/src/train_metamem.py)
+- [Validation dataset and all-step evaluation](https://github.com/OpenBMB/MetaMem/blob/66232c1cb33d3d7939d323b431f21c741785142e/scripts/eval_metamem.sh)
+- [Test dataset; manually specified step_x checkpoint](https://github.com/OpenBMB/MetaMem/blob/66232c1cb33d3d7939d323b431f21c741785142e/scripts/infer_metamem.sh)
+- [Apache-2.0 source terms](https://github.com/OpenBMB/MetaMem/blob/66232c1cb33d3d7939d323b431f21c741785142e/LICENSE)
+
+Limitations / next extraction:
+
+- Selected passages and code paths only; no independent human review. The published ACL PDF was not compared line-by-line with the inspected preprint.
+- The benchmark is repartitioned: held-out per fold, not an untouched official test. Scripts score validation checkpoints and require a manually selected step for test; actual selection and total-compute matching are unaudited.
+- Later optimization can regress; Table 5 includes a worse Llama fold. Judge reliability and out-of-domain transfer remain limited, not universal improvement.
+- Release scripts require paths, model services and a selected step_x checkpoint. Frozen data/checkpoints and raw runs are absent from the inspected tree; exact reproduction is unverified. Apache-2.0 code terms do not establish external data rights.
 
 ## Reflexion
 
@@ -121,6 +151,28 @@ Limitations / next extraction:
 
 - Only the abstract, metadata, and repository README were inspected; full split, baseline, budget, and uncertainty extraction remains open.
 - The MIT repository releases the StableToolBench pipeline and a compact corpus, not baselines, ablations, full outputs, or the RestBench pipeline.
+
+## ERSkill
+
+Status: needs-review; checked 2026-09-14 by Codex (AI-assisted extraction; no independent human review).
+
+Citation identity: ERSkill: Evolving for Skill-Guided Adaptive Memory Retrieval (2026).
+
+Retention: Accepted skills serve later queries; accepted/rejected paths guide later proposals. Router training continues even when a skill-set update is rejected.
+
+Reproduction: not-run. Safety: Privacy, poisoning, and execution isolation not assessed. Use isolated environments for executable retrieval; no external code or benchmark was run. COI: No connection identified in this screening; no external COI declaration obtained.
+
+Sources inspected:
+
+- [Bibliographic metadata](https://arxiv.org/abs/2608.12720v1)
+- [Author block; Sections 2.2–2.4, 3.1–3.2; Table 1; Appendices B, D.1–D.3, F](https://arxiv.org/html/2608.12720v1)
+
+Limitations / next extraction:
+
+- Selected passages only; no independent human review. Official code, split manifests, and logs not located; this is not proof of absence.
+- Appendix D lists LongMemEval training/validation settings despite Section 3.2's transfer claim; exact usage needs clarification. Validation is optimizer-visible, not an untouched test.
+- Oracle non-degradation does not guarantee routed performance: compactness permits losses. Full-state rollback, matched total compute, and statistical validity remain unverified.
+- The HTML author block says Guangxu Zhu; abstract metadata says Guanrxu Zhu. Both spellings are recorded without silently resolving identity.
 
 ## SkillAdam
 

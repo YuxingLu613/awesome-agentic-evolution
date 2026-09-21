@@ -3,14 +3,14 @@
 Generated from [README](../../README.md) and [evidence records](reviews.json).
 Do not edit directly: run `node scripts/build-survey-catalog.mjs`.
 
-178 distinct entries. Source profiles describe linked artifacts, not
+180 distinct entries. Source profiles describe linked artifacts, not
 publication status or evidence quality. Not-extracted means no structured
 extraction is recorded here; earlier editorial checks may still exist in GitHub.
 
 | Section | Entries | Source-checked | Evidence-reviewed |
 | --- | ---: | ---: | ---: |
 | Start Here | 4 | 0 | 0 |
-| Resource Map | 134 | 10 | 0 |
+| Resource Map | 136 | 11 | 0 |
 | Benchmarks and Evaluation | 33 | 1 | 0 |
 | Articles and Technical Posts | 3 | 0 | 0 |
 | Related Awesome Lists | 4 | 0 | 0 |
@@ -57,6 +57,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | [Membrane](https://github.com/brightjade/membrane) | Memory | paper-linked | not-extracted |
 | [MemOS](https://github.com/MemTensor/MemOS) | Memory | repository-only | not-extracted |
 | [MemSkill](https://github.com/ViktorAxelsen/MemSkill) | Memory | paper-linked | not-extracted |
+| [MetaMem](https://github.com/OpenBMB/MetaMem) | Memory | paper-linked | source-checked |
 | [OpenViking](https://github.com/volcengine/OpenViking) | Memory | repository-only | not-extracted |
 | [R2-MAD: Remember and Reweight](https://github.com/KylJin/R2-MAD) | Memory | paper-linked | not-extracted |
 | [Recuris](https://github.com/Gen-Verse/Recuris) | Memory | paper-linked | not-extracted |
@@ -81,6 +82,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | [COBRA-Skills](https://github.com/Jerry-LuP/COBRA-Skills) | Skills | repository-only | not-extracted |
 | [CoEvoSkills](https://github.com/Zhang-Henry/CoEvoSkills) | Skills | paper-linked | not-extracted |
 | [CoSkill](https://github.com/jinyuan-cookie/CoSkill) | Skills | paper-linked | not-extracted |
+| [ERSkill](https://arxiv.org/abs/2608.12720) | Skills | paper-linked | needs-review |
 | [Evo-Harness](https://github.com/A-EVO-Lab/a-evolve/tree/release/evo-harness) | Skills | paper-linked | not-extracted |
 | [From Memory to Skills](https://arxiv.org/abs/2607.16621) | Skills | paper-linked | not-extracted |
 | [HypoForge](https://arxiv.org/abs/2608.25770) | Skills | paper-linked | not-extracted |
