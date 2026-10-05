@@ -3,14 +3,14 @@
 Generated from [README](../../README.md) and [evidence records](reviews.json).
 Do not edit directly: run `node scripts/build-survey-catalog.mjs`.
 
-180 distinct entries. Source profiles describe linked artifacts, not
+181 distinct entries. Source profiles describe linked artifacts, not
 publication status or evidence quality. Not-extracted means no structured
 extraction is recorded here; earlier editorial checks may still exist in GitHub.
 
 | Section | Entries | Source-checked | Evidence-reviewed |
 | --- | ---: | ---: | ---: |
 | Start Here | 4 | 0 | 0 |
-| Resource Map | 136 | 11 | 0 |
+| Resource Map | 137 | 12 | 0 |
 | Benchmarks and Evaluation | 33 | 1 | 0 |
 | Articles and Technical Posts | 3 | 0 | 0 |
 | Related Awesome Lists | 4 | 0 | 0 |
@@ -35,6 +35,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | [CAFE: Self-Improving Search Agents Need Co-Evolving Feedback](https://arxiv.org/abs/2608.24794) | Parameters | paper-linked | not-extracted |
 | [FlowBalance](https://arxiv.org/abs/2609.03241) | Parameters | paper-linked | not-extracted |
 | [GenRubric](https://github.com/foggpoy/GenRubric) | Parameters | paper-linked | not-extracted |
+| [PCPO: Population-Curated Policy Optimization](https://arxiv.org/abs/2609.38757) | Parameters | paper-linked | source-checked |
 | [RecurSE: Bounded Recursive Self-Evaluation for LLM Rubric Judges](https://arxiv.org/abs/2608.24231) | Parameters | paper-linked | not-extracted |
 | [Self-Rewarding Language Models](https://arxiv.org/abs/2401.10020) | Parameters | paper-linked | not-extracted |
 | [STaR](https://arxiv.org/abs/2203.14465) | Parameters | paper-linked | source-checked |

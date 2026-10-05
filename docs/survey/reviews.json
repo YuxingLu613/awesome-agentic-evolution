@@ -1,4 +1,32 @@
 {
+  "https://arxiv.org/abs/2609.38757": {
+    "status": "source-checked",
+    "reviewedAt": "2026-10-05",
+    "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+    "bibliography": {
+      "title": "Self-Evolving Algorithm-Design Agents: Escaping In-Context Evolutionary Stagnation via Population-Curated Policy Optimization",
+      "authors": ["Chen Lu", "Ke Xue", "Siyuan Xu", "Mingxuan Yuan", "Chao Qian"],
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "version": "2609.38757v1, submitted 2026-09-30"
+    },
+    "sources": [
+      {"url": "https://arxiv.org/abs/2609.38757v1", "locator": "Title, authors, submission and version metadata"},
+      {"url": "https://arxiv.org/html/2609.38757v1", "locator": "Sections 4.2, 5.1–5.2, 6.1–6.2; Tables 1–3; Appendices B.2–B.3, C.2, D"}
+    ],
+    "artifact": "Model weights (Parameters) and a separately curated program-experience archive (Memory); generated programs alone do not establish an evolving skill library.",
+    "feedback": "Execution validity, placement wirelength subject to overflow constraints, or kernel correctness and runtime.",
+    "retention": "Deduplicated, quality/diversity-selected elites persist for off-policy replay alongside fresh on-policy updates.",
+    "evaluation": "Qwen3-8B; 4 placement training cases and 12 unseen cases. Four kernel tasks use online 64-rollout optimization, not held-out transfer. Comparisons include frozen models, OpenEvolve, ShinkaEvolve and GRPO; update/replay ablations are reported.",
+    "reproducibility": "not-run",
+    "safety": "Generated code requires isolated execution; isolation and poisoning resistance were not assessed. No external code executed",
+    "conflictOfInterest": "No connection identified; no external COI declaration obtained",
+    "limitations": [
+      "Selected passages only; no independent human review or statistical audit. Local-transfer analysis is conditional, not a global improvement guarantee.",
+      "Kernel speedups use a frozen PyTorch Eager reference on RTX 4090; not whole-benchmark coverage. Equal rollout counts do not establish equal total compute.",
+      "No author-associated implementation, checkpoints or raw runs located in this screening; absence is not established. Exact reproduction and release licensing remain unverified. No code/data redistributed."
+    ]
+  },
   "https://github.com/OpenBMB/MetaMem": {
     "status": "source-checked",
     "reviewedAt": "2026-09-20",
