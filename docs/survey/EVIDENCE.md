@@ -7,6 +7,7 @@ All unextracted entries remain in the [complete inventory](catalog.md).
 
 | Work | Target | Persistent artifact | Feedback | Reported evaluation |
 | --- | --- | --- | --- | --- |
+| [PCPO: Population-Curated Policy Optimization](https://arxiv.org/abs/2609.38757) | Parameters | Model weights (Parameters) and a separately curated program-experience archive (Memory); generated programs alone do not establish an evolving skill library. | Execution validity, placement wirelength subject to overflow constraints, or kernel correctness and runtime. | Qwen3-8B; 4 placement training cases and 12 unseen cases. Four kernel tasks use online 64-rollout optimization, not held-out transfer. Comparisons include frozen models, OpenEvolve, ShinkaEvolve and GRPO; update/replay ablations are reported. |
 | [STaR](https://arxiv.org/abs/2203.14465) | Parameters | Model parameters trained on generated correct-answer rationales. | Answer correctness; failed generations are retried with the correct answer. | Authors compare iterative rationale training with direct-answer fine-tuning on reasoning datasets, including CommonsenseQA. |
 | [MetaMem](https://github.com/OpenBMB/MetaMem) | Memory | Editable memory-use experience units. Memory is the editorial unit; no separately evolving factual corpus, callable skill library, or model weights are established. | Ground-truth-conditioned LLM judgments and reflections propose additions, modifications, and deletions; a filtering prompt reconciles edits. | LongMemEval five-fold evaluation: 350 training, 50 validation, 100 test examples per fold, seed 42. Qwen3-30B-A3B-Instruct and Llama3.1-70B-Instruct; accuracy against LightMem and other memory/retrieval baselines, plus no-evolution/reflection ablations. |
 | [Reflexion](https://github.com/noahshinn/reflexion) | Memory | Reflective text in an episodic memory buffer; model weights are unchanged. | Scalar or linguistic task feedback, external or internally simulated. | Authors report sequential decision-making, coding, and reasoning experiments with feedback ablations. |
@@ -20,6 +21,27 @@ All unextracted entries remain in the [complete inventory](catalog.md).
 | [ADAS](https://github.com/ShengranHu/ADAS) | Topology | Code-defined agent designs and an archive of discoveries. | Evaluation of candidate agent designs in Meta Agent Search. | Authors report coding, science, and mathematics experiments plus cross-domain/model transfer. |
 | [Agent0](https://github.com/aiming-lab/Agent0) | Co-evolution | Learned executor and curriculum-agent state. | Executor capability and task difficulty drive competitive curriculum/executor learning. | Authors report mathematical and general reasoning benchmarks for a Qwen3-8B-Base starting model. |
 | [EvoHarnessBench](https://arxiv.org/abs/2609.04280) | Benchmarks and Evaluation | Evaluation resource, not an evolving method: the benchmark supplies cumulative capabilities; evaluated systems may retain their own adaptive state. | Verifier-scored tasks; cumulative adaptation examples are available before separate held-out measurement. | EnterpriseOps-Gym and Agentic Last Exam comparisons include task-specific capability references, memory/prompt/code adaptation, performance, cost, and forward/backward transfer. |
+
+## PCPO: Population-Curated Policy Optimization
+
+Status: source-checked; checked 2026-10-05 by Codex (AI-assisted extraction; no independent human review).
+
+Citation identity: Self-Evolving Algorithm-Design Agents: Escaping In-Context Evolutionary Stagnation via Population-Curated Policy Optimization (2026).
+
+Retention: Deduplicated, quality/diversity-selected elites persist for off-policy replay alongside fresh on-policy updates.
+
+Reproduction: not-run. Safety: Generated code requires isolated execution; isolation and poisoning resistance were not assessed. No external code executed. COI: No connection identified; no external COI declaration obtained.
+
+Sources inspected:
+
+- [Title, authors, submission and version metadata](https://arxiv.org/abs/2609.38757v1)
+- [Sections 4.2, 5.1–5.2, 6.1–6.2; Tables 1–3; Appendices B.2–B.3, C.2, D](https://arxiv.org/html/2609.38757v1)
+
+Limitations / next extraction:
+
+- Selected passages only; no independent human review or statistical audit. Local-transfer analysis is conditional, not a global improvement guarantee.
+- Kernel speedups use a frozen PyTorch Eager reference on RTX 4090; not whole-benchmark coverage. Equal rollout counts do not establish equal total compute.
+- No author-associated implementation, checkpoints or raw runs located in this screening; absence is not established. Exact reproduction and release licensing remain unverified. No code/data redistributed.
 
 ## STaR
 

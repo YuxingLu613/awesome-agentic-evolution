@@ -2,6 +2,15 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-10-05
+
+### Field updates
+
+- Added PCPO under Parameters with retained population Memory and a
+  source-checked preprint card. Distinguished held-out placement evaluation
+  from online kernel optimization; recorded release and comparison limits.
+  Reproduction remains `not-run`. Regenerated survey exports.
+
 ## 2026-09-20
 
 ### Field updates

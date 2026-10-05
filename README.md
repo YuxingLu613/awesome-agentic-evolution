@@ -169,6 +169,11 @@ unless an evidence record explicitly documents independent reproduction.
   unlabeled queries, with agreement gains on human-annotated benchmarks and
   held-out domains.
   **Targets:** Parameters.
+- [PCPO: Population-Curated Policy Optimization](https://arxiv.org/abs/2609.38757)
+  — Retains evaluated program populations and updates model weights through
+  on-policy exploration and elite replay for algorithm design; preprint,
+  reproduction not run here.
+  **Targets:** Parameters, Memory.
 - [RecurSE: Bounded Recursive Self-Evaluation for LLM Rubric Judges](https://arxiv.org/abs/2608.24231) — Co-evolves a rubric judge and
   checker with decoupled self-reward, validation-based early stopping,
   held-out generalization, and ablations against frozen-checker and teacher
