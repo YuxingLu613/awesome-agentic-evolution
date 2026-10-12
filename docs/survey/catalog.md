@@ -3,14 +3,14 @@
 Generated from [README](../../README.md) and [evidence records](reviews.json).
 Do not edit directly: run `node scripts/build-survey-catalog.mjs`.
 
-181 distinct entries. Source profiles describe linked artifacts, not
+182 distinct entries. Source profiles describe linked artifacts, not
 publication status or evidence quality. Not-extracted means no structured
 extraction is recorded here; earlier editorial checks may still exist in GitHub.
 
 | Section | Entries | Source-checked | Evidence-reviewed |
 | --- | ---: | ---: | ---: |
 | Start Here | 4 | 0 | 0 |
-| Resource Map | 137 | 12 | 0 |
+| Resource Map | 138 | 13 | 0 |
 | Benchmarks and Evaluation | 33 | 1 | 0 |
 | Articles and Technical Posts | 3 | 0 | 0 |
 | Related Awesome Lists | 4 | 0 | 0 |
@@ -74,6 +74,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | [Adaptive Reflective Interactive Agent (ARIA)](https://aclanthology.org/2025.emnlp-industry.115/) | Knowledge | paper-linked | source-checked |
 | [CoEvoKG](https://github.com/lazzy1225/CoEvoKG) | Knowledge | paper-linked | not-extracted |
 | [ContDa](https://github.com/Bingo-W/ContDa) | Knowledge | paper-linked | source-checked |
+| [EvoOntology](https://github.com/ruc-datalab/EvoOntology) | Knowledge | paper-linked | source-checked |
 | [Knowledge-Centric Self-Improvement](https://github.com/recursive-knowledge/KSI) | Knowledge | paper-linked | not-extracted |
 | [ProofEvolve: Neuro-Symbolic Evolution for Formal Automated Theorem Proving](https://arxiv.org/abs/2608.26334) | Knowledge | paper-linked | not-extracted |
 | [VISA: Agentic Self-Evolving Data Synthesis for Multimodal Instruction Following](https://arxiv.org/abs/2608.26013) | Knowledge | paper-linked | not-extracted |

@@ -2,6 +2,16 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-10-12
+
+### Field updates
+
+- Added EvoOntology under Knowledge with independently editable Tools, linking
+  its preprint and official implementation as one resource.
+- Recorded a source-checked card separating the paper's cross-fold evaluation
+  from the current release's evaluation modes and noting reporting and
+  reproduction limits. Reproduction remains `not-run`; regenerated survey exports.
+
 ## 2026-10-05
 
 ### Field updates

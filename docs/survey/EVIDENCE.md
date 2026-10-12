@@ -14,6 +14,7 @@ All unextracted entries remain in the [complete inventory](catalog.md).
 | [ReMe](https://aclanthology.org/2026.findings-acl.829/) | Memory | Scenario-indexed experience records; Memory is the editorial unit, not a separately evolving skill library. | Task success and LLM quality judgments; retrieval-associated success counts are not causal attribution. | Qwen3-8B/14B/32B; BFCL-V3 50/150 acquisition/evaluation tasks, AppWorld 90/168 train/test-normal. Compares no memory, A-Mem, LangMem, fixed/dynamic ReMe; Avg@4/Pass@4 with three-run mean and standard deviation. |
 | [Adaptive Reflective Interactive Agent (ARIA)](https://aclanthology.org/2025.emnlp-industry.115/) | Knowledge | Timestamped domain-knowledge repository. | Targeted human explanations and corrections requested after uncertainty assessment. | Authors report customer due-diligence name screening and public dynamic-knowledge tasks. |
 | [ContDa](https://github.com/Bingo-W/ContDa) | Knowledge | A tool-description corpus with relational notes. Knowledge is an editorial classification of API documentation; callable implementations are not the updated artifact. | Tool-probe observations guide description revisions and disambiguation; optional virtual-server observations may be LLM-simulated. | The paper reports stability/adaptation comparisons on dynamic StableToolBench and RestBench across three toolset-change patterns, with residual forgetting. |
+| [EvoOntology](https://github.com/ruc-datalab/EvoOntology) | Knowledge | Versioned semantic content and schema (Knowledge), plus separately editable callable interfaces (Tools); no model-weight update established. | Interaction traces guide single-layer patches; parent and candidate share validation tasks, decoding and interaction budgets. | DDR-Bench 10-K, InsightBench and BIRD (Oracle Knowledge); reciprocal two-fold testing freezes the ontology before the opposite fold. The adaptation fold is split 70/30 for construction and validation. Baselines include no ontology, static semantic context and initial ontology. |
 | [ERSkill](https://arxiv.org/abs/2608.12720) | Skills | Retrieval programs (Skills), router weights (Parameters), and a retained search-experience trie (Memory); fixed primitives and compiled memory are not separately evolving tools or knowledge. | GPT-4o-mini answer judgments guide candidate filtering, router learning, and validation-based selection. | LoCoMo and PerLTQA use train/validation/test partitions; LongMemEval is described as transfer. Table 1 compares memory/optimization baselines using F1, BLEU-1, and judge scores with two backbones. |
 | [SkillAdam](https://github.com/ruc-datalab/SkillAdam) | Skills | Skill documents plus a separately updated issue/outcome tracker; editorial targets Skills and Memory. Adam is an analogy, not model-weight training. | Paired case scores and diagnostics control acceptance and subsequent edit magnitude. | Seven benchmarks with frozen GPT-5.5 or Claude Sonnet 4.5, separate final test partitions, and skill-optimization baselines; results are author-reported. |
 | [Voyager](https://github.com/MineDojo/Voyager) | Skills | Growing library of reusable executable skills, alongside an adaptive curriculum. | Environment observations, execution errors, and self-verification. | Authors report exploration, milestone acquisition, and new-world skill reuse in Minecraft. |
@@ -173,6 +174,31 @@ Limitations / next extraction:
 
 - Only the abstract, metadata, and repository README were inspected; full split, baseline, budget, and uncertainty extraction remains open.
 - The MIT repository releases the StableToolBench pipeline and a compact corpus, not baselines, ablations, full outputs, or the RestBench pipeline.
+
+## EvoOntology
+
+Status: source-checked; checked 2026-10-12 by Codex (AI-assisted extraction; no independent human review).
+
+Citation identity: EvoOntology: A Self-Evolving Ontology Layer for Data Agents (2026).
+
+Retention: The paper retains margin-passing candidates and logs rejected edits. Release documentation describes version publication only on acceptance; incomplete runs retain the parent.
+
+Reproduction: not-run. Safety: Data-access tools and evolving interfaces require isolated environments and authorized data. Privacy and execution isolation were not assessed; no external code executed. COI: No connection identified in this screening; no external COI declaration obtained.
+
+Sources inspected:
+
+- [Bibliographic metadata and official code attribution](https://arxiv.org/abs/2609.15779v1)
+- [Method: Trajectory-Grounded Ontology Evolution, Eq. 2; Experimental Setup; Tables 1–6; Effect of Ontology Layer](https://arxiv.org/html/2609.15779v1)
+- [Lifecycle, performance subset, benchmark adapters and release layout](https://github.com/ruc-datalab/EvoOntology/blob/c94389b764394379086ff25e50d0e0f4396167b4/README.md)
+- [Evolution state machine and fixed_split versus rolling_trajectory modes](https://github.com/ruc-datalab/EvoOntology/blob/c94389b764394379086ff25e50d0e0f4396167b4/docs/architecture.md)
+- [EvaluationGate.decide_gt and decide_judge; static inspection only](https://github.com/ruc-datalab/EvoOntology/blob/c94389b764394379086ff25e50d0e0f4396167b4/evoontology/evaluation/evaluation.py)
+- [MIT source terms; copyright Meiduo Chong](https://github.com/ruc-datalab/EvoOntology/blob/c94389b764394379086ff25e50d0e0f4396167b4/LICENSE)
+
+Limitations / next extraction:
+
+- Selected passages and release paths only; no independent human review, seed/uncertainty audit or equal-total-compute conclusion. Opposite-fold testing is not an untouched official test split.
+- Abstract says four backbones; setup and main tables list six, while analyses use four. Avoid a single unqualified coverage count or universal improvement claim.
+- Current decide_gt uses strict mean improvement; Eq. 2 uses a margin. The release also supports judge-based rolling evaluation, which must not be conflated with paper reproduction. Exact split files, checkpoints and end-to-end result parity were not verified. MIT code terms do not establish external data rights.
 
 ## ERSkill
 
