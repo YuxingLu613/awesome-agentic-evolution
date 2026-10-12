@@ -1,4 +1,36 @@
 {
+  "https://github.com/ruc-datalab/EvoOntology": {
+    "status": "source-checked",
+    "reviewedAt": "2026-10-12",
+    "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+    "bibliography": {
+      "title": "EvoOntology: A Self-Evolving Ontology Layer for Data Agents",
+      "authors": ["Meiduo Chong", "Shaolei Zhang", "Ju Fan", "Xiaoyong Du"],
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "version": "2609.15779v1, submitted 2026-09-14; implementation c94389b764394379086ff25e50d0e0f4396167b4"
+    },
+    "sources": [
+      {"url": "https://arxiv.org/abs/2609.15779v1", "locator": "Bibliographic metadata and official code attribution"},
+      {"url": "https://arxiv.org/html/2609.15779v1", "locator": "Method: Trajectory-Grounded Ontology Evolution, Eq. 2; Experimental Setup; Tables 1–6; Effect of Ontology Layer"},
+      {"url": "https://github.com/ruc-datalab/EvoOntology/blob/c94389b764394379086ff25e50d0e0f4396167b4/README.md", "locator": "Lifecycle, performance subset, benchmark adapters and release layout"},
+      {"url": "https://github.com/ruc-datalab/EvoOntology/blob/c94389b764394379086ff25e50d0e0f4396167b4/docs/architecture.md", "locator": "Evolution state machine and fixed_split versus rolling_trajectory modes"},
+      {"url": "https://github.com/ruc-datalab/EvoOntology/blob/c94389b764394379086ff25e50d0e0f4396167b4/evoontology/evaluation/evaluation.py", "locator": "EvaluationGate.decide_gt and decide_judge; static inspection only"},
+      {"url": "https://github.com/ruc-datalab/EvoOntology/blob/c94389b764394379086ff25e50d0e0f4396167b4/LICENSE", "locator": "MIT source terms; copyright Meiduo Chong"}
+    ],
+    "artifact": "Versioned semantic content and schema (Knowledge), plus separately editable callable interfaces (Tools); no model-weight update established.",
+    "feedback": "Interaction traces guide single-layer patches; parent and candidate share validation tasks, decoding and interaction budgets.",
+    "retention": "The paper retains margin-passing candidates and logs rejected edits. Release documentation describes version publication only on acceptance; incomplete runs retain the parent.",
+    "evaluation": "DDR-Bench 10-K, InsightBench and BIRD (Oracle Knowledge); reciprocal two-fold testing freezes the ontology before the opposite fold. The adaptation fold is split 70/30 for construction and validation. Baselines include no ontology, static semantic context and initial ontology.",
+    "reproducibility": "not-run",
+    "safety": "Data-access tools and evolving interfaces require isolated environments and authorized data. Privacy and execution isolation were not assessed; no external code executed",
+    "conflictOfInterest": "No connection identified in this screening; no external COI declaration obtained",
+    "limitations": [
+      "Selected passages and release paths only; no independent human review, seed/uncertainty audit or equal-total-compute conclusion. Opposite-fold testing is not an untouched official test split.",
+      "Abstract says four backbones; setup and main tables list six, while analyses use four. Avoid a single unqualified coverage count or universal improvement claim.",
+      "Current decide_gt uses strict mean improvement; Eq. 2 uses a margin. The release also supports judge-based rolling evaluation, which must not be conflated with paper reproduction. Exact split files, checkpoints and end-to-end result parity were not verified. MIT code terms do not establish external data rights."
+    ]
+  },
   "https://arxiv.org/abs/2609.38757": {
     "status": "source-checked",
     "reviewedAt": "2026-10-05",

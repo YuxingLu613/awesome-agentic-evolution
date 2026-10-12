@@ -354,6 +354,12 @@ unless an evidence record explicitly documents independent reproduction.
   tool-documentation corpus from API observations and relation-aware exploration,
   evaluating adaptation and retention on evolving StableToolBench and RestBench toolsets.
   **Targets:** Knowledge.
+- [EvoOntology](https://github.com/ruc-datalab/EvoOntology) —
+  [Paper](https://arxiv.org/abs/2609.15779). Evolves retained semantic knowledge,
+  schemas, and callable ontology interfaces from interaction traces, accepting
+  updates through paired evaluation before frozen cross-fold testing. Use isolated
+  environments.
+  **Targets:** Knowledge, Tools.
 - [Knowledge-Centric Self-Improvement](https://github.com/recursive-knowledge/KSI) —
   [Paper](https://arxiv.org/abs/2607.19592). Runs disposable agents that
   distill evidence-grounded forums into shared knowledge, then seeds later
