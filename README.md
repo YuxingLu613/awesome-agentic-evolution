@@ -807,6 +807,12 @@ unless an evidence record explicitly documents independent reproduction.
   and validation-task sampling, focusing evaluation on discriminative tasks
   while retaining unbiased full-set estimates and reducing evaluation cost.
   **Targets:** Co-evolution, Topology.
+- [VERSE](https://github.com/wzekai/VERSE) —
+  [Paper](https://arxiv.org/abs/2610.02616). Co-evolves executor and optimizer
+  harnesses using execution probes and cross-round audits; selects retained
+  versions on validation tasks while model weights stay fixed. Use isolated
+  environments.
+  **Targets:** Co-evolution, Topology, Skills, Tools, Memory.
 - [WebEvolver](https://github.com/Tencent/SelfEvolvingAgent/tree/main/WebEvolver)
   — [Paper](https://aclanthology.org/2025.emnlp-main.454/). Co-trains a policy
   and world model from real trajectories, then uses the model for synthetic
