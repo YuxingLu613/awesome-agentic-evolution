@@ -21,6 +21,7 @@ All unextracted entries remain in the [complete inventory](catalog.md).
 | [AgentFactory](https://github.com/zzatpku/AgentFactory) | Tools | Documented callable Python subagents. | Execution outcomes used to refine saved solutions. | Authors demonstrate capability accumulation and reduced effort for similar tasks. |
 | [ADAS](https://github.com/ShengranHu/ADAS) | Topology | Code-defined agent designs and an archive of discoveries. | Evaluation of candidate agent designs in Meta Agent Search. | Authors report coding, science, and mathematics experiments plus cross-domain/model transfer. |
 | [Agent0](https://github.com/aiming-lab/Agent0) | Co-evolution | Learned executor and curriculum-agent state. | Executor capability and task difficulty drive competitive curriculum/executor learning. | Authors report mathematical and general reasoning benchmarks for a Qwen3-8B-Base starting model. |
+| [VERSE](https://github.com/wzekai/VERSE) | Co-evolution | Coupled executor/optimizer harnesses (Co-evolution): workflows/hooks (Topology), skill instructions (Skills), callable utilities (Tools), and accumulated notes (Memory). Model weights remain fixed. | Execution probes, failure replays, perturbations and cross-round audits guide proposals; validation summaries inform optimizer updates without exposing validation task content. | 110 training and 50 validation SWE-rebench tasks; 108 gradable March test tasks and 107 July multilingual test tasks. Four reimplemented host optimizers, fixed-weight baselines and verification/self-evolution ablations; final tests follow validation selection. |
 | [EvoHarnessBench](https://arxiv.org/abs/2609.04280) | Benchmarks and Evaluation | Evaluation resource, not an evolving method: the benchmark supplies cumulative capabilities; evaluated systems may retain their own adaptive state. | Verifier-scored tasks; cumulative adaptation examples are available before separate held-out measurement. | EnterpriseOps-Gym and Agentic Last Exam comparisons include task-specific capability references, memory/prompt/code adaptation, performance, cost, and forward/backward transfer. |
 
 ## PCPO: Population-Curated Policy Optimization
@@ -324,6 +325,35 @@ Limitations / next extraction:
 
 - Tool integration is not evidence of tool evolution; classification is Co-evolution plus Parameters.
 - Abstract-level screening only; extract reward equations, contamination controls, training cost, and evaluation splits before comparison.
+
+## VERSE
+
+Status: source-checked; checked 2026-10-19 by Codex (AI-assisted extraction; no independent human review).
+
+Citation identity: VERSE: Verified Self-Evolving Optimizer for Agent Harnesses (2026).
+
+Retention: Release defaults retain valid edits under keep_all, including regressions. Final validation-selected harnesses and optimizer state persist; this is not monotonic acceptance or a formal correctness guarantee.
+
+Reproduction: not-run. Safety: Generated tools and hooks need isolated execution and restricted credentials/network access. Execution isolation and poisoning resistance were not audited; no external code executed. COI: No connection identified in this screening; no external COI declaration obtained.
+
+Sources inspected:
+
+- [Bibliographic identity and author-linked implementation](https://arxiv.org/abs/2610.02616v1)
+- [Sections 2.1–2.3, 3.1–3.2, 4.1–4.3; Tables 2–3; selected method, evaluation and ablation passages](https://arxiv.org/html/2610.02616v1)
+- [Setup, evolution, validation selection and test commands; not executed](https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/README.md)
+- [Task-ID splits, reference-patch exclusions and data reconstruction; task data not redistributed](https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/data/README.md)
+- [Released executor/optimizer harnesses, run metadata and per-task test outcomes](https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/results/README.md)
+- [Example selected round 2, validation reevaluation and harness checksums](https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/results/verse_mh/run.json)
+- [Shared keep_all gate, rounds, candidate screening and validation flip confirmation](https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/verse/configs/_base.yaml)
+- [Optimizer self-edit, code hooks and verification budgets](https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/verse/configs/self_teacher/verse_mh.yaml)
+- [KeepAllGate retains valid proposals regardless of improvement; static inspection only](https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/verse/evolution/gates.py)
+- [MIT source terms; copyright Zekai Wang](https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/LICENSE)
+
+Limitations / next extraction:
+
+- Selected passages and release paths only; no independent human review. Validation is adaptively reused. Shared turn caps do not equalize total compute.
+- Three test evaluations reuse one evolved run per row, not three independent evolution seeds. Self-evolution is not uniformly better than verification without self-evolution.
+- Release includes selected harnesses, split IDs and per-task results, but task data must be reconstructed. Full trajectories, artifact checksums, aggregate-result parity and end-to-end reproducibility were not independently verified. MIT code terms do not establish external data rights.
 
 ## EvoHarnessBench
 

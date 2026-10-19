@@ -3,14 +3,14 @@
 Generated from [README](../../README.md) and [evidence records](reviews.json).
 Do not edit directly: run `node scripts/build-survey-catalog.mjs`.
 
-182 distinct entries. Source profiles describe linked artifacts, not
+183 distinct entries. Source profiles describe linked artifacts, not
 publication status or evidence quality. Not-extracted means no structured
 extraction is recorded here; earlier editorial checks may still exist in GitHub.
 
 | Section | Entries | Source-checked | Evidence-reviewed |
 | --- | ---: | ---: | ---: |
 | Start Here | 4 | 0 | 0 |
-| Resource Map | 138 | 13 | 0 |
+| Resource Map | 139 | 14 | 0 |
 | Benchmarks and Evaluation | 33 | 1 | 0 |
 | Articles and Technical Posts | 3 | 0 | 0 |
 | Related Awesome Lists | 4 | 0 | 0 |
@@ -165,6 +165,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | [SBCO: Self-Supervised, Verifier-Grounded Harness Optimization](https://arxiv.org/abs/2608.10157) | Co-evolution | paper-linked | not-extracted |
 | [Self-Modifying Lean Proof Agents](https://arxiv.org/abs/2607.17352) | Co-evolution | paper-linked | not-extracted |
 | [Task-CoEvolve](https://arxiv.org/abs/2608.20169) | Co-evolution | paper-linked | not-extracted |
+| [VERSE](https://github.com/wzekai/VERSE) | Co-evolution | paper-linked | source-checked |
 | [WebEvolver](https://github.com/Tencent/SelfEvolvingAgent/tree/main/WebEvolver) | Co-evolution | paper-linked | not-extracted |
 
 ## Benchmarks and Evaluation

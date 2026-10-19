@@ -2,6 +2,17 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-10-19
+
+### Field updates
+
+- Added VERSE under Co-evolution as one paper/implementation resource, with
+  distinct workflow, skill, tool and memory artifacts and fixed model weights.
+- Recorded a source-checked card distinguishing retained edits from final
+  validation selection, adaptive validation feedback from held-out testing,
+  and repeated test runs from independent evolution seeds. Reproduction remains
+  `not-run`; regenerated survey exports.
+
 ## 2026-10-12
 
 ### Field updates

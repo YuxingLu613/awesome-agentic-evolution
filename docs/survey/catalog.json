@@ -3683,6 +3683,109 @@
       "review": null
     },
     {
+      "id": "https://github.com/wzekai/VERSE",
+      "title": "VERSE",
+      "section": "Resource Map",
+      "category": "Co-evolution",
+      "primaryTarget": "Co-evolution",
+      "targets": [
+        "Co-evolution",
+        "Topology",
+        "Skills",
+        "Tools",
+        "Memory"
+      ],
+      "description": "Co-evolves executor and optimizer harnesses using execution probes and cross-round audits; selects retained versions on validation tasks while model weights stay fixed. Use isolated environments.",
+      "sources": [
+        {
+          "label": "VERSE",
+          "url": "https://github.com/wzekai/VERSE"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2610.02616"
+        }
+      ],
+      "sourceProfile": "paper-linked",
+      "evidenceStatus": "source-checked",
+      "review": {
+        "status": "source-checked",
+        "reviewedAt": "2026-10-19",
+        "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+        "bibliography": {
+          "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses",
+          "authors": [
+            "Zekai Wang",
+            "Yingqiang Ge",
+            "Zekun Wang",
+            "Hai Wang",
+            "Yuhui Xu",
+            "Joshua Frandsen",
+            "Shancong Fu",
+            "Ashia C. Wilson",
+            "Chandan K. Reddy"
+          ],
+          "year": 2026,
+          "venue": "arXiv preprint",
+          "version": "2610.02616v1, submitted 2026-10-02; implementation d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9"
+        },
+        "sources": [
+          {
+            "url": "https://arxiv.org/abs/2610.02616v1",
+            "locator": "Bibliographic identity and author-linked implementation"
+          },
+          {
+            "url": "https://arxiv.org/html/2610.02616v1",
+            "locator": "Sections 2.1–2.3, 3.1–3.2, 4.1–4.3; Tables 2–3; selected method, evaluation and ablation passages"
+          },
+          {
+            "url": "https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/README.md",
+            "locator": "Setup, evolution, validation selection and test commands; not executed"
+          },
+          {
+            "url": "https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/data/README.md",
+            "locator": "Task-ID splits, reference-patch exclusions and data reconstruction; task data not redistributed"
+          },
+          {
+            "url": "https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/results/README.md",
+            "locator": "Released executor/optimizer harnesses, run metadata and per-task test outcomes"
+          },
+          {
+            "url": "https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/results/verse_mh/run.json",
+            "locator": "Example selected round 2, validation reevaluation and harness checksums"
+          },
+          {
+            "url": "https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/verse/configs/_base.yaml",
+            "locator": "Shared keep_all gate, rounds, candidate screening and validation flip confirmation"
+          },
+          {
+            "url": "https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/verse/configs/self_teacher/verse_mh.yaml",
+            "locator": "Optimizer self-edit, code hooks and verification budgets"
+          },
+          {
+            "url": "https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/verse/evolution/gates.py",
+            "locator": "KeepAllGate retains valid proposals regardless of improvement; static inspection only"
+          },
+          {
+            "url": "https://github.com/wzekai/VERSE/blob/d8ff0adab0cf82e13d7878f84ff84f823cb2f6c9/LICENSE",
+            "locator": "MIT source terms; copyright Zekai Wang"
+          }
+        ],
+        "artifact": "Coupled executor/optimizer harnesses (Co-evolution): workflows/hooks (Topology), skill instructions (Skills), callable utilities (Tools), and accumulated notes (Memory). Model weights remain fixed.",
+        "feedback": "Execution probes, failure replays, perturbations and cross-round audits guide proposals; validation summaries inform optimizer updates without exposing validation task content.",
+        "retention": "Release defaults retain valid edits under keep_all, including regressions. Final validation-selected harnesses and optimizer state persist; this is not monotonic acceptance or a formal correctness guarantee.",
+        "evaluation": "110 training and 50 validation SWE-rebench tasks; 108 gradable March test tasks and 107 July multilingual test tasks. Four reimplemented host optimizers, fixed-weight baselines and verification/self-evolution ablations; final tests follow validation selection.",
+        "reproducibility": "not-run",
+        "safety": "Generated tools and hooks need isolated execution and restricted credentials/network access. Execution isolation and poisoning resistance were not audited; no external code executed",
+        "conflictOfInterest": "No connection identified in this screening; no external COI declaration obtained",
+        "limitations": [
+          "Selected passages and release paths only; no independent human review. Validation is adaptively reused. Shared turn caps do not equalize total compute.",
+          "Three test evaluations reuse one evolved run per row, not three independent evolution seeds. Self-evolution is not uniformly better than verification without self-evolution.",
+          "Release includes selected harnesses, split IDs and per-task results, but task data must be reconstructed. Full trajectories, artifact checksums, aggregate-result parity and end-to-end reproducibility were not independently verified. MIT code terms do not establish external data rights."
+        ]
+      }
+    },
+    {
       "id": "https://github.com/Tencent/SelfEvolvingAgent/tree/main/WebEvolver",
       "title": "WebEvolver",
       "section": "Resource Map",
