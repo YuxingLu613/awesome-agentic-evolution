@@ -3,7 +3,7 @@
 Generated from [README](../../README.md) and [evidence records](reviews.json).
 Do not edit directly: run `node scripts/build-survey-catalog.mjs`.
 
-183 distinct entries. Source profiles describe linked artifacts, not
+184 distinct entries. Source profiles describe linked artifacts, not
 publication status or evidence quality. Not-extracted means no structured
 extraction is recorded here; earlier editorial checks may still exist in GitHub.
 
@@ -11,7 +11,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | --- | ---: | ---: | ---: |
 | Start Here | 4 | 0 | 0 |
 | Resource Map | 139 | 14 | 0 |
-| Benchmarks and Evaluation | 33 | 1 | 0 |
+| Benchmarks and Evaluation | 34 | 2 | 0 |
 | Articles and Technical Posts | 3 | 0 | 0 |
 | Related Awesome Lists | 4 | 0 | 0 |
 
@@ -176,6 +176,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | [AI4AI-Bench](https://arxiv.org/abs/2608.20318) | Longitudinal and adaptation evaluation | paper-linked | not-extracted |
 | [ASPIRE](https://arxiv.org/abs/2608.31111) | Longitudinal and adaptation evaluation | paper-linked | not-extracted |
 | [Continual Skill Bench](https://github.com/gtynnn060110-hash/continual-skill-bench-final) | Longitudinal and adaptation evaluation | paper-linked | not-extracted |
+| [EmbodiedCLBench](https://github.com/PKU-VaLuE-Lab/EmbodiedCLBench) | Longitudinal and adaptation evaluation | paper-linked | source-checked |
 | [Evo-Bench](https://github.com/RUCAIBox/Evo-Bench) | Longitudinal and adaptation evaluation | paper-linked | not-extracted |
 | [EvoHarnessBench](https://arxiv.org/abs/2609.04280) | Longitudinal and adaptation evaluation | paper-linked | source-checked |
 | [Experience-driven Lifelong Learning](https://arxiv.org/abs/2508.19005) | Longitudinal and adaptation evaluation | paper-linked | not-extracted |

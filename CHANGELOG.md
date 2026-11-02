@@ -2,6 +2,14 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-11-02
+
+### Field updates
+
+- Added EmbodiedCLBench to longitudinal and adaptation evaluation. Its evidence
+  card compares no experience, retained trajectories and distilled skill summaries
+  on the same advanced tasks, and records the limited transfer horizon.
+
 ## 2026-10-19
 
 ### Field updates

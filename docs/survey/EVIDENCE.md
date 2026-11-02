@@ -22,6 +22,7 @@ All unextracted entries remain in the [complete inventory](catalog.md).
 | [ADAS](https://github.com/ShengranHu/ADAS) | Topology | Code-defined agent designs and an archive of discoveries. | Evaluation of candidate agent designs in Meta Agent Search. | Authors report coding, science, and mathematics experiments plus cross-domain/model transfer. |
 | [Agent0](https://github.com/aiming-lab/Agent0) | Co-evolution | Learned executor and curriculum-agent state. | Executor capability and task difficulty drive competitive curriculum/executor learning. | Authors report mathematical and general reasoning benchmarks for a Qwen3-8B-Base starting model. |
 | [VERSE](https://github.com/wzekai/VERSE) | Co-evolution | Coupled executor/optimizer harnesses (Co-evolution): workflows/hooks (Topology), skill instructions (Skills), callable utilities (Tools), and accumulated notes (Memory). Model weights remain fixed. | Execution probes, failure replays, perturbations and cross-round audits guide proposals; validation summaries inform optimizer updates without exposing validation task content. | 110 training and 50 validation SWE-rebench tasks; 108 gradable March test tasks and 107 July multilingual test tasks. Four reimplemented host optimizers, fixed-weight baselines and verification/self-evolution ablations; final tests follow validation selection. |
+| [EmbodiedCLBench](https://github.com/PKU-VaLuE-Lab/EmbodiedCLBench) | Benchmarks and Evaluation | Evaluation benchmark. The agent carries either basic-task interaction histories or a Markdown skill summary into a related advanced task. | Agents choose actions on a task graph and observe the next state. They must reach the goal within six steps beyond the shortest path during learning, or three beyond it during testing. | 168 basic and 100 advanced tasks; four harnesses and two models. For Hermes with Qwen3.8-Flash, Table 1 reports advanced-task success of 8% without experience, 44% with trajectories and 33% with summaries. The ordering of the two experience conditions varies by configuration. |
 | [EvoHarnessBench](https://arxiv.org/abs/2609.04280) | Benchmarks and Evaluation | Evaluation resource, not an evolving method: the benchmark supplies cumulative capabilities; evaluated systems may retain their own adaptive state. | Verifier-scored tasks; cumulative adaptation examples are available before separate held-out measurement. | EnterpriseOps-Gym and Agentic Last Exam comparisons include task-specific capability references, memory/prompt/code adaptation, performance, cost, and forward/backward transfer. |
 
 ## PCPO: Population-Curated Policy Optimization
@@ -354,6 +355,29 @@ Limitations / next extraction:
 - Selected passages and release paths only; no independent human review. Validation is adaptively reused. Shared turn caps do not equalize total compute.
 - Three test evaluations reuse one evolved run per row, not three independent evolution seeds. Self-evolution is not uniformly better than verification without self-evolution.
 - Release includes selected harnesses, split IDs and per-task results, but task data must be reconstructed. Full trajectories, artifact checksums, aggregate-result parity and end-to-end reproducibility were not independently verified. MIT code terms do not establish external data rights.
+
+## EmbodiedCLBench
+
+Status: source-checked; checked 2026-11-02 by Codex (AI-assisted extraction; no independent human review).
+
+Citation identity: EmbodiedCLBench: Evaluating Continual Learning for Self-Evolving Embodied Agents (2026).
+
+Retention: Each main comparison pairs two related basic tasks with one advanced task. In the skill condition the agent summarizes the learning trajectories; only that summary transfers. Zero-shot agents receive neither artifact.
+
+Reproduction: not-run. Safety: Offline task graphs simulate action consequences; physical deployment safety was not assessed. The release uses external model APIs. No external benchmark code was executed. COI: No curator connection identified; no external COI declaration obtained.
+
+Sources inspected:
+
+- [Title, author list and v1 submission record](https://arxiv.org/abs/2610.13021v1)
+- [Sections 3.4 and 4.1–4.2; Table 1 (main comparison); Section 5.2 and Figure 5 (sample-count sweep)](https://arxiv.org/html/2610.13021v1)
+- [Main Results; Usage steps 7–10: pilot, full run, raw trajectories and summary scoring](https://github.com/PKU-VaLuE-Lab/EmbodiedCLBench/blob/f33105f017f5408f8d2c6debe8bd4086881d3ea4/README.md)
+- [Dataset card, license metadata, and paper/code attribution](https://huggingface.co/datasets/PKU-VaLuE-Lab/EmbodiedCLBench/blob/f308ffb28e8cd350df467b022a2d4e1d088a9e8e/README.md)
+
+Limitations / next extraction:
+
+- The deliberately related learning and test tasks measure short-horizon compositional transfer. Table 1 does not test long-term forgetting or isolate experience from the cost of collecting it.
+- In the Qwen3.8-Flash sample-count sweep with Hermes and OpenClaw, success did not consistently rise beyond the first basic task. Table 1 gives no uncertainty intervals.
+- The release documents a Qwen API default and result-generation commands. Raw-run parity was not checked. The dataset card declares Apache-2.0; no code license was identified in the inspected repository tree. Only links and a summary are included here.
 
 ## EvoHarnessBench
 
