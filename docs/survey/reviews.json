@@ -1,4 +1,35 @@
 {
+  "https://github.com/PKU-VaLuE-Lab/EmbodiedCLBench": {
+    "status": "source-checked",
+    "reviewedAt": "2026-11-02",
+    "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+    "bibliography": {
+      "title": "EmbodiedCLBench: Evaluating Continual Learning for Self-Evolving Embodied Agents",
+      "authors": ["Jie Huang", "Yanan Chen", "Ruixun Liu", "Kaichen He", "Xinyi He", "Rui Huang", "Zilong Zheng", "Zhenliang Zhang", "Yiwu Zhong"],
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "doi": "10.48550/arXiv.2610.13021",
+      "version": "2610.13021v1, submitted 2026-10-09; repository f33105f017f5408f8d2c6debe8bd4086881d3ea4"
+    },
+    "sources": [
+      {"url": "https://arxiv.org/abs/2610.13021v1", "locator": "Title, author list and v1 submission record"},
+      {"url": "https://arxiv.org/html/2610.13021v1", "locator": "Sections 3.4 and 4.1–4.2; Table 1 (main comparison); Section 5.2 and Figure 5 (sample-count sweep)"},
+      {"url": "https://github.com/PKU-VaLuE-Lab/EmbodiedCLBench/blob/f33105f017f5408f8d2c6debe8bd4086881d3ea4/README.md", "locator": "Main Results; Usage steps 7–10: pilot, full run, raw trajectories and summary scoring"},
+      {"url": "https://huggingface.co/datasets/PKU-VaLuE-Lab/EmbodiedCLBench/blob/f308ffb28e8cd350df467b022a2d4e1d088a9e8e/README.md", "locator": "Dataset card, license metadata, and paper/code attribution"}
+    ],
+    "artifact": "Evaluation benchmark. The agent carries either basic-task interaction histories or a Markdown skill summary into a related advanced task.",
+    "feedback": "Agents choose actions on a task graph and observe the next state. They must reach the goal within six steps beyond the shortest path during learning, or three beyond it during testing.",
+    "retention": "Each main comparison pairs two related basic tasks with one advanced task. In the skill condition the agent summarizes the learning trajectories; only that summary transfers. Zero-shot agents receive neither artifact.",
+    "evaluation": "168 basic and 100 advanced tasks; four harnesses and two models. For Hermes with Qwen3.8-Flash, Table 1 reports advanced-task success of 8% without experience, 44% with trajectories and 33% with summaries. The ordering of the two experience conditions varies by configuration.",
+    "reproducibility": "not-run",
+    "safety": "Offline task graphs simulate action consequences; physical deployment safety was not assessed. The release uses external model APIs. No external benchmark code was executed",
+    "conflictOfInterest": "No curator connection identified; no external COI declaration obtained",
+    "limitations": [
+      "The deliberately related learning and test tasks measure short-horizon compositional transfer. Table 1 does not test long-term forgetting or isolate experience from the cost of collecting it.",
+      "In the Qwen3.8-Flash sample-count sweep with Hermes and OpenClaw, success did not consistently rise beyond the first basic task. Table 1 gives no uncertainty intervals.",
+      "The release documents a Qwen API default and result-generation commands. Raw-run parity was not checked. The dataset card declares Apache-2.0; no code license was identified in the inspected repository tree. Only links and a summary are included here."
+    ]
+  },
   "https://github.com/wzekai/VERSE": {
     "status": "source-checked",
     "reviewedAt": "2026-10-19",

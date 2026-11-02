@@ -845,6 +845,10 @@ general task benchmarks; none automatically demonstrates persistent learning.
   [Paper](https://arxiv.org/abs/2608.03874). Evaluates continual skill reuse
   across five domains and 100-task sequences, comparing in-context adaptation
   with explicit skill maintenance.
+- [EmbodiedCLBench](https://github.com/PKU-VaLuE-Lab/EmbodiedCLBench) —
+  [Paper](https://arxiv.org/abs/2610.13021). Tests whether agents solve
+  simulated household tasks by reusing trajectories or skill summaries from
+  simpler tasks, with a no-experience baseline.
 - [Evo-Bench](https://github.com/RUCAIBox/Evo-Bench) —
   [Paper](https://arxiv.org/abs/2608.09096). Holds policy, seed harness, and
   budget fixed while scoring autonomous harness evolution on disjoint
