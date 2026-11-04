@@ -384,6 +384,11 @@ unless an evidence record explicitly documents independent reproduction.
   proposals, reward scoring, and asynchronous aggregator merges, with
   live-model results and per-run raw data.
   **Targets:** Skills, Tools, Topology.
+- [AutoSR](https://github.com/AutoResearch-Factory/AutoSR) —
+  [Paper](https://arxiv.org/abs/2608.16876). Searches research states that
+  couple candidate equations with motives, probes, failed attempts, and review
+  under progressive-widening MCTS.
+  **Targets:** Skills, Topology.
 - [cambium](https://github.com/debarshi29/cambium) — Admission-gates evolving
   skill, tool, and prompt libraries, measures retrieval separately, rejects
   reward-hacking candidates, and reports held-out transfer from a reproducible
@@ -603,6 +608,10 @@ unless an evidence record explicitly documents independent reproduction.
   search with statistical quality, safety, canary, promotion, and rollback
   gates, publishing deterministic fixtures and reproducible reports.
   **Targets:** Topology.
+- [Agon](https://github.com/AutoResearch-Factory/Agon) —
+  [Paper](https://arxiv.org/abs/2606.24177). Runs omnidisciplinary research with
+  a Prompt Economy of role prompts retained across domains.
+  **Targets:** Topology, Skills.
 - [AgentSquare](https://github.com/tsinghua-fib-lab/AgentSquare) —
   [Paper](https://arxiv.org/abs/2410.06153). Searches a modular space of
   planning, reasoning, tool-use, and memory components.
@@ -962,6 +971,9 @@ general task benchmarks; none automatically demonstrates persistent learning.
   multiple interactive environments.
 - [GAIA](https://huggingface.co/gaia-benchmark) — Tests assistants on tasks
   requiring reasoning, tools, and multimodal information.
+- [SciΠvot](https://arxiv.org/abs/2610.21082) — Benchmarks whether
+  scientific autoresearch agents judge pivotal moments like a Principal
+  Investigator, using items from real research corrections.
 - [SWE-bench](https://github.com/SWE-bench/SWE-bench) — Supplies real-world
   software issues used by self-improving coding-agent systems.
 
