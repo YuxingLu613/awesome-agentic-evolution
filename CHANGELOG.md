@@ -2,6 +2,20 @@
 
 All notable editorial updates are recorded here.
 
+## 2026-11-16
+
+### Field updates
+
+- Added EvoRec under Memory with a source-checked preprint card. Distinguished
+  later-day evaluation from replay acceptance and whole-system online results
+  from the contribution of retained memory.
+- Recorded that unverified, non-retracted user memories may be reused, while
+  system-level abstraction requires verification; retained private-data and
+  implementation-release limits. Reproduction remains `not-run`; regenerated
+  survey exports.
+- Replaced AgentDescent's missing paper-branch PDF link with the Zenodo DOI
+  linked by the project's current README; no evidence-status upgrade.
+
 ## 2026-11-02
 
 ### Field updates

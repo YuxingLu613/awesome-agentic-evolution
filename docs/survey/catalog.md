@@ -3,14 +3,14 @@
 Generated from [README](../../README.md) and [evidence records](reviews.json).
 Do not edit directly: run `node scripts/build-survey-catalog.mjs`.
 
-184 distinct entries. Source profiles describe linked artifacts, not
+185 distinct entries. Source profiles describe linked artifacts, not
 publication status or evidence quality. Not-extracted means no structured
 extraction is recorded here; earlier editorial checks may still exist in GitHub.
 
 | Section | Entries | Source-checked | Evidence-reviewed |
 | --- | ---: | ---: | ---: |
 | Start Here | 4 | 0 | 0 |
-| Resource Map | 139 | 14 | 0 |
+| Resource Map | 140 | 15 | 0 |
 | Benchmarks and Evaluation | 34 | 2 | 0 |
 | Articles and Technical Posts | 3 | 0 | 0 |
 | Related Awesome Lists | 4 | 0 | 0 |
@@ -50,6 +50,7 @@ extraction is recorded here; earlier editorial checks may still exist in GitHub.
 | [earcon](https://github.com/370540009gg-cmd/earcon) | Memory | repository-only | not-extracted |
 | [Evolve](https://github.com/AgentToolkit/altk-evolve) | Memory | paper-linked | not-extracted |
 | [EvolveBank](https://github.com/C10udsea/evolvebank) | Memory | repository-only | not-extracted |
+| [EvoRec](https://arxiv.org/abs/2611.01977) | Memory | paper-linked | source-checked |
 | [ExpeL](https://github.com/LeapLabTHU/ExpeL) | Memory | paper-linked | not-extracted |
 | [GeoForge](https://arxiv.org/abs/2608.10494) | Memory | paper-linked | not-extracted |
 | [KOPE: Experience-Driven Workflow and Experience Graph Memory](https://arxiv.org/abs/2608.25570) | Memory | paper-linked | not-extracted |

@@ -9,6 +9,7 @@ All unextracted entries remain in the [complete inventory](catalog.md).
 | --- | --- | --- | --- | --- |
 | [PCPO: Population-Curated Policy Optimization](https://arxiv.org/abs/2609.38757) | Parameters | Model weights (Parameters) and a separately curated program-experience archive (Memory); generated programs alone do not establish an evolving skill library. | Execution validity, placement wirelength subject to overflow constraints, or kernel correctness and runtime. | Qwen3-8B; 4 placement training cases and 12 unseen cases. Four kernel tasks use online 64-rollout optimization, not held-out transfer. Comparisons include frozen models, OpenEvolve, ShinkaEvolve and GRPO; update/replay ablations are reported. |
 | [STaR](https://arxiv.org/abs/2203.14465) | Parameters | Model parameters trained on generated correct-answer rationales. | Answer correctness; failed generations are retried with the correct answer. | Authors compare iterative rationale training with direct-answer fine-tuning on reasoning datasets, including CommonsenseQA. |
+| [EvoRec](https://arxiv.org/abs/2611.01977) | Memory | Personalized repair records and a shared hierarchy of experience-derived error patterns (Memory). Fixed agent weights and execution pipeline; tree edits organize experience, not agent topology. | Clicks/conversions and execution traces; replay tests whether a feedback item enters the top 50. At most five feedback items per user daily. | Seven learning days precede next-day evaluation on 28,227 users. Table 1 reports Hit@50 of 24.48% versus 23.90% without reflection; Table 5 compares components on 5,216 memory recipients. Seven-day online results concern the complete additional recommendation channel. |
 | [MetaMem](https://github.com/OpenBMB/MetaMem) | Memory | Editable memory-use experience units. Memory is the editorial unit; no separately evolving factual corpus, callable skill library, or model weights are established. | Ground-truth-conditioned LLM judgments and reflections propose additions, modifications, and deletions; a filtering prompt reconciles edits. | LongMemEval five-fold evaluation: 350 training, 50 validation, 100 test examples per fold, seed 42. Qwen3-30B-A3B-Instruct and Llama3.1-70B-Instruct; accuracy against LightMem and other memory/retrieval baselines, plus no-evolution/reflection ablations. |
 | [Reflexion](https://github.com/noahshinn/reflexion) | Memory | Reflective text in an episodic memory buffer; model weights are unchanged. | Scalar or linguistic task feedback, external or internally simulated. | Authors report sequential decision-making, coding, and reasoning experiments with feedback ablations. |
 | [ReMe](https://aclanthology.org/2026.findings-acl.829/) | Memory | Scenario-indexed experience records; Memory is the editorial unit, not a separately evolving skill library. | Task success and LLM quality judgments; retrieval-associated success counts are not causal attribution. | Qwen3-8B/14B/32B; BFCL-V3 50/150 acquisition/evaluation tasks, AppWorld 90/168 train/test-normal. Compares no memory, A-Mem, LangMem, fixed/dynamic ReMe; Avg@4/Pass@4 with three-run mean and standard deviation. |
@@ -64,6 +65,30 @@ Limitations / next extraction:
 
 - Abstract-level extraction only; extract splits, models, compute, seeds, and result tables before comparison.
 - Foundational parameter self-improvement, not by itself evidence about deployed multi-tool agents.
+
+## EvoRec
+
+Status: source-checked; checked 2026-11-16 by Codex (AI-assisted extraction; no independent human review).
+
+Citation identity: EvoRec: A Unified Self-Evolving Agentic Recommender with Dynamic Reflection Trees (2026).
+
+Retention: Non-retracted user records, including unverified ones, enter later prompts. ERROR-MEMORY retracts misleading repairs. Verified records feed shared abstractions; 20 verified pending nodes trigger abstraction. This is not verified-only user-memory admission.
+
+Reproduction: not-run. Safety: Privacy, consent and memory-poisoning resistance were not independently assessed; retraction is not a safety guarantee. No private user data, implementation or experiments were accessed or run. COI: Authors disclose Kuaishou affiliations; no curator connection identified and no external COI declaration obtained.
+
+Sources inspected:
+
+- [Author list and v1 submission record](https://arxiv.org/abs/2611.01977v1)
+- [Sections 3.1–3.4 (retained state and deployment); 4.1–4.5 and Tables 1, 5–6 (evaluation); Appendix A (budgets and replay rule)](https://arxiv.org/html/2611.01977v1)
+- [Author-linked project page; Paper/Code controls, results and citation block, inspected 2026-11-16](https://mtli-buaa.github.io/evorec-project-page/)
+- [Pinned page source: disabled Code control (line 154) and 2027 BibTeX year (lines 252–255)](https://github.com/mtli-buaa/evorec-project-page/blob/998f0977c19503621d1604745337d1b80206e0a1/index.html)
+
+Limitations / next extraction:
+
+- The next-day split holds out future outcomes, not users. Later days continue adaptation. Replay is an update signal, not independent acceptance evidence; logged clicks/conversions reflect prior exposure.
+- Decision agents use Qwen3-4B and reflection Qwen3-32B. The 3,000-candidate budget is shared, but total inference/update cost is not equalized. Tables 1 and 5 give no uncertainty intervals or independent evolution-seed results.
+- The paper describes a proprietary dataset. The inspected project page has no usable implementation download; release parity cannot be checked. Only a link and source notes are indexed, not code/data redistribution.
+- The project citation and paper template display 2027, while arXiv records v1 in 2026; the index uses the preprint submission year and does not infer venue acceptance. Public case-study diagrams do not establish executable reproduction.
 
 ## MetaMem
 

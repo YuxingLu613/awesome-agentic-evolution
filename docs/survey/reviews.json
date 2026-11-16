@@ -1,4 +1,35 @@
 {
+  "https://arxiv.org/abs/2611.01977": {
+    "status": "source-checked",
+    "reviewedAt": "2026-11-16",
+    "reviewer": "Codex (AI-assisted extraction; no independent human review)",
+    "bibliography": {
+      "title": "EvoRec: A Unified Self-Evolving Agentic Recommender with Dynamic Reflection Trees",
+      "authors": ["Mengting Li", "Long Zhang", "Hao Jiang", "Sheng Yu", "Fei Pan", "Peng Jiang"],
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "version": "2611.01977v1, submitted 2026-11-01; inspected 2026-11-16"
+    },
+    "sources": [
+      {"url": "https://arxiv.org/abs/2611.01977v1", "locator": "Author list and v1 submission record"},
+      {"url": "https://arxiv.org/html/2611.01977v1", "locator": "Sections 3.1–3.4 (retained state and deployment); 4.1–4.5 and Tables 1, 5–6 (evaluation); Appendix A (budgets and replay rule)"},
+      {"url": "https://mtli-buaa.github.io/evorec-project-page/", "locator": "Author-linked project page; Paper/Code controls, results and citation block, inspected 2026-11-16"},
+      {"url": "https://github.com/mtli-buaa/evorec-project-page/blob/998f0977c19503621d1604745337d1b80206e0a1/index.html", "locator": "Pinned page source: disabled Code control (line 154) and 2027 BibTeX year (lines 252–255)"}
+    ],
+    "artifact": "Personalized repair records and a shared hierarchy of experience-derived error patterns (Memory). Fixed agent weights and execution pipeline; tree edits organize experience, not agent topology.",
+    "feedback": "Clicks/conversions and execution traces; replay tests whether a feedback item enters the top 50. At most five feedback items per user daily.",
+    "retention": "Non-retracted user records, including unverified ones, enter later prompts. ERROR-MEMORY retracts misleading repairs. Verified records feed shared abstractions; 20 verified pending nodes trigger abstraction. This is not verified-only user-memory admission.",
+    "evaluation": "Seven learning days precede next-day evaluation on 28,227 users. Table 1 reports Hit@50 of 24.48% versus 23.90% without reflection; Table 5 compares components on 5,216 memory recipients. Seven-day online results concern the complete additional recommendation channel.",
+    "reproducibility": "not-run",
+    "safety": "Privacy, consent and memory-poisoning resistance were not independently assessed; retraction is not a safety guarantee. No private user data, implementation or experiments were accessed or run",
+    "conflictOfInterest": "Authors disclose Kuaishou affiliations; no curator connection identified and no external COI declaration obtained",
+    "limitations": [
+      "The next-day split holds out future outcomes, not users. Later days continue adaptation. Replay is an update signal, not independent acceptance evidence; logged clicks/conversions reflect prior exposure.",
+      "Decision agents use Qwen3-4B and reflection Qwen3-32B. The 3,000-candidate budget is shared, but total inference/update cost is not equalized. Tables 1 and 5 give no uncertainty intervals or independent evolution-seed results.",
+      "The paper describes a proprietary dataset. The inspected project page has no usable implementation download; release parity cannot be checked. Only a link and source notes are indexed, not code/data redistribution.",
+      "The project citation and paper template display 2027, while arXiv records v1 in 2026; the index uses the preprint submission year and does not infer venue acceptance. Public case-study diagrams do not establish executable reproduction."
+    ]
+  },
   "https://github.com/PKU-VaLuE-Lab/EmbodiedCLBench": {
     "status": "source-checked",
     "reviewedAt": "2026-11-02",
