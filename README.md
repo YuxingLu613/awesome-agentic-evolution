@@ -238,6 +238,12 @@ unless an evidence record explicitly documents independent reproduction.
   win rates, freezes the bank for held-out τ-bench evaluation, and reports a
   parity result.
   **Targets:** Memory.
+- [EvoRec](https://arxiv.org/abs/2611.01977) —
+  [Project](https://mtli-buaa.github.io/evorec-project-page/). Retains personalized
+  repair memories and shared error patterns from recommendation feedback,
+  using replay and retraction; evaluates later-day recommendations against
+  a no-reflection baseline on proprietary data.
+  **Targets:** Memory.
 - [ExpeL](https://github.com/LeapLabTHU/ExpeL) —
   [Paper](https://arxiv.org/abs/2308.10144). Distills transferable insights
   from successes and failures without updating model weights.
@@ -379,7 +385,7 @@ unless an evidence record explicitly documents independent reproduction.
 ### Skills
 
 - [AgentDescent](https://github.com/Birfy/agentdescent) —
-  [Paper](https://github.com/Birfy/agentdescent/blob/paper/paper/main.pdf).
+  [Paper](https://doi.org/10.5281/zenodo.22348027).
   Evolves skills, prompts, harness modules, and verifiers through parallel
   proposals, reward scoring, and asynchronous aggregator merges, with
   live-model results and per-run raw data.
